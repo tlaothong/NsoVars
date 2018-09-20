@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    /// <summary>
-    /// อาคาร / สิ่งปลูกสร้าง
-    /// </summary>
-    public class Building : ModelBase
+    public class ModelBase
     {
+        /// <summary>
+        /// Primary ID
+        /// </summary>
+        public string _id { get; set; }
     }
 }

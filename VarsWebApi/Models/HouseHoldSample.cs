@@ -8,11 +8,11 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ครัวเรือน - หน่วยตัวอย่าง
     /// </summary>
-    public class HouseHoldSample
+    public class HouseHoldSample : ModelBase
     {
         /// <summary>
-        /// ที่อยู่
+        /// ครัวเรือนที่อยู่อาศัย
         /// </summary>
-        public string Address { get; set; }
+        public Residential Rensidence { get; set; }
     }
 }
