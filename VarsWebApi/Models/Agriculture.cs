@@ -11,8 +11,8 @@ namespace VarsWebApi.Models
     public class Agriculture : ModelBase
     {
         /// <summary>
-        /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้ปลูกข้าวเองหรือไม่
+        /// ข้าว
         /// </summary>
-        public bool GrowRice { get; set; }
+        public RicePlant RicePlant { get; set; }
     }
 }

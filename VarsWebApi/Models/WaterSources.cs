@@ -13,7 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำประปา
         /// </summary>
-        public bool Prapa { get; set; }
+        public bool Plumbing { get; set; }
         /// <summary>
         /// น้ำบาดาล
         /// </summary>
@@ -29,7 +29,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำจากชลประทาน
         /// </summary>
-        public bool Chonpratan { get; set; }
+        public bool Irrigation { get; set; }
         /// <summary>
         /// น้ำฝนที่กักเก็บไว้
         /// </summary>

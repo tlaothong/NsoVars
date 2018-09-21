@@ -13,6 +13,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำประปานครหลวง
         /// </summary>
-        public bool MEA { get; set; }
+        public bool MWA { get; set; }
+        /// <summary>
+        /// น้ำประปาส่วนภูมิภาค
+        /// </summary>
+        public bool PWA { get; set; }
     }
 }
