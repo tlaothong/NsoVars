@@ -21,6 +21,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ตารางวา
         /// </summary>
-        public int SqWa { get; set; }   // Square Wa
+        public int SqWa { get; set; }
+        /// <summary>
+        /// ความลึก
+        /// </summary>
+        public int Depth { get; set; }
     }
 }
