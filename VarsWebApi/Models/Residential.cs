@@ -26,5 +26,8 @@ namespace VarsWebApi.Models
         /// ใช้น้ำเพื่อรดน้ำต้นไม้ / สวนหย่อม / สวนครัว ในบริเวณที่อยู่อาศัยหรือไม่
         /// </summary>
         public bool GardeningUse { get; set; }
+
+       
+     
     }
 }
