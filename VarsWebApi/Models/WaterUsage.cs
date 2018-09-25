@@ -25,11 +25,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
         /// </summary>
-        public bool River { get; set; }
+        public River River { get; set; }
         /// <summary>
         /// น้ำจากชลประทาน
         /// </summary>
-        public bool Irrigation { get; set; }
+        public Irrigation Irrigation { get; set; }
         /// <summary>
         /// น้ำฝนที่กักเก็บไว้
         /// </summary>
