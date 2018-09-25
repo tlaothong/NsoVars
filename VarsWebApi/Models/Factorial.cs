@@ -14,5 +14,13 @@ namespace VarsWebApi.Models
         /// ชื่อสถานประกอบการ / หน่วยงาน
         /// </summary>
         public string Name { get; set; }
+        public string Category { get; set; }
+        public int Totalworkers { get; set; }
+        public bool HeavyMachine { get; set; }
+        public WaterSources WaterSource { get; set; }
+        public bool Wastewaterforcreateproductinmount { get; set; }
+        public bool Wastewaterforcreateproduct { get; set; }
+        public bool Wastewaterreuse { get; set; }
     }
+    
 }
