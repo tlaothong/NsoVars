@@ -21,11 +21,5 @@ namespace VarsWebApi.Models
         /// </summary>
         /// <value></value>
         public int Length { get; set; }
-
-        /// <summary>
-        /// ความลึก
-        /// </summary>
-        /// <value></value>
-        public int Depth { get; set; }
     }
 }

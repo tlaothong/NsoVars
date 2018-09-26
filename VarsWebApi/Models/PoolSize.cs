@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ทราบพื้นที่หรือไม่ กี่ไร่ กี่งาน กี่ตารางวา ความลึกของสระกี่เมตร
         /// </summary>
-        public PoolArea PoolArea { get; set; }
+        public Area PoolArea { get; set; }
 
         /// <summary>
         /// ถ้าสระเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร
@@ -19,6 +19,11 @@ namespace VarsWebApi.Models
         /// ถ้าสระเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึกเท่าไร
         /// </summary>
         public Circle PoolCircle { get; set; }
+
+        /// <summary>
+        /// ความลึก
+        /// </summary>
+        public int Depth { get; set; }
 
     }
 }
