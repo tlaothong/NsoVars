@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// การเพราะปลูกไม้ดอก ไม้ประดับ
+    /// </summary>
     public class FlowerCrop : ModelBase
     {
         /// <summary>

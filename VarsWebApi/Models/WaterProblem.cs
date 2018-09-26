@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// ปัญหาคุณภาพน้้า
+    /// </summary>
     public class WaterProblem
     {
         /// <summary>

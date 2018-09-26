@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// ยางพารา
+    /// </summary>
     public class RubberTree : ModelBase
     {
         /// <summary>
@@ -22,10 +25,5 @@ namespace VarsWebApi.Models
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>
         public WaterSources WaterSource { get; set; }
-        
-        
-
-
-
     }
 }

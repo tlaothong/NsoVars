@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// คำถามสำหรับปลูกสร้าง
+    /// </summary>
     public class QuestionForBuilding
     {
         /// <summary>

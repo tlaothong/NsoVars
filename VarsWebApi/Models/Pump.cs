@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// เครื่องสูบน้้า
+    /// </summary>
     public class Pump
     {
         /// <summary>

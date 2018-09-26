@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// คำถามสำหรับสถานพยาบาล
+    /// </summary>
     public class QuestionForHospital
     {
         /// <summary>

@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// สระน้้า หนองน้้า บึง 
+    /// </summary>
     public class Pool
     {
         /// <summary>

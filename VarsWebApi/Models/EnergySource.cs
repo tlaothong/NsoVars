@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// แหล่งพลังงาน
+    /// </summary>
     public class EnergySource
     {
         /// <summary>

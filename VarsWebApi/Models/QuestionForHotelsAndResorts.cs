@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// คำถามสำหรับสถานบริการห้องพัก
+    /// </summary>
     public class QuestionForHotelsAndResorts
     {
         /// <summary>

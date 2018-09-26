@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// พืชยืนต้น ไม้ผล สวนป่า
+    /// </summary>
     public class PerennialPlant : ModelBase
     {
         /// <summary>

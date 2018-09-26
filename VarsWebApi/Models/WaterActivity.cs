@@ -1,8 +1,7 @@
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// ***ปรากฏกิจกรรมเฉพาะที่ระบุไว้ก่อนหน้าว่าใช้น้้า  - ประเภทนี้
-    ///*** ( สัดส่วนที่ใช้ (%) , รวมทุกกิจกรรม 100% )
+    /// ***ปรากฏกิจกรรมเฉพาะที่ระบุไว้ก่อนหน้าว่าใช้น้้า
     /// </summary>
     public class WaterActivity
     {
@@ -33,7 +32,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 6.เพื่อท้านา
         /// </summary>
-        /// <value></value>
         public double Farm { get; set; }
     }
 }

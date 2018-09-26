@@ -1,6 +1,9 @@
 namespace VarsWebApi.Models
 {
-    public class QuestionForAcademy
+    /// <summary>
+    /// คำถามสำหรับสถานศึกษา
+    /// </summary>
+    public class QuestionForAcademy:ModelBase
     {
         /// <summary>
         /// ก่อนวัยเรียน 

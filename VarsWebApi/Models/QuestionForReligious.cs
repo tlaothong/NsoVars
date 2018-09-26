@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// คำถามสำหรับศาสนสถาน
+    /// </summary>
     public class QuestionForReligious
     {
         /// <summary>

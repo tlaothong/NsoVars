@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// น้ำบาดาล
+    /// </summary>
     public class Underground
     {
         

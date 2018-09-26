@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// น้ าจากแม่น้ า
+    /// </summary>
     public class River
     {
          /// <summary>

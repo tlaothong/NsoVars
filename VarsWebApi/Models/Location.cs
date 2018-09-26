@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace VarsWebApi.Models {
+    /// <summary>
+    /// ตำแหน่ง ที่ตั้ง
+    /// </summary>
     public class Location {
         /// <summary>
         /// จังหวัด

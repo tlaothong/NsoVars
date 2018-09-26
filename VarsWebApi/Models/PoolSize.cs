@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// ขนาดของสระน้ำ
+    /// </summary>
     public class PoolSize
     {
         /// <summary>

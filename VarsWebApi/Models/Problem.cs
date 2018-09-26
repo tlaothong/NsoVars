@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// ปัญหาคุณภาพน้ำ
+    /// </summary>
     public class Problem
     {
         /// <summary>
@@ -35,7 +38,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร
         /// </summary>
-        public int Quantityusedpermonth { get; set; }
+        public int QuantityUsedPerMonth { get; set; }
 
     }
 }

@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// การบริหารจัดการน้ำ เพื่อการเกษตร
+    /// </summary>
     public class ManagementForFarming
     {
         /// <summary>

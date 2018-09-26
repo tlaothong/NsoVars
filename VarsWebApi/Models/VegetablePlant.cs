@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// พืชผัก สมุนไพร
+    /// </summary>
     public class VegetablePlant : ModelBase
     {
         /// <summary>

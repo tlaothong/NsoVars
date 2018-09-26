@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// การนำน้ำออกจากสระมาใช้
+    /// </summary>
     public class PoolUsage
     {
         /// <summary>

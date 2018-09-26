@@ -2,7 +2,10 @@ namespace VarsWebApi.Models
 {
     public class Irrigation
     {
-         public string MainPlanTingList { get; set; }
+        /// <summary>
+        /// พืชหลัก
+        /// </summary>
+        public string MainPlantingList { get; set; }
         /// <summary>
         /// น้้ำจากชลประทาน 
         /// </summary>

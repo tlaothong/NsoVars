@@ -1,5 +1,8 @@
 namespace VarsWebApi.Models
 {
+    /// <summary>
+    /// การเพาะเชื้อเห็ด
+    /// </summary>
     public class MushroomPlant : ModelBase
     {
         /// <summary>
