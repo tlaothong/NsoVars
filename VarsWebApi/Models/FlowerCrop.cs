@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// ที่แปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่ 
         /// </summary>
         public bool IrrigationField { get; set; }
-         public Area Area { get; set; }
+        
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาที่แปลงนี้ปลูกไม้ ดอกไม้ประดับ เพาะพันธุ์ไม้ ชนิดใด  
         /// </summary>
@@ -39,6 +39,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>
-        public WaterSource WaterSource { get; set; }
+        public WaterSources WaterSource { get; set; }
     }
 }

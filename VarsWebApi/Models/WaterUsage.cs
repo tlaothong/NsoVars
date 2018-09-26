@@ -11,12 +11,36 @@ namespace VarsWebApi.Models
     public class WaterUsage : ModelBase
     {
         /// <summary>
-        /// น้ำประปานครหลวง
+        /// น้ำประปา
         /// </summary>
-        public bool MWA { get; set; }
+        public Plumbing Plumbing { get; set; }
         /// <summary>
-        /// น้ำประปาส่วนภูมิภาค
+        /// น้ำบาดาล
         /// </summary>
-        public bool PWA { get; set; }
+        public Underground Underground { get; set; }
+        /// <summary>
+        /// น้ำจากสระน้ำ
+        /// </summary>
+        public bool Pool { get; set; }
+        /// <summary>
+        /// น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
+        /// </summary>
+        public River River { get; set; }
+        /// <summary>
+        /// น้ำจากชลประทาน
+        /// </summary>
+        public Irrigation Irrigation { get; set; }
+        /// <summary>
+        /// น้ำฝนที่กักเก็บไว้
+        /// </summary>
+        public bool Rain { get; set; }
+        /// <summary>
+        /// น้ำที่ซื้อมาใช้
+        /// </summary>
+        public bool Buying { get; set; }
+        /// <summary>
+        /// อื่น ๆ (ระบุ)
+        /// </summary>
+        public string Other { get; set; }
     }
 }

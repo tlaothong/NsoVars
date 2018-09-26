@@ -37,7 +37,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>
-        public WaterSource WaterSource { get; set; }
+        public WaterSources WaterSource { get; set; }
 
 
 
