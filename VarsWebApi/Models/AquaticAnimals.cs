@@ -49,8 +49,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSources WaterSources { get; set; }
+        
+        public QuestionForFish QuestionForFish { get; set; }
 
+        public QuestionForFog QuestionForFog { get; set; }
 
+        public QuestionForCrocodile QuestionForCrocodile { get; set; }
     }
 }
