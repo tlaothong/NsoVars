@@ -13,16 +13,16 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  น้้าประปานครหลวงใช้หรือไม่
         /// </summary>
-        public bool DoingMWA { get; set; }
+        public bool MWA { get; set; }
          /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
         // TODO:  
-        public bool Doing { get; set; }
+        public bool WaterQualityMWA { get; set; }
         /// <summary>
         ///  มีปัญหา คือ  
         /// </summary>
-        public Problem2 WaterQualityMWA { get; set; }
+        public Problem2 ProblemMWA { get; set; }
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
@@ -35,15 +35,15 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  น้้าประปาส่วนภูมิภาคใช้หรือไม่ 
         /// </summary>
-        public bool DoingPWA { get; set; }
+        public bool PWA { get; set; }
          /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public bool DoingWaterQuality { get; set; }
+        public bool WaterQualityPWA { get; set; }
         /// <summary>
         ///  มีปัญหา คือ 
         /// </summary>
-        public Problem2 WaterQualityPWA { get; set; }
+        public Problem2 ProblemPWA { get; set; }
          /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
@@ -55,15 +55,15 @@ namespace VarsWebApi.Models
         ///  น้้าประปาอื่น ๆ (หมู่บ้าน,อบต.,เทศบาล,ชุมชน, นิคม, ภูเขา, ฯลฯ)  
         /// </summary>
         // TODO:Name
-        public bool DoingOther { get; set; }
+        public bool Other { get; set; }
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public bool DoingWaterQualityOther { get; set; }
+        public bool WaterQualityOther { get; set; }
         /// <summary>
         ///  มีปัญหา คือ 
         /// </summary>
-        public Problem2 WaterQualityOther { get; set; }
+        public Problem2 Problem2Other { get; set; }
          /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>

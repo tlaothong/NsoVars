@@ -10,17 +10,17 @@ namespace VarsWebApi.Models
         /// <summary>
         /// มีบ่อน้้าบาดาลส่วนตัวหรือไม่
         /// </summary>
-        public bool DoingPrivatePool{ get; set; }
+        public bool PrivateGroundWater{ get; set; }
 
         /// <summary>
         /// ถ้ามีบ่อน้้าบาดาลส่วนตัว มีจ้านวนกี่บ่อ 
         /// </summary>
-        public int PoolCount { get; set; }
+        public int GroundWaterCount { get; set; }
 
         /// <summary>
         ///  ในรอบ 12 เดือนที่ผ่านมา มีบ่อน้้าบาดาลที่ใช้อยู่กี่บ่อ 
         /// </summary>
-        public int UsePoolCount { get; set; }
+        public int UseGroundWaterCount { get; set; }
 
 
         // TODO:
@@ -53,7 +53,7 @@ namespace VarsWebApi.Models
          /// <summary>
         ///  ใช้น้้าจากบ่อน้้าบาดาลสาธารณะหรือไม่ 
         /// </summary>
-        public bool PublicUnderGround { get; set; }
+        public bool PublicGroundWater { get; set; }
 
         /// <summary>
         ///   ถ้าใช้น้้าบ่อน้้าบาดาลสาธารณะ ใช้จ้านวนกี่บ่อ 
