@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// น้ำประปา 
     /// </summary>
-    public class Plumbing : ModelBase
+    public class Plumbing
     {
         /// <summary>
         ///  น้้าประปานครหลวงใช้หรือไม่

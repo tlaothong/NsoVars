@@ -46,11 +46,18 @@ namespace VarsWebApi.Models
         /// </summary>
         public bool Reddish { get; set; }
         // TODO:ใส่ฟอร์มเพิ่มให้ครบ
+
         /// <summary>
-        /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
+        /// 1.ปลา  (2.กุ้ง 6.ปู 7.หอย และ 9.ไรแดง ถามเหมือนกับปลาทุกข้อ)
         /// </summary>
-        public WaterSources WaterSources { get; set; }
-
-
+        public QuestionForFish QuestionForFish { get; set; }
+        /// <summary>
+        /// กบ 
+        /// </summary>
+        public QuestionForFrog QuestionForForg { get; set; }
+        /// <summary>
+        /// จระเข้ (5.ตะพาบน้้า และ 8.เต่า ถามเหมือนกับจระเข้ทุกข้อ)
+        /// </summary>
+        public QuestionForCrocodile QuestionForCrocodile { get; set; }
     }
 }

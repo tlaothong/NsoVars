@@ -18,6 +18,7 @@ namespace VarsWebApi.Models
         /// ใช้น้้ามันเบนซิน
         /// </summary>
         public bool PetrolPump { get; set; }
+        
         /// <summary>
         /// รถไถเดินตาม
         /// </summary>

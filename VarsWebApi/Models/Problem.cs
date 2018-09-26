@@ -5,12 +5,10 @@ namespace VarsWebApi.Models
     /// </summary>
     public class Problem
     {
-
         /// <summary>
         /// เค็ม/กร่อย  
         /// </summary>
         public bool SaltWater { get; set; }
-       
         /// <summary>
         ///  มีกลิ่น
         /// </summary>
@@ -25,11 +23,6 @@ namespace VarsWebApi.Models
         /// ฝ้าขาว
         /// </summary>
         public bool FogWater { get; set; }
-
-       
-
-
-
 
     }
 }

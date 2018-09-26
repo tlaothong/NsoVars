@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// น้ำบาดาล
         /// </summary>
         /// // TODO:5.3, 5.4, 5.5 ทำใหม่
-        public GroundWater Underground { get; set; } 
+        public GroundWater GroundWater { get; set; } 
         /// <summary>
         /// น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
         /// </summary>
@@ -34,14 +34,13 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำฝนที่กักเก็บไว้
         /// </summary>
-        public bool Rain { get; set; }
+        public Rain Rain { get; set; }
+
         /// <summary>
         /// น้ำที่ซื้อมาใช้
         /// </summary>
-        public bool Buying { get; set; }
-        /// <summary>
-        /// อื่น ๆ (ระบุ)
-        /// </summary>
-        public string Other { get; set; }
+        public Buying Buying { get; set; }
+
+        
     }
 }

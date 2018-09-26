@@ -32,7 +32,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  จำนวนครัวเรือนที่เป็นสมาชิกโครงการมีจำนวนเท่าไร 
         /// </summary>
-        public int HouseToCount { get; set; }
+        public int HouseMember { get; set; }
 
         /// <summary>
         ///  โครงการใช้น้้าผิวดินปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ) 
