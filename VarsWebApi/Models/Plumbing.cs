@@ -17,6 +17,7 @@ namespace VarsWebApi.Models
          /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
+        // TODO:  
         public bool Doing { get; set; }
         /// <summary>
         ///  มีปัญหา คือ  

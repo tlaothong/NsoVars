@@ -14,10 +14,5 @@ namespace VarsWebApi.Models
         /// เส้นผ่านศูนย์กลาง
         /// </summary>
         public int Diameter { get; set; }
-
-        /// <summary>
-        /// ความลึก
-        /// </summary>
-        public int Depth { get; set; }
     }
 }
