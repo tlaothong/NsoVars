@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ถ้าสระเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึกเท่าไร
         /// </summary>
-        public CirclePool PoolCircle { get; set; }
+        //public CirclePool PoolCircle { get; set; }
 
         /// <summary>
         /// ความลึก
