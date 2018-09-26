@@ -27,6 +27,10 @@ namespace VarsWebApi.Models
         public PumpRate PumpRate { get; set; }
 
         /// <summary>
+        /// ไม่ทราบ
+        /// </summary>
+        public bool UnknowPumpUsage { get; set; }
+        /// <summary>
         /// เครื่องสูบน้้าใช้แหล่งพลังงานจากที่ใด
         /// </summary>
         // TODO:
@@ -62,6 +66,11 @@ namespace VarsWebApi.Models
         /// ปัญหาคุณภาพน้้า
         /// </summary>
         public WaterProblem WaterProblem { get; set; }
+
+
+
+
+    
 
     }
 }

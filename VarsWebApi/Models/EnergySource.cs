@@ -10,12 +10,10 @@ namespace VarsWebApi.Models
         /// ใช้ไฟฟ้า
         /// </summary>
         public bool ElecticPump { get; set; }
-
         /// <summary>
         /// ใช้น้้ามันดีเซล(โซล่า)
         /// </summary>
         public bool SolaPump { get; set; }
-
         /// <summary>
         /// ใช้น้้ามันเบนซิน
         /// </summary>

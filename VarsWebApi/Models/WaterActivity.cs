@@ -8,30 +8,33 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 1.ใช้เพื่ออุปโภคบริโภค
         /// </summary>
-        public double Drink { get; set; }
+        public int Drink { get; set; }
 
         /// <summary>
         /// 2.เพื่อรดน้้าพืชในบริเวณที่อยู่อาศัย
         /// </summary>
-        public double Plant { get; set; }
+        public int Plant { get; set; }
+
+         /// <summary>
+        /// 3..เพื่อท้านา
+        /// </summary>
+        public int Farm { get; set; }
 
         /// <summary>
-        /// 3.ใช้เพื่อท้าเกษตร
+        /// 4.ใช้เพื่อท้าเกษตร
         /// </summary>
-        public double Agriculture { get; set; }
+        public int Agriculture { get; set; }
 
         /// <summary>
-        /// 4.เพื่อผลิตสินค้า
+        /// 5.เพื่อผลิตสินค้า
         /// </summary>
-        public double Product { get; set; }
+        public int Product { get; set; }
 
         /// <summary>
-        /// 5.เพื่อการบริการ
+        /// 6.เพื่อการบริการ
         /// </summary>
-        public double Service { get; set; }
-        /// <summary>
-        /// 6.เพื่อท้านา
-        /// </summary>
-        public double Farm { get; set; }
+        public int Service { get; set; }
+       
+        
     }
 }
