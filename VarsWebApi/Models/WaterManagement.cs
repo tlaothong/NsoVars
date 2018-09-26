@@ -51,28 +51,20 @@ namespace VarsWebApi.Models
         public string UseWaterForOther { get; set; }
 
         /// <summary>
-        /// ไร่
+        /// ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa) ความลึก(Depth)
         /// </summary>
-        public int Rai { get; set; }
-        /// <summary>
-        /// ความลึก
-        /// </summary>
-        public int Depth { get; set; }
-        /// <summary>
-        /// ตารางวา
-        /// </summary>
-        public int SqWa { get; set; }
+        public PoolSize ProjectArea { get; set; }
 
         /// 
         /// <summary>
-        /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
+        /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง(RectanglePool->Width) ยาว(RectanglePool-> Length)  ความลึก(Depth)
         /// </summary>
-        public RectanglePool RectanglePool { get; set; }
+        public PoolSize RectanglePool { get; set; }
 
         /// <summary>
-        ///  ถ้าแหล่งน้้าเป็นวงกลม เส้นผ่านศูนย์กลางกี่ เมตร ลึกเท่าไร 
+        ///  ใช้เส้นผ่านศูนย์กลางกี่ เมตร(Circle -> Diameter) ลึกเท่าไร(Depth)
         /// </summary>
-        public Circle Circle { get; set; }
+        public PoolSize Circle { get; set; }
 
         /// <summary>
         ///  น้้าประปาส่วนภูมิภาค  
@@ -87,7 +79,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   น้้าประปาอื่นๆ 
         /// </summary>
-        public bool Other { get; set; }
+        public bool PlumbingOther { get; set; }
 
         /// <summary>
         /// ในหมู่บ้าน/ชุมชน เป็นที่ตั้งของแหล่งผลิตน้้าประปาอื่นๆ (หมู่บ้าน, อบต., เทศบาล, ชุมชน, นิคม, ภูเขา, ฯลฯ)  ใช่หรือไม่ 
