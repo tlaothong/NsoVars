@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ปัญหาคุณภาพน้ำ
     /// </summary>
-    public class WaterQualityProblem
+    public class Problem2
     {
         /// <summary>
         /// ขุ่น/ตะกอน  
