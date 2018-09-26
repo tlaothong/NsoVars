@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในพื้นที่อยู่อาศัย สวน ไร่ นา สถานประกอบการมีสระน้้า หนองน้้า บึง หรือไม่ (ถ้าไม่มี ข้ามไปถามแหล่งน้้าถัดไป)
         /// </summary>
-        public bool Doing { get; set; }
+        public bool IsExist { get; set; }
 
         /// <summary>
         /// หาก “มี” มีจำนวนกี่สระ
