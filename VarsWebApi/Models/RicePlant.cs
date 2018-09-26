@@ -34,7 +34,7 @@ namespace VarsWebApi.Models {
          /// <summary>
         ///  แต่ละครั้งท้ากี่ไร่ ท้าทั้งแปลงทุกครั้งหรือไม่ ถ้าใช่เลือก 
         /// </summary>
-        public bool RicePlantTotal { get; set; }
+        public bool CountRicePlant { get; set; }
          /// <summary>
         ///  แต่ละครั้งท้ากี่ไร่ ถ้าไม่ได้ท้าทั้งแปลง แต่ละครั้งท้าเท่ากันหรือไม่ ถ้าใช่เลือก 
         /// </summary>
@@ -54,7 +54,7 @@ namespace VarsWebApi.Models {
           /// <summary>
         ///   การท้านาครั้งที่ 1 ปล่อยน้้าเข้านากี่ครั้ง  
         /// </summary>
-        public int WaterCount { get; set; }
+        public int CountWater { get; set; }
          /// <summary>
         ///    การท้านาครั้งที่ 1 โดยเฉลี่ยแต่ละครั้งปล่อยน้้าสูง   
         /// </summary>
