@@ -12,11 +12,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปลา
         /// </summary>
-        public bool Fish { get; set; }
+        public FishFarming Fish { get; set; }
         /// <summary>
         /// กุ้ง
         /// </summary>
-        public bool Shrimp { get; set; }
+        public FishFarming Shrimp { get; set; }
         /// <summary>
         /// กบ
         /// </summary>
@@ -32,11 +32,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปู
         /// </summary>
-        public bool Crab { get; set; }
+        public FishFarming Crab { get; set; }
         /// <summary>
         /// หอย
         /// </summary>
-        public bool ShellFish { get; set; }
+        public FishFarming ShellFish { get; set; }
         /// <summary>
         /// เต่า
         /// </summary>
@@ -44,13 +44,9 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ไรแดง
         /// </summary>
-        public bool Reddish { get; set; }
+        public FishFarming Reddish { get; set; }
         // TODO:ใส่ฟอร์มเพิ่มให้ครบ
 
-        /// <summary>
-        /// 1.ปลา  (2.กุ้ง 6.ปู 7.หอย และ 9.ไรแดง ถามเหมือนกับปลาทุกข้อ)
-        /// </summary>
-        public QuestionForFish QuestionForFish { get; set; }
         /// <summary>
         /// กบ 
         /// </summary>

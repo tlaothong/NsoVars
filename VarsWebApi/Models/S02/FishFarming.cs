@@ -1,7 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace VarsWebApi.Models
 {
-    public class QuestionForFish
+    /// <summary>
+    /// ข้อมูลการเลี้ยงปลา, กุ้ง, ปู, หอย, ไรแดง
+    /// </summary>
+    public class FishFarming
     {
+        /// <summary>
+        /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ท้าการเพาะเลี้ยง เพาะฟัก อนุบาลสัตว์น้้าในพื้นที่น้้าจืดหรือไม่
+        /// (เฉพาะชนิดนี้)
+        /// </summary>
+        public bool Doing { get; set; }
+
         /// <summary>
         ///  ลักษณะการเลี้ยงเป็นบ่อ
         /// </summary>
@@ -22,38 +36,31 @@ namespace VarsWebApi.Models
         ///  ลักษณะการเลี้ยงในที่อื่นๆ
         /// </summary>
         public string Other { get; set; }
-       
+
         /// <summary>
         ///  ถ้าเลี้ยงในบ่อ หรือร่องสวน มีจ้านวนบ่อหรือ ร่องสวนรวมเท่าไร 
         /// </summary>
-        public int CountDepression { get; set; }
-         /// <summary>
-        ///   ขนาดบ่อหรือร่องสวนทั้งหมดเท่ากันหรือไม่  
-        /// </summary>
-        public bool DepressionSize { get; set; }
+        public int FieldCount { get; set; }
         /// <summary>
-        ///  บ่อหรือร่องสวน  พื้นที่ กี่ไร่ กี่งาน  กี่ตารางวา
+        /// ขนาดบ่อหรือร่องสวนทั้งหมดเท่ากันหรือไม่  
         /// </summary>
-        public Area Area { get; set; }
+        /// <remarks>
+        ///     True - 1. เท่ากัน (ให้ถามขนาดบ่อครั้งเดียว)
+        ///     False - 2. ไม่เท่ากัน (ให้ถามทีละบ่อ)
+        /// </remarks>
+        public bool FieldsAreSameSize { get; set; }
+
         /// <summary>
-        /// ความลึกของบ่อกี่เมตร 
+        /// บ่อหรือร่องสวน (ที่ n) -- สอบถามทีละบ่อ
         /// </summary>
-        public int Depth { get; set; }
-        /// <summary>
-        ///  ถ้าบ่อเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
-        /// </summary>
-        public RectanglePool SquarePool { get; set; }
-        /// <summary>
-        ///  ถ้าบ่อเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึก เท่าไร 
-        /// </summary>
-        public Circle Circle { get; set; }
+        public List<AquariumFieldSize> Fields { get; set; }
         /// <summary>
         /// จ้านวนที่เลี้ยงในปัจจุบัน (รวมทุกบ่อ/ร่องสวน) 
         /// </summary>
-        public int CountFish { get; set; }
+        public int AquaticAnimalsCount { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSources WaterSources { get; set; }
+        public FarmingWaterSources WaterSources { get; set; }
     }
 }

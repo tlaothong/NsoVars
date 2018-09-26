@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace VarsWebApi.Models
+{
+    /// <summary>
+    /// 2.5 พืชผัก สมุนไพร
+    /// </summary>
+    public class MixablePlanting : PlantingInfo<GrowingFieldWithNames>
+    {
+        /// <summary>
+        /// ลักษณะการปลูกเป็นแบบใด
+        /// </summary>
+        /// <remarks>
+        ///     True - 1. ปลูกเฉพาะ พืชผัก สมุนไพร
+        ///     False - 2. ปลูกแบบปะปนกัน กับพืชชนิดอื่น
+        /// </remarks>
+        public bool ThisPlantOnly { get; set; }
+        /// <summary>
+        /// รายชื่อพืชที่ปลูกหลัก
+        /// </summary>
+        public string MixedWithPrimaryPlant { get; set; }
+    }
+}

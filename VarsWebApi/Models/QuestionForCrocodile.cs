@@ -33,7 +33,8 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ถ้าบ่อเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึก เท่าไร 
         /// </summary>
-        public Circle Circle { get; set; }
+        // public CirclePool Circle { get; set; }
+
         /// <summary>
         /// จ้านวนที่เลี้ยงเฉลี่ยต่อเดือน เดือนละกี่ตัว
         /// </summary>
