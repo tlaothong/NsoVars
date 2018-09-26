@@ -6,7 +6,7 @@ namespace VarsWebApi.Models
     public class QuestionForOtherBuilding
     {
         /// <summary>
-        /// จำนวนบุคลากร
+        /// จำนวนบุคลากร/คนทำงานทั้งหมด
         /// </summary>
         public int PersonCount { get; set; }
     }

@@ -11,7 +11,7 @@ namespace VarsWebApi.Models
         public int BedCount { get; set; }
 
         /// <summary>
-        /// จำนวนบุคลากร
+        /// จำนวนบุคลากรรวมทั้งหมดทุกประเภท
         /// </summary>
         public int PersonnelCount { get; set; }
     }
