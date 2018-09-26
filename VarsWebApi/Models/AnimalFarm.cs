@@ -52,7 +52,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// อื่นๆ(เช่น ฟาร์มสุนัข แมว กระต่าย หนู นกกระจอกเทศ)
         /// </summary>
-        public int Other { get; set; }
+        public string Other { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

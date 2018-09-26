@@ -9,11 +9,15 @@ namespace VarsWebApi.Models
          /// <summary>
         ///  ลักษณะการเลี้ยงในที่อื่นๆ
         /// </summary>
-        public  bool Other { get; set; }
+        public  string Other { get; set; }
          /// <summary>
         ///  ถ้าเลี้ยงในบ่อ มีจ้านวนบ่อเท่าไร 
         /// </summary>
-        public int DepressionTotal { get; set; }
+        public int CountDepression { get; set; }
+         /// <summary>
+        ///   ขนาดบ่อทั้งหมดเท่ากันหรือไม  
+        /// </summary>
+        public bool DepressionSize { get; set; }
          /// <summary>
         ///  บ่อ พื้นที่ กี่ไร่ กี่งาน  กี่ตารางวา
         /// </summary>
@@ -33,7 +37,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จ้านวนที่เลี้ยงเฉลี่ยต่อเดือน เดือนละกี่ตัว
         /// </summary>
-        public int AmountCrocodilePerMonth { get; set; }
+        public int CountCrocodilePerMonth { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

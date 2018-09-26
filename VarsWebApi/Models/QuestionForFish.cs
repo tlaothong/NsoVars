@@ -21,12 +21,12 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ลักษณะการเลี้ยงในที่อื่นๆ
         /// </summary>
-        public bool Other { get; set; }
+        public string Other { get; set; }
        
         /// <summary>
         ///  ถ้าเลี้ยงในบ่อ หรือร่องสวน มีจ้านวนบ่อหรือ ร่องสวนรวมเท่าไร 
         /// </summary>
-        public int DepressionTotal { get; set; }
+        public int CountDepression { get; set; }
          /// <summary>
         ///   ขนาดบ่อหรือร่องสวนทั้งหมดเท่ากันหรือไม่  
         /// </summary>
@@ -50,7 +50,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จ้านวนที่เลี้ยงในปัจจุบัน (รวมทุกบ่อ/ร่องสวน) 
         /// </summary>
-        public int FishTotal { get; set; }
+        public int CountFish { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
