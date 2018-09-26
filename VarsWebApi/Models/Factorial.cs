@@ -14,13 +14,35 @@ namespace VarsWebApi.Models
         /// ชื่อสถานประกอบการ / หน่วยงาน
         /// </summary>
         public string Name { get; set; }
+        /// <summary>
+        /// สถานประกอบการแห่งนี้ผลิตสินค้าประเภทใด
+        /// </summary>
         public string Category { get; set; }
+        /// <summary>
+        /// สถานประกอบการแห่งนี้มีคนทำงานรวมทั้งหมดกี่คน
+        /// </summary>
         public int Totalworkers { get; set; }
+        /// <summary>
+        /// สถานประกอบการแห่งนี้ใช้เครื่องจักรที่มีขนาดแรงม้าตั้งแต่ 5 แรงม้าหรือ 3,725 วัตต์ขึ้นไป หรือไม่ boolean
+        /// </summary>
         public bool HeavyMachine { get; set; }
+        /// <summary>
+        /// แหล่งที่มาของน้ำ
+        /// </summary>
         public WaterSources WaterSource { get; set; }
+        /// <summary>
+        /// ในรอบ 12 เดือนที่ผ่านมาสถานประกอบการนี้มีน้ำเสียจากกระบวนการผลิตสินค้าหรือไม่
+        /// </summary>
         public bool Wastewaterforcreateproductinmount { get; set; }
+        /// <summary>
+        /// ถ้า“มี”น้้าเสีย สถานประกอบการนี้มีการจัดการน้ำเสียที่เกิดจากกระบวนการผลิตสินค้าหรือไม่   (ให้กา  ใน  เพียงข้อเดียว) 
+        /// </summary>
         public bool Wastewaterforcreateproduct { get; set; }
+        /// <summary>
+        /// ในรอบ 12 เดือนที่ผ่านมา สถานประกอบการนี้มีการน้าน้ าที่ผ่านกระบวนการผลิตสินค้าแล้วกลับมาใช้ ใหม่หรือไม่  (ให้กา  ใน  เพียงข้อเดียว)
+        /// </summary>
         public bool Wastewaterreuse { get; set; }
+        
     }
     
 }
