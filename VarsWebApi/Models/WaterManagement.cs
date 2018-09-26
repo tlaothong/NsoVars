@@ -67,7 +67,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
         /// </summary>
-        public SquarePool SquarePool { get; set; }
+        public RectanglePool SquarePool { get; set; }
 
         /// <summary>
         ///  ถ้าแหล่งน้้าเป็นวงกลม เส้นผ่านศูนย์กลางกี่ เมตร ลึกเท่าไร 

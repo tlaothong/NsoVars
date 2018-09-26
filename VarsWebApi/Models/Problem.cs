@@ -6,18 +6,9 @@ namespace VarsWebApi.Models
     public class Problem
     {
         /// <summary>
-        /// ขุ่น/ตะกอน 
-        /// </summary>
-        public bool TurbidWater { get; set; }
-
-        /// <summary>
         /// เค็ม/กร่อย  
         /// </summary>
         public bool SaltWater { get; set; }
-        /// <summary>
-        /// น้ำกระด้าง
-        /// </summary>
-        public bool HardWater { get; set; }
 
         /// <summary>
         ///  มีกลิ่น
@@ -34,11 +25,6 @@ namespace VarsWebApi.Models
         /// ฝ้าขาว
         /// </summary>
         public bool FogWater { get; set; }
-        // TODO:
-        /// <summary>
-        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร
-        /// </summary>
-        public int QuantityUsedPerMonth { get; set; }
 
     }
 }

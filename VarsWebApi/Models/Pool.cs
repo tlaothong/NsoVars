@@ -9,18 +9,27 @@ namespace VarsWebApi.Models
         /// ในพื้นที่อยู่อาศัย สวน ไร่ นา สถานประกอบการมีสระน้้า หนองน้้า บึง หรือไม่ (ถ้าไม่มี ข้ามไปถามแหล่งน้้าถัดไป)
         /// </summary>
         public bool Doing { get; set; }
+
         /// <summary>
         /// หาก “มี” มีจำนวนกี่สระ
         /// </summary>
         public int PoolCount { get; set; }
+
+        /// <summary>
+        /// ขนาดสระน้้าทั้งหมดเท่ากันหรือไม่ (ให้ถามถ้าจ้านวนสระในข้อ 5.4.2 มากกว่า 1 สระ)
+        /// </summary>
+        public bool PoolEqual { get; set; }
+
         /// <summary>
         /// ถามขนาดของสระ
         /// </summary>
         public PoolSize PoolSize { get; set; }
+
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมามีกี่สระที่นำน้ำมาใช้
         /// </summary>
         public int PoolCountUsage { get; set; }
+        
         /// <summary>
         /// สระที่นำน้ำมาใช้ในรอบ 12 เดือน
         /// </summary>

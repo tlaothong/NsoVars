@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำจากสระน้ำ
         /// </summary>
-        public bool Pool { get; set; }
+        public Pool Pool { get; set; }
         /// <summary>
         /// น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
         /// </summary>
@@ -34,11 +34,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำฝนที่กักเก็บไว้
         /// </summary>
-        public bool Rain { get; set; }
+        public Rain Rain { get; set; }
         /// <summary>
         /// น้ำที่ซื้อมาใช้
         /// </summary>
-        public bool Buying { get; set; }
+        public Buying Buying { get; set; }
         /// <summary>
         /// อื่น ๆ (ระบุ)
         /// </summary>
