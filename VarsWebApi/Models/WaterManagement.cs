@@ -143,12 +143,12 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในช่วงเวลา 5 ปีที่ผ่านมา หมู่บ้าน/ชุมชนแห่งนี้เคยเกิดภัยธรรมชาติหรือไม่  
         /// </summary>
-        public string[] DisasterInfiveyear { get; set; }
+        public string[] DisasterInFiveYear { get; set; }
 
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มีการเตือนภัยและมาตรการช่วยเหลือน้้าท่วมหรือไม่  
         /// </summary>
-        public string[] Havedisaster { get; set; }
+        public string[] HaveDisaster { get; set; }
 
         /// <summary>
         /// โครงการจัดการน้้าเพื่อการเกษตรชุมชน  โดยใช้พื้นที่สาธารณะ
