@@ -6,7 +6,6 @@ namespace VarsWebApi.Models
     public class Problem
     {
 
-
         /// <summary>
         /// เค็ม/กร่อย  
         /// </summary>

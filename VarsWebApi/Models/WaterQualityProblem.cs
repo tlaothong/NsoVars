@@ -34,5 +34,6 @@ namespace VarsWebApi.Models
         /// ฝ้าขาว
         /// </summary>
         public bool FogWater { get; set;}
+        
     }
 }

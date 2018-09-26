@@ -1,0 +1,26 @@
+namespace VarsWebApi.Models
+{
+    /// <summary>
+    /// ปัญหาคุณภาพน้้า
+    /// </summary>
+    public class WaterProblem2
+    {
+        /// <summary>
+        /// มีปัญหาคุณภาพน้้า หรือไม่
+        /// </summary>
+        public bool HaveProblem { get; set; }
+        /// <summary>
+        /// ปัญหา
+        /// </summary>
+        public WaterQualityProblem Problem { get; set; }
+       
+
+       
+
+
+
+        
+
+
+    }
+}

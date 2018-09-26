@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// น้ำบาดาล
     /// </summary>
-    public class Underground
+    public class GroundWater
     {
         // TODO:Doing
         
@@ -47,6 +47,8 @@ namespace VarsWebApi.Models
         ///  ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่  
         /// </summary>
         public PoolUsage PoolUsage { get; set; }
+
+        
 
         // TODO: 5.2.4, 5.2.5, 5.2.6 Missing
          /// <summary>

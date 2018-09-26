@@ -14,11 +14,20 @@ namespace VarsWebApi.Models
         ///  น้้าประปานครหลวงใช้หรือไม่
         /// </summary>
         public bool DoingMWA { get; set; }
-
-        /// <summary>
+         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public Problem WaterQualityMWA { get; set; }
+        public bool Doing { get; set; }
+        /// <summary>
+        ///  มีปัญหา คือ  
+        /// </summary>
+        public WaterQualityProblem WaterQualityMWA { get; set; }
+        /// <summary>
+        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
+        /// </summary>
+        public PlumbingUsage PlumbingUsageMWA { get; set; }
+        
+        
 
 
 
@@ -26,10 +35,18 @@ namespace VarsWebApi.Models
         ///  น้้าประปาส่วนภูมิภาคใช้หรือไม่ 
         /// </summary>
         public bool DoingPWA { get; set; }
-        /// <summary>
+         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public Problem WaterQualityPWA { get; set; }
+        public bool DoingWaterQuality { get; set; }
+        /// <summary>
+        ///  มีปัญหา คือ 
+        /// </summary>
+        public WaterQualityProblem WaterQualityPWA { get; set; }
+         /// <summary>
+        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
+        /// </summary>
+        public PlumbingUsage WPlumbingUsagePWA { get; set; }
 
 
 
@@ -41,7 +58,16 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public Problem WaterQualityOther { get; set; }
+        public bool DoingWaterQualityOther { get; set; }
+        /// <summary>
+        ///  มีปัญหา คือ 
+        /// </summary>
+        public WaterQualityProblem WaterQualityOther { get; set; }
+         /// <summary>
+        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
+        /// </summary>
+        public PlumbingUsage WPlumbingUsageOther { get; set; }
+
 
 
 
