@@ -14,10 +14,10 @@ namespace VarsWebApi.Models
         /// จำนวนห้องที่มีคนอาศัย
         /// </summary>
         // TODO:
-        public int StayCountRoom { get; set; }
+        public int Occupied { get; set; }
 
         /// <summary>
-        /// จำนวนบุคลากร
+        /// จำนวนบุคลากรรวมทั้งหมดทุกประเภท
         /// </summary>
         public int PersonnelCount { get; set; }
     }
