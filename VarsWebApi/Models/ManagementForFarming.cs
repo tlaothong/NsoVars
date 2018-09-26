@@ -42,11 +42,11 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   โครงการมีบ่อน้้าบาดาลจำนวนกี่บ่อ  
         /// </summary>
-        public int UndergroundOfCount { get; set; }
+        public int UnderGroundOfCount { get; set; }
 
         /// <summary>
         ///   โครงการใช้น้้าบาดาลปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ)  
         /// </summary>
-        public int UndergroundAVGPerMount { get; set; }
+        public int UnderGroundAVGPerMount { get; set; }
     }
 }
