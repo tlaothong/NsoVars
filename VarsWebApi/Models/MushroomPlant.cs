@@ -3,28 +3,26 @@ namespace VarsWebApi.Models
     public class MushroomPlant : ModelBase
     {
         /// <summary>
-        /// เพาะเชื้อและปลูกเห็ด
+        ///  ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้เพาะเชื้อและปลูกเห็ด หรือไม่
         /// </summary>
-        public bool Mushroom { get; set; }
+        public bool Doing { get; set; }
         /// <summary>
-        /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้เพาะเชื้อและปลูกเห็ด หรือไม่  
+        ///  ตั้งอยู่ที่ใด (ตำบล อำเภอ จังหวัด)
         /// </summary>
         public Location Location { get; set; }
         /// <summary>
-        /// ตั้งอยู่ที่ใด (ตำบล อำเภอ จังหวัด)
+        /// ขนาดพื้นที่เท่าไร กี่ไร่ กี่งาน กี่ตารางวา  เพิ่มตารางเมตร
         /// </summary>
         public Area Area { get; set; }
         /// <summary>
-        /// ขนาดพื้นที่เท่าไร กี่ไร่ กี่งาน กี่ตารางวา  เพิ่มตารางเมตร
+        /// ที่แปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่
         /// </summary>
         public bool IrrigationField { get; set; }
         /// <summary>
-        /// ที่แปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่
-        /// </summary>
-        public WaterSources WaterSource { get; set; }
-        /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง 
         /// </summary>
+        public WaterSources WaterSource { get; set; }
+
     }
 
 }

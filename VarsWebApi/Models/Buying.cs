@@ -5,7 +5,13 @@ namespace VarsWebApi.Models
     /// </summary>
     public class Buying
     {
+        /// <summary>
+        /// บรรจุภัณฑ์
+        /// </summary>
         public string NamePackage { get; set; }
+        /// <summary>
+        /// ขนาดของบรรจุภัณฑ์
+        /// </summary>
         public double Size { get; set; }
                 /// <summary>
         /// 1.ใช้เพื่ออุปโภคบริโภค
@@ -34,7 +40,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 6.เพื่อท้านา
         /// </summary>
-        /// <value></value>
         public double CountFarm { get; set; }
     }
 }

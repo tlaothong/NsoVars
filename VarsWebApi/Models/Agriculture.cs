@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace VarsWebApi.Models {
+    
     /// <summary>
     /// การทำการเกษตร
     /// </summary>
@@ -49,7 +50,7 @@ namespace VarsWebApi.Models {
         public AnimalFarm AnimalFarm { get; set; }
 
         /// <summary>
-        /// การเพาะเลี้ยงสัตว์น้ าในพื้นที่น้ าจืด 
+        /// การเพาะเลี้ยงสัตว์น้ำในพื้นที่น้ำจืด 
         /// </summary>
         public AquaticAnimals AquaticAnimals { get; set; }
 

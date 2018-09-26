@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public WaterQuality WaterQualityMWA { get; set; }
+        public Problem WaterQualityMWA { get; set; }
 
 
 
@@ -29,7 +29,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public WaterQuality WaterQualityPWA { get; set; }
+        public Problem WaterQualityPWA { get; set; }
 
 
 
@@ -40,7 +40,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public WaterQuality WaterQualityOther { get; set; }
+        public Problem WaterQualityOther { get; set; }
 
 
         /// <summary>

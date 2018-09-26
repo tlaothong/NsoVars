@@ -33,9 +33,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาที่แปลงนี้ปลูกพืชไร่ ชนิดใด (ระบุได้ไมเ่กิน 5 ชนิด) 
         /// </summary>
-        public string AgronomyPerYear { get; set; }
+        public string[] AgronomyPerYear { get; set; }
+
         /// <summary>
-        /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง    (ให้กา  ใน  ได้หลายข้อ) 
+        /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
         public WaterSources WaterSource { get; set; }
     }

@@ -3,21 +3,39 @@ namespace VarsWebApi.Models
     public class Problem
     {
         /// <summary>
-        /// เค็ม/กร่อย
+        /// ขุ่น/ตะกอน 
         /// </summary>
-        public string Salty = "Salty";
+        public bool TurbidWater { get; set; }
+
         /// <summary>
-        /// มีกลิ่น
+        /// เค็ม/กร่อย  
         /// </summary>
-        public string Smell = "Smell";
+        public bool SaltWater { get; set; }
         /// <summary>
-        /// คราบมัน
+        /// น้ำกระด้าง
         /// </summary>
-        public string Stain = "Stain";
+        public bool HardWater { get; set; }
+
+        /// <summary>
+        ///  มีกลิ่น
+        /// </summary>
+        public bool Odor { get; set; }
+
+        /// <summary>
+        ///  คราบมัน
+        /// </summary>
+        public bool FilmOfOil { get; set; }
+
+
         /// <summary>
         /// ฝ้าขาว
         /// </summary>
-        public string WhitFrost = "WhitFrost";
+        public bool FogWater { get; set; }
+
+        /// <summary>
+        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร
+        /// </summary>
+        public int Quantityusedpermonth { get; set; }
 
     }
 }

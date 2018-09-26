@@ -22,9 +22,5 @@ namespace VarsWebApi.Models
         /// ตารางวา
         /// </summary>
         public int SqWa { get; set; }
-        /// <summary>
-        /// ความลึก
-        /// </summary>
-        public int Depth { get; set; }
     }
 }
