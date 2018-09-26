@@ -11,35 +11,35 @@ namespace VarsWebApi.Models
     public class WaterSources
     {
         /// <summary>
-        /// น้ำประปา
+        /// 1. น้ำประปา
         /// </summary>
         public bool Plumbing { get; set; }
         /// <summary>
-        /// น้ำบาดาล
+        /// 2. น้ำบาดาล
         /// </summary>
         public bool UnderGround { get; set; }
         /// <summary>
-        /// น้ำจากสระน้ำ
+        /// 3. น้ำจากสระน้ำ
         /// </summary>
         public bool Pool { get; set; }
         /// <summary>
-        /// น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
+        /// 4. น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
         /// </summary>
         public bool River { get; set; }
         /// <summary>
-        /// น้ำจากชลประทาน
+        /// 5. น้ำจากชลประทาน
         /// </summary>
         public bool Irrigation { get; set; }
         /// <summary>
-        /// น้ำฝนที่กักเก็บไว้
+        /// 6. น้ำฝนที่กักเก็บไว้
         /// </summary>
         public bool Rain { get; set; }
         /// <summary>
-        /// น้ำที่ซื้อมาใช้
+        /// 7. น้ำที่ซื้อมาใช้
         /// </summary>
         public bool Buying { get; set; }
         /// <summary>
-        /// อื่น ๆ (ระบุ)
+        /// 8/9. อื่น ๆ (ระบุ)
         /// </summary>
         public string Other { get; set; }
     }
