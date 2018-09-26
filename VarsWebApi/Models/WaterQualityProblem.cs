@@ -3,14 +3,22 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ปัญหาคุณภาพน้ำ
     /// </summary>
-    public class Problem
+    public class WaterQualityProblem
     {
-
+        /// <summary>
+        /// ขุ่น/ตะกอน  
+        /// </summary>
+        public bool TurbidWater { get; set; }
 
         /// <summary>
         /// เค็ม/กร่อย  
         /// </summary>
         public bool SaltWater { get; set; }
+
+        /// <summary>
+        ///  น้ำกระด้าง
+        /// </summary>
+        public bool HardWater { get; set; }
        
         /// <summary>
         ///  มีกลิ่น
@@ -25,12 +33,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ฝ้าขาว
         /// </summary>
-        public bool FogWater { get; set; }
-
-       
-
-
-
-
+        public bool FogWater { get; set;}
     }
 }

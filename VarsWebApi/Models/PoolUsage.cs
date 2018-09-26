@@ -5,11 +5,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class PoolUsage
     {
-        // TODO:
-        /// <summary>
-        /// มีการนำน้ำออกจากสระมาใช้ปริมาณเท่าไรต่อเดือนโดยเฉลี่ย (ลบ.ม./เดือน) (ถ้าตอบได้ให้ข้ามไปข้อ 5) 6)
-        /// </summary>
-        public int AvgUsageWater { get; set; }
+      
         /// <summary>
         /// ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่ (ถ้าไม่ใช้ ข้ามไปถามสระถัดไป)
         /// </summary>

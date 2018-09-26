@@ -9,19 +9,19 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้ไฟฟ้า
         /// </summary>
-        public string ElecticPump { get; set; }
+        public bool ElecticPump { get; set; }
         /// <summary>
         /// ใช้น้้ามันดีเซล(โซล่า)
         /// </summary>
-        public string SolaPump { get; set; }
+        public bool SolaPump { get; set; }
         /// <summary>
         /// ใช้น้้ามันเบนซิน
         /// </summary>
-        public string PetrolPump { get; set; }
+        public bool PetrolPump { get; set; }
         /// <summary>
         /// รถไถเดินตาม
         /// </summary>
-        public string TwoWheeledTractors { get; set; }
+        public bool TwoWheeledTractors { get; set; }
 
     }
 }

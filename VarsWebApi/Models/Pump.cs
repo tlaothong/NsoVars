@@ -13,6 +13,10 @@ namespace VarsWebApi.Models
         /// ใช้ระยะเวลาในการสูบน้้าต่อครั้งเท่าไร (ชั่วโมง) (ถ้าไม่ทราบ ข้ามไปถามเครื่องถัดไป)
         /// </summary>
         public int PumpUsagePerHour { get; set; }
+         /// <summary>
+        /// ไม่ทราบเนื่องจากเป็นเครื่องสูบน้ำอัตโนมัติ
+        /// </summary>
+        public bool UnknowAutoPump { get; set; }
         // TODO:Name, Missing
         /// <summary>
         /// ในระยะเวลา 1 ปีสูบน้้ากี่ครั้ง
@@ -22,6 +26,10 @@ namespace VarsWebApi.Models
         /// มีอัตราการสูบเท่าไร (ลบ.ม./ชม.) (ถ้าทราบ ให้ข้ามไปถามเครื่องถัดไป)
         /// </summary>
         public int PumpRate { get; set; }
+        /// <summary>
+        /// ไม่ทราบ
+        /// </summary>
+        public bool UnknowPumpUsage { get; set; }
         /// <summary>
         /// เครื่องสูบน้้าใช้แหล่งพลังงานจากที่ใด
         /// </summary>
@@ -51,6 +59,11 @@ namespace VarsWebApi.Models
         /// ปัญหาคุณภาพน้้า
         /// </summary>
         public WaterProblem WaterProblem { get; set; }
+
+
+
+
+    
 
     }
 }
