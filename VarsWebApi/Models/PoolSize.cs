@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ถ้าสระเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร
         /// </summary>
-        public SquarePool PoolSquare { get; set; }
+        public RectanglePool PoolSquare { get; set; }
         /// <summary>
         /// ถ้าสระเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึกเท่าไร
         /// </summary>
