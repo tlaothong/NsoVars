@@ -21,7 +21,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหา คือ  
         /// </summary>
-        public WaterQualityProblem WaterQualityMWA { get; set; }
+        public Problem2 WaterQualityMWA { get; set; }
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
@@ -42,7 +42,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหา คือ 
         /// </summary>
-        public WaterQualityProblem WaterQualityPWA { get; set; }
+        public Problem2 WaterQualityPWA { get; set; }
          /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
@@ -62,7 +62,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหา คือ 
         /// </summary>
-        public WaterQualityProblem WaterQualityOther { get; set; }
+        public Problem2 WaterQualityOther { get; set; }
          /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>

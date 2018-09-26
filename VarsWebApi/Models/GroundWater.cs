@@ -28,7 +28,6 @@ namespace VarsWebApi.Models
         /// ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย 
         /// </summary>
         public int AvgUsageWater { get; set; }
-
         /// <summary>
         ///  ไม่ทราบ ถามค่าน้้า  
         /// </summary>
@@ -46,7 +45,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่  
         /// </summary>
-        public PoolUsage PoolUsage { get; set; }
+        public PoolUsage2 PoolUsage { get; set; }
 
         
 
@@ -73,7 +72,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   บ่อที่ 1 (ถามบ่อน้้าบาดาลสาธารณะที่ใช้อยู่ทีละบ่อ) 
         /// </summary>
-        public PoolUsage Pool { get; set; }
+        public PoolUsage2 Pool { get; set; }
         
 
 

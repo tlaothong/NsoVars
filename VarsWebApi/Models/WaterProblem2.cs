@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปัญหา
         /// </summary>
-        public WaterQualityProblem Problem { get; set; }
+        public Problem2 Problem { get; set; }
        
 
        
