@@ -36,13 +36,14 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  น้้าประปาอื่น ๆ (หมู่บ้าน,อบต.,เทศบาล,ชุมชน, นิคม, ภูเขา, ฯลฯ)  
         /// </summary>
+        // TODO:Name
         public bool Other { get; set; }
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
         public Problem WaterQualityOther { get; set; }
 
-
+        // TODO: 
         /// <summary>
         ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร   
         /// </summary>
@@ -51,11 +52,5 @@ namespace VarsWebApi.Models
         ///   ในรอบ 12 เดือนที่ผ่านมา มีเหตุการณ์ที่น้ำประปาไม่ไหล ติดต่อกันเกิน 3 วันหรือไม่   
         /// </summary>
         public bool WaterNotRunning { get; set; }
-
-       
-
-
-
-
     }
 }

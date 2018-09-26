@@ -25,11 +25,12 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาที่แปลงนี้ปลูกไม้ ดอกไม้ประดับ เพาะพันธุ์ไม้ ชนิดใด  
         /// </summary>
-        public string FlowerCropPerYear { get; set; }
+        public string[] FlowerCropPerYear { get; set; }
         
         /// <summary>
         /// ลักษณะการปลูกเป็นแบบใด 
         /// </summary>
+        // TODO:
         public bool SingleCrop { get; set; }
         /// <summary>
         /// แบบปลูกปะปนกัน กับพืชชนิดอื่น ได้แก่ 

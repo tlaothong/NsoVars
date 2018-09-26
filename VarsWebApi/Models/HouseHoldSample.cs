@@ -34,5 +34,6 @@ namespace VarsWebApi.Models
         /// ปัญหาอุทกภัย
         /// </summary>
         public Disasterous Disaster { get; set; }
+        // TODO: ผู้ให้ข้อมูล
     }
 }

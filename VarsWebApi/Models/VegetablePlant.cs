@@ -24,10 +24,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาที่แปลงนี้ปลูก พืชผัก สมุนไพร ชนิดใด
         /// </summary>
-        public string VegetablePerYear { get; set; }
+        public string[] VegetablePerYear { get; set; }
         /// <summary>
         /// ลักษณะการปลูกเป็นแบบใด 
         /// </summary>
+        // TODO:
         public bool SingleCrop { get; set; }
         /// <summary>
         /// แบบปลูกปะปนกัน กับพืชชนิดอื่น ได้แก่ 

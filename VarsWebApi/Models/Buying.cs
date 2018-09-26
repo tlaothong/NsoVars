@@ -3,6 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     ///  น้ำที่ซื้อมาใช้    ***แสดงข้อมูล ชนิดพืช/การผลิต/การบริการ ที่เลือกใช้น้าฝนที่กักเก็บไว้ จากตอนที่ 1-4
     /// </summary>
+    // TODO: 
     public class Buying
     {
         /// <summary>

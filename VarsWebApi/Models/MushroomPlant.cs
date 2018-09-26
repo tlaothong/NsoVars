@@ -9,6 +9,7 @@ namespace VarsWebApi.Models
         ///  ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้เพาะเชื้อและปลูกเห็ด หรือไม่
         /// </summary>
         public bool Doing { get; set; }
+        // TODO:Count
         /// <summary>
         ///  ตั้งอยู่ที่ใด (ตำบล อำเภอ จังหวัด)
         /// </summary>
@@ -16,6 +17,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดพื้นที่เท่าไร กี่ไร่ กี่งาน กี่ตารางวา  เพิ่มตารางเมตร
         /// </summary>
+        // TODO:SqM
         public Area Area { get; set; }
         /// <summary>
         /// ที่แปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่

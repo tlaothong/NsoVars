@@ -13,6 +13,7 @@ namespace VarsWebApi.Models
         /// ใช้ระยะเวลาในการสูบน้้าต่อครั้งเท่าไร (ชั่วโมง) (ถ้าไม่ทราบ ข้ามไปถามเครื่องถัดไป)
         /// </summary>
         public int PumpUsagePerHour { get; set; }
+        // TODO:Name, Missing
         /// <summary>
         /// ในระยะเวลา 1 ปีสูบน้้ากี่ครั้ง
         /// </summary>
@@ -24,6 +25,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เครื่องสูบน้้าใช้แหล่งพลังงานจากที่ใด
         /// </summary>
+        // TODO:
         public EnergySource EnergySource  { get; set; }
         /// <summary>
         /// ชนิดของเครื่องสูบ (จะโชว์ตามแหล่งพลังงานที่ตอบใน 4.5))

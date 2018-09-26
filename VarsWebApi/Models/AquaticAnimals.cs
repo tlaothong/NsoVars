@@ -8,7 +8,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ท้าการเพาะเลี้ยง เพาะฟัก อนุบาลสัตว์น้้าในพื้นที่น้้าจืดหรือไม่ 
         /// </summary>
-        /// <value></value>
         public bool Doing { get; set; }
         /// <summary>
         /// ปลา
@@ -46,6 +45,7 @@ namespace VarsWebApi.Models
         /// ไรแดง
         /// </summary>
         public bool Reddish { get; set; }
+        // TODO:ใส่ฟอร์มเพิ่มให้ครบ
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

@@ -13,6 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// - กิจกรรมการใช้น้า
         /// </summary>
+        // TODO: Type
         public WaterActivity WaterActive { get; set; }
 
     }

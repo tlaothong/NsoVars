@@ -26,7 +26,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาที่แปลงนี้ปลูกพืช   ยืนต้น ไม้ผล สวนป่า ชนิดใด  (ระบุได้ไมเ่กิน 5 ชนิด)  
         /// </summary>
-        public string PerennialPerYear { get; set; }
+        public string[] PerennialPerYear { get; set; }
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>

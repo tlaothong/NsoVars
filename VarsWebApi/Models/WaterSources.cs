@@ -17,7 +17,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำบาดาล
         /// </summary>
-        public bool Underground { get; set; }
+        public bool UnderGround { get; set; }
         /// <summary>
         /// น้ำจากสระน้ำ
         /// </summary>

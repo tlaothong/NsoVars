@@ -18,6 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// สถาณประกอบการให้บริการในลักษณะใด
         /// </summary>
+        // TODO:
         public string ServiceType { get; set; }
 
         /// <summary>

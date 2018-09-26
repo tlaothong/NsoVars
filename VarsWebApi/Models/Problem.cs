@@ -34,7 +34,7 @@ namespace VarsWebApi.Models
         /// ฝ้าขาว
         /// </summary>
         public bool FogWater { get; set; }
-
+        // TODO:
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร
         /// </summary>

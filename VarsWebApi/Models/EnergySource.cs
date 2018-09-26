@@ -3,6 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// แหล่งพลังงาน
     /// </summary>
+    // TODO:
     public class EnergySource
     {
         /// <summary>

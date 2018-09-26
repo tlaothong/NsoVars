@@ -23,7 +23,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ชื่อของแหล่งน้ำ
         /// </summary>
-        public int WaterSupplyName { get; set; }
+        public string WaterSupplyName { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้ท้าน้้าประปา
@@ -54,7 +54,7 @@ namespace VarsWebApi.Models
         /// ขนาดของแหล่งน้้า
         /// </summary>
         public Area Area { get; set; }
-
+        // TODO:
         /// <summary>
         /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
         /// </summary>
@@ -93,7 +93,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ชื่อหน่วยงาน 
         /// </summary>
-        public int NameOrgWaterSupply { get; set; }
+        public string NameOrgWaterSupply { get; set; }
 
 
         /// <summary>

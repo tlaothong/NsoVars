@@ -13,6 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนห้องที่มีคนอาศัย
         /// </summary>
+        // TODO:
         public int StayCountRoom { get; set; }
 
         /// <summary>

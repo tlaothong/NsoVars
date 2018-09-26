@@ -18,6 +18,7 @@ namespace VarsWebApi.Models
         /// น้ำบาดาล
         /// </summary>
         public Underground Underground { get; set; }
+        // TODO:5.3, 5.4, 5.5 ทำใหม่
         /// <summary>
         /// น้ำจากสระน้ำ
         /// </summary>

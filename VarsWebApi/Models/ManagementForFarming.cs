@@ -23,7 +23,8 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  พื้นที่ของโครงการมีกี่ไร่ กี่ตารางวา(หากมีหลายพื้นที่ให้รวมทุกที่) 
         /// </summary>
-        public string AreaOfManagement { get; set; }
+        // TODO: Type
+        public Area AreaOfManagement { get; set; }
 
         /// <summary>
         ///  จ้านวนครัวเรือนที่เป็นสมาชิกโครงการมีจ้านวนเท่าไร 

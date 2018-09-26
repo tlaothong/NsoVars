@@ -6,7 +6,7 @@ namespace VarsWebApi.Models
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้มีการเลี้ยงสัตว์ เพื่อขายหรือใช้งานเกษตรหรือไม่
         /// </summary>
         public bool Doing { get; set; }
-
+        // TODO: int?
         /// <summary>
         /// วัว
         /// </summary>

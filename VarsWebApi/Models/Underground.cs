@@ -5,6 +5,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class Underground
     {
+        // TODO:Doing
         
         /// <summary>
         /// มีบ่อน้้าบาดาลส่วนตัวหรือไม่
@@ -26,7 +27,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public PoolUsage PoolUsage { get; set; }
 
-
+        // TODO: 5.2.4, 5.2.5, 5.2.6 Missing
         
 
 

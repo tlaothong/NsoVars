@@ -8,6 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ปัญหาอุทกภัย
     /// </summary>
+    // TODO: 
     public class Disasterous:ModelBase
     {
         /// <summary>

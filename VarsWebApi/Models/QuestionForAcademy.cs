@@ -5,6 +5,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class QuestionForAcademy:ModelBase
     {
+        // TODO:Count, int?
         /// <summary>
         /// ก่อนวัยเรียน 
         /// </summary>
