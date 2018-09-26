@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// การกักเก็บน้าฝน ***แสดงข้อมูล ชนิดพืช/การผลิต/การบริการ ที่เลือกใช้น้าฝนที่กักเก็บไว้ 
     /// </summary>
-    public class Rian
+    public class Rain
     {
         /// <summary>
         /// - ภาชนะกักเก็บ

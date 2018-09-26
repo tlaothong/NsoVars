@@ -13,7 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  หาก “มี” มีกี่โครงการ
         /// </summary>
-        public int CountManagementForFarming { get; set; }
+        public int ManagementForFarmingCount { get; set; }
 
         /// <summary>
         /// ชื่อโครงการ
@@ -21,15 +21,18 @@ namespace VarsWebApi.Models
         public string NameOfManagement { get; set; }
 
         /// <summary>
-        ///  พื้นที่ของโครงการมีกี่ไร่ กี่ตารางวา(หากมีหลายพื้นที่ให้รวมทุกที่) 
+        /// ไร่
         /// </summary>
-        // TODO: Type
-        public Area AreaOfManagement { get; set; }
+        public int Rai { get; set; }
+        /// <summary>
+        /// ตารางวา
+        /// </summary>
+        public int SqWa { get; set; }
 
         /// <summary>
-        ///  จ้านวนครัวเรือนที่เป็นสมาชิกโครงการมีจ้านวนเท่าไร 
+        ///  จำนวนครัวเรือนที่เป็นสมาชิกโครงการมีจำนวนเท่าไร 
         /// </summary>
-        public int CountToHouse { get; set; }
+        public int HouseMember { get; set; }
 
         /// <summary>
         ///  โครงการใช้น้้าผิวดินปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ) 
@@ -37,9 +40,9 @@ namespace VarsWebApi.Models
         public int UpperGroundAVGPerMount { get; set; }
 
         /// <summary>
-        ///   โครงการมีบ่อน้้าบาดาลจ้านวนกี่บ่อ  
+        ///   โครงการมีบ่อน้้าบาดาลจำนวนกี่บ่อ  
         /// </summary>
-        public int CountOfUnderground { get; set; }
+        public int UndergroundOfCount { get; set; }
 
         /// <summary>
         ///   โครงการใช้น้้าบาดาลปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ)  

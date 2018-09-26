@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// หาก “มี” มีจ้านวนกี่แหล่ง
         /// </summary>
-        public int CountWaterSupply { get; set; }
+        public int WaterSupplyCount { get; set; }
 
         /// <summary>
         /// ชื่อของแหล่งน้ำ
@@ -51,14 +51,23 @@ namespace VarsWebApi.Models
         public string UseWaterForOther { get; set; }
 
         /// <summary>
-        /// ขนาดของแหล่งน้้า
+        /// ไร่
         /// </summary>
-        public Area Area { get; set; }
-        // TODO:
+        public int Rai { get; set; }
+        /// <summary>
+        /// ความลึก
+        /// </summary>
+        public int Depth { get; set; }
+        /// <summary>
+        /// ตารางวา
+        /// </summary>
+        public int SqWa { get; set; }
+
+        /// 
         /// <summary>
         /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
         /// </summary>
-        public SquarePool SquarePool { get; set; }
+        public RectanglePool RectanglePool { get; set; }
 
         /// <summary>
         ///  ถ้าแหล่งน้้าเป็นวงกลม เส้นผ่านศูนย์กลางกี่ เมตร ลึกเท่าไร 
@@ -66,7 +75,7 @@ namespace VarsWebApi.Models
         public Circle Circle { get; set; }
 
         /// <summary>
-        ///  ในหมู่บ้าน/ชุมชนนี้มีระบบน้้าประปาประเภทใดบ้าง 
+        ///  น้้าประปาส่วนภูมิภาค  
         /// </summary>
         public bool PWA { get; set; }
 
@@ -78,7 +87,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   น้้าประปาอื่นๆ 
         /// </summary>
-        public string Other { get; set; }
+        public bool Other { get; set; }
 
         /// <summary>
         /// ในหมู่บ้าน/ชุมชน เป็นที่ตั้งของแหล่งผลิตน้้าประปาอื่นๆ (หมู่บ้าน, อบต., เทศบาล, ชุมชน, นิคม, ภูเขา, ฯลฯ)  ใช่หรือไม่ 
@@ -88,7 +97,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// หาก “ใช่” ในหมู่บ้าน/ชุมชน มีแหล่งผลิตน้้าประปาอื่นๆ กี่หน่วยงาน 
         /// </summary>
-        public int CountOrgWaterSupply { get; set; }
+        public int OrgWaterSupplyCount { get; set; }
 
         /// <summary>
         /// ชื่อหน่วยงาน 
@@ -104,7 +113,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ใช้น้้าจาก บ่อบาดาล หรือไม่ ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ ใช้น้้าบาดาลผลิตน้้าประปาโดยเฉลี่ยต่อเดือนปริมาณเท่าไร  
         /// </summary>
-        public int CountUnderGround { get; set; }
+        public int UnderGroundCount { get; set; }
 
         /// <summary>
         ///  ใช้น้้าจาก บ่อบาดาล หรือไม่ ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ ใช้น้้าบาดาลผลิตน้้าประปาโดยเฉลี่ยต่อเดือนปริมาณเท่าไร  
