@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace VarsWebApi.Models {
-    public class RicePlantingField
+    public class RicePlantingField 
     {
         /// <summary>
         /// ตั้งอยู่ที่ใด (จังหวัด อำเภอ ตำบล)
@@ -55,6 +55,6 @@ namespace VarsWebApi.Models {
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>
-        public WaterSources WaterSource { get; set; }
+        public WaterSourcesRice WaterSource { get; set; }
      }
 }
