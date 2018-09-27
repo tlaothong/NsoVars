@@ -1,26 +1,32 @@
 namespace VarsWebApi.Models
 {
-    public class AnimalFarm : ModelBase
+    /// <summary>
+    /// 2.8 การเลี้ยงสัตว์เพื่อขายหรือใช้งานเกษตร 
+    /// </summary>
+    public class Farming : ModelBase
     {
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้มีการเลี้ยงสัตว์ เพื่อขายหรือใช้งานเกษตรหรือไม่
         /// </summary>
         public bool Doing { get; set; }
-        // TODO: int?
+        // TODO: bool HasXXX, int XXXCount
         /// <summary>
         /// วัว
         /// </summary>
-        public int Cow { get; set; }
+        public bool HasCow { get; set; }
+        public int CowCount { get; set; }
 
         /// <summary>
         /// ควาย
         /// </summary>
-        public int Buffalo { get; set; }
+        public bool HasBuffalo { get; set; }
+        public int BuffaloCount { get; set; }
 
         /// <summary>
         /// หมู
         /// </summary>
-        public int Pig { get; set; }
+        public bool HasPig { get; set; }
+        public int PigCount { get; set; }
 
         /// <summary>
         /// แพะ
@@ -48,15 +54,17 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ไหม(น้้าหนักรังไหมเป็น กก.)
         /// </summary>
-        public int Cocoon { get; set; }
+        public bool HasSilkWool { get; set; }
+        public int SilkWoolCount { get; set; }
         /// <summary>
         /// อื่นๆ(เช่น ฟาร์มสุนัข แมว กระต่าย หนู นกกระจอกเทศ)
         /// </summary>
-        public int Other { get; set; }
+        public string OtherName { get; set; }
+        public int OtherCount { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSources WaterSources { get; set; }
+        public FarmingWaterSources WaterSources { get; set; }
 
     }
 }

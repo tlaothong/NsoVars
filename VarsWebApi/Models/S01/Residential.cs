@@ -27,7 +27,5 @@ namespace VarsWebApi.Models
         /// </summary>
         public bool GardeningUse { get; set; }
 
-       
-     
     }
 }

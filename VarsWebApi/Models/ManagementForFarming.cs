@@ -19,15 +19,10 @@ namespace VarsWebApi.Models
         /// ชื่อโครงการ
         /// </summary>
         public string NameOfManagement { get; set; }
-
         /// <summary>
-        /// ไร่
+        /// พื้นที่ของโครงการมีกี่ไร่ ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa)
         /// </summary>
-        public int Rai { get; set; }
-        /// <summary>
-        /// ตารางวา
-        /// </summary>
-        public int SqWa { get; set; }
+        public PoolSize ProjectArea { get; set; }
 
         /// <summary>
         ///  จำนวนครัวเรือนที่เป็นสมาชิกโครงการมีจำนวนเท่าไร 
