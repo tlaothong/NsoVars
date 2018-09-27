@@ -39,7 +39,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำที่ซื้อมาใช้
         /// </summary>
-        public Buying Buying { get; set; }
+        public List<Buying> Buying { get; set; }
 
         
     }

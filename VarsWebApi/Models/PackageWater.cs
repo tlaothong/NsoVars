@@ -13,7 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดของบรรจุภัณ
         /// </summary>
-        public int Size { get; set; }
+        public double Size { get; set; }
         /// <summary>
         /// จำนวน
         /// </summary>
