@@ -53,18 +53,18 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa) ความลึก(Depth)
         /// </summary>
-        public PoolSize ProjectArea { get; set; }
+        public FieldSize ProjectArea { get; set; }
 
         /// 
         /// <summary>
         /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง(RectanglePool->Width) ยาว(RectanglePool-> Length)  ความลึก(Depth)
         /// </summary>
-        public PoolSize RectanglePool { get; set; }
+        public FieldSize RectanglePool { get; set; }
 
         /// <summary>
         ///  ใช้เส้นผ่านศูนย์กลางกี่ เมตร(Circle -> Diameter) ลึกเท่าไร(Depth)
         /// </summary>
-        public PoolSize Circle { get; set; }
+        public FieldSize Circle { get; set; }
 
         /// <summary>
         ///  น้้าประปาส่วนภูมิภาค  

@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public class AquariumFieldSize
+    public class FieldSize
     {
         /// <summary>
         /// ลักษณะพื้นที่เลี้ยงสัตว์น้ำ
         /// </summary>
-        public AquariumFieldShape Shape { get; set; }
+        public FieldShape Shape { get; set; }
         /// <summary>
         ///  บ่อหรือร่องสวน  พื้นที่ กี่ไร่ กี่งาน  กี่ตารางวา
         /// </summary>

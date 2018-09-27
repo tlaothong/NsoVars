@@ -5,11 +5,15 @@ namespace VarsWebApi.Models
     /// </summary>
     public class River
     {
-         /// <summary>
+        /// <summary>
         ///  น้ าจากแม่น้ า/ล าคลอง/แหล่งน้ าสาธารณะ 
         /// </summary>
-        public PoolUsage PoolUsageRiver { get; set; }
-         /// <summary>
+        public WaterPump PoolUsageRiver { get; set; }
+        // <summary>
+        /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
+        /// </summary>
+        public WaterActivity2 WaterActivityPublicGroundWater { get; set; }
+        /// <summary>
         /// ปัญหาคุณภาพน้้า
         /// </summary>
         public WaterProblem WaterProblem { get; set; }

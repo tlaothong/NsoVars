@@ -27,10 +27,6 @@ namespace VarsWebApi.Models
         public PumpRate PumpRate { get; set; }
 
         /// <summary>
-        /// ไม่ทราบ
-        /// </summary>
-        public bool UnknowPumpUsage { get; set; }
-        /// <summary>
         /// เครื่องสูบน้้าใช้แหล่งพลังงานจากที่ใด
         /// </summary>
         // TODO:
@@ -56,13 +52,6 @@ namespace VarsWebApi.Models
         /// ขนาดท่อส่งเท่าไร (นิ้ว/หุน/มิลลิเมตร ***ให้เลือกหน่วยได้)
         /// </summary>
         public double PipelineSize { get; set; }
-
-       
-
-
-
-
-    
 
     }
 }

@@ -1,16 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace VarsWebApi.Models
 {
     /// <summary>
     /// น้ำบาดาล
     /// </summary>
-    public class GroundWater
+    public class GroundWater : WaterPump
     {
         // TODO:Doing
-        
+
         /// <summary>
         /// มีบ่อน้้าบาดาลส่วนตัวหรือไม่
         /// </summary>
-        public bool PrivateGroundWater{ get; set; }
+        public bool PrivateGroundWater { get; set; }
 
         /// <summary>
         /// ถ้ามีบ่อน้้าบาดาลส่วนตัว มีจ้านวนกี่บ่อ 
@@ -22,46 +27,13 @@ namespace VarsWebApi.Models
         /// </summary>
         public int UseGroundWaterCount { get; set; }
 
-
-        // TODO:
         /// <summary>
         /// ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย 
         /// </summary>
-        public int AvgUsageWater { get; set; }
-        /// <summary>
-        ///  ไม่ทราบ ถามค่าน้้า  
-        /// </summary>
-        public bool UnknowAskWaterBill { get; set; }
-         /// <summary>
-        ///  ถามค่าน้้า  
-        /// </summary>
-        public int WaterBill { get; set; }
-        /// <summary>
-        ///  ไม่ทราบ
-        /// </summary>
-        public bool Unknow { get; set; }
-
-
-        //TODO
-        /// <summary>
-        ///  ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่  
-        /// </summary>
-        public PoolUsage2 PoolUsage { get; set; }
-
-        /// <summary>
-        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
-        /// </summary>
-        // TODO:  
-        public bool WaterQuality { get; set; }
-        /// <summary>
-        ///  มีปัญหา คือ  
-        /// </summary>
-        public ProblemAdd Problem { get; set; }
-
-        
+        public List<AvgUsageWaterBill> AvgUsageWater { get; set;} 
 
         // TODO: 5.2.4, 5.2.5, 5.2.6 Missing
-         /// <summary>
+        /// <summary>
         ///  ใช้น้้าจากบ่อน้้าบาดาลสาธารณะหรือไม่ 
         /// </summary>
         public bool PublicGroundWater { get; set; }
@@ -71,23 +43,10 @@ namespace VarsWebApi.Models
         /// </summary>
         public int Count { get; set; }
 
-         /// <summary>
+        /// <summary>
         ///   ใช้น้้าปริมาณเท่าไรต่อเดือนโดยเฉลี่ย
         /// </summary>
-        public int UsePerMonth { get; set; }
-         /// <summary>
-        ///   ไม่ทราบ
-        /// </summary>
-        public bool UnknowUsePerMonth { get; set; }
-        
-        
-        /// <summary>
-        ///   บ่อที่ 1 (ถามบ่อน้้าบาดาลสาธารณะที่ใช้อยู่ทีละบ่อ) 
-        /// </summary>
-        public PoolUsage2 Pool { get; set; }
-        
-
-
+        public List<AvgUsageWater> UsePerMonth { get; set; }
         
     }
 }

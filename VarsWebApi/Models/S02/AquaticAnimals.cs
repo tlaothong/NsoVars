@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปลา
         /// </summary>
-        public FishFarming Fish { get; set; }
+        public FishFarming Fish { get; set; }        
         /// <summary>
         /// กุ้ง
         /// </summary>
@@ -20,15 +20,15 @@ namespace VarsWebApi.Models
         /// <summary>
         /// กบ
         /// </summary>
-        public bool Frog { get; set; }
+        public FrogFarming Frog { get; set; }
         /// <summary>
         /// จระเข้
         /// </summary>
-        public bool Crocodile { get; set; }
+        public CrocodileFarming Crocodile { get; set; }
         /// <summary>
         /// ตะพาบน้ำ
         /// </summary>
-        public bool SnappingTurtle { get; set; }
+        public CrocodileFarming SnappingTurtle { get; set; }
         /// <summary>
         /// ปู
         /// </summary>
@@ -40,20 +40,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เต่า
         /// </summary>
-        public bool Turtle { get; set; }
+        public CrocodileFarming Turtle { get; set; }
         /// <summary>
         /// ไรแดง
         /// </summary>
         public FishFarming Reddish { get; set; }
-        // TODO:ใส่ฟอร์มเพิ่มให้ครบ
-
-        /// <summary>
-        /// กบ 
-        /// </summary>
-        public QuestionForFrog QuestionForForg { get; set; }
-        /// <summary>
-        /// จระเข้ (5.ตะพาบน้้า และ 8.เต่า ถามเหมือนกับจระเข้ทุกข้อ)
-        /// </summary>
-        public QuestionForCrocodile QuestionForCrocodile { get; set; }
+        // TODO:ใส่ฟอร์มเพิ่มให้ครบ - (เสร็จแล้ว)
     }
 }
