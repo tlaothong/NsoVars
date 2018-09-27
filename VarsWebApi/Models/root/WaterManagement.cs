@@ -53,20 +53,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa) ความลึก(Depth)
         /// </summary>
-<<<<<<< HEAD:VarsWebApi/Models/WaterManagement.cs
-        public int Rai { get; set; }
-        /// <summary>
-        /// ความลึก
-        /// </summary>
-        public int Depth { get; set; }
-
-        /// <summary>
-        /// ตารางวา
-        /// </summary>
-        public int SqWa { get; set; }
-=======
         public PoolSize ProjectArea { get; set; }
->>>>>>> e35a850a36b01284580a43c0aaaa3c5d23111088:VarsWebApi/Models/root/WaterManagement.cs
 
         /// 
         /// <summary>

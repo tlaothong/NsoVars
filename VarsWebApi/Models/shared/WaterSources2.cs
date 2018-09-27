@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// แหล่งน้ำที่นำมาใช้ 8 ตัว
+    /// แหล่งน้ำที่นำมาใช้ 9 ตัว
     /// </summary>
-    public class WaterSources
+    public class WaterSources2
     {
         /// <summary>
         /// 1. น้ำประปา
@@ -39,7 +34,11 @@ namespace VarsWebApi.Models
         /// </summary>
         public bool Buying { get; set; }
         /// <summary>
-        /// 8/9. อื่น ๆ (ระบุ)
+        /// 8. น้้าฝนตามธรรมชาติ
+        /// </summary>
+        public bool NaturalRain { get; set; }        
+        /// <summary>
+        /// 9. อื่น ๆ (ระบุ)
         /// </summary>
         public string Other { get; set; }
     }
