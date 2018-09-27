@@ -29,67 +29,15 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร(น้้ำประปาส่วนภมูิภาค/นครหลวง)   
         /// </summary>
-        public int[] WaterActivityMWAPWA { get; set; }
+        public WaterActivity WaterActivityMWAPWA { get; set; }
        
-        /// <summary>
-        /// 1.ใช้เพื่ออุปโภคบริโภค
-        /// </summary>
-        public int Drink { get; set; }
-
-        /// <summary>
-        /// 2.เพื่อรดน้้าพืชในบริเวณที่อยู่อาศัย
-        /// </summary>
-        public int Plant { get; set; }
-
-        /// <summary>
-        /// 3.ใช้เพื่อท้าเกษตร
-        /// </summary>
-        public int Agriculture { get; set; }
-
-        /// <summary>
-        /// 4.เพื่อผลิตสินค้า
-        /// </summary>
-        public int Product { get; set; }
-
-        /// <summary>
-        /// 5.เพื่อการบริการ
-        /// </summary>
-        public int Service { get; set; }
-
-
-
          /// <summary>
         ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร(น้ำประปาอื่น ๆ)   
         /// </summary>
-        public int[] WaterActivityOther { get; set; }
+        public WaterActivity WaterActivityOther { get; set; }
        
-        /// <summary>
-        /// 1.ใช้เพื่ออุปโภคบริโภค
-        /// </summary>
-        public int DrinkOther { get; set; }
-
-        /// <summary>
-        /// 2.เพื่อรดน้้าพืชในบริเวณที่อยู่อาศัย
-        /// </summary>
-        public int PlantOther { get; set; }
-
-        /// <summary>
-        /// 3.ใช้เพื่อท้าเกษตร
-        /// </summary>
-        public int AgricultureOther { get; set; }
-
-        /// <summary>
-        /// 4.เพื่อผลิตสินค้า
-        /// </summary>
-        public int ProductOther { get; set; }
-
-        /// <summary>
-        /// 5.เพื่อการบริการ
-        /// </summary>
-        public int ServiceOther { get; set; }
-
-
-       
+        
+    
         /// <summary>
         ///   ในรอบ 12 เดือนที่ผ่านมา มีเหตุการณ์ที่น้ำประปาไม่ไหล ติดต่อกันเกิน 3 วันหรือไม่   
         /// </summary>

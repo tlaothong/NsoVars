@@ -8,10 +8,10 @@ namespace VarsWebApi.Models
     /// <summary>
     /// น้ำบาดาล
     /// </summary>
-    public class GroundWater : WaterPump
+    public class GroundWater
     {
         // TODO:Doing
-
+        // บ่อน้้าบาดาลส่วนตัว PrivateGroundWater
         /// <summary>
         /// มีบ่อน้้าบาดาลส่วนตัวหรือไม่
         /// </summary>
@@ -32,6 +32,9 @@ namespace VarsWebApi.Models
         /// </summary>
         public List<AvgUsageWaterBill> AvgUsageWater { get; set;} 
 
+
+
+        // บ่อน้้าบาดาลสาธารณะ PublicGroundWater
         // TODO: 5.2.4, 5.2.5, 5.2.6 Missing
         /// <summary>
         ///  ใช้น้้าจากบ่อน้้าบาดาลสาธารณะหรือไม่ 
