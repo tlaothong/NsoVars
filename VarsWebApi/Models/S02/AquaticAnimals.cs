@@ -45,15 +45,6 @@ namespace VarsWebApi.Models
         /// ไรแดง
         /// </summary>
         public FishFarming Reddish { get; set; }
-        // TODO:ใส่ฟอร์มเพิ่มให้ครบ
-
-        /// <summary>
-        /// กบ 
-        /// </summary>
-        public QuestionForFrog QuestionForForg { get; set; }
-        /// <summary>
-        /// จระเข้ (5.ตะพาบน้้า และ 8.เต่า ถามเหมือนกับจระเข้ทุกข้อ)
-        /// </summary>
-        public QuestionForCrocodile QuestionForCrocodile { get; set; }
+        // TODO:ใส่ฟอร์มเพิ่มให้ครบ - (เสร็จแล้ว)
     }
 }

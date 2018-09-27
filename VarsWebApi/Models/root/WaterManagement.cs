@@ -21,50 +21,10 @@ namespace VarsWebApi.Models
         public int WaterSupplyCount { get; set; }
 
         /// <summary>
-        /// ชื่อของแหล่งน้ำ
+        /// รายละเอียดของแหล่งน้ำสาธารณะ 
         /// </summary>
-        public string WaterSupplyName { get; set; }
+        public List<DetailWaterManagement> DetailWaterManagement { get; set; }
 
-        /// <summary>
-        /// แหล่งน้้านี้ใช้ท้าน้้าประปา
-        /// </summary>
-        public bool UseWaterForPlumbing { get; set; }
-
-        /// <summary>
-        /// แหล่งน้้านี้ใช้ท้าการผลิต/อุตสาหกรรม 
-        /// </summary>
-        public bool UseWaterForFactory { get; set; }
-
-        /// <summary>
-        /// แหล่งน้้านี้ใช้เพื่อการเกษตร 
-        /// </summary>
-        public bool UseWaterForFarming { get; set; }
-
-        /// <summary>
-        /// แหล่งน้้านี้ใช้เพื่อการบริการ 
-        /// </summary>
-        public bool UseWaterForService { get; set; }
-
-        /// <summary>
-        /// แหล่งน้้านี้ใช้เพื่อการบริการ 
-        /// </summary>
-        public string UseWaterForOther { get; set; }
-
-        /// <summary>
-        /// ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa) ความลึก(Depth)
-        /// </summary>
-        public FieldSize ProjectArea { get; set; }
-
-        /// 
-        /// <summary>
-        /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง(RectanglePool->Width) ยาว(RectanglePool-> Length)  ความลึก(Depth)
-        /// </summary>
-        public FieldSize RectanglePool { get; set; }
-
-        /// <summary>
-        ///  ใช้เส้นผ่านศูนย์กลางกี่ เมตร(Circle -> Diameter) ลึกเท่าไร(Depth)
-        /// </summary>
-        public FieldSize Circle { get; set; }
 
         /// <summary>
         ///  น้้าประปาส่วนภูมิภาค  
@@ -92,53 +52,31 @@ namespace VarsWebApi.Models
         public int OrgWaterSupplyCount { get; set; }
 
         /// <summary>
-        /// ชื่อหน่วยงาน 
+        /// รายละเอียดของหน่วยงานแหล่งผลิตน้ำประปา
         /// </summary>
-        public string NameOrgWaterSupply { get; set; }
-
-
-        /// <summary>
-        /// ใช้น้้าผิวดิน (สระน้้า แม่น้้า/ล้าคลอง) หรือไม่ถ้า “ใช้” ใช้น้้าผิวดินผลิตน้้าประปาโดยเฉลี่ยต่อเดือน ปริมาณเท่าไร 
-        /// </summary>
-        public int CapacityGroundWater { get; set; }
-
-        /// <summary>
-        ///  ใช้น้้าจาก บ่อบาดาล หรือไม่ ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ ใช้น้้าบาดาลผลิตน้้าประปาโดยเฉลี่ยต่อเดือนปริมาณเท่าไร  
-        /// </summary>
-        public int UnderGroundCount { get; set; }
-
-        /// <summary>
-        ///  ใช้น้้าจาก บ่อบาดาล หรือไม่ ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ ใช้น้้าบาดาลผลิตน้้าประปาโดยเฉลี่ยต่อเดือนปริมาณเท่าไร  
-        /// </summary>
-        public int CapacityUnderGround { get; set; }
-
-        /// <summary>
-        /// น้้าประปาราคาขายหน่วยละเท่าไร 
-        /// </summary>
-        public int PlumbingPrice { get; set; }
-
-        /// <summary>
-        ///  ค่าเช่ามิเตอร์คิดเดือนละเท่าไร  
-        /// </summary>
-        public int ForrentMeter { get; set; }
-
-        /// <summary>
-        ///  การผลิตน้้าประปา มีระบบการฆ่าเชื้อโรคหรือไม่ 
-        /// </summary>
-        public string Disinfection { get; set; }
+        public List<DetailOrgWaterSupply> DetailOrgWaterSupply { get; set; }
 
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนมีระบบบ้าบัดน้้าเสียหรือไม่  (ให้กา  ใน  เพียงข้อเดียว) 
         /// </summary>
         public bool WaterTreatment { get; set; }
 
+
         /// <summary>
         /// ในช่วงเวลา 5 ปีที่ผ่านมา หมู่บ้าน/ชุมชนแห่งนี้เคยเกิดภัยธรรมชาติหรือไม่  
         /// </summary>
+        public bool HasDisasterInFiveYear { get; set; }
+        /// <summary>
+        /// ถ้าเคย ภัยธรรมชาติที่เกิดมีอะไรบ้าง (ให้เลือกได้หลายข้อ) 
+        /// </summary>
         public string[] DisasterInFiveYear { get; set; }
 
-        /// <summary>
+        // <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มีการเตือนภัยและมาตรการช่วยเหลือน้้าท่วมหรือไม่  
+        /// </summary>
+        public bool HasHaveDisaster { get; set; }
+        /// <summary>
+        ///  ถ้ามีลักษณะการดำเนินการเป็นอย่างไร (ให้เลือกได้หลายข้อ)   
         /// </summary>
         public string[] HaveDisaster { get; set; }
 
