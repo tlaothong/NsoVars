@@ -20,15 +20,15 @@ namespace VarsWebApi.Models
         /// <summary>
         /// กบ
         /// </summary>
-        public bool Frog { get; set; }
+        public FrogFarming Frog { get; set; }
         /// <summary>
         /// จระเข้
         /// </summary>
-        public bool Crocodile { get; set; }
+        public CrocodileFarming Crocodile { get; set; }
         /// <summary>
         /// ตะพาบน้ำ
         /// </summary>
-        public bool SnappingTurtle { get; set; }
+        public CrocodileFarming SnappingTurtle { get; set; }
         /// <summary>
         /// ปู
         /// </summary>
@@ -40,7 +40,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เต่า
         /// </summary>
-        public bool Turtle { get; set; }
+        public CrocodileFarming Turtle { get; set; }
         /// <summary>
         /// ไรแดง
         /// </summary>
