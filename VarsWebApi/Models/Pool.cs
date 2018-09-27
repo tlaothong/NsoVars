@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace VarsWebApi.Models
 {
     /// <summary>
@@ -23,7 +28,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ถามขนาดของสระ
         /// </summary>
-        public FieldSize PoolSize { get; set; }
+        public List<FieldSize> PoolSize { get; set; }
 
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมามีกี่สระที่นำน้ำมาใช้
@@ -33,6 +38,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// สระที่นำน้ำมาใช้ในรอบ 12 เดือน
         /// </summary>
-        public PoolUsage PoolUsage { get; set; }
+        public List<PoolUsage> PoolUsage { get; set; }
     }
 }

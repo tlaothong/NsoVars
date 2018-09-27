@@ -57,20 +57,5 @@ namespace VarsWebApi.Models
         /// </summary>
         public double PipelineSize { get; set; }
 
-        /// <summary>
-        /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
-        /// </summary>
-        public WaterActivity WaterActive { get; set; }
-
-        /// <summary>
-        /// ปัญหาคุณภาพน้้า
-        /// </summary>
-        public WaterProblem WaterProblem { get; set; }
-
-
-
-
-    
-
     }
 }
