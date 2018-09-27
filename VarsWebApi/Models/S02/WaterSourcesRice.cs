@@ -1,4 +1,4 @@
-namespace VarsWebApi.Models.shared
+namespace VarsWebApi.Models
 {
     /// <summary>
     /// แหล่งน้ำที่นำมาใช้ 8 ตัว ไม่มีน้ำประปา(Plumbing)
