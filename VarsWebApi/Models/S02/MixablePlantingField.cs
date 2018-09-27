@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// 2.5 พืชผัก สมุนไพร
+    /// ข้อมูลแปลงเพาะปลูก พืชสมุนไพร ที่ปลูกผสมกับพืชหลักอื่นได้
     /// </summary>
-    public class MixablePlanting : PlantingInfo<GrowingFieldWithNames>
+    public class MixablePlantingField : GrowingFieldWithNames
     {
         /// <summary>
         /// ลักษณะการปลูกเป็นแบบใด
@@ -18,6 +18,7 @@ namespace VarsWebApi.Models
         ///     False - 2. ปลูกแบบปะปนกัน กับพืชชนิดอื่น
         /// </remarks>
         public bool ThisPlantOnly { get; set; }
+
         /// <summary>
         /// รายชื่อพืชที่ปลูกหลัก
         /// </summary>

@@ -32,12 +32,12 @@ namespace VarsWebApi.Models {
         /// <summary>
         /// 2.5 พืชผัก สมุนไพร
         /// </summary>
-        public MixablePlanting HerbsPlant { get; set; }
+        public PlantingInfo<MixablePlantingField> HerbsPlant { get; set; }
 
         /// <summary>
         /// 2.6 ไม้ดอกไม้ประดับ การเพาะพันธุ์ไม้ 
         /// </summary>
-        public MixablePlanting FlowerCrop { get; set; }
+        public PlantingInfo<MixablePlantingField> FlowerCrop { get; set; }
 
         /// <summary>
         /// 2.7 เพาะเชื้อและปลูกเห็ด 
