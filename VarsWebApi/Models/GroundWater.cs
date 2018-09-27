@@ -42,10 +42,21 @@ namespace VarsWebApi.Models
         public bool Unknow { get; set; }
 
 
+        //TODO
         /// <summary>
         ///  ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่  
         /// </summary>
         public PoolUsage2 PoolUsage { get; set; }
+
+        /// <summary>
+        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
+        /// </summary>
+        // TODO:  
+        public bool WaterQuality { get; set; }
+        /// <summary>
+        ///  มีปัญหา คือ  
+        /// </summary>
+        public ProblemAdd Problem { get; set; }
 
         
 
@@ -68,6 +79,7 @@ namespace VarsWebApi.Models
         ///   ไม่ทราบ
         /// </summary>
         public bool UnknowUsePerMonth { get; set; }
+        
         
         /// <summary>
         ///   บ่อที่ 1 (ถามบ่อน้้าบาดาลสาธารณะที่ใช้อยู่ทีละบ่อ) 

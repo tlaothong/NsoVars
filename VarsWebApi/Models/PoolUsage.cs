@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace VarsWebApi.Models
 {
     /// <summary>
@@ -17,6 +22,13 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เครื่องสูบน้้าที่ใช้
         /// </summary>
-        public Pump Pump { get; set; }
+        public List<Pump> Pump { get; set; }
+
+         /// <summary>
+        /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
+        /// </summary>
+        public WaterActivity WaterActive { get; set; }
+
+       
     }
 }
