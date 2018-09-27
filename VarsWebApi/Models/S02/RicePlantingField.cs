@@ -55,6 +55,6 @@ namespace VarsWebApi.Models {
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>
-        public WaterSourcesRice WaterSource { get; set; }
+        public RiceWaterSources WaterSource { get; set; }
      }
 }
