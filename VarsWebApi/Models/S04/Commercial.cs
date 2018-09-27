@@ -24,38 +24,38 @@ namespace VarsWebApi.Models
         /// <summary>
         /// สถานศึกษา/โรงเรียน/สถาบันการศึกษา
         /// </summary>
-        public QuestionForAcademy QuestionForAcademy { get; set; }
+        public Academy QuestionForAcademy { get; set; }
 
         /// <summary>
         ///  โรงแรม/รีสอร์ท/เกสต์เฮาส์
         /// </summary>
-        public QuestionForHotelsAndResorts HotelsAndResorts { get; set; }
+        public HotelsAndResorts HotelsAndResorts { get; set; }
 
         /// <summary>
         /// สถานพยาบาล/โรงพยาบาล/สถานสงเคราะห์
         /// </summary>
-        public QuestionForHospital Hospital { get; set; }
+        public Hospital Hospital { get; set; }
 
         /// <summary>
         /// คอนโด/อพาร์ทเม้นต์/หอพัก/แมนชั่น/แฟลต
         /// </summary>
-        public QuestionForBuilding Building { get; set; }
+        public Building Building { get; set; }
 
         /// <summary>
         /// ศาสนสถาน/วัด/ส้านักสงฆ์/ส้านักปฏิบัติธรรม
         /// </summary>
-        public QuestionForReligious  Religious { get; set; }
+        public Religious  Religious { get; set; }
 
         /// <summary>
         /// สถานประกอบการบริการประเภทอื่น ๆ
         /// </summary>
-        public QuestionForOtherBuilding OtherBuilding { get; set; }
+        public OtherBuilding OtherBuilding { get; set; }
 
 
         /// <summary>
         /// ใช้แหล่งน้ำ
         /// </summary>
-        public WaterSources WaterSources { get; set; }
+        public WaterSourcesWithPlumbing WaterSources { get; set; }
 
 
     }

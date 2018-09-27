@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// คำถามสำหรับปลูกสร้าง
     /// </summary>
-    public class QuestionForBuilding
+    public class Building
     {
         /// <summary>
         /// จำนวนห้อง

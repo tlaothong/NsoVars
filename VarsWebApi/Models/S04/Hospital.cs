@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// คำถามสำหรับสถานพยาบาล
     /// </summary>
-    public class QuestionForHospital
+    public class Hospital
     {
         /// <summary>
         /// จำนวนเตียง

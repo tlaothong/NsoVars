@@ -64,7 +64,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public FarmingWaterSources WaterSources { get; set; }
+        public WaterSourcesWithPlumbingAndRainingAsIs WaterSources { get; set; }
 
     }
 }

@@ -1,6 +1,6 @@
 namespace VarsWebApi.Models
 {
-    public class ResidentialAndFactorialWaterSources : WaterSources
+    public class WaterSourcesWithPlumbing : WaterSources
     {
         /// <summary>
         /// 1. น้ำประปา

@@ -1,6 +1,6 @@
 namespace VarsWebApi.Models
 {
-        public class RiceWaterSources: WaterSources
+        public class WaterSourcesWithRainingAsIs: WaterSources
     {
       
         /// <summary>

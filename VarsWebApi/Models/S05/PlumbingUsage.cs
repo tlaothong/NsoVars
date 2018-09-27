@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
     /// </summary>
-    public class PlumbingUsage : ModelBase
+    public class PlumbingUsage
     {
 
         /// <summary>

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public class FarmingWaterSources : WaterSources
+    public class WaterSourcesWithPlumbingAndRainingAsIs : WaterSources
     {
         /// <summary>
         /// 1. น้ำประปา
