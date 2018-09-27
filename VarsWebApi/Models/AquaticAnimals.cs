@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปลา
         /// </summary>
-        public FishFarming Fish { get; set; }
+        public FishFarming Fish { get; set; }        
         /// <summary>
         /// กุ้ง
         /// </summary>

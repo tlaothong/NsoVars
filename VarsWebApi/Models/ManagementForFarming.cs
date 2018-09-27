@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// พื้นที่ของโครงการมีกี่ไร่ ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa)
         /// </summary>
-        public PoolSize ProjectArea { get; set; }
+        public FieldSize ProjectArea { get; set; }
 
         /// <summary>
         ///  จำนวนครัวเรือนที่เป็นสมาชิกโครงการมีจำนวนเท่าไร 
