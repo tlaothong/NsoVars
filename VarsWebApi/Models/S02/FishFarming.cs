@@ -53,7 +53,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// บ่อหรือร่องสวน (ที่ n) -- สอบถามทีละบ่อ
         /// </summary>
-        public List<AquariumFieldSize> Fields { get; set; }
+        public List<FieldSize> Fields { get; set; }
         /// <summary>
         /// จ้านวนที่เลี้ยงในปัจจุบัน (รวมทุกบ่อ/ร่องสวน) 
         /// </summary>

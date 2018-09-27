@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ลักษณะพื้นที่เลี้ยงสัตว์น้ำ
     /// </summary>
-    public enum AquariumFieldShape
+    public enum FieldShape
     {
         /// <summary>
         /// ระบุขนาดพื้นที่ เป็น ไร่ งาน ตารางวา
