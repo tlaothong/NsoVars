@@ -23,7 +23,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ถามขนาดของสระ
         /// </summary>
-        public PoolSize PoolSize { get; set; }
+        public FieldSize PoolSize { get; set; }
 
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมามีกี่สระที่นำน้ำมาใช้
