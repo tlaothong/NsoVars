@@ -11,66 +11,19 @@ namespace VarsWebApi.Models
     public class Plumbing
     {
         /// <summary>
-        ///  น้้าประปานครหลวงใช้หรือไม่
-        /// </summary>
-        public bool MWA { get; set; }
-         /// <summary>
-        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
-        /// </summary>
-        // TODO:  
-        public bool WaterQualityMWA { get; set; }
+        ///  น้้าประปานครหลวง
+        /// </summary>DoingMWA
+        public PlumbingInfo MWA { get; set; }
         /// <summary>
-        ///  มีปัญหา คือ  
+        ///  น้้าประปาส่วนภูมิภาค 
         /// </summary>
-        public Problem2 ProblemMWA { get; set; }
-        /// <summary>
-        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
-        /// </summary>
-        public PlumbingUsage PlumbingUsageMWA { get; set; }
-        
-        
-
-
-
-        /// <summary>
-        ///  น้้าประปาส่วนภูมิภาคใช้หรือไม่ 
-        /// </summary>
-        public bool PWA { get; set; }
-         /// <summary>
-        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
-        /// </summary>
-        public bool WaterQualityPWA { get; set; }
-        /// <summary>
-        ///  มีปัญหา คือ 
-        /// </summary>
-        public Problem2 ProblemPWA { get; set; }
-         /// <summary>
-        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
-        /// </summary>
-        public PlumbingUsage WPlumbingUsagePWA { get; set; }
-
-
-
+        public PlumbingInfo PWA { get; set; }
         /// <summary>
         ///  น้้าประปาอื่น ๆ (หมู่บ้าน,อบต.,เทศบาล,ชุมชน, นิคม, ภูเขา, ฯลฯ)  
         /// </summary>
         // TODO:Name
-        public bool Other { get; set; }
-        /// <summary>
-        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
-        /// </summary>
-        public bool WaterQualityOther { get; set; }
-        /// <summary>
-        ///  มีปัญหา คือ 
-        /// </summary>
-        public Problem2 Problem2Other { get; set; }
-         /// <summary>
-        ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
-        /// </summary>
-        public PlumbingUsage WPlumbingUsageOther { get; set; }
-
-
-
+        public PlumbingInfo Other { get; set; }
+        
 
         // TODO: 
         /// <summary>
