@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// การนำน้ำออกจากสระมาใช้
+    /// ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย
     /// </summary>
-    public class PoolUsage
+    public class AvgUsageWater
     {
         /// <summary>
-        /// มีการนำน้้าออกจากสระมาใช้ปริมาณเท่าไรต่อเดือนโดยเฉลี่ย (ลบ.ม./เดือน)
+        ///   ลบ.ม./เดือน  
         /// </summary>
-        public int MyProperty { get; set; }
-
-        /// <summary>
-        /// ไม่ทราบปริมาณน้ำที่มีการนำน้้าออกจากสระมาใช้ (ถ้าไม่ทราบต้องถามข้อ2) 3) 4) ต่อ)
+        public int CubicMeterPerMonth { get; set; }
+        
+        ///  ไม่ทราบ
         /// </summary>
-        public bool UnknowPoolUsage { get; set; }
+        public bool Unknow { get; set; }
 
         /// <summary>
         /// ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่ (ถ้าไม่ใช้ ข้ามไปถามสระถัดไป)
@@ -29,19 +28,28 @@ namespace VarsWebApi.Models
         /// บ่อนี้ใช้เครื่องสูบน้้ากี่เครื่อง
         /// </summary>
         public int PumpCount { get; set; }
+        
         /// <summary>
         /// เครื่องสูบน้้าที่ใช้
         /// </summary>
         public List<Pump> Pump { get; set; }
-
-        /// <summary>
+        
+        // <summary>
         /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
         /// </summary>
-        public WaterActivity WaterActivity { get; set; }
+        public FarmWaterActivity WaterActivityPublicGroundWater { get; set; }
 
         /// <summary>
-        /// มีปัญหาคุณภาพน้้า หรือไม่
+        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
         /// </summary>
-        public WaterProblem WaterProblem { get; set; }
+        // TODO:  
+        public bool WaterQualityPrivateGroundWater { get; set; }
+        /// <summary>
+        ///  มีปัญหา คือ  
+        /// </summary>
+        public ProblemAdd ProblemPrivateGroundWater { get; set; }
+
+
+
     }
 }
