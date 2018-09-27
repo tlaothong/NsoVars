@@ -58,6 +58,7 @@ namespace VarsWebApi.Models
         /// ความลึก
         /// </summary>
         public int Depth { get; set; }
+
         /// <summary>
         /// ตารางวา
         /// </summary>
