@@ -29,7 +29,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// แหล่งที่มาของน้ำ
         /// </summary>
-        public WaterSources WaterSource { get; set; }
+        public ResidentialAndFactorialWaterSources WaterSource { get; set; }
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาสถานประกอบการนี้มีน้ำเสียจากกระบวนการผลิตสินค้าหรือไม่
         /// </summary>

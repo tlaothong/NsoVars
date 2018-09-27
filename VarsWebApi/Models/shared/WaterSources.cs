@@ -10,11 +10,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class WaterSources
     {
-        /// <summary>
-        /// 1. น้ำประปา
-        /// </summary>
-        public bool Plumbing { get; set; }
-        /// <summary>
+
         /// 2. น้ำบาดาล
         /// </summary>
         public bool UnderGround { get; set; }
@@ -39,7 +35,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public bool Buying { get; set; }
         /// <summary>
-        /// 8 อื่น ๆ (ระบุ)
+        /// 8/9 อื่น ๆ (ระบุ)
         /// </summary>
         public string Other { get; set; }
     }
