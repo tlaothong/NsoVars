@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// แหล่งน้ำที่นำมาใช้ 8 ตัว ไม่มีน้ำฝนธรรมชาติ(NaturalRain)
+    /// แหล่งน้ำที่นำมาใช้ 8 ตัว ไม่มีน้ำฝนธรรมชาติ
     /// </summary>
     public class WaterSources
     {
