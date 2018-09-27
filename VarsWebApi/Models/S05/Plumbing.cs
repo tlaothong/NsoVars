@@ -45,6 +45,6 @@ namespace VarsWebApi.Models
          /// <summary>
         ///   ถ้ามีเกิดเหตุการณ์ลักษณะนี้เป็นเวลากี่เดือน 
         /// </summary>
-        public int WaterNotRunningMonth { get; set; }
+        public int WaterNotRunningCount { get; set; }
     }
 }
