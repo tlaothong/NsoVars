@@ -31,26 +31,31 @@ namespace VarsWebApi.Models
         /// <summary>
         /// แพะ
         /// </summary>
-        public int Goat { get; set; }
+        public bool HasGoat{ get; set; }
+        public int GoatCount { get; set; }
 
         /// <summary>
         /// แกะ
         /// </summary>
-        public int Sheep { get; set; }
+        public bool HasSheep{ get; set; }
+        public int SheepCount { get; set; }
 
         /// <summary>
         /// ไก่
         /// </summary>
-        public int Chicken { get; set; }
+        public bool HasChicken{ get; set; }
+        public int ChickenCount { get; set; }
         
         /// <summary>
         /// เป็ด
         /// </summary>
-        public int Duck { get; set; }
+        public bool HasDuck{ get; set; }
+        public int DuckCount { get; set; }
         /// <summary>
         /// ห่าน
         /// </summary>
-        public int Goose { get; set; }
+        public bool HasGoose{ get; set; }
+        public int GooseCount { get; set; }
         /// <summary>
         /// ไหม(น้้าหนักรังไหมเป็น กก.)
         /// </summary>
