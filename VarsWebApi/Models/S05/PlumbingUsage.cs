@@ -12,17 +12,14 @@ namespace VarsWebApi.Models
     {
 
         /// <summary>
-        /// ทราบปริมาณน้้า 
+        /// ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
-        public bool Doing { get; set; }
+        public WaterQuantity WaterQuantity { get; set; }
         /// <summary>
         /// ปริมาณน้ำ ลบ.ม./เดือน  
         /// </summary>
         public int CubicMeterPerMonth { get; set; }
-        /// <summary>
-        /// ไม่ทราบปริมาณน้้า แต่ทราบค่าน้้า     
-        /// </summary>
-        public bool Unknow { get; set; }
+        
         /// <summary>
         /// ทราบค่าน้้า
         /// </summary>

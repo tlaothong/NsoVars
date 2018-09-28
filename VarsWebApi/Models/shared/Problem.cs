@@ -16,7 +16,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีกลิ่น
         /// </summary>
-        public bool Odor { get; set; }
+        public bool Smell { get; set; }
 
         /// <summary>
         ///  คราบมัน

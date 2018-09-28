@@ -11,17 +11,17 @@ namespace VarsWebApi.Models
         /// ชนิดของบรรจภุัณฑ์ 
         /// </summary>
         // TODO:
-        public string PackageName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// ขนาดของภาชนะ 
         /// </summary>
-        public double PackageSize { get; set; }
+        public double Size { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่ออุปโภคบริโภค  
         /// </summary>
-        public int Consume { get; set; }
+        public int Drink { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อทำเกษตร 
@@ -31,11 +31,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อผลิตสินค้า  
         /// </summary>
-        public int Factorial { get; set; }
+        public int Product { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อการบริการ
         /// </summary>
-        public int Commercial { get; set; }
+        public int Service { get; set; }
     }
 }

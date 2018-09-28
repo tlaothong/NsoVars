@@ -27,6 +27,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public int UseGroundWaterCount { get; set; }
 
+        // TODO: enum (ใช้ class ร่วมกับคนอื่นด้วยเลยทำ class ของตัวเอง)
         /// <summary>
         /// ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย 
         /// </summary>

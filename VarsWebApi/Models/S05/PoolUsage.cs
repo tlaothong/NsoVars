@@ -14,7 +14,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// มีการนำน้้าออกจากสระมาใช้ปริมาณเท่าไรต่อเดือนโดยเฉลี่ย (ลบ.ม./เดือน)
         /// </summary>
-        public int MyProperty { get; set; }
+        public int CubicMeterPerMonth { get; set; }
 
         /// <summary>
         /// ไม่ทราบปริมาณน้ำที่มีการนำน้้าออกจากสระมาใช้ (ถ้าไม่ทราบต้องถามข้อ2) 3) 4) ต่อ)

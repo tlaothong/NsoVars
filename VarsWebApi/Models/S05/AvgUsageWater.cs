@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
+    // บ่อน้้าบาดาลสาธารณะ PublicGroundWater
     /// <summary>
     /// ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย
     /// </summary>
@@ -15,6 +16,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public int CubicMeterPerMonth { get; set; }
         
+        /// <summary>
         ///  ไม่ทราบ
         /// </summary>
         public bool Unknow { get; set; }
