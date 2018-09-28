@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public class DetailWaterManagement 
+    public class DetailWaterManagement
     {
         /// <summary>
         /// ชื่อของแหล่งน้ำ
@@ -38,15 +38,29 @@ namespace VarsWebApi.Models
         public string UseWaterForOther { get; set; }
 
         /// <summary>
+        /// พื้นที่ของแหล่งน้ำ
+        /// </summary>
+        public bool HasProjectArea { get; set; }
+
+        /// <summary>
         /// ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa) ความลึก(Depth)
         /// </summary>
         public FieldSize ProjectArea { get; set; }
 
-        /// 
+        /// <summary>
+        /// แหล่งน้ำเป็นสี่เหลี่ยมหรือไม่
+        /// </summary>
+        public bool HasSquareWaterSource { get; set; }
+
         /// <summary>
         /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง(RectanglePool->Width) ยาว(RectanglePool-> Length)  ความลึก(Depth)
         /// </summary>
         public FieldSize RectanglePool { get; set; }
+
+        /// <summary>
+        /// แหล่งน้ำเป็นวงกลมหรือไม่
+        /// </summary>
+        public bool HasCircleWaterSource { get; set; }
 
         /// <summary>
         ///  ใช้เส้นผ่านศูนย์กลางกี่ เมตร(Circle -> Diameter) ลึกเท่าไร(Depth)
