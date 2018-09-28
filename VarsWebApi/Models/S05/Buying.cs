@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
@@ -8,15 +11,20 @@ namespace VarsWebApi.Models
     // TODO: 
     public class Buying
     {
-        /// <summary>
-        /// บรรจุภัณฑ์
-        /// </summary>
-        public string NamePackage { get; set; }
-        /// <summary>
-        /// ขนาดของบรรจุภัณฑ์ (มิลลิลิตร/ลิตร)
-        /// </summary>
-        public double Size { get; set; }
+        // /// <summary>
+        // /// ขวด
+        // /// </summary>
+        // public BuyingInfo Bottle { get; set; }
 
-        public List<FarmWaterActivity> WarterActivity { get; set; }
+        // public BuyingInfo Bucket { get; set; }
+
+        // public BuyingInfo Tank { get; set; }
+
+        // public BuyingInfo Other { get; set; }
+
+        /// <summary>
+        /// น้้าที่ซื้อมาใช้ มีบรรจุภัณฑ์ชนิดใดบ้าง มีขนาดบรรจุเท่าใด และโดยเฉลี่ยต่อเดือนแล้วซื้อมาเพื่อใช้ในแต่ ละกิจกรรมเป็นจ้านวนเท่าไร 
+        /// </summary>
+        public List<Package> Package { get; set; }
     }
 }

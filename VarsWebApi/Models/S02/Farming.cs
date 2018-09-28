@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// 2.8 การเลี้ยงสัตว์เพื่อขายหรือใช้งานเกษตร 
     /// </summary>
-    public class Farming : ModelBase
+    public class Farming
     {
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้มีการเลี้ยงสัตว์ เพื่อขายหรือใช้งานเกษตรหรือไม่

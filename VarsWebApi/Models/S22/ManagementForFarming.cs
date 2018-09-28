@@ -15,6 +15,11 @@ namespace VarsWebApi.Models
         public bool HaveManagementForFarming { get; set; }
 
         /// <summary>
+        ///  หาก “มี” มีกี่โครงการ
+        /// </summary>
+        public int ManagementForFarmingCount { get; set; }
+
+        /// <summary>
         /// จำนวนโครงการการจัดการน้้าเพื่อการเกษตรชุมชน
         /// </summary>
         public List<DetailManagementForFarming> DetailManagementForFarming { get; set; }

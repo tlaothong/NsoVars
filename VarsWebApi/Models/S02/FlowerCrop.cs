@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// การเพราะปลูกไม้ดอก ไม้ประดับ
     /// </summary>
-    public class FlowerCrop : ModelBase
+    public class FlowerCrop
     {
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้ปลูกไม้ดอกไม้ประดับ เพาะพันธุ์ไม้ หรือไม่ 

@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// ครัวเรือนอยู่อาศัย
     /// </summary>
-    public class Residential : ModelBase
+    public class Residential
     {
         /// <summary>
         /// จำนวนสมาชิกในครัวเรือนที่อยู่ประจำติดต่อกันตั้งแต่ 3 เดือนขึ้นไป

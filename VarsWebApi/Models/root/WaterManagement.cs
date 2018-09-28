@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// การจัดการน้้าในหมู่บ้าน/ชุมชน 
     /// </summary>
-    public class WaterManagement : ModelBase
+    public class WaterManagement
     {
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มี แหล่งน้้าสาธารณะ (สระน้้า/ หนอง/ บึง/ อ่างเก็บน้้า) หรือไม่ 

@@ -8,12 +8,13 @@ namespace VarsWebApi.Models
     /// <summary>
     /// การผลิตสินค้า
     /// </summary>
-    public class Factorial : ModelBase
+    public class Factorial
     {
         /// <summary>
         /// ชื่อสถานประกอบการ / หน่วยงาน
         /// </summary>
         public string Name { get; set; }
+        // TODO:CAT
         /// <summary>
         /// สถานประกอบการแห่งนี้ผลิตสินค้าประเภทใด
         /// </summary>

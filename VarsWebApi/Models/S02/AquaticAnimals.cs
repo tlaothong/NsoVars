@@ -3,7 +3,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// การเลี้ยงสัตว์น้ำ
     /// </summary>
-    public class AquaticAnimals : ModelBase
+    public class AquaticAnimals
     {
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ท้าการเพาะเลี้ยง เพาะฟัก อนุบาลสัตว์น้้าในพื้นที่น้้าจืดหรือไม่ 

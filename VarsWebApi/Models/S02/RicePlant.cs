@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VarsWebApi.Models {
+namespace VarsWebApi.Models 
+{
     /// <summary>
     /// 2.1 ข้าว
     /// </summary>

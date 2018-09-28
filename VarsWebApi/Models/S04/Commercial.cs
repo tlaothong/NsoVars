@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// การค้าและบริการ
     /// </summary>
-    public class Commercial: ModelBase
+    public class Commercial
     {
         /// <summary>
         /// ชื่อสถานประกอบการ / หน่วยงาน

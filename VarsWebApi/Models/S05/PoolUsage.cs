@@ -9,7 +9,8 @@ namespace VarsWebApi.Models
     /// การนำน้ำออกจากสระมาใช้
     /// </summary>
     public class PoolUsage
-    {
+    {   
+        // TODO:NAME
         /// <summary>
         /// มีการนำน้้าออกจากสระมาใช้ปริมาณเท่าไรต่อเดือนโดยเฉลี่ย (ลบ.ม./เดือน)
         /// </summary>

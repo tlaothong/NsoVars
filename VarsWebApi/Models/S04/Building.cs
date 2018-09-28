@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
@@ -14,7 +18,7 @@ namespace VarsWebApi.Models
         /// จำนวนห้องที่มีคนอาศัย
         /// </summary>
         // TODO:
-        public int Occupied { get; set; }
+        public int OccupiedRoomCount { get; set; }
 
         /// <summary>
         /// จำนวนบุคลากรรวมทั้งหมดทุกประเภท
