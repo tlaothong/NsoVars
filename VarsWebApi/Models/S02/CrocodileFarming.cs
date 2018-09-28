@@ -1,7 +1,14 @@
+using System.Collections.Generic;
+
 namespace VarsWebApi.Models
 {
     public class CrocodileFarming
     {
+        /// <summary>
+        /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ท้าการเพาะเลี้ยง เพาะฟัก อนุบาลสัตว์น้้าในพื้นที่น้้าจืดหรือไม่
+        /// (เฉพาะชนิดนี้)
+        /// </summary>
+        public bool Doing { get; set; }
          /// <summary>
         ///  ลักษณะการเลี้ยงเป็นบ่อ
         /// </summary>
@@ -11,34 +18,26 @@ namespace VarsWebApi.Models
         /// </summary>
         public  string Other { get; set; }
          /// <summary>
-        ///  ถ้าเลี้ยงในบ่อ มีจ้านวนบ่อเท่าไร 
+        ///  ถ้าเลี้ยงในบ่อ หรือร่องสวน มีจ้านวนบ่อหรือ ร่องสวนรวมเท่าไร 
         /// </summary>
-        public int CountDepression { get; set; }
-         /// <summary>
-        ///   ขนาดบ่อทั้งหมดเท่ากันหรือไม  
-        /// </summary>
-        public bool DepressionSize { get; set; }
-         /// <summary>
-        ///  บ่อ พื้นที่ กี่ไร่ กี่งาน  กี่ตารางวา
-        /// </summary>
-        public Area Area { get; set; }
+        public int FieldCount { get; set; }
         /// <summary>
-        /// ความลึกของบ่อกี่เมตร 
+        /// ขนาดบ่อหรือร่องสวนทั้งหมดเท่ากันหรือไม่  
         /// </summary>
-        public int Depth { get; set; }
-        /// <summary>
-        ///  ถ้าบ่อเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
-        /// </summary>
-        public RectanglePool RectanglePool { get; set; }
-        /// <summary>
-        ///  ถ้าบ่อเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึก เท่าไร 
-        /// </summary>
-        // public CirclePool Circle { get; set; }
+        /// <remarks>
+        ///     True - 1. เท่ากัน (ให้ถามขนาดบ่อครั้งเดียว)
+        ///     False - 2. ไม่เท่ากัน (ให้ถามทีละบ่อ)
+        /// </remarks>
+        public bool FieldsAreSameSize { get; set; }
 
         /// <summary>
-        /// จ้านวนที่เลี้ยงเฉลี่ยต่อเดือน เดือนละกี่ตัว
+        /// บ่อหรือร่องสวน (ที่ n) -- สอบถามทีละบ่อ
         /// </summary>
-        public int CountCrocodilePerMonth { get; set; }
+        public List<FieldSize> Fields { get; set; }
+        /// <summary>
+        /// จ้านวนที่เลี้ยงในปัจจุบัน (รวมทุกบ่อ/ร่องสวน) 
+        /// </summary>
+        public int CrocodileCount { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

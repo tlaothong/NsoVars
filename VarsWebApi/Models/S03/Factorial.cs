@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// สถานประกอบการแห่งนี้มีคนทำงานรวมทั้งหมดกี่คน
         /// </summary>
-        public int CountWorkers { get; set; }
+        public int WorkersCount { get; set; }
         /// <summary>
         /// สถานประกอบการแห่งนี้ใช้เครื่องจักรที่มีขนาดแรงม้าตั้งแต่ 5 แรงม้าหรือ 3,725 วัตต์ขึ้นไป หรือไม่ boolean
         /// </summary>
@@ -41,9 +41,11 @@ namespace VarsWebApi.Models
         /// </summary>
         public bool WasteWaterForCreateProduct { get; set; }
         /// <summary>
-        /// ในรอบ 12 เดือนที่ผ่านมา สถานประกอบการนี้มีการน้าน้ าที่ผ่านกระบวนการผลิตสินค้าแล้วกลับมาใช้ ใหม่หรือไม่  (ให้กา  ใน  เพียงข้อเดียว)
+        /// ในรอบ 12 เดือนที่ผ่านมา สถานประกอบการนี้มีการน้า น้ำที่ผ่านกระบวนการผลิตสินค้าแล้วกลับมาใช้ ใหม่หรือไม่  (ให้กา  ใน  เพียงข้อเดียว)
         /// </summary>
+        
         public bool WasteWaterReuse { get; set; }
+        
         
     }
     

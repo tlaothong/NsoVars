@@ -3,6 +3,11 @@ namespace VarsWebApi.Models
     public class FrogFarming
     {
         /// <summary>
+        /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ท้าการเพาะเลี้ยง เพาะฟัก อนุบาลสัตว์น้้าในพื้นที่น้้าจืดหรือไม่
+        /// (เฉพาะชนิดนี้)
+        /// </summary>
+        public bool Doing { get; set; }
+        /// <summary>
         ///  ลักษณะการเลี้ยงเป็นบ่อ
         /// </summary>
         public bool Depression { get; set; }
