@@ -27,16 +27,16 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  โครงการใช้น้้าผิวดินปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ) 
         /// </summary>
-        public int UpperGroundAVGPerMount { get; set; }
+        public int AvgOnGroundWaterUse { get; set; }
 
         /// <summary>
         ///   โครงการมีบ่อน้้าบาดาลจำนวนกี่บ่อ  
         /// </summary>
-        public int UnderGroundOfCount { get; set; }
+        public int GroundWaterWellCount { get; set; }
 
         /// <summary>
         ///   โครงการใช้น้้าบาดาลปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ)  
         /// </summary>
-        public int UnderGroundAVGPerMount { get; set; }
+        public int AvgUnderGroundWaterUse { get; set; }
     }
 }

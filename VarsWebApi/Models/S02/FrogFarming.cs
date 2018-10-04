@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จ้านวนกบที่เลี้ยงเฉลี่ยต่อเดือน เดือนละกี่ตัว
         /// </summary>
-        public int FrogCount { get; set; }
+        public int AnimalsCount { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

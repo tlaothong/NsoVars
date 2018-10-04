@@ -6,7 +6,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปีที่เกิดอุทกภัย 2556-2560
         /// </summary>
-        public string Year { get; set; }
+        public int Year { get; set; }
 
         /// <summary>
         /// FloodAmount - จำนวนครั้งที่เกิดอุทกภัย
@@ -26,6 +26,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ระดับความสูงของน้ำท่วม (ซม.)
         /// </summary>
-        public double Height { get; set; }
+        public double WaterHeight { get; set; }
     }
 }

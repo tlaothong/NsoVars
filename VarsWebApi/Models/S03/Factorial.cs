@@ -35,15 +35,15 @@ namespace VarsWebApi.Models
         /// ในรอบ 12 เดือนที่ผ่านมาสถานประกอบการนี้มีน้ำเสียจากกระบวนการผลิตสินค้าหรือไม่
         /// </summary>
         // TODO:
-        public bool WasteWaterForCreateProductInMount { get; set; }
+        public bool HasWasteWaterFromProduction { get; set; }
         /// <summary>
         /// ถ้า“มี”น้้าเสีย สถานประกอบการนี้มีการจัดการน้ำเสียที่เกิดจากกระบวนการผลิตสินค้าหรือไม่   (ให้กา  ใน  เพียงข้อเดียว) 
         /// </summary>
-        public bool WasteWaterForCreateProduct { get; set; }
+        public bool HasWasteWaterTreatment { get; set; }
+
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมา สถานประกอบการนี้มีการน้า น้ำที่ผ่านกระบวนการผลิตสินค้าแล้วกลับมาใช้ ใหม่หรือไม่  (ให้กา  ใน  เพียงข้อเดียว)
         /// </summary>
-        
         public bool WasteWaterReuse { get; set; }
         
         

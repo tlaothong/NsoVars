@@ -57,7 +57,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จ้านวนที่เลี้ยงในปัจจุบัน (รวมทุกบ่อ/ร่องสวน) 
         /// </summary>
-        public int AquaticAnimalsCount { get; set; }
+        public int AnimalsCount { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

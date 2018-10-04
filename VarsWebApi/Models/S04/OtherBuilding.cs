@@ -12,6 +12,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนบุคลากร/คนทำงานทั้งหมด
         /// </summary>
-        public int PersonCount { get; set; }
+        public int PersonnelCount { get; set; }
     }
 }

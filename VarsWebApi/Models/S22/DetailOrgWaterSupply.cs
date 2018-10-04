@@ -10,28 +10,28 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ชื่อหน่วยงาน 
         /// </summary>
-        public string NameOrgWaterSupply { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// ใช้น้้าผิวดิน (สระน้้า แม่น้้า/ล้าคลอง) หรือไม่  
         /// </summary>
-        public bool HasGroundWater { get; set; }
+        public bool HasOnGroundWater { get; set; }
         /// <summary>
         /// ถ้า “ใช้” ใช้น้้าผิวดินผลิตน้้าประปาโดยเฉลี่ยต่อเดือน ปริมาณเท่าไร  
         /// </summary>
-        public int CapacityGroundWater { get; set; }
+        public int OnGroundWaterCapacity { get; set; }
         /// <summary>
         ///  ใช้น้้าจาก บ่อบาดาล หรือไม่   
         /// </summary>
-        public bool HasUnderGround { get; set; }
+        public bool UseUnderGroundWater { get; set; }
         /// <summary>
         ///  ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ   
         /// </summary>
-        public int UnderGroundCount { get; set; }
+        public int GroundWaterWellCount { get; set; }
 
         /// <summary>
         ///  ใช้น้้าบาดาลผลิตน้้าประปาโดยเฉลี่ยต่อเดือนปริมาณเท่าไร   
         /// </summary>
-        public int CapacityUnderGround { get; set; }
+        public int UnderGroundWaterUse { get; set; }
 
         /// <summary>
         /// น้้าประปาราคาขายหน่วยละเท่าไร 
@@ -41,11 +41,11 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ค่าเช่ามิเตอร์คิดเดือนละเท่าไร  
         /// </summary>
-        public int ForrentMeter { get; set; }
+        public int MeterRentalFee { get; set; }
 
         /// <summary>
         ///  การผลิตน้้าประปา มีระบบการฆ่าเชื้อโรคหรือไม่ 
         /// </summary>
-        public string Disinfection { get; set; }
+        public string HasDisinfection { get; set; }
     }
 }

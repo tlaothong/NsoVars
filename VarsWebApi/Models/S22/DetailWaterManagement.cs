@@ -10,61 +10,36 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ชื่อของแหล่งน้ำ
         /// </summary>
-        public string WaterSupplyName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้ท้าน้้าประปา
         /// </summary>
-        public bool UseWaterForPlumbing { get; set; }
+        public bool UseForPlumbing { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้ท้าการผลิต/อุตสาหกรรม 
         /// </summary>
-        public bool UseWaterForFactory { get; set; }
+        public bool UseForFactory { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้เพื่อการเกษตร 
         /// </summary>
-        public bool UseWaterForFarming { get; set; }
+        public bool UseForFarming { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้เพื่อการบริการ 
         /// </summary>
-        public bool UseWaterForService { get; set; }
+        public bool UseForService { get; set; }
 
         /// <summary>
-        /// แหล่งน้้านี้ใช้เพื่อการบริการ 
+        /// แหล่งน้้านี้ใช้เพื่อวัตถุประสงค์อื่นๆ
         /// </summary>
-        public string UseWaterForOther { get; set; }
+        public string UseForOther { get; set; }
 
         /// <summary>
         /// พื้นที่ของแหล่งน้ำ
         /// </summary>
-        public bool HasProjectArea { get; set; }
-
-        /// <summary>
-        /// ใช้ ไร่(Area->Rai) ตารางวา(Area-> SqWa) ความลึก(Depth)
-        /// </summary>
         public FieldSize ProjectArea { get; set; }
-
-        /// <summary>
-        /// แหล่งน้ำเป็นสี่เหลี่ยมหรือไม่
-        /// </summary>
-        public bool HasSquareWaterSource { get; set; }
-
-        /// <summary>
-        /// ถ้าแหล่งน้้าเป็นสี่เหลี่ยม กว้าง(RectanglePool->Width) ยาว(RectanglePool-> Length)  ความลึก(Depth)
-        /// </summary>
-        public FieldSize RectanglePool { get; set; }
-
-        /// <summary>
-        /// แหล่งน้ำเป็นวงกลมหรือไม่
-        /// </summary>
-        public bool HasCircleWaterSource { get; set; }
-
-        /// <summary>
-        ///  ใช้เส้นผ่านศูนย์กลางกี่ เมตร(Circle -> Diameter) ลึกเท่าไร(Depth)
-        /// </summary>
-        public FieldSize Circle { get; set; }
     }
 }
