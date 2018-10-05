@@ -64,7 +64,7 @@ namespace VarsWebApi
                 };
             });
 
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

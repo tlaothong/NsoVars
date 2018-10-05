@@ -13,7 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ครัวเรือนที่อยู่อาศัย
         /// </summary>
-        public Residential Rensidence { get; set; }
+        public Residential Residence { get; set; }
         /// <summary>
         /// การทำการเกษตร
         /// </summary>

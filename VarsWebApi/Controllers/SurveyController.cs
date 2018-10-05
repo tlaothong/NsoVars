@@ -14,9 +14,15 @@ namespace VarsWebApi.Controllers
     {
         public ActionResult<HouseHoldSample> Get()
         {
-            throw new NotImplementedException();
+            return new HouseHoldSample() {
+                _id = "1234",
+                Residence = new Residential() {
+                    MemberCount = 5,
+                }
+            };
         }
 
+        [HttpPost]
         public void Post(HouseHoldSample sample)
         {
             throw new NotImplementedException();
