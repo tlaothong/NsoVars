@@ -71,14 +71,14 @@ namespace VarsWebApi.Models
         /// </summary>
         public string[] Disasters { get; set; }
 
-        // <summary>
+        /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มีการเตือนภัยและมาตรการช่วยเหลือน้้าท่วมหรือไม่  
         /// </summary>
         public bool HasDisasterWarning { get; set; }
         /// <summary>
         ///  ถ้ามีลักษณะการดำเนินการเป็นอย่างไร (ให้เลือกได้หลายข้อ)   
         /// </summary>
-        public string[] DisasterWarnings { get; set; }
+        public string[] DisasterWarningMethods { get; set; }
 
         /// <summary>
         /// โครงการจัดการน้้าเพื่อการเกษตรชุมชน  โดยใช้พื้นที่สาธารณะ

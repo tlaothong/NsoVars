@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// น้ าจากแม่น้ า
+    /// น้ำจากแม่น้ำ
     /// </summary>
     public class River
     {
         /// <summary>
         /// ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่ (ถ้าไม่ใช้ ข้ามไปถามสระถัดไป)
         /// </summary>
-        public bool PumpUsage { get; set; }
+        public bool HasPump { get; set; }
 
         /// <summary>
         /// บ่อนี้ใช้เครื่องสูบน้้ากี่เครื่อง
@@ -22,17 +22,17 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เครื่องสูบน้้าที่ใช้
         /// </summary>
-        public List<Pump> Pump { get; set; }
+        public List<Pump> Pumps { get; set; }
         
         
-        // <summary>
+        /// <summary>
         /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
         /// </summary>
-        public FarmWaterActivity WaterActivityPublicGroundWater { get; set; }
+        public FarmWaterActivity UsageActivities { get; set; }
         /// <summary>
         /// ปัญหาคุณภาพน้้า
         /// </summary>
-        public WaterProblem WaterProblem { get; set; }
+        public WaterProblem QualityProblem { get; set; }
 
     }
 }

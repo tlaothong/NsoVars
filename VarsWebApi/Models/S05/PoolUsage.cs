@@ -24,7 +24,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้เครื่องสูบน้้าเพื่อสูบน้้าหรือไม่ (ถ้าไม่ใช้ ข้ามไปถามสระถัดไป)
         /// </summary>
-        public bool PumpUsage { get; set; }
+        public bool HasPump { get; set; }
 
         /// <summary>
         /// บ่อนี้ใช้เครื่องสูบน้้ากี่เครื่อง

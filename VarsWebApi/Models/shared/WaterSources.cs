@@ -10,7 +10,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class WaterSources
     {
-
+        /// <summary>
         /// 2. น้ำบาดาล
         /// </summary>
         public bool UnderGround { get; set; }

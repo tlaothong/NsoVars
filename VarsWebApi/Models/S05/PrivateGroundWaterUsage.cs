@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ไม่ทราบ
         /// </summary>
-        Unknow      = 3
+        Unknown      = 3
       
         
     }
