@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหา คือ  
         /// </summary>
-        public ProblemAdd Problem { get; set; }
+        public Problem Problem { get; set; }
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>

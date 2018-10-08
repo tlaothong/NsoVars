@@ -18,19 +18,23 @@ namespace VarsWebApi.Models
         /// 2.เพื่อรดน้้าพืชในบริเวณที่อยู่อาศัย
         /// </summary>
         public int Plant { get; set; }
+        /// <summary>
+        /// 3..เพื่อทำนา
+        /// </summary>
+        public int Farm { get; set; }
 
         /// <summary>
-        /// 3.ใช้เพื่อท้าเกษตร
+        /// 4.ใช้เพื่อท้าเกษตร
         /// </summary>
         public int Agriculture { get; set; }
 
         /// <summary>
-        /// 4.เพื่อผลิตสินค้า
+        /// 45.เพื่อผลิตสินค้า
         /// </summary>
         public int Product { get; set; }
 
         /// <summary>
-        /// 5.เพื่อการบริการ
+        /// 6.เพื่อการบริการ
         /// </summary>
         public int Service { get; set; }
        

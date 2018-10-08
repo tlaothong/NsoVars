@@ -39,7 +39,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
         /// </summary>
-        public FarmWaterActivity UsageActivities { get; set; }
+        public WaterActivity UsageActivities { get; set; }
 
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 
@@ -49,7 +49,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหา คือ  
         /// </summary>
-        public ProblemAdd QualityProblem { get; set; }
+        public Problem QualityProblem { get; set; }
 
 
 
