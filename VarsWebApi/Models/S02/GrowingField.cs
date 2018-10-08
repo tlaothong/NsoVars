@@ -28,6 +28,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSourcesWithPlumbingAndRainingAsIs WaterSource { get; set; }
+        public WaterSources WaterSource { get; set; }
     }
 }
