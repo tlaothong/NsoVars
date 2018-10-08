@@ -607,15 +607,48 @@ namespace VarsWebApi.Controllers
                     },
                     Irrigation = new PoolUsage()
                     {
-
+                        CubicMeterPerMonth = 75,
+                        HasPump = false,
+                        WaterActivity = new WaterActivity()
+                        {
+                            Drink = 0,
+                            Plant = 5,
+                            Farm = 0,
+                            Agriculture = 0,
+                            Product = 80,
+                            Service = 15
+                        },
+                        WaterProblem = new WaterProblem()
+                        {
+                            HasProblem = false
+                        }
                     },
                     Rain = new Rain()
                     {
-
+                        PackageWater = new PackageWater()
+                        {
+                            Category = "โอ่ง",
+                            Size = 1000,
+                            Count = 5
+                        },
+                        WaterActive = new WaterActivity()
+                        {
+                            Drink = 60,
+                            Plant = 5,
+                            Agriculture = 0,
+                            Product = 20,
+                            Service = 15
+                        }
                     },
                     Buying = new Buying()
                     {
-
+                        Package = new List<Package>(){
+                            new Package(){
+                                Name = "ขวด",
+                                Size = 1,
+                                Drink = 100
+                            }
+                        }
                     }
                 },
                 Disaster = new Disasterous()
