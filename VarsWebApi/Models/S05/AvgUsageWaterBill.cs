@@ -52,7 +52,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  มีปัญหา คือ  
         /// </summary>
-        public ProblemAdd QualityProblems { get; set; }
+        public Problem QualityProblems { get; set; }
     }
 }    
 
