@@ -55,7 +55,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้แหล่งน้ำ
         /// </summary>
-        public WaterSourcesWithPlumbing WaterSources { get; set; }
+        public WaterSources WaterSources { get; set; }
 
 
     }

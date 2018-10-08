@@ -26,6 +26,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// การใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSourcesWithPlumbingAndRainingAsIs WaterSources { get; set; }
+        public WaterSources WaterSources { get; set; }
     }
 }
