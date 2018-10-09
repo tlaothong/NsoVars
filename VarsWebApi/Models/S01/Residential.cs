@@ -21,7 +21,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้น้ำเพื่อการอุปโภคบริโภคจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSourcesWithPlumbing WaterSource { get; set; }
+        public WaterSources WaterSources { get; set; }
         /// <summary>
         /// ใช้น้ำเพื่อรดน้ำต้นไม้ / สวนหย่อม / สวนครัว ในบริเวณที่อยู่อาศัยหรือไม่
         /// </summary>

@@ -7,7 +7,10 @@ namespace VarsWebApi.Models
 {
     public class UserInfo
     {
-        // TODO: Name
+        /// <summary>
+        /// ชื่อผู้ให้ข้อมูล 
+        /// </summary>
+        public string name { get; set; }
         /// <summary>
         /// ประเภทสถานประกอบการผลิต 
         /// </summary>

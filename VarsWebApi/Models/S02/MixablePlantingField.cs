@@ -23,9 +23,6 @@ namespace VarsWebApi.Models
         /// รายชื่อพืชที่ปลูกหลัก
         /// </summary>
         public string MixedWithPrimaryPlant { get; set; }
-        /// <summary>
-        /// การใช้น้้าจากแหล่งใดบ้าง
-        /// </summary>
-        public WaterSourcesWithPlumbingAndRainingAsIs WaterSources { get; set; }
+        
     }
 }

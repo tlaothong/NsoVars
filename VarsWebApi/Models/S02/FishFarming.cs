@@ -35,6 +35,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ลักษณะการเลี้ยงในที่อื่นๆ
         /// </summary>
+        public bool HasOther { get; set; }
         public string Other { get; set; }
 
         /// <summary>
@@ -61,6 +62,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
-        public WaterSourcesWithPlumbingAndRainingAsIs WaterSources { get; set; }
+        public WaterSources WaterSources { get; set; }
     }
 }

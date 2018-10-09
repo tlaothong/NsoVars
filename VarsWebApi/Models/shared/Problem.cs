@@ -10,6 +10,10 @@ namespace VarsWebApi.Models
     public class Problem
     {
         /// <summary>
+        /// ขุ่น/ตะกอน  
+        /// </summary>
+        public bool TurbidWater { get; set; }
+        /// <summary>
         /// เค็ม/กร่อย  
         /// </summary>
         public bool SaltWater { get; set; }
@@ -27,6 +31,10 @@ namespace VarsWebApi.Models
         /// ฝ้าขาว
         /// </summary>
         public bool FogWater { get; set; }
+        /// <summary>
+        ///  น้ำกระด้าง
+        /// </summary>
+        public bool HardWater { get; set; }
 
     }
 }
