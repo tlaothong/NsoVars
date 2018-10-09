@@ -45,6 +45,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 9. อื่น ๆ (ระบุ)
         /// </summary>
+        public bool HasOther { get; set; }
         public string Other { get; set; }
     }
 }

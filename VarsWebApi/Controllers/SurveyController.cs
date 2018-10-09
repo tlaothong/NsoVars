@@ -274,21 +274,29 @@ namespace VarsWebApi.Controllers
                         }
                     },
                     AnimalFarm = new Farming()
-                    {
+                    {                        
                         Doing = true,
-                        HasCow = true,
-                        CowCount = 2,
-                        HasBuffalo = false,
-                        HasPig = true,
-                        PigCount = 5,
-                        HasGoat = false,
-                        HasSheep = false,
-                        HasChicken = true,
-                        ChickenCount = 40,
-                        HasDuck = true,
-                        DuckCount = 12,
-                        HasSilkWool = false,
-                        OtherName = "no",
+                        Cow = new HasAndCount(){
+                            HasItem = true,
+                            ItemCount = 2
+                        },
+                        Pig = new HasAndCount(){
+                            HasItem = true,
+                            ItemCount = 5
+                        },
+                        Chicken = new HasAndCount(){
+                            HasItem = true,
+                            ItemCount = 40
+                        },
+                        Duck = new HasAndCount(){
+                            HasItem = true,
+                            ItemCount = 12
+                        },
+                        Other = new HasAndCount(){
+                            HasItem = true,
+                            ItemCount = 2
+                        },                        
+                        OtherName = "Dog",
                         WaterSources = new WaterSources()
                         {
                             Plumbing = true,

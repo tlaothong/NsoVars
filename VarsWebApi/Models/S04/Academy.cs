@@ -13,38 +13,32 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ก่อนวัยเรียน 
         /// </summary>
-        public bool HasPreSchool { get; set; }
-        public int PreSchoolCount { get; set; }
+        public HasAndCount PreSchool { get; set; }
 
         /// <summary>
         /// อนุบาล  
         /// </summary>
-        public bool HasKindergarten { get; set; }
-        public int KindergartenCount { get; set; }
+        public HasAndCount Kindergarten { get; set; }
 
         /// <summary>
         /// ประถมศึกษา  
         /// </summary>
-        public bool HasPrimarySchool { get; set; }
-        public int PrimarySchoolCount { get; set; }
+        public HasAndCount PrimarySchool { get; set; }
 
         /// <summary>
         /// มัธยมศึกษา  
         /// </summary>
-        public bool HasHighschool { get; set; }
-        public int HighschoolCount { get; set; }
+        public HasAndCount Highschool { get; set; }
 
         /// <summary>
         /// ปวช./ปวส 
         /// </summary>
-        public bool HasVocational { get; set; }
-        public int VocationalCount { get; set; }
+        public HasAndCount Vocational { get; set; }
 
         /// <summary>
         /// อุดมศึกษา  
         /// </summary>
-        public bool HasHigherEducation { get; set; }
-        public int HigherEducationCount { get; set; }
+        public HasAndCount HigherEducation { get; set; }
 
         /// <summary>
         /// จำนวนบุคลากรรวมทั้งหมดทุกประเภท

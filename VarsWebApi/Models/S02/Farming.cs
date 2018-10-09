@@ -13,59 +13,50 @@ namespace VarsWebApi.Models
         /// <summary>
         /// วัว
         /// </summary>
-        public bool HasCow { get; set; }
-        public int CowCount { get; set; }
+        public HasAndCount Cow { get; set; }
 
         /// <summary>
         /// ควาย
         /// </summary>
-        public bool HasBuffalo { get; set; }
-        public int BuffaloCount { get; set; }
+        public HasAndCount Buffalo { get; set; }
 
         /// <summary>
         /// หมู
         /// </summary>
-        public bool HasPig { get; set; }
-        public int PigCount { get; set; }
+        public HasAndCount Pig { get; set; }
 
         /// <summary>
         /// แพะ
         /// </summary>
-        public bool HasGoat{ get; set; }
-        public int GoatCount { get; set; }
+        public HasAndCount Goat { get; set; }
 
         /// <summary>
         /// แกะ
         /// </summary>
-        public bool HasSheep{ get; set; }
-        public int SheepCount { get; set; }
+        public HasAndCount Sheep { get; set; }
 
         /// <summary>
         /// ไก่
         /// </summary>
-        public bool HasChicken{ get; set; }
-        public int ChickenCount { get; set; }
+        public HasAndCount Chicken { get; set; }
         
         /// <summary>
         /// เป็ด
         /// </summary>
-        public bool HasDuck{ get; set; }
-        public int DuckCount { get; set; }
+        public HasAndCount Duck { get; set; }
         /// <summary>
         /// ห่าน
         /// </summary>
-        public bool HasGoose{ get; set; }
-        public int GooseCount { get; set; }
+        public HasAndCount Goose { get; set; }
         /// <summary>
         /// ไหม(น้้าหนักรังไหมเป็น กก.)
         /// </summary>
-        public bool HasSilkWool { get; set; }
-        public int SilkWoolCount { get; set; }
+        public HasAndCount SilkWool { get; set; }
         /// <summary>
         /// อื่นๆ(เช่น ฟาร์มสุนัข แมว กระต่าย หนู นกกระจอกเทศ)
         /// </summary>
+        public HasAndCount Other { get; set; }
         public string OtherName { get; set; }
-        public int OtherCount { get; set; }
         /// <summary>
         /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>
