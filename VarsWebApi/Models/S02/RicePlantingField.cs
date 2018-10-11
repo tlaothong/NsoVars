@@ -33,21 +33,9 @@ namespace VarsWebApi.Models {
         /// </summary>
         public List<Area> AreaUsed { get; set; }
         /// <summary>
-        ///   การท้านา เริ่มท้าเดือนใด   
+        /// ข้อมูลการทำนาแต่ละครั้ง
         /// </summary>
-        public int PlantingFromMonth { get; set; }
-        /// <summary>
-        ///   การท้านา ทำถึงเดือนใด   
-        /// </summary>
-        public int PlantingThruMonth { get; set; }
-        /// <summary>
-        /// การท้านา ปล่อยน้้าเข้านากี่ครั้ง (ถ้าไม่ได้ปล่อยน้ำให้กรอก 0)
-        /// </summary>
-        public int WaterFillingCount { get; set; }
-        /// <summary>
-        /// การท้านา โดยเฉลี่ยแต่ละครั้งปล่อยน้้าสูง กี่ เซนติเมตร
-        /// </summary>
-        public double WaterHigh { get; set; }
+        public List<RicePlantingHarvest> Harvests { get; set; }
         /// <summary>
         /// นาแปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่ 
         /// </summary>

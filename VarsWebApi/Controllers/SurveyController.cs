@@ -61,10 +61,15 @@ namespace VarsWebApi.Controllers
                                         SqWa = 1
                                     }
                                 },
-                                PlantingFromMonth = 6,
-                                PlantingThruMonth = 11,
-                                WaterFillingCount = 1,
-                                WaterHigh = 2,
+                                Harvests = new List<RicePlantingHarvest>
+                                {
+                                    new RicePlantingHarvest {
+                                        PlantingFromMonth = 6,
+                                        PlantingThruMonth = 11,
+                                        WaterFillingCount = 1,
+                                        WaterHighCm = 2,
+                                    }
+                                },
                                 IrrigationField = false,
                                 WaterSources = new WaterSources(){
                                     UnderGround = false,
