@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// บรรจุภัณ
     /// </summary>
     // TODO: More Info
-    public class PackageWater
+    public class RainContainer
     {
         /// <summary>
         /// ประเภทของบรรจุภัณ

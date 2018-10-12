@@ -7,11 +7,11 @@ namespace VarsWebApi.Models
     /// <summary>
     /// บ่อน้ำส่วนตัว
     /// </summary>
-    public class PrivateGroundWater : GroundWaterBase
+    public class PrivateGroundWater : WaterResourceBase<GroundWaterWell>
     {
         /// <summary>
         /// ถ้ามีบ่อน้้าบาดาลส่วนตัว มีจ้านวนกี่บ่อ 
         /// </summary>
-        public int GroundWaterCount { get; set; }
+        public int AllCount { get; set; }
     }
 }

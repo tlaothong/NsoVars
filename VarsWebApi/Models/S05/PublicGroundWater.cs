@@ -3,7 +3,7 @@
     /// <summary>
     /// บ่อน้ำสาธารณะ
     /// </summary>
-    public class PublicGroundWater : GroundWaterBase
+    public class PublicGroundWater : WaterResourceBase<WaterConsumptionUsingPumpBase>
     {
     }
 }

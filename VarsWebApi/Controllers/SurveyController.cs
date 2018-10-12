@@ -67,7 +67,7 @@ namespace VarsWebApi.Controllers
                                         PlantingFromMonth = 6,
                                         PlantingThruMonth = 11,
                                         WaterFillingCount = 1,
-                                        WaterHighCm = 2,
+                                        WaterHeightCm = 2,
                                     }
                                 },
                                 IrrigationField = false,
@@ -696,53 +696,53 @@ namespace VarsWebApi.Controllers
                     },
                     Pool = new Pool()
                     {
-                        IsExist = true,
+                        Doing = true,
                         PoolCount = 1,
-                        PoolEqual = true,
-                        PoolSize = new List<FieldSize>(){
+                        HasSameSize = true,
+                        PoolSizes = new List<FieldSize>(){
                             new FieldSize(){
                                 Shape = FieldShape.Circle,
                                 Depth = 3,
                                 Diameter = 25
                             }
                         },
-                        PoolCountUsage = 1,
-                        PoolUsage = new List<PoolUsage>(){
-                            new PoolUsage(){
-                                CubicMeterPerMonth = 30,
-                                HasPump = true,
-                                PumpCount = 1,
-                                Pump = new List<Pump>(){
-                                    new Pump(){
-                                        PumpAuto = false,
-                                        HoursPerPump = 3,
-                                        NumberOfPumpsPerYear = 2,
-                                        PumpRate = 7,
-                                        EnergySource = EnergySource.ElecticPump,
-                                        PumpType = EnergySource.ElecticPump,
-                                        HorsePower = 1250,
-                                        SuctionPipeSize = 4,
-                                        PipelineSize = 3
-                                    }
-                                },
-                                WaterActivities = new WaterActivity(){
-                                    Drink = 0,
-                                    Plant = 5,
-                                    Farm = 40,
-                                    Agriculture = 0,
-                                    Product = 40,
-                                    Service = 15
-                                },
-                                QualityProblem = new WaterProblem(){
-                                    HasProblem = true,
-                                    Problem = new Problem(){
-                                        TurbidWater =true
-                                    }
-                                }
-                            }
+                        WaterResourceCount = 1,
+                        WaterResources = new List<WaterConsumptionUsingPump> {
+                            //new PoolUsage(){
+                            //    CubicMeterPerMonth = 30,
+                            //    HasPump = true,
+                            //    PumpCount = 1,
+                            //    Pump = new List<Pump>(){
+                            //        new Pump(){
+                            //            PumpAuto = false,
+                            //            HoursPerPump = 3,
+                            //            NumberOfPumpsPerYear = 2,
+                            //            PumpRate = 7,
+                            //            EnergySource = EnergySource.ElecticPump,
+                            //            PumpType = EnergySource.ElecticPump,
+                            //            HorsePower = 1250,
+                            //            SuctionPipeSize = 4,
+                            //            PipelineSize = 3
+                            //        }
+                            //    },
+                            //    WaterActivities = new WaterActivity(){
+                            //        Drink = 0,
+                            //        Plant = 5,
+                            //        Farm = 40,
+                            //        Agriculture = 0,
+                            //        Product = 40,
+                            //        Service = 15
+                            //    },
+                            //    QualityProblem = new WaterProblem(){
+                            //        HasProblem = true,
+                            //        Problem = new Problem(){
+                            //            TurbidWater =true
+                            //        }
+                            //    }
+                            //}
                         }
                     },
-                    Irrigation = new PoolUsage()
+                    Irrigation = new Irrigation()
                     {
                         CubicMeterPerMonth = 75,
                         HasPump = false,
@@ -762,32 +762,34 @@ namespace VarsWebApi.Controllers
                     },
                     Rain = new Rain()
                     {
-                        PackageWater = new PackageWater()
+                        RainContainers = new List<RainContainer>
                         {
-                            Category = "โอ่ง",
-                            Size = 1000,
-                            Count = 5
-                        },
-                        WaterActivities = new WaterActivity()
-                        {
-                            Drink = 60,
-                            Plant = 5,
-                            Agriculture = 0,
-                            Product = 20,
-                            Service = 15
-                        }
-                    },
-                    Buying = new Buying()
-                    {
-                        Package = new List<Package>(){
-                            new Package(){
-                                Name = "ขวด",
-                                Size = 1,
-                                Drink = 100
+                            new RainContainer() {
+                                Category = "โอ่ง",
+                                Size = 1000,
+                                Count = 5
                             }
-                        }
+                        },
+                    WaterActivities = new WaterActivity()
+                    {
+                        Drink = 60,
+                        Plant = 5,
+                        Agriculture = 0,
+                        Product = 20,
+                        Service = 15
                     }
                 },
+                Buying = new Buying()
+                {
+                    Package = new List<Package>(){
+                        new Package(){
+                            Name = "ขวด",
+                            Size = 1,
+                            Drink = 100
+                        }
+                    }
+                }
+            },
                 Disaster = new Disasterous()
                 {
                     Flooded = false

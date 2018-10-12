@@ -25,6 +25,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// การทำนา โดยเฉลี่ยแต่ละครั้งปล่อยน้้าสูง กี่ เซนติเมตร
         /// </summary>
-        public double WaterHighCm { get; set; }
+        public double WaterHeightCm { get; set; }
     }
 }
