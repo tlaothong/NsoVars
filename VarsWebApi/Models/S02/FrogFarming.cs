@@ -18,6 +18,7 @@ namespace VarsWebApi.Models
          /// <summary>
         ///  ลักษณะการเลี้ยงในที่อื่นๆ
         /// </summary>
+        public bool HasOther { get; set; }
         public string Other { get; set; }
         /// <summary>
         /// จ้านวนกบที่เลี้ยงเฉลี่ยต่อเดือน เดือนละกี่ตัว
