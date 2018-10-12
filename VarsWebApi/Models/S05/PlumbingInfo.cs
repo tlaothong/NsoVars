@@ -22,7 +22,6 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
-        public PlumbingUsage PlumbingUsage { get; set; }
-        
+        public PlumbingUsage PlumbingUsage { get; set; }        
     }
 }

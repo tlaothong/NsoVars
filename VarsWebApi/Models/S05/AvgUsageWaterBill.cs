@@ -14,7 +14,12 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ใช้น้้าปริมาณเท่าไรต่อเดือนโดยเฉลี่ย   
         /// </summary>
-        public PrivateGroundWaterUsage UsageType { get; set; }
+        /// <remarks>
+        /// 1.ทราบปริมาณน้้า
+        /// 2.ไม่ทราบปริมาณน้้าแต่ทราบค่าน้้า
+        /// 3.ไม่ทราบ
+        /// </remarks>
+        public GroundWaterUsage UsageType { get; set; }
         /// <summary>
         ///  ลบ.ม./เดือน  
         /// </summary>

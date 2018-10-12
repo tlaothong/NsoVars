@@ -14,6 +14,12 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
+        /// <remarks>
+        /// 1.ทราบปริมาณน้้า
+        /// 2.ไม่ทราบปริมาณน้้า แต่ทราบค่าน้้า
+        /// 3.ไม่ทราบปริมาณน้้าและค่าน้้าเนื่องจากไม่มีมิเตอร์แยกจากส่วนกลาง
+        /// 4.ไม่ทราบปริมาณน้้าและค่าน้้าเนื่องจากได้รับการยกเว้น   
+        /// </remarks>
         public WaterQuantity WaterQuantity { get; set; }
         /// <summary>
         /// ปริมาณน้ำ ลบ.ม./เดือน  
@@ -24,14 +30,6 @@ namespace VarsWebApi.Models
         /// ทราบค่าน้้า
         /// </summary>
         public int WaterBill { get; set; }
-         /// <summary>
-        ///  ไม่ทราบปริมาณน้้า และค่าน้้า เนื่องจากไม่มีมิเตอร์แยกจากส่วนกลาง     
-        /// </summary>
-        public bool UnknowNoMeter { get; set; }
-         /// <summary>
-        ///  ไม่ทราบปริมาณน้้า และค่าน้้า เนื่องจากได้รับการยกเว้น      
-        /// </summary>
-        public bool UnknowExcepted { get; set; }
 
     }
 }
