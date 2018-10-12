@@ -36,6 +36,10 @@ namespace VarsWebApi.Models
         /// แหล่งน้้านี้ใช้เพื่อวัตถุประสงค์อื่นๆ
         /// </summary>
         public string UseForOther { get; set; }
+        /// <summary>
+        /// ระบุชื่อหากใช้แหล่งน้ำนี้เพื่อประโยชน์อื่นๆ
+        /// </summary>
+        public string Other { get; set; }
 
         /// <summary>
         /// พื้นที่ของแหล่งน้ำ

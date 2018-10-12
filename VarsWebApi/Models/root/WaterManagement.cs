@@ -85,6 +85,5 @@ namespace VarsWebApi.Models
         /// </summary>
         public ManagementForFarming CommunityProject { get; set; }
 
-
     }
 }

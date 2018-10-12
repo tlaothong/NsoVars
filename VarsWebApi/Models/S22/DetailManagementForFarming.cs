@@ -37,6 +37,6 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   โครงการใช้น้้าบาดาลปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ)  
         /// </summary>
-        public int AvgUnderGroundWaterUse { get; set; }
+        public int AvgGroundWaterUse { get; set; }
     }
 }
