@@ -612,7 +612,7 @@ namespace VarsWebApi.Controllers
                             Product = 80,
                             Service = 15
                         },
-                        WaterNotRunning = false
+                        HasWaterNotRunning = false
                     },
                     GroundWater = new GroundWater()
                     {                        
@@ -670,7 +670,7 @@ namespace VarsWebApi.Controllers
                                 NumberOfPumpsPerYear = 224,
                                 PumpRate = 6,
                                 EnergySource = EnergySource.ElecticPump,
-                                PumpType = EnergySource.ElecticPump,
+                                PumpType = PumpType.DontKnowYet,
                                 HorsePower = 87,
                                 SuctionPipeSize = 16,
                                 PipelineSize = 24

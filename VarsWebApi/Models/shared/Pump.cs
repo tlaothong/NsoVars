@@ -58,7 +58,7 @@ namespace VarsWebApi.Models
         /// 4.รถไถเดินตาม
         /// </remarks>
         // TODO: Not sure
-        public EnergySource PumpType { get; set; }
+        public PumpType PumpType { get; set; }
 
         /// <summary>
         /// ขนาดแรงม้า / วัตต์ เท่าไร
