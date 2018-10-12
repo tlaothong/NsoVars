@@ -27,9 +27,14 @@ namespace VarsWebApi.Models
         public int NumberOfPumpsPerYear { get; set; }
 
         /// <summary>
-        /// อัตราการสูบน้ำ
+        /// ทราบอัตราการสูบหรือไม่
         /// </summary>
-        public PumpRate PumpRate { get; set; }
+        public bool HasPumpRate { get; set; }
+
+        /// <summary>
+        /// มีอัตราการสูบเท่าไร (ลบ.ม./ชม.)
+        /// </summary>
+        public int? PumpRate { get; set; }
 
         /// <summary>
         /// เครื่องสูบน้้าใช้แหล่งพลังงานจากที่ใด

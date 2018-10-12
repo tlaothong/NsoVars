@@ -474,7 +474,7 @@ namespace VarsWebApi.Controllers
                                 WaterBill = 569
                             }
                         },
-                        WaterActivityMWAPWA = new WaterActivity()
+                        WaterActivityMWA = new WaterActivity()
                         {
                             Drink = 0,
                             Plant = 0,
@@ -508,10 +508,7 @@ namespace VarsWebApi.Controllers
                                     new Pump(){
                                         PumpAuto = false,
                                         NumberOfPumpsPerYear = 125,
-                                        PumpRate = new PumpRate(){
-                                            KnowPumpRate = true,
-                                            PumpRateUsage = 7
-                                        },
+                                        PumpRate = 7,
                                         EnergySource = EnergySource.ElecticPump,
                                         PumpType = EnergySource.ElecticPump,
                                         HorsePower = 72.329,
@@ -535,7 +532,10 @@ namespace VarsWebApi.Controllers
                                 }
                             }
                         },
-                        PublicGroundWater = false,
+                        PublicGroundWater = new PublicGroundWater
+                        {
+                            Doing = false,
+                        },
                     },
                     River = new River()
                     {
@@ -546,10 +546,7 @@ namespace VarsWebApi.Controllers
                                 PumpAuto = false,
                                 HoursPerPump = 2,
                                 NumberOfPumpsPerYear = 224,
-                                PumpRate = new PumpRate(){
-                                    KnowPumpRate = true,
-                                    PumpRateUsage = 6
-                                },
+                                PumpRate = 6,
                                 EnergySource = EnergySource.ElecticPump,
                                 PumpType = EnergySource.ElecticPump,
                                 HorsePower = 87,
@@ -557,7 +554,7 @@ namespace VarsWebApi.Controllers
                                 PipelineSize = 24
                             }
                         },
-                        UsageActivities = new WaterActivity()
+                        WaterActivities = new WaterActivity()
                         {
                             Drink = 0,
                             Plant = 15,
@@ -598,10 +595,7 @@ namespace VarsWebApi.Controllers
                                         PumpAuto = false,
                                         HoursPerPump = 3,
                                         NumberOfPumpsPerYear = 2,
-                                        PumpRate = new PumpRate(){
-                                            KnowPumpRate = true,
-                                            PumpRateUsage = 79
-                                        },
+                                        PumpRate = 7,
                                         EnergySource = EnergySource.ElecticPump,
                                         PumpType = EnergySource.ElecticPump,
                                         HorsePower = 1250,
@@ -609,7 +603,7 @@ namespace VarsWebApi.Controllers
                                         PipelineSize = 3
                                     }
                                 },
-                                WaterActivity = new WaterActivity(){
+                                WaterActivities = new WaterActivity(){
                                     Drink = 0,
                                     Plant = 5,
                                     Farm = 40,
@@ -617,7 +611,7 @@ namespace VarsWebApi.Controllers
                                     Product = 40,
                                     Service = 15
                                 },
-                                WaterProblem = new WaterProblem(){
+                                QualityProblem = new WaterProblem(){
                                     HasProblem = true,
                                     Problem = new Problem(){
                                         TurbidWater =true
@@ -630,7 +624,7 @@ namespace VarsWebApi.Controllers
                     {
                         CubicMeterPerMonth = 75,
                         HasPump = false,
-                        WaterActivity = new WaterActivity()
+                        WaterActivities = new WaterActivity()
                         {
                             Drink = 0,
                             Plant = 5,
@@ -639,7 +633,7 @@ namespace VarsWebApi.Controllers
                             Product = 80,
                             Service = 15
                         },
-                        WaterProblem = new WaterProblem()
+                        QualityProblem = new WaterProblem()
                         {
                             HasProblem = false
                         }
@@ -652,7 +646,7 @@ namespace VarsWebApi.Controllers
                             Size = 1000,
                             Count = 5
                         },
-                        WaterActive = new WaterActivity()
+                        WaterActivities = new WaterActivity()
                         {
                             Drink = 60,
                             Plant = 5,

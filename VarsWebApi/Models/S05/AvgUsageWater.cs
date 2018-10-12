@@ -39,7 +39,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้น้้าจากสระนี้เพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร
         /// </summary>
-        public WaterActivity UsageActivities { get; set; }
+        public WaterActivity WaterActivities { get; set; }
 
         /// <summary>
         ///  มีปัญหาคุณภาพน้้า หรือไม่ 

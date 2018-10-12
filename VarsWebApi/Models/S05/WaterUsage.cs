@@ -13,16 +13,16 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำประปา
         /// </summary>
-        public Plumbing Plumbing { get; set; } 
+        public Plumbing Plumbing { get; set; }
         /// <summary>
         /// น้ำบาดาล
         /// </summary>
         /// // TODO:5.3, 5.4, 5.5 ทำใหม่
-        public GroundWater GroundWater { get; set; } 
+        public GroundWater GroundWater { get; set; }
         /// <summary>
         /// น้ำจากแม่น้ำ / ลำคลอง / แหล่งน้ำสาธารณะ
         /// </summary>
-          public River River { get; set; }
+        public River River { get; set; }
         /// <summary>
         /// น้ำจากสระน้ำ/หนองน้ำ/บึง
         /// </summary>
@@ -41,6 +41,6 @@ namespace VarsWebApi.Models
         /// </summary>
         public Buying Buying { get; set; }
 
-        
+
     }
 }
