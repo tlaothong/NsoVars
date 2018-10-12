@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace VarsWebApi.Models
+{
+    /// <summary>
+    /// พื้นที่ย่อย
+    /// </summary>
+    public class CommunitySample
+    {
+        /// <summary>
+        /// การจัดการน้ำในหมู่บ้าน / ชุมชน
+        /// </summary>
+        public CommunityWaterManagement Management { get; set; }
+
+        /// <summary>
+        /// โครงการจัดการน้้าเพื่อการเกษตรชุมชน  โดยใช้พื้นที่สาธารณะ
+        /// </summary>
+        public ManagementForFarming CommunityProject { get; set; }
+
+    }
+}

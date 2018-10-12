@@ -30,7 +30,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้ำจากชลประทาน
         /// </summary>
-        public PoolUsage Irrigation { get; set; }
+        public Irrigation Irrigation { get; set; }
         /// <summary>
         /// น้ำฝนที่กักเก็บไว้
         /// </summary>

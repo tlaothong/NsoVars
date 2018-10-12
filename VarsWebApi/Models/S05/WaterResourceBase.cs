@@ -2,7 +2,8 @@
 
 namespace VarsWebApi.Models
 {
-    public class GroundWaterBase
+    public class WaterResourceBase<T>
+        where T : WaterConsumptionUsingPumpBase
     {
         /// <summary>
         /// มีบ่อน้้าบาดาลส่วนตัว / สาธารณะ หรือไม่
@@ -10,14 +11,14 @@ namespace VarsWebApi.Models
         public bool Doing { get; set; }
 
         /// <summary>
-        ///  ในรอบ 12 เดือนที่ผ่านมา มีบ่อน้้าบาดาลที่ใช้อยู่กี่บ่อ 
+        ///  ในรอบ 12 เดือนที่ผ่านมา มีบ่อน้้าบาดาลที่ใช้อยู่กี่บ่อ / สระ
         /// </summary>
-        public int ActiveGroundWaterCount { get; set; }
+        public int WaterResourceCount { get; set; }
 
         // TODO: enum (ใช้ class ร่วมกับคนอื่นด้วยเลยทำ class ของตัวเอง)
         /// <summary>
-        /// ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย 
+        /// ข้อมูลทีละ บ่อ / สระ
         /// </summary>
-        public List<GroundWaterWell> Wells { get; set; }
+        public List<T> WaterResources { get; set; }
     }
 }

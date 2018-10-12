@@ -31,7 +31,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อผลิตสินค้า  
         /// </summary>
-        public int Product { get; set; }
+        public int Factory { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อการบริการ

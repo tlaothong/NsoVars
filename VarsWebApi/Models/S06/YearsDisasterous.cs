@@ -16,16 +16,17 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ระยะเวลาที่เกิดน้ำท่วม  (โดยเฉลี่ย : จำนวนวัน)
         /// </summary>
-        public double AvgDay { get; set; }
+        public int AvgDay { get; set; }
 
         /// <summary>
         /// ระยะเวลาที่เกิดน้ำท่วม  (โดยเฉลี่ย : จำนวนชั่วโมง)
+        /// ม่ีค่า 1-23
         /// </summary>
-        public double AvgHour { get; set; }
+        public int AvgHour { get; set; }
 
         /// <summary>
         /// ระดับความสูงของน้ำท่วม (ซม.)
         /// </summary>
-        public double WaterHeight { get; set; }
+        public double WaterHeightCm { get; set; }
     }
 }

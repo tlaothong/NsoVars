@@ -36,16 +36,20 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้้าประปาราคาขายหน่วยละเท่าไร 
         /// </summary>
-        public int PlumbingPrice { get; set; }
+        public double PlumbingPrice { get; set; }
 
         /// <summary>
         ///  ค่าเช่ามิเตอร์คิดเดือนละเท่าไร  
         /// </summary>
-        public int MeterRentalFee { get; set; }
+        public double MeterRentalFee { get; set; }
 
         /// <summary>
         ///  การผลิตน้้าประปา มีระบบการฆ่าเชื้อโรคหรือไม่ 
         /// </summary>
-        public string HasDisinfection { get; set; }
+        public DisinfectionMethod Disinfection { get; set; }
+        /// <summary>
+        /// ระบุการฆ่าเชื้อโรคด้วยวิธีอื่นๆ
+        /// </summary>
+        public string OtherDisinfection { get; set; }
     }
 }
