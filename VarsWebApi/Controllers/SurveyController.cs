@@ -488,7 +488,9 @@ namespace VarsWebApi.Controllers
                         UseGroundWaterCount = 1,
                         AvgUsageWater = new List<AvgUsageWaterBill>(){
                             new AvgUsageWaterBill(){
-                                UsageType = PrivateGroundWaterUsage.Unknown,
+                                UsageType = new GroundWaterUsage(){
+                                    GroundWaterQuantity = GroundWaterQuantity.Unknown
+                                },
                                 HasPump = true,
                                 PumpCount = 1,
                                 Pumps = new List<Pump>(){
@@ -500,12 +502,8 @@ namespace VarsWebApi.Controllers
                                             KnowPumpRate = true,
                                             PumpRateUsage = 7
                                         },
-                                        EnergySource = new EnergySource(){
-                                            ElecticPump = true
-                                        },
-                                        PumpType = new EnergySource(){
-                                            ElecticPump = true
-                                        },
+                                        EnergySource = EnergySource.ElecticPump,
+                                        PumpType = EnergySource.ElecticPump,
                                         HorsePower = 72.329,
                                         SuctionPipeSize = 5,
                                         PipelineSize = 3
@@ -543,12 +541,8 @@ namespace VarsWebApi.Controllers
                                     KnowPumpRate = true,
                                     PumpRateUsage = 6
                                 },
-                                EnergySource = new EnergySource(){
-                                    ElecticPump = true
-                                },
-                                PumpType = new EnergySource(){
-                                    ElecticPump = true
-                                },
+                                EnergySource = EnergySource.ElecticPump,
+                                PumpType = EnergySource.ElecticPump,
                                 HorsePower = 87,
                                 SuctionPipeSize = 16,
                                 PipelineSize = 24
