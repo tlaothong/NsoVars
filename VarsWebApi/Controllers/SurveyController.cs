@@ -170,7 +170,16 @@ namespace VarsWebApi.Controllers
                                     SqWa = 255
                                 },
                                 IrrigationField = false,
-                                Names = new [] {"กล้วย", "องุ่น", "มะพร้าว", "แอ๊ปเปิ้ล", "เงาะ "},
+                                Plantings = new List<PlantItem>(){
+                                    new PlantItem(){
+                                        Code = "358",
+                                        Name = "กล้วย"
+                                    },
+                                    new PlantItem(){
+                                        Code = "951",
+                                        Name = "แอ๊ปเปิ้ล"
+                                    }
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,
@@ -202,9 +211,18 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-                                Names = new [] {"กะหล่้าปลี","คะน้า","ตะไคร้ ","พริกไทย","ผักชี"},
+                                Plantings = new List<PlantItem>(){
+                                    new PlantItem(){
+                                        Code = "165",
+                                        Name = "พริกไทย"
+                                    },
+                                    new PlantItem(){
+                                        Code = "366",
+                                        Name = "คะน้า"
+                                    }
+                                },
                                 ThisPlantOnly = false,
-                                MixedWithPrimaryPlant = "RubberTree",
+                                MixedWithPrimaryPlantCode = "778",
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,
@@ -236,9 +254,18 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-                                Names = new [] {"เข็ม","กล้วยไม้","เฟื่องฟ้า","มะลิ","หญ้าปสูนาม"},
+                                Plantings = new List<PlantItem>(){
+                                    new PlantItem(){
+                                        Code = "117",
+                                        Name = "หญ้าปสูนาม"
+                                    },
+                                    new PlantItem(){
+                                        Code = "341",
+                                        Name = "กล้วยไม้"
+                                    }
+                                },
                                 ThisPlantOnly = false,
-                                MixedWithPrimaryPlant = "RubberTree",
+                                MixedWithPrimaryPlantCode = "665",
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,
@@ -253,22 +280,18 @@ namespace VarsWebApi.Controllers
                             }
                         }
                     },
-                    MushroomPlant = new PlantingInfo<GrowingField>()
+                    MushroomPlant = new PlantingInfo<MushroomField>()
                     {
                         Doing = true,
                         FieldCount = 1,
-                        Fields = new List<GrowingField>(){
-                            new GrowingField(){
+                        Fields = new List<MushroomField>(){
+                            new MushroomField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     Distric = "เมือง",
                                     SubDistric = "เมือง"
                                 },
-                                Area = new Area(){
-                                    Rai = 0,
-                                    Ngan = 0,
-                                    SqWa = 25
-                                },
+                                AreaSqM = 4,
                                 IrrigationField = true,
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
@@ -285,28 +308,33 @@ namespace VarsWebApi.Controllers
                         }
                     },
                     AnimalFarm = new Farming()
-                    {                        
+                    {
                         Doing = true,
-                        Cow = new HasAndCount(){
+                        Cow = new HasAndCount()
+                        {
                             HasItem = true,
                             ItemCount = 2
                         },
-                        Pig = new HasAndCount(){
+                        Pig = new HasAndCount()
+                        {
                             HasItem = true,
                             ItemCount = 5
                         },
-                        Chicken = new HasAndCount(){
+                        Chicken = new HasAndCount()
+                        {
                             HasItem = true,
                             ItemCount = 40
                         },
-                        Duck = new HasAndCount(){
+                        Duck = new HasAndCount()
+                        {
                             HasItem = true,
                             ItemCount = 12
                         },
-                        Other = new HasAndCount(){
+                        Other = new HasAndCount()
+                        {
                             HasItem = true,
                             ItemCount = 2
-                        },                        
+                        },
                         OtherName = "Dog",
                         WaterSources = new WaterSources()
                         {
@@ -347,6 +375,36 @@ namespace VarsWebApi.Controllers
                                 Plumbing = true,
                                 UnderGround = true,
                                 Pool = true,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                RainingAsIs = true,
+                                Buying = false,
+                                Other = "no"
+                            }
+                        },
+                        Shrimp = new FishFarming()
+                        {
+                            Doing = true,
+                            Depression = true,
+                            FieldCount = 3,
+                            FieldsAreSameSize = true,
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1
+                                }
+                            },
+                            AnimalsCount = 1200,
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = false,
                                 River = false,
                                 Irrigation = true,
                                 Rain = true,
@@ -402,8 +460,46 @@ namespace VarsWebApi.Controllers
                                 Buying = false,
                                 Other = "no"
                             }
+                        },
+                        SnappingTurtle = new CrocodileFarming()
+                        {
+                            Doing = true,
+                            Depression = false,
+                            HasOther = true,
+                            Other = "กะละมัง",
+                            FieldCount = 3,
+                            FieldsAreSameSize = false,
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Circle,
+                                    Diameter = 1,
+                                    Depth = 1
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Circle,
+                                    Diameter = 2,
+                                    Depth = 1
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Circle,
+                                    Diameter = 1,
+                                    Depth = 2
+                                }
+                            },
+                            AnimalsCount = 28,
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = true,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                RainingAsIs = true,
+                                Buying = false,
+                                Other = "no"
+                            }
                         }
-
                     }
                 },
                 Factory = new Factorial()
@@ -431,6 +527,20 @@ namespace VarsWebApi.Controllers
                 {
                     Name = "บ้านซอ",
                     ServiceType = "โรงงาน",
+                    BuildingCode = "431",
+                    QuestionForAcademy = new Academy(){
+                        PreSchool = new HasAndCount(){ HasItem = true, ItemCount = 7},
+                        Kindergarten = new HasAndCount(){ HasItem = true, ItemCount = 12},
+                        PrimarySchool = new HasAndCount(){ HasItem = true, ItemCount = 24},
+                        Highschool = new HasAndCount(){ HasItem = true, ItemCount = 33},
+                        Vocational = new HasAndCount(){ HasItem = true, ItemCount = 46},
+                        HigherEducation = new HasAndCount(){ HasItem = true, ItemCount = 19},
+                        PersonnelCount = 15
+                    },
+                    HotelsAndResorts = new HotelsAndResorts(){ RoomCount = 35, PersonnelCount = 5},
+                    Hospital = new Hospital(){ BedCount = 40, PersonnelCount = 25},
+                    Building = new Building(){ RoomCount = 40, OccupiedRoomCount = 35, PersonnelCount = 3},
+                    Religious = new Religious(){ PeopleCount = 7},                    
                     OtherBuilding = new OtherBuilding()
                     {
                         PersonnelCount = 1,
@@ -462,17 +572,29 @@ namespace VarsWebApi.Controllers
                         Other = new PlumbingInfo()
                         {
                             Doing = true,
-                            WaterQuality = true,
-                            Problem = new Problem()
-                            {
-                                TurbidWater = true,
-                                HardWater = true,
+                            QualityProblem = new WaterProblem(){
+                                HasProblem = true,
+                                Problem = new Problem(){
+                                    TurbidWater = false,
+                                    SaltWater = true,
+                                    Smell = false,
+                                    FilmOfOil = false,
+                                    FogWater = false,
+                                    HardWater = false,
+                                }
                             },
-                            PlumbingUsage = new PlumbingUsage()
-                            {
+                            PlumbingUsage = new PlumbingUsage(){
                                 WaterQuantity = WaterQuantity.WaterBill,
-                                WaterBill = 569
+                                WaterBill = 956
                             }
+                        },
+                        WaterActivityPWA = new WaterActivity()
+                        {
+                            Drink = 0,
+                            Plant = 0,
+                            Agriculture = 0,
+                            Product = 0,
+                            Service = 0
                         },
                         WaterActivityMWA = new WaterActivity()
                         {
@@ -493,49 +615,49 @@ namespace VarsWebApi.Controllers
                         WaterNotRunning = false
                     },
                     GroundWater = new GroundWater()
-                    {
-                        PrivateGroundWater = true,
-                        GroundWaterCount = 1,
-                        UseGroundWaterCount = 1,
-                        AvgUsageWater = new List<AvgUsageWaterBill>(){
-                            new AvgUsageWaterBill(){
-                                UsageType = new GroundWaterUsage(){
-                                    GroundWaterQuantity = GroundWaterQuantity.Unknown
-                                },
-                                HasPump = true,
-                                PumpCount = 1,
-                                Pumps = new List<Pump>(){
-                                    new Pump(){
-                                        PumpAuto = false,
-                                        NumberOfPumpsPerYear = 125,
-                                        PumpRate = 7,
-                                        EnergySource = EnergySource.ElecticPump,
-                                        PumpType = EnergySource.ElecticPump,
-                                        HorsePower = 72.329,
-                                        SuctionPipeSize = 5,
-                                        PipelineSize = 3
-                                    }
-                                },
-                                UsageActivities = new WaterActivity(){
-                                    Drink = 0,
-                                    Plant = 5,
-                                    Farm = 0,
-                                    Agriculture = 0,
-                                    Product = 80,
-                                    Service = 15
-                                },
-                                HasQaulityProblem = true,
-                                QualityProblems = new Problem(){
-                                    TurbidWater = true,
-                                    SaltWater = true,
-                                    HardWater = true
-                                }
-                            }
-                        },
-                        PublicGroundWater = new PublicGroundWater
-                        {
-                            Doing = false,
-                        },
+                    {                        
+                        // PrivateGroundWater = true,
+                        // GroundWaterCount = 1,
+                        // ActiveGroundWaterCount = 1,
+                        // AvgUsageWater = new List<AvgUsageWaterBill>(){
+                        //     new AvgUsageWaterBill(){
+                        //         UsageType = new GroundWaterUsage(){
+                        //             GroundWaterQuantity = GroundWaterQuantity.Unknown
+                        //         },
+                        //         HasPump = true,
+                        //         PumpCount = 1,
+                        //         Pumps = new List<Pump>(){
+                        //             new Pump(){
+                        //                 PumpAuto = false,
+                        //                 NumberOfPumpsPerYear = 125,
+                        //                 PumpRate = 7,
+                        //                 EnergySource = EnergySource.ElecticPump,
+                        //                 PumpType = EnergySource.ElecticPump,
+                        //                 HorsePower = 72.329,
+                        //                 SuctionPipeSize = 5,
+                        //                 PipelineSize = 3
+                        //             }
+                        //         },
+                        //         UsageActivities = new WaterActivity(){
+                        //             Drink = 0,
+                        //             Plant = 5,
+                        //             Farm = 0,
+                        //             Agriculture = 0,
+                        //             Product = 80,
+                        //             Service = 15
+                        //         },
+                        //         HasQaulityProblem = true,
+                        //         QualityProblems = new Problem(){
+                        //             TurbidWater = true,
+                        //             SaltWater = true,
+                        //             HardWater = true
+                        //         }
+                        //     }
+                        // },
+                        // PublicGroundWater = new PublicGroundWater
+                        // {
+                        //     Doing = false,
+                        // },
                     },
                     River = new River()
                     {
