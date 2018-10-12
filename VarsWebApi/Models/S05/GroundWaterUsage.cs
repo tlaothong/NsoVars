@@ -9,22 +9,26 @@ namespace VarsWebApi.Models
     /// <summary>
     ///  ในรอบ 1 ปีที่ผ่านมาใช้น้้าปริมาณเท่าไรต่อเดือนโดยเฉลี่ย 
     /// </summary>
-    public enum GroundWaterUsage
+    public class GroundWaterUsage
     {
         /// <summary>
-        /// ทราบปริมาณน้้า 
+        ///  ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย
         /// </summary>
-        CubicMeterPerMonth            = 1,
+        /// <remarks>
+        /// 1.ทราบปริมาณน้้า
+        /// 2.ไม่ทราบปริมาณน้้าแต่ทราบค่าน้้า
+        /// 3.ไม่ทราบ
+        /// </remarks>
+        public GroundWaterQuantity GroundWaterQuantity { get; set; }
+        /// <summary>
+        ///  ลบ.ม./เดือน  
+        /// </summary>
+        public int UsageCubicMeters { get; set; }
         /// <summary>
         /// ไม่ทราบปริมาณน้้าแต่ทราบค่าน้้า 
         /// </summary>
-        WaterBill       = 2,
-        /// <summary>
-        ///  ไม่ทราบ
-        /// </summary>
-        Unknown      = 3
-      
-        
+        public int WaterBill { get; set; }
+              
     }
     
 }
