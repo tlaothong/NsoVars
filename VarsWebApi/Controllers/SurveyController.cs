@@ -501,7 +501,6 @@ namespace VarsWebApi.Controllers
                                 Pumps = new List<Pump>(){
                                     new Pump(){
                                         PumpAuto = false,
-                                        UnknowHoursPerPump = true,
                                         NumberOfPumpsPerYear = 125,
                                         PumpRate = new PumpRate(){
                                             KnowPumpRate = true,
@@ -539,7 +538,6 @@ namespace VarsWebApi.Controllers
                         Pumps = new List<Pump>(){
                             new Pump(){
                                 PumpAuto = false,
-                                UnknowHoursPerPump = true,
                                 HoursPerPump = 2,
                                 NumberOfPumpsPerYear = 224,
                                 PumpRate = new PumpRate(){
@@ -592,7 +590,17 @@ namespace VarsWebApi.Controllers
                                 Pump = new List<Pump>(){
                                     new Pump(){
                                         PumpAuto = false,
-                                        UnknowHoursPerPump = false,
+                                        HoursPerPump = 3,
+                                        NumberOfPumpsPerYear = 2,
+                                        PumpRate = new PumpRate(){
+                                            KnowPumpRate = true,
+                                            PumpRateUsage = 79
+                                        },
+                                        EnergySource = EnergySource.ElecticPump,
+                                        PumpType = EnergySource.ElecticPump,
+                                        HorsePower = 1250,
+                                        SuctionPipeSize = 4,
+                                        PipelineSize = 3
                                     }
                                 },
                                 WaterActivity = new WaterActivity(){

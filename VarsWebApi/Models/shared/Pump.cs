@@ -15,10 +15,6 @@ namespace VarsWebApi.Models
         public bool PumpAuto { get; set; }
 
         /// <summary>
-        /// ใช้ระยะเวลาในการสูบน้้าต่อครั้งเท่าไร ไม่ทราบ เนื่องจากเป็นเครื่องสูบน้ำอัตโนมัติ (ถ้าไม่ทราบข้ามไปถามเครื่องถัดไป)
-        /// </summary>
-        public bool UnknowHoursPerPump { get; set; }
-        /// <summary>
         /// ใช้ระยะเวลาในการสูบน้้าต่อครั้งเท่าไร (ชั่วโมง) 
         /// </summary>
         public int HoursPerPump { get; set; }
