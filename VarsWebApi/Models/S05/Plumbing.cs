@@ -25,13 +25,17 @@ namespace VarsWebApi.Models
         public PlumbingInfo Other { get; set; }
         
 
-        // TODO: 
         /// <summary>
-        ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร(น้้ำประปาส่วนภมูิภาค/นครหลวง)   
+        ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร(นครหลวง)   
         /// </summary>
-        public WaterActivity WaterActivityMWAPWA { get; set; }
-       
-         /// <summary>
+        public WaterActivity WaterActivityMWA { get; set; }
+
+        /// <summary>
+        ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร(น้้ำประปาส่วนภมูิภาค)   
+        /// </summary>
+        public WaterActivity WaterActivityPWA { get; set; }
+
+        /// <summary>
         ///   ใช้น้้าเพื่อท้ากิจกรรมใดบ้างคิดเป็นสัดส่วนเท่าไร(น้ำประปาอื่น ๆ)   
         /// </summary>
         public WaterActivity WaterActivityOther { get; set; }

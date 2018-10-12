@@ -101,7 +101,13 @@ namespace VarsWebApi.Controllers
                                     SqWa = 78,
                                 },
                                 IrrigationField = false,
-                                Names = new [] { "ยาสูบ", "แตงโม", "งา", "ทานตะวัน", "ถั่วทุกชนิด"},
+                                Plantings = new List<PlantItem> {
+                                    new PlantItem { Code = "232", Name = "ยาสูบ" },
+                                    new PlantItem { Code= "323", Name="แตงโม" }
+                                },
+                                OtherPlantings = new List<PlantItem> {
+                                    new PlantItem { Code = "3001", Name="ยาสูบชนิดใหม่" },
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,
@@ -670,11 +676,11 @@ namespace VarsWebApi.Controllers
                 {
                     Flooded = false
                 },
-                UserInfo = new UserInfo()
+                Closing = new ClosingInfo()
                 {
-                    name = "SorrY",
-                    Category = new string[] { "ยาสูบ" },
-                    ServiceType = new string[] { "โรงงาน" }
+                    Informer = "SorrY",
+                    FactorialCategoryCode = "3245",
+                    ServiceTypeCode = "29",
                 }
             };
         }

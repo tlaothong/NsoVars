@@ -20,9 +20,9 @@ namespace VarsWebApi.Models
         public bool ThisPlantOnly { get; set; }
 
         /// <summary>
-        /// รายชื่อพืชที่ปลูกหลัก
+        /// รายชื่อพืชที่ปลูกหลัก (เป็นรหัส)
         /// </summary>
-        public string MixedWithPrimaryPlant { get; set; }
-        
+        public string MixedWithPrimaryPlantCode { get; set; }
+
     }
 }

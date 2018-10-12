@@ -14,11 +14,12 @@ namespace VarsWebApi.Models
         /// ชื่อสถานประกอบการ / หน่วยงาน
         /// </summary>
         public string Name { get; set; }
-        // TODO:CAT
+
         /// <summary>
         /// สถานประกอบการแห่งนี้ผลิตสินค้าประเภทใด
         /// </summary>
         public string Category { get; set; }
+
         /// <summary>
         /// สถานประกอบการแห่งนี้มีคนทำงานรวมทั้งหมดกี่คน
         /// </summary>

@@ -25,7 +25,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ในรอบ 12 เดือนที่ผ่านมา มีบ่อน้้าบาดาลที่ใช้อยู่กี่บ่อ 
         /// </summary>
-        public int UseGroundWaterCount { get; set; }
+        public int ActiveGroundWaterCount { get; set; }
 
         // TODO: enum (ใช้ class ร่วมกับคนอื่นด้วยเลยทำ class ของตัวเอง)
         /// <summary>

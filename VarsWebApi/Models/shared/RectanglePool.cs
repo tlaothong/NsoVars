@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// สระน้ำ สี่เหลี่ยม
     /// </summary>
-    public class RectanglePool : ModelBase
+    public class RectanglePool
     {
         /// <summary>
         /// ความกว้าง

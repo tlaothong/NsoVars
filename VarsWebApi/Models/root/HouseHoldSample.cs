@@ -34,10 +34,10 @@ namespace VarsWebApi.Models
         /// ปัญหาอุทกภัย
         /// </summary>
         public Disasterous Disaster { get; set; }
-        // TODO: ผู้ให้ข้อมูล
+
         /// <summary>
         /// ข้อมูลพื้นฐานส่วนบุคคล
         /// </summary>
-        public UserInfo UserInfo { get; set; }
+        public ClosingInfo Closing { get; set; }
     }
 }
