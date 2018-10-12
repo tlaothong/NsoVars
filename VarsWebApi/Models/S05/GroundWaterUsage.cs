@@ -9,7 +9,7 @@ namespace VarsWebApi.Models
     /// <summary>
     ///  ในรอบ 1 ปีที่ผ่านมาใช้น้้าปริมาณเท่าไรต่อเดือนโดยเฉลี่ย 
     /// </summary>
-    public enum PrivateGroundWaterUsage
+    public enum GroundWaterUsage
     {
         /// <summary>
         /// ทราบปริมาณน้้า 

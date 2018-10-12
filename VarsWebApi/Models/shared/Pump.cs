@@ -38,12 +38,24 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เครื่องสูบน้้าใช้แหล่งพลังงานจากที่ใด
         /// </summary>
+        /// <remarks>
+        /// 1.ใช้ไฟฟ้า
+        /// 2.ใช้น้้ามันดีเซล(โซล่า)
+        /// 3.ใช้น้้ามันเบนซิน
+        /// 4.รถไถเดินตาม
+        /// </remarks>
         // TODO:
         public EnergySource EnergySource { get; set; }
 
         /// <summary>
         /// ชนิดของเครื่องสูบ (จะโชว์ตามแหล่งพลังงานที่ตอบใน 4.5))
         /// </summary>
+        /// <remarks>
+        /// 1.ใช้ไฟฟ้า
+        /// 2.ใช้น้้ามันดีเซล(โซล่า)
+        /// 3.ใช้น้้ามันเบนซิน
+        /// 4.รถไถเดินตาม
+        /// </remarks>
         // TODO: Not sure
         public EnergySource PumpType { get; set; }
 
