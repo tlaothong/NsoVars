@@ -616,48 +616,96 @@ namespace VarsWebApi.Controllers
                     },
                     GroundWater = new GroundWater()
                     {                        
-                        // PrivateGroundWater = true,
-                        // GroundWaterCount = 1,
-                        // ActiveGroundWaterCount = 1,
-                        // AvgUsageWater = new List<AvgUsageWaterBill>(){
-                        //     new AvgUsageWaterBill(){
-                        //         UsageType = new GroundWaterUsage(){
-                        //             GroundWaterQuantity = GroundWaterQuantity.Unknown
-                        //         },
-                        //         HasPump = true,
-                        //         PumpCount = 1,
-                        //         Pumps = new List<Pump>(){
-                        //             new Pump(){
-                        //                 PumpAuto = false,
-                        //                 NumberOfPumpsPerYear = 125,
-                        //                 PumpRate = 7,
-                        //                 EnergySource = EnergySource.ElecticPump,
-                        //                 PumpType = EnergySource.ElecticPump,
-                        //                 HorsePower = 72.329,
-                        //                 SuctionPipeSize = 5,
-                        //                 PipelineSize = 3
-                        //             }
-                        //         },
-                        //         UsageActivities = new WaterActivity(){
-                        //             Drink = 0,
-                        //             Plant = 5,
-                        //             Farm = 0,
-                        //             Agriculture = 0,
-                        //             Product = 80,
-                        //             Service = 15
-                        //         },
-                        //         HasQaulityProblem = true,
-                        //         QualityProblems = new Problem(){
-                        //             TurbidWater = true,
-                        //             SaltWater = true,
-                        //             HardWater = true
-                        //         }
-                        //     }
-                        // },
-                        // PublicGroundWater = new PublicGroundWater
-                        // {
-                        //     Doing = false,
-                        // },
+                        PrivateGroundWater = new PrivateGroundWater(){
+                            Doing = true,
+                            AllCount = 1,
+                            WaterResourceCount = 1,
+                            WaterResources = new List<GroundWaterWell>(){
+                                new GroundWaterWell(){
+                                    UsageType = new GroundWaterUsage(){
+                                        GroundWaterQuantity = GroundWaterQuantity.WaterBill,
+                                        WaterBill = 578
+                                    },
+                                    HasPump = true,
+                                    PumpCount = 1,
+                                    Pumps = new List<Pump>(){
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 2,
+                                            NumberOfPumpsPerYear = 340,
+                                            HasPumpRate = true,
+                                            PumpRate = 30,
+                                            EnergySource = EnergySource.ElecticPump,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 79.5,
+                                            SuctionPipeSize = 3,
+                                            PipelineSize = 2.5
+                                        }
+                                    },
+                                    WaterActivities = new WaterActivity(){
+                                        Drink = 0,
+                                        Plant = 15,
+                                        Farm = 0,
+                                        Agriculture = 0,
+                                        Product = 70,
+                                        Service = 15
+                                    },
+                                    QualityProblem = new WaterProblem(){
+                                        HasProblem = true,
+                                        Problem = new Problem(){
+                                            TurbidWater = true,
+                                            SaltWater = false,
+                                            Smell = false,
+                                            FilmOfOil = false,
+                                            FogWater = true,
+                                            HardWater = true
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        PublicGroundWater = new PublicGroundWater(){
+                            Doing = true,
+                            WaterResourceCount = 1,
+                            WaterResources = new List<WaterConsumptionUsingPumpBase>(){
+                                new WaterConsumptionUsingPumpBase(){
+                                    HasPump = true,
+                                    PumpCount = 1,
+                                    Pumps = new List<Pump>(){
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 8,
+                                            NumberOfPumpsPerYear = 365,
+                                            HasPumpRate = false,
+                                            EnergySource = EnergySource.ElecticPump,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 67,
+                                            SuctionPipeSize = 4,
+                                            PipelineSize = 2.5,
+                                        }
+                                    },
+                                    WaterActivities = new WaterActivity(){
+                                        Drink = 0,
+                                        Plant = 40,
+                                        Farm = 0,
+                                        Agriculture = 40,
+                                        Product = 0,
+                                        Service = 20
+                                    },
+                                    QualityProblem = new WaterProblem(){
+                                        HasProblem = true,
+                                        Problem = new Problem(){
+                                            TurbidWater = true,
+                                            SaltWater = false,
+                                            Smell = false,
+                                            FilmOfOil = false,
+                                            FogWater = false,
+                                            HardWater = true
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     },
                     River = new River()
                     {
@@ -708,38 +756,56 @@ namespace VarsWebApi.Controllers
                         },
                         WaterResourceCount = 1,
                         WaterResources = new List<WaterConsumptionUsingPump> {
-                            //new PoolUsage(){
-                            //    CubicMeterPerMonth = 30,
-                            //    HasPump = true,
-                            //    PumpCount = 1,
-                            //    Pump = new List<Pump>(){
-                            //        new Pump(){
-                            //            PumpAuto = false,
-                            //            HoursPerPump = 3,
-                            //            NumberOfPumpsPerYear = 2,
-                            //            PumpRate = 7,
-                            //            EnergySource = EnergySource.ElecticPump,
-                            //            PumpType = EnergySource.ElecticPump,
-                            //            HorsePower = 1250,
-                            //            SuctionPipeSize = 4,
-                            //            PipelineSize = 3
-                            //        }
-                            //    },
-                            //    WaterActivities = new WaterActivity(){
-                            //        Drink = 0,
-                            //        Plant = 5,
-                            //        Farm = 40,
-                            //        Agriculture = 0,
-                            //        Product = 40,
-                            //        Service = 15
-                            //    },
-                            //    QualityProblem = new WaterProblem(){
-                            //        HasProblem = true,
-                            //        Problem = new Problem(){
-                            //            TurbidWater =true
-                            //        }
-                            //    }
-                            //}
+                            new WaterConsumptionUsingPump(){
+                                HasCubicMeterPerMonth = false,
+                                HasPump = true,
+                                PumpCount = 2,
+                                Pumps = new List<Pump>(){
+                                    new Pump(){
+                                        PumpAuto = false,
+                                        HoursPerPump = 5,
+                                        NumberOfPumpsPerYear = 50,
+                                        HasPumpRate = true,
+                                        PumpRate = 40,
+                                        EnergySource = EnergySource.ElecticPump,
+                                        PumpType = PumpType.DontKnowYet,
+                                        HorsePower = 110,
+                                        SuctionPipeSize = 8,
+                                        PipelineSize = 6
+                                    },
+                                    new Pump(){
+                                        PumpAuto = false,
+                                        HoursPerPump = 4,
+                                        NumberOfPumpsPerYear = 70,
+                                        HasPumpRate = true,
+                                        PumpRate = 60,
+                                        EnergySource = EnergySource.ElecticPump,
+                                        PumpType = PumpType.DontKnowYet,
+                                        HorsePower = 100,
+                                        SuctionPipeSize = 6,
+                                        PipelineSize = 4
+                                    }
+                                },
+                                WaterActivities = new WaterActivity(){
+                                    Drink = 0,
+                                    Plant = 20,
+                                    Farm = 60,
+                                    Agriculture = 20,
+                                    Product = 0,
+                                    Service = 0
+                                },
+                                QualityProblem = new WaterProblem(){
+                                    HasProblem = true,
+                                    Problem = new Problem(){
+                                        TurbidWater = true,
+                                        SaltWater = false,
+                                        Smell = false,
+                                        FilmOfOil = false,
+                                        FogWater = false,
+                                        HardWater = false
+                                    }
+                                }
+                            }
                         }
                     },
                     Irrigation = new Irrigation()
