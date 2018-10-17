@@ -8,11 +8,11 @@ namespace VarsWebApi.Models
     public enum UnitAllowed 
     {
         /// <summary>
-        /// 1 มีผู้ให้ข้อมูล ให้ความรว่มมอื  
+        /// 1 มีผู้ให้ข้อมูลให้ความร่วมมือ
         /// </summary>
         HasPersonAndAccept = 1,
         /// <summary>
-        /// 2 มีผู้ให้ข้อมลู แต่ไม่ให้ความร่วมมอื  
+        /// 2 มีผู้ให้ข้อมูลแต่ไม่ให้ความร่วมมือ 
         /// </summary>
         HasPersonNoAccept = 2,
         /// <summary>
@@ -20,9 +20,9 @@ namespace VarsWebApi.Models
         /// </summary>
         NoPerson = 3,
         /// <summary>
-        /// 4 บ้าน/อาคาร ว่าง
+        /// 4 บ้าน/อาคารว่าง
         /// </summary>
-        EmptyHouse = 4,
+        Vacancy = 4,
         /// <summary>
         /// 5 บ้านร้าง  
         /// </summary>

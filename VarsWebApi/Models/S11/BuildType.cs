@@ -20,7 +20,7 @@ namespace VarsWebApi.Models
         /// </summary>
         ShopHouse = 3,
         /// <summary>
-        /// 4 อาคารสูง (คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์) 
+        /// 4 อาคารสูง(คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์) 
         /// </summary>
         Apartment = 4,
         /// <summary>
@@ -28,7 +28,7 @@ namespace VarsWebApi.Models
         /// </summary>
         Office = 5,
         /// <summary>
-        /// 6 โรงแรม /รีสอร์ท / เกสเฮาส์  
+        /// 6 โรงแรม/รีสอร์ท/เกสเฮาส์  
         /// </summary>
         Hotel = 6,
         /// <summary>
@@ -36,11 +36,11 @@ namespace VarsWebApi.Models
         /// </summary>
         PublicHospital = 7,
         /// <summary>
-        /// 8 สถานพยาบาล :  ภาคเอกชน 
+        /// 8 สถานพยาบาล : ภาคเอกชน 
         /// </summary>
         PrivateHospital = 8,
         /// <summary>
-        /// 9 สถานที่ราชการ / รัฐวิสาหกิจ 
+        /// 9 สถานที่ราชการ/รัฐวิสาหกิจ 
         /// </summary>
         GovernmentOffice = 9,
         /// <summary>
@@ -64,7 +64,7 @@ namespace VarsWebApi.Models
         /// </summary>
         GreenHouse = 14,
         /// <summary>
-        /// 15 อาคารก้าลังก่อสร้าง   
+        /// 15 อาคารกำลังก่อสร้าง   
         /// </summary>
         UnderConstruction = 15,
         /// <summary>
