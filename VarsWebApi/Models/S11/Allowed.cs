@@ -9,8 +9,8 @@ namespace VarsWebApi.Models
     {
         /// <summary>
         /// 1 อนุญาต      
-        /// 2 ไม่อนุญาต แต่ให้ข้อมูล 
-        /// 3 ไม่อนุญาต และไม่ให้ข้อมลู
+        /// 2 ไม่อนุญาตแต่ให้ข้อมูล 
+        /// 3 ไม่อนุญาตและไม่ให้ข้อมลู
         /// </summary>
         public Allow Allow { get; set; }
         /// <summary>
@@ -18,15 +18,15 @@ namespace VarsWebApi.Models
         /// </summary>
         public int VacantRoomCount { get; set; }
         /// <summary>
-        /// จำนวนห้องที่มีผู้อาศัย/จำนวนสถานประกอบการ ****
+        /// จำนวนห้องที่มีผู้อาศัย/จำนวนสถานประกอบการ
         /// </summary>
         public int OccupiedRoomCount { get; set; }
         /// <summary>
-        /// ปริมาณน้้า
+        /// ปริมาณน้ำ
         /// </summary>
         public int WaterQuantity { get; set; }
         /// <summary>
-        ///  ค่าน้้า 
+        ///  ค่าน้ำ
         /// </summary>
         public int WaterBill { get; set; }
     }

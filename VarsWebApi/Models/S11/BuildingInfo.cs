@@ -12,11 +12,11 @@ namespace VarsWebApi.Models
         /// </summary>
         public string EA { get; set; }
         /// <summary>
-        /// ล้าดับที่ บ้าน/ อาคาร/สิ่ง ปลูกสร้าง
+        /// ลำดับที่บ้าน/อาคาร/สิ่งปลูกสร้าง
         /// </summary>
         public int Rank { get; set; }
         /// <summary>
-        /// ชื่อถนน ล้าน้้า หรือ ละแวกบ้าน
+        /// ชื่อถนนลำน้ำหรือละแวกบ้าน
         /// </summary>
         public string Road { get; set; }
         /// <summary>
@@ -24,11 +24,11 @@ namespace VarsWebApi.Models
         /// </summary>
         public string Alley { get; set; }
         /// <summary>
-        /// ชื่อหมู่บ้าน/คอนโด/ อาคาร/ส้านักงาน/ สถาน ประกอบการ/สถาบัน ฯลฯ 
+        /// ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน ฯลฯ 
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// เลขที่ บ้าน/ อาคาร
+        /// เลขที่บ้าน/อาคาร
         /// </summary>
         public string HouseNo { get; set; }
         /// <summary>
@@ -40,18 +40,21 @@ namespace VarsWebApi.Models
         /// </summary>
         public double Longitude { get; set; }
         /// <summary>
-        /// ประเภท บ้าน/ อาคาร/ สิ่งปลูก สร้าง 
+        /// ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง 
         /// </summary>
         public BuildType BuildType { get; set; }
         /// <summary>
-        /// อื่นๆ --> ระบุประเภทอาคาร
+        /// อื่นๆ (ระบุประเภทอาคาร)
         /// </summary>
         public string Other { get; set; }
         /// <summary>
-        ///  อาคารสูง  (คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์) และ อาคารสำนักงานเอกชน 
+        ///  อาคารสูง(คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์)และอาคารสำนักงานเอกชน 
         /// </summary>
         public Allowed Allow { get; set; }
 
+        /// <summary>
+        ///  การเข้าพบบ้าน/อาคาร/สิ่งปลูกสร้าง 
+        /// </summary>
         public List<Access> Access { get; set; }
 
     }

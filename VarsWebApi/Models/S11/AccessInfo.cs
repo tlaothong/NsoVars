@@ -8,11 +8,11 @@ namespace VarsWebApi.Models
     public enum AccessInfo
     {
         /// <summary>
-        /// 1 มีผู้ให้ข้อมูล ให้ความรว่มมอื  
+        /// 1 มีผู้ให้ข้อมูลให้ความร่วมมือ  
         /// </summary>
         HasPersonAndAccept = 1,
         /// <summary>
-        /// 2 มีผู้ให้ข้อมลู แต่ไม่ให้ความร่วมมือ  
+        /// 2 มีผู้ให้ข้อมูลแต่ไม่ให้ความร่วมมือ  
         /// </summary>
         HasPersonNoAccept = 2,
         /// <summary>
@@ -20,7 +20,7 @@ namespace VarsWebApi.Models
         /// </summary>
         NoPerson = 3,
         /// <summary>
-        /// 4 บ้าน/อาคาร ว่าง หรือร้าง  
+        /// 4 บ้าน/อาคารว่างหรือร้าง  
         /// </summary>
         Vacancy = 4
     }
