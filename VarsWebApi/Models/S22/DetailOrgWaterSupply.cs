@@ -14,24 +14,24 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้น้้าผิวดิน (สระน้้า แม่น้้า/ล้าคลอง) หรือไม่  
         /// </summary>
-        public bool HasOnGroundWater { get; set; }
+        public bool HasSurfaceWater { get; set; }
         /// <summary>
         /// ถ้า “ใช้” ใช้น้้าผิวดินผลิตน้้าประปาโดยเฉลี่ยต่อเดือน ปริมาณเท่าไร  
         /// </summary>
-        public int OnGroundWaterCapacity { get; set; }
+        public int? SurfaceWaterPerMonth { get; set; }
         /// <summary>
         ///  ใช้น้้าจาก บ่อบาดาล หรือไม่   
         /// </summary>
-        public bool UseUnderGroundWater { get; set; }
+        public bool UseGroundWater { get; set; }
         /// <summary>
         ///  ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ   
         /// </summary>
-        public int GroundWaterWellCount { get; set; }
+        public int? GroundWaterCount { get; set; }
 
         /// <summary>
         ///  ใช้น้้าบาดาลผลิตน้้าประปาโดยเฉลี่ยต่อเดือนปริมาณเท่าไร   
         /// </summary>
-        public int UnderGroundWaterUse { get; set; }
+        public int? GroundWaterUsePerMonth { get; set; }
 
         /// <summary>
         /// น้้าประปาราคาขายหน่วยละเท่าไร 

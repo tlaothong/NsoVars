@@ -15,7 +15,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// หาก “มี” มีจ้านวนกี่แหล่ง
         /// </summary>
-        public int PublicWaterCount { get; set; }
+        public int? PublicWaterCount { get; set; }
 
         /// <summary>
         /// รายละเอียดของแหล่งน้ำสาธารณะ 
@@ -46,7 +46,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// หาก “ใช่” ในหมู่บ้าน/ชุมชน มีแหล่งผลิตน้้าประปาอื่นๆ กี่หน่วยงาน 
         /// </summary>
-        public int WaterServiceCount { get; set; }
+        public int? WaterServiceCount { get; set; }
 
         /// <summary>
         /// รายละเอียดของหน่วยงานแหล่งผลิตน้ำประปา
