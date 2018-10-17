@@ -16,13 +16,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จ้านวนห้องว่าง
         /// </summary>
-        /// <value></value>
-        public int EmptyRoom { get; set; }
+        public int VacantRoomCount { get; set; }
         /// <summary>
-        /// จำนวนห้องที่มีผู้อาศัย/จำนวนสถานประกอบการ 
+        /// จำนวนห้องที่มีผู้อาศัย/จำนวนสถานประกอบการ ****
         /// </summary>
-        /// <value></value>
-        public int UseRoom { get; set; }
+        public int OccupiedRoomCount { get; set; }
         /// <summary>
         /// ปริมาณน้้า
         /// </summary>

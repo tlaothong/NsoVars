@@ -19,7 +19,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public int? EmptyHouse { get; set; }
         /// <summary>
-        /// จeนวนบ้านร้าง
+        /// จำนวนบ้านร้าง
         /// </summary>
         public int? AbandonedHouse { get; set; }
 

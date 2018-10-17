@@ -66,10 +66,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 15 อาคารก้าลังก่อสร้าง   
         /// </summary>
-        BuildingConstruction = 15,
+        UnderConstruction = 15,
         /// <summary>
         /// 16 อื่นๆ  
         /// </summary>
-        OtherBuilding = 16     
+        Other = 16     
     }
 }

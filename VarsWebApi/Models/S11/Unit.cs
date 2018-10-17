@@ -16,11 +16,15 @@ namespace VarsWebApi.Models
         /// </summary>
         public int RankHouse { get; set; }
         /// <summary>
-        /// ล้าดับครัว เรือน/ สถานประ กอบ การใน อาคาร 
+        /// หมายเลขห้อง
         /// </summary>
         public int RoomNumber { get; set; }
 
-        public UnitAllowed MyProperty { get; set; }
+        /// <summary>
+        /// ****
+        /// </summary>
+        /// <value></value>
+        public UnitAllowed UnitAllowed { get; set; }
         
     }
 }

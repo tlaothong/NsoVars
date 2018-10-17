@@ -14,10 +14,10 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ไม่อนุญาต แต่ให้ข้อมูล 
         /// </summary>
-        NoAllowGiveInfo = 2,
+        NotAllowGiveInfo = 2,
         /// <summary>
         ///  ไม่อนุญาต และไม่ให้ข้อมูล
         /// </summary>
-        NoAllowNoInfo = 3,
+        NotAllowNoInfo = 3,
     }
 }

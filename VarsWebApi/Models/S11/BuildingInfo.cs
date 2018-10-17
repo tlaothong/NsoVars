@@ -26,19 +26,19 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ชื่อหมู่บ้าน/คอนโด/ อาคาร/ส้านักงาน/ สถาน ประกอบการ/สถาบัน ฯลฯ 
         /// </summary>
-        public string NameBuilding { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// เลขที่ บ้าน/ อาคาร
         /// </summary>
-        public string NumberHouse { get; set; }
+        public string HouseNo { get; set; }
         /// <summary>
         /// ละติจูด 
         /// </summary>
-        public double latitude { get; set; }
+        public double Latitude { get; set; }
         /// <summary>
         /// ลองจิจูด
         /// </summary>
-        public double longitude { get; set; }
+        public double Longitude { get; set; }
         /// <summary>
         /// ประเภท บ้าน/ อาคาร/ สิ่งปลูก สร้าง 
         /// </summary>
@@ -46,7 +46,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// อื่นๆ --> ระบุประเภทอาคาร
         /// </summary>
-        public string OtherBuilding { get; set; }
+        public string Other { get; set; }
         /// <summary>
         ///  อาคารสูง  (คอนโดฯ/แมนชั่น/แฟลต/อพาร์ทเมนท์) และ อาคารสำนักงานเอกชน 
         /// </summary>

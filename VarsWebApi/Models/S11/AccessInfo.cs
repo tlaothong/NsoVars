@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// </summary>
         HasPersonAndAccept = 1,
         /// <summary>
-        /// 2 มีผู้ให้ข้อมลู แต่ไม่ให้ความร่วมมอื  
+        /// 2 มีผู้ให้ข้อมลู แต่ไม่ให้ความร่วมมือ  
         /// </summary>
         HasPersonNoAccept = 2,
         /// <summary>
@@ -22,6 +22,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 4 บ้าน/อาคาร ว่าง หรือร้าง  
         /// </summary>
-        EmptyHouse = 4
+        Vacancy = 4
     }
 }
