@@ -869,6 +869,16 @@ namespace VarsWebApi.Controllers
             };
         }
 
+        [Route("building")]
+        public ActionResult<BuildingSample> GetBuilding() {
+            return new BuildingSample();
+        }
+
+        [Route("community")]
+        public ActionResult<CommunitySample> GetCommunity() {
+            return new CommunitySample();
+        }
+
         [HttpPost]
         public void Post(HouseHoldSample sample)
         {
