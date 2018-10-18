@@ -44,8 +44,8 @@ namespace VarsWebApi.Controllers
                             new RicePlantingField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 5,
@@ -92,8 +92,8 @@ namespace VarsWebApi.Controllers
                             new GrowingFieldWithNames(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 5,
@@ -130,8 +130,8 @@ namespace VarsWebApi.Controllers
                             new GrowingField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 15,
@@ -161,8 +161,8 @@ namespace VarsWebApi.Controllers
                             new GrowingFieldWithNames(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 7,
@@ -202,8 +202,8 @@ namespace VarsWebApi.Controllers
                             new MixablePlantingField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 1,
@@ -245,8 +245,8 @@ namespace VarsWebApi.Controllers
                             new MixablePlantingField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 0,
@@ -288,8 +288,8 @@ namespace VarsWebApi.Controllers
                             new MushroomField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
-                                    Distric = "เมือง",
-                                    SubDistric = "เมือง"
+                                    District = "เมือง",
+                                    Tambon = "เมือง"
                                 },
                                 AreaSqM = 4,
                                 IrrigationField = true,

@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public enum Allow
+    /// <summary>
+    /// ได้รับอนุญาตให้เก็บข้อมูลผู้พักอาศัยในอาคารหรือไม่
+    /// </summary>
+    public enum UnitAccess
     {
         /// <summary>
         /// อนุญาต 

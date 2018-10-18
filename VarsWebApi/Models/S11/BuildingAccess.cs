@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public enum AccessInfo
+    /// <summary>
+    /// H1-X การอนุญาตให้เข้าอาคาร
+    /// </summary>
+    public enum BuildingAccess
     {
         /// <summary>
         /// 1 มีผู้ให้ข้อมูลให้ความร่วมมือ  

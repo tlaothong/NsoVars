@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public enum BuildType
+    public enum BuildingType
     {
         /// <summary>
         /// 1 บ้านเดี่ยว 

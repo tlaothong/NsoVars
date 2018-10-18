@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public enum UnitAllowed 
+    /// <summary>
+    /// รหัสการเข้าพบยูนิตย่อย
+    /// </summary>
+    public enum SubUnitAccess 
     {
         /// <summary>
         /// 1 มีผู้ให้ข้อมูลให้ความร่วมมือ
