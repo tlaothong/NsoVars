@@ -17,11 +17,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// อำเภอ
         /// </summary>
-        public string Distric { get; set; }
+        public string District { get; set; }
 
         /// <summary>
         /// ตำบล
         /// </summary>
-        public string SubDistric { get; set; }
+        public string Tambon { get; set; }
     }
 }
