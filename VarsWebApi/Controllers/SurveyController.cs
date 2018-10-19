@@ -532,7 +532,7 @@ namespace VarsWebApi.Controllers
                         PreSchool = new HasAndCount(){ HasItem = true, ItemCount = 7},
                         Kindergarten = new HasAndCount(){ HasItem = true, ItemCount = 12},
                         PrimarySchool = new HasAndCount(){ HasItem = true, ItemCount = 24},
-                        Highschool = new HasAndCount(){ HasItem = true, ItemCount = 33},
+                        HighSchool = new HasAndCount(){ HasItem = true, ItemCount = 33},
                         Vocational = new HasAndCount(){ HasItem = true, ItemCount = 46},
                         HigherEducation = new HasAndCount(){ HasItem = true, ItemCount = 19},
                         PersonnelCount = 15
