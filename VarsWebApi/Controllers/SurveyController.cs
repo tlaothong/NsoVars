@@ -12,6 +12,7 @@ namespace VarsWebApi.Controllers
     [ApiController]
     public class SurveyController : ControllerBase
     {
+        [HttpGet]
         public ActionResult<HouseHoldSample> Get()
         {
             return new HouseHoldSample()
@@ -870,11 +871,13 @@ namespace VarsWebApi.Controllers
         }
 
         [Route("building")]
+        [HttpGet]
         public ActionResult<BuildingSample> GetBuilding() {
             return new BuildingSample();
         }
 
         [Route("community")]
+        [HttpGet]
         public ActionResult<CommunitySample> GetCommunity() {
             return new CommunitySample();
         }
