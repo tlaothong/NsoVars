@@ -17,7 +17,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  หาก “มี” มีกี่โครงการ
         /// </summary>
-        public int ProjectCount { get; set; }
+        public int? ProjectCount { get; set; }
 
         /// <summary>
         /// จำนวนโครงการการจัดการน้้าเพื่อการเกษตรชุมชน

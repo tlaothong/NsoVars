@@ -4,25 +4,25 @@ namespace VarsWebApi.Models
     /// แหล่งพลังงาน
     /// </summary>
     // TODO:
-    public class EnergySource
+    public enum EnergySource
     {
         /// <summary>
         /// ใช้ไฟฟ้า
         /// </summary>
-        public bool ElecticPump { get; set; }
+        ElecticPump = 1,
         /// <summary>
         /// ใช้น้้ามันดีเซล(โซล่า)
         /// </summary>
-        public bool SolaPump { get; set; }
+        SolaPump = 2,
         /// <summary>
         /// ใช้น้้ามันเบนซิน
         /// </summary>
-        public bool PetrolPump { get; set; }
+        PetrolPump = 3,
         
         /// <summary>
         /// รถไถเดินตาม
         /// </summary>
-        public bool TwoWheeledTractors { get; set; }
+        TwoWheeledTractors = 4
 
     }
 }

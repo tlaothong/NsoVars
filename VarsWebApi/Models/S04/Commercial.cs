@@ -18,8 +18,15 @@ namespace VarsWebApi.Models
         /// <summary>
         /// สถาณประกอบการให้บริการในลักษณะใด
         /// </summary>
-        // TODO:
         public string ServiceType { get; set; }
+
+        /// <summary>
+        /// ประเภทบ้าน / อาคาร / สิ่งปลูกสร้าง (ถามเฉพาะกรณีเป็นยูนิตย่อย)
+        /// </summary>
+        /// <remarks>
+        /// หากเป็น ส่วนกลาง ให้ใช้เป็นประเภทเดียวกับ สิ่งปลุกสร้างหลัก
+        /// </remarks>
+        public string BuildingCode { get; set; }
 
         /// <summary>
         /// สถานศึกษา/โรงเรียน/สถาบันการศึกษา

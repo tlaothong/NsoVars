@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    // บ่อน้้าบาดาลส่วนตัว 
     /// <summary>
-    ///  ในรอบ 1 ปีที่ผ่านมาใช้น้้าปริมาณเท่าไรต่อเดือนโดยเฉลี่ย 
+    ///  ในรอบ 1 ปีที่ผ่านมา ใช้น้้าปริมาณเท่าไร ต่อเดือนโดยเฉลี่ย
     /// </summary>
-    public enum PrivateGroundWaterUsage
+    public enum GroundWaterQuantity
     {
         /// <summary>
         /// ทราบปริมาณน้้า 
@@ -22,9 +21,6 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ไม่ทราบ
         /// </summary>
-        Unknown      = 3
-      
-        
+        Unknown      = 3       
     }
-    
 }

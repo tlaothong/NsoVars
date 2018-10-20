@@ -28,7 +28,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// มัธยมศึกษา  
         /// </summary>
-        public HasAndCount Highschool { get; set; }
+        public HasAndCount HighSchool { get; set; }
 
         /// <summary>
         /// ปวช./ปวส 

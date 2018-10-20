@@ -43,7 +43,7 @@ namespace VarsWebApi.Models {
         /// <summary>
         /// 2.7 เพาะเชื้อและปลูกเห็ด 
         /// </summary>
-        public PlantingInfo<GrowingField> MushroomPlant { get; set; }
+        public PlantingInfo<MushroomField> MushroomPlant { get; set; }
 
         /// <summary>
         /// 2.8 การเลี้ยงสัตว์เพื่อขายหรือใช้งานเกษตร 

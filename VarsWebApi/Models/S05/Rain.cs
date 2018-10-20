@@ -12,13 +12,13 @@ namespace VarsWebApi.Models
         /// <summary>
         /// - ภาชนะกักเก็บ
         /// </summary>
-        public PackageWater PackageWater { get; set; }
+        public List<RainContainer> RainContainers { get; set; }
         
         /// <summary>
         /// - กิจกรรมการใช้น้า
         /// </summary>
         // TODO: Type
-        public WaterActivity WaterActive { get; set; }
+        public WaterActivity WaterActivities { get; set; }
 
     }
 }

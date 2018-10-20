@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// น้ำจากแม่น้ำ
+    /// การนำน้ำออกจากสระมาใช้
     /// </summary>
-    public class River : WaterConsumptionUsingPumpBase
-    {
+    public class Irrigation : WaterConsumptionUsingPump
+    {   
 
     }
 }

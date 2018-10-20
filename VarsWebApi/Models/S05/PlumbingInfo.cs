@@ -10,19 +10,15 @@ namespace VarsWebApi.Models
         ///  ใช้หรือไม่
         /// </summary>
         public bool Doing { get; set; }
-         /// <summary>
-        ///  มีปัญหาคุณภาพน้้า หรือไม่ 
-        /// </summary>
-        // TODO:  
-        public bool WaterQuality { get; set; }
+
         /// <summary>
-        ///  มีปัญหา คือ  
+        /// ปัญหาคุณภาพน้ำ
         /// </summary>
-        public Problem Problem { get; set; }
+        public WaterProblem QualityProblem { get; set; }
+
         /// <summary>
         ///  ปริมาณน้้าประปาที่ใช้เฉลี่ยเดือนละเท่าไร 
         /// </summary>
-        public PlumbingUsage PlumbingUsage { get; set; }
-        
+        public PlumbingUsage PlumbingUsage { get; set; }        
     }
 }

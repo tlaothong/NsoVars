@@ -1,14 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    /// <summary>
-    /// การจัดการน้้าในหมู่บ้าน/ชุมชน 
-    /// </summary>
-    public class WaterManagement
+    public class CommunityWaterManagement
     {
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มี แหล่งน้้าสาธารณะ (สระน้้า/ หนอง/ บึง/ อ่างเก็บน้้า) หรือไม่ 
@@ -18,7 +15,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// หาก “มี” มีจ้านวนกี่แหล่ง
         /// </summary>
-        public int PublicWaterCount { get; set; }
+        public int? PublicWaterCount { get; set; }
 
         /// <summary>
         /// รายละเอียดของแหล่งน้ำสาธารณะ 
@@ -49,7 +46,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// หาก “ใช่” ในหมู่บ้าน/ชุมชน มีแหล่งผลิตน้้าประปาอื่นๆ กี่หน่วยงาน 
         /// </summary>
-        public int WaterServiceCount { get; set; }
+        public int? WaterServiceCount { get; set; }
 
         /// <summary>
         /// รายละเอียดของหน่วยงานแหล่งผลิตน้ำประปา
@@ -69,7 +66,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ถ้าเคย ภัยธรรมชาติที่เกิดมีอะไรบ้าง (ให้เลือกได้หลายข้อ) 
         /// </summary>
-        public string[] Disasters { get; set; }
+        public NaturalDisaster Disasters { get; set; }
 
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มีการเตือนภัยและมาตรการช่วยเหลือน้้าท่วมหรือไม่  
@@ -78,13 +75,6 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ถ้ามีลักษณะการดำเนินการเป็นอย่างไร (ให้เลือกได้หลายข้อ)   
         /// </summary>
-        public string[] DisasterWarningMethods { get; set; }
-
-        /// <summary>
-        /// โครงการจัดการน้้าเพื่อการเกษตรชุมชน  โดยใช้พื้นที่สาธารณะ
-        /// </summary>
-        public ManagementForFarming CommunityProject { get; set; }
-
-
+        public DisasterWarningMethod DisasterWarningMethods { get; set; }
     }
 }

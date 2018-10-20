@@ -5,19 +5,19 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public class UserInfo
+    public class ClosingInfo
     {
         /// <summary>
         /// ชื่อผู้ให้ข้อมูล 
         /// </summary>
-        public string name { get; set; }
+        public string Informer { get; set; }
         /// <summary>
         /// ประเภทสถานประกอบการผลิต 
         /// </summary>
-        public string[] Category { get; set; }
+        public string FactorialCategoryCode { get; set; }
         /// <summary>
         /// ประเภทสถานประกอบการบริการ 
         /// </summary>
-        public string[] ServiceType { get; set; }
+        public string ServiceTypeCode { get; set; }
     }
 }
