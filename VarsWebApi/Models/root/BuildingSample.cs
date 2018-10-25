@@ -95,6 +95,10 @@ namespace VarsWebApi.Models
         ///  ค่าน้ำ
         /// </summary>
         public int? WaterBill { get; set; }
+        /// <summary>
+        ///  จำนวนชั้น (สำหรับอาคารสูง 4 หรือ 5)
+        /// </summary>
+        public int? FloorCount { get; set; }
 
         /// <summary>
         /// บันทึกปัญหา/อุปสรรค หรือข้อความทั่วไปเพื่อเตือนความจำ
