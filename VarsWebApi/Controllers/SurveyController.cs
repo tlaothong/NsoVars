@@ -892,7 +892,18 @@ namespace VarsWebApi.Controllers
             },
                 Disaster = new Disasterous()
                 {
-                    Flooded = false
+                    Flooded = true,
+                    YearsDisasterous = new List<YearsDisasterous>()
+                    {
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 1,
+                            AvgDay = 2,
+                            AvgHour = 1,
+                            WaterHeightCm = 2
+                        }
+                    }
                 },
                 Closing = new ClosingInfo()
                 {
