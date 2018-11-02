@@ -777,7 +777,8 @@ namespace VarsWebApi.Controllers
                         WaterResourceCount = 1,
                         WaterResources = new List<WaterConsumptionUsingPump> {
                             new WaterConsumptionUsingPump(){
-                                HasCubicMeterPerMonth = false,
+                                HasCubicMeterPerMonth = true,
+                                CubicMeterPerMonth = 55,
                                 HasPump = true,
                                 PumpCount = 2,
                                 Pumps = new List<Pump>(){
