@@ -46,7 +46,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 5,
@@ -94,7 +94,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 5,
@@ -132,7 +132,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 15,
@@ -163,7 +163,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 7,
@@ -204,7 +204,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 1,
@@ -247,7 +247,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 0,
@@ -290,7 +290,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    Tambon = "เมือง"
+                                    SubDistrict = "เมือง"
                                 },
                                 AreaSqM = 4,
                                 IrrigationField = true,

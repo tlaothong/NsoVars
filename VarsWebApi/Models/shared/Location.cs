@@ -22,6 +22,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ตำบล
         /// </summary>
-        public string Tambon { get; set; }
+        public string SubDistrict { get; set; }
     }
 }
