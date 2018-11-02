@@ -866,7 +866,27 @@ namespace VarsWebApi.Controllers
                             Name = "ขวด",
                             Size = 1,
                             Drink = 100
-                        }
+                        },
+                        new Package(){
+                            Name = "ถัง",
+                            Size = 1,
+                            Drink = 100
+                        },
+                        new Package(){
+                            Name = "แทงค์",
+                            Size = 1,
+                            Drink = 100
+                        },
+                        new Package(){
+                            Name = "รถ",
+                            Size = 1,
+                            Drink = 100
+                        },
+                        new Package(){
+                            Name = "รถถัง",
+                            Size = 1,
+                            Drink = 100
+                        },
                     }
                 }
             },
