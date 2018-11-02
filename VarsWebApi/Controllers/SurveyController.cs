@@ -860,7 +860,16 @@ namespace VarsWebApi.Controllers
                         },
                         QualityProblem = new WaterProblem()
                         {
-                            HasProblem = false
+                            HasProblem = true,
+                            Problem = new Problem()
+                            {
+                                TurbidWater = true,
+                                SaltWater = true,
+                                Smell = true,
+                                FilmOfOil = true,
+                                FogWater = true,
+                                HardWater = true
+                            }
                         }
                     },
                     Rain = new Rain()
