@@ -739,7 +739,9 @@ namespace VarsWebApi.Controllers
                             HasProblem = true,
                             Problem = new Problem()
                             {
-                                TurbidWater = true
+                                TurbidWater = true,
+                                SaltWater = true
+
                             }
                         }
                     },
