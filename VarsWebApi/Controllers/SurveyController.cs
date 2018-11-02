@@ -750,8 +750,19 @@ namespace VarsWebApi.Controllers
                         HasSameSize = true,
                         PoolSizes = new List<FieldSize>(){
                             new FieldSize(){
-                                Shape = FieldShape.Circle,
+                                Shape = FieldShape.Rectangle,
+                                Area = new Area()
+                                {
+                                    Rai = 2,
+                                    Ngan = 1,
+                                    SqWa = 300
+                                },
                                 Depth = 3,
+                                Rectangle = new RectanglePool()
+                                {
+                                    Width = 0,
+                                    Length = 0
+                                },
                                 Diameter = 25
                             }
                         },
