@@ -529,19 +529,20 @@ namespace VarsWebApi.Controllers
                     Name = "บ้านซอ",
                     ServiceType = "โรงงาน",
                     BuildingCode = "431",
-                    QuestionForAcademy = new Academy(){
-                        PreSchool = new HasAndCount(){ HasItem = true, ItemCount = 7},
-                        Kindergarten = new HasAndCount(){ HasItem = true, ItemCount = 12},
-                        PrimarySchool = new HasAndCount(){ HasItem = true, ItemCount = 24},
-                        HighSchool = new HasAndCount(){ HasItem = true, ItemCount = 33},
-                        Vocational = new HasAndCount(){ HasItem = true, ItemCount = 46},
-                        HigherEducation = new HasAndCount(){ HasItem = true, ItemCount = 19},
+                    QuestionForAcademy = new Academy()
+                    {
+                        PreSchool = new HasAndCount() { HasItem = true, ItemCount = 7 },
+                        Kindergarten = new HasAndCount() { HasItem = true, ItemCount = 12 },
+                        PrimarySchool = new HasAndCount() { HasItem = true, ItemCount = 24 },
+                        HighSchool = new HasAndCount() { HasItem = true, ItemCount = 33 },
+                        Vocational = new HasAndCount() { HasItem = true, ItemCount = 46 },
+                        HigherEducation = new HasAndCount() { HasItem = true, ItemCount = 19 },
                         PersonnelCount = 15
                     },
-                    HotelsAndResorts = new HotelsAndResorts(){ RoomCount = 35, PersonnelCount = 5},
-                    Hospital = new Hospital(){ BedCount = 40, PersonnelCount = 25},
-                    Building = new Building(){ RoomCount = 40, OccupiedRoomCount = 35, PersonnelCount = 3},
-                    Religious = new Religious(){ PeopleCount = 7},                    
+                    HotelsAndResorts = new HotelsAndResorts() { RoomCount = 35, PersonnelCount = 5 },
+                    Hospital = new Hospital() { BedCount = 40, PersonnelCount = 25 },
+                    Building = new Building() { RoomCount = 40, OccupiedRoomCount = 35, PersonnelCount = 3 },
+                    Religious = new Religious() { PeopleCount = 7 },
                     OtherBuilding = new OtherBuilding()
                     {
                         PersonnelCount = 1,
@@ -573,9 +574,11 @@ namespace VarsWebApi.Controllers
                         Other = new PlumbingInfo()
                         {
                             Doing = true,
-                            QualityProblem = new WaterProblem(){
+                            QualityProblem = new WaterProblem()
+                            {
                                 HasProblem = true,
-                                Problem = new Problem(){
+                                Problem = new Problem()
+                                {
                                     TurbidWater = false,
                                     SaltWater = true,
                                     Smell = false,
@@ -584,7 +587,8 @@ namespace VarsWebApi.Controllers
                                     HardWater = false,
                                 }
                             },
-                            PlumbingUsage = new PlumbingUsage(){
+                            PlumbingUsage = new PlumbingUsage()
+                            {
                                 WaterQuantity = WaterQuantity.WaterBill,
                                 WaterBill = 956
                             }
@@ -616,8 +620,9 @@ namespace VarsWebApi.Controllers
                         HasWaterNotRunning = false
                     },
                     GroundWater = new GroundWater()
-                    {                        
-                        PrivateGroundWater = new PrivateGroundWater(){
+                    {
+                        PrivateGroundWater = new PrivateGroundWater()
+                        {
                             Doing = true,
                             AllCount = 1,
                             WaterResourceCount = 1,
@@ -665,7 +670,8 @@ namespace VarsWebApi.Controllers
                                 }
                             }
                         },
-                        PublicGroundWater = new PublicGroundWater(){
+                        PublicGroundWater = new PublicGroundWater()
+                        {
                             Doing = true,
                             WaterResourceCount = 1,
                             WaterResources = new List<WaterConsumptionUsingPumpBase>(){
@@ -824,8 +830,25 @@ namespace VarsWebApi.Controllers
                     },
                     Irrigation = new Irrigation()
                     {
+                        HasCubicMeterPerMonth = true,
                         CubicMeterPerMonth = 75,
-                        HasPump = false,
+                        HasPump = true,
+                        PumpCount = 1,
+                        Pumps = new List<Pump>()
+                        {
+                            new Pump(){
+                                 PumpAuto = false,
+                                 HoursPerPump = 4,
+                                 NumberOfPumpsPerYear = 70,
+                                 HasPumpRate = true,
+                                 PumpRate = 60,
+                                 EnergySource = EnergySource.ElecticPump,
+                                 PumpType = PumpType.DontKnowYet,
+                                 HorsePower = 100,
+                                 SuctionPipeSize = 6,
+                                 PipelineSize = 4
+                            }
+                        },
                         WaterActivities = new WaterActivity()
                         {
                             Drink = 0,
@@ -850,18 +873,18 @@ namespace VarsWebApi.Controllers
                                 Count = 5
                             }
                         },
-                    WaterActivities = new WaterActivity()
+                        WaterActivities = new WaterActivity()
+                        {
+                            Drink = 60,
+                            Plant = 5,
+                            Agriculture = 0,
+                            Product = 20,
+                            Service = 15
+                        }
+                    },
+                    Buying = new Buying()
                     {
-                        Drink = 60,
-                        Plant = 5,
-                        Agriculture = 0,
-                        Product = 20,
-                        Service = 15
-                    }
-                },
-                Buying = new Buying()
-                {
-                    Package = new List<Package>(){
+                        Package = new List<Package>(){
                         new Package(){
                             Name = "ขวด",
                             Size = 1,
@@ -888,8 +911,8 @@ namespace VarsWebApi.Controllers
                             Drink = 100
                         },
                     }
-                }
-            },
+                    }
+                },
                 Disaster = new Disasterous()
                 {
                     Flooded = true,
@@ -916,13 +939,15 @@ namespace VarsWebApi.Controllers
 
         [Route("building")]
         [HttpGet]
-        public ActionResult<BuildingSample> GetBuilding() {
+        public ActionResult<BuildingSample> GetBuilding()
+        {
             return new BuildingSample();
         }
 
         [Route("community")]
         [HttpGet]
-        public ActionResult<CommunitySample> GetCommunity() {
+        public ActionResult<CommunitySample> GetCommunity()
+        {
             return new CommunitySample();
         }
 
