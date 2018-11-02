@@ -935,6 +935,38 @@ namespace VarsWebApi.Controllers
                             AvgDay = 2,
                             AvgHour = 1,
                             WaterHeightCm = 2
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 1,
+                            AvgDay = 2,
+                            AvgHour = 1,
+                            WaterHeightCm = 2
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 1,
+                            AvgDay = 2,
+                            AvgHour = 1,
+                            WaterHeightCm = 2
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 1,
+                            AvgDay = 2,
+                            AvgHour = 1,
+                            WaterHeightCm = 2
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 1,
+                            AvgDay = 2,
+                            AvgHour = 1,
+                            WaterHeightCm = 2
                         }
                     }
                 },
