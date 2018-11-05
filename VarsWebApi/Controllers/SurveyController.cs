@@ -31,6 +31,7 @@ namespace VarsWebApi.Controllers
                         Irrigation = false,
                         Rain = true,
                         Buying = true,
+                        HasOther = false,
                         Other = "no"
                     },
                     GardeningUse = true
@@ -46,7 +47,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 5,
@@ -80,6 +81,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     Buying = true,
                                     RainingAsIs = true,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -94,7 +96,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 5,
@@ -118,6 +120,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     RainingAsIs = true,
                                     Buying = false,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -132,7 +135,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 15,
@@ -149,6 +152,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     RainingAsIs = true,
                                     Buying = false,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -163,7 +167,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 7,
@@ -190,6 +194,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     RainingAsIs = true,
                                     Buying = false,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -204,7 +209,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 1,
@@ -233,6 +238,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     RainingAsIs = true,
                                     Buying = false,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -247,7 +253,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 Area = new Area(){
                                     Rai = 0,
@@ -276,6 +282,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     RainingAsIs = true,
                                     Buying = false,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -290,7 +297,7 @@ namespace VarsWebApi.Controllers
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
                                     District = "เมือง",
-                                    SubDistrict = "เมือง"
+                                    SubDistrict = "ในเมือง"
                                 },
                                 AreaSqM = 4,
                                 IrrigationField = true,
@@ -303,6 +310,7 @@ namespace VarsWebApi.Controllers
                                     Rain = true,
                                     RainingAsIs = true,
                                     Buying = false,
+                                    HasOther = false,
                                     Other = "no"
                                 }
                             }
@@ -347,6 +355,7 @@ namespace VarsWebApi.Controllers
                             Rain = true,
                             RainingAsIs = true,
                             Buying = false,
+                            HasOther = false,
                             Other = "no"
                         }
                     },
@@ -381,6 +390,7 @@ namespace VarsWebApi.Controllers
                                 Rain = true,
                                 RainingAsIs = true,
                                 Buying = false,
+                                HasOther = false,
                                 Other = "no"
                             }
                         },
@@ -411,6 +421,7 @@ namespace VarsWebApi.Controllers
                                 Rain = true,
                                 RainingAsIs = true,
                                 Buying = false,
+                                HasOther = false,
                                 Other = "no"
                             }
                         },
@@ -429,6 +440,7 @@ namespace VarsWebApi.Controllers
                                 Rain = true,
                                 RainingAsIs = true,
                                 Buying = false,
+                                HasOther = false,
                                 Other = "no"
                             }
                         },
@@ -459,6 +471,7 @@ namespace VarsWebApi.Controllers
                                 Rain = true,
                                 RainingAsIs = true,
                                 Buying = false,
+                                HasOther = false,
                                 Other = "no"
                             }
                         },
@@ -498,6 +511,7 @@ namespace VarsWebApi.Controllers
                                 Rain = true,
                                 RainingAsIs = true,
                                 Buying = false,
+                                HasOther = false,
                                 Other = "no"
                             }
                         }
@@ -518,6 +532,7 @@ namespace VarsWebApi.Controllers
                         Irrigation = true,
                         Rain = true,
                         Buying = false,
+                        HasOther = false,
                         Other = "no"
                     },
                     HasWasteWaterFromProduction = true,
@@ -556,6 +571,7 @@ namespace VarsWebApi.Controllers
                         Irrigation = true,
                         Rain = true,
                         Buying = false,
+                        HasOther = false,
                         Other = "no"
                     }
                 },
@@ -990,7 +1006,146 @@ namespace VarsWebApi.Controllers
         [HttpGet]
         public ActionResult<CommunitySample> GetCommunity()
         {
-            return new CommunitySample();
+            return new CommunitySample()
+            {
+                Management = new CommunityWaterManagement()
+                {
+                    HasPublicWater = true,
+                    PublicWaterCount = 2,
+                    Details = new List<DetailWaterManagement>(){
+                        new DetailWaterManagement(){
+                            Name = "หนองหญ้าเขียว",
+                            UseForPlumbing = true,
+                            UseForFactory = true,
+                            UseForFarming = true,
+                            UseForService = true,
+                            UseForOther = true,
+                            Other = "no",
+                            ProjectArea = new FieldSize(){
+                                Shape = FieldShape.Rectangle,
+                                Area = new Area(){
+                                    Rai = 362,
+                                    Ngan = 2,
+                                    SqWa = 132
+                                },
+                                Depth = 3,
+                                Rectangle = new RectanglePool(){
+                                    Width = 278,
+                                    Length = 214
+                                },
+                                Diameter = 0
+                            }
+                        },
+                        new DetailWaterManagement(){
+                            Name = "สระดินดำ",
+                            UseForPlumbing = true,
+                            UseForFactory = true,
+                            UseForFarming = true,
+                            UseForService = true,
+                            UseForOther = true,
+                            Other = "no",
+                            ProjectArea = new FieldSize(){
+                                Shape = FieldShape.Rectangle,
+                                Area = new Area(){
+                                    Rai = 14,
+                                    Ngan = 2,
+                                    SqWa = 31
+                                },
+                                Depth = 2,
+                                Rectangle = new RectanglePool(){
+                                    Width = 56,
+                                    Length = 41
+                                },
+                                Diameter = 0
+                            }
+                        }
+                    },
+                    PWA = true,
+                    MWA = false,
+                    OtherPlumbing = true,
+                    HasWaterService = true,
+                    WaterServiceCount = 2,
+                    WaterServices = new List<DetailOrgWaterSupply>(){
+                        new DetailOrgWaterSupply(){
+                            Name = "ปะปาบ้านซอ",
+                            HasSurfaceWater = true,
+                            SurfaceWaterPerMonth = 2000,
+                            UseGroundWater = true,
+                            GroundWaterCount = 2,
+                            GroundWaterUsePerMonth = 200,
+                            PlumbingPrice = 2,
+                            MeterRentalFee = 300,
+                            Disinfection = DisinfectionMethod.Other,
+                            OtherDisinfection = "no"
+                        },
+                        new DetailOrgWaterSupply(){
+                            Name = "ปะปาวัด",
+                            HasSurfaceWater = true,
+                            SurfaceWaterPerMonth = 1000,
+                            UseGroundWater = true,
+                            GroundWaterCount = 1,
+                            GroundWaterUsePerMonth = 50,
+                            PlumbingPrice = 2,
+                            MeterRentalFee = 100,
+                            Disinfection = DisinfectionMethod.Other,
+                            OtherDisinfection = "no"
+                        }
+                    },
+                    HasWaterTreatment = true,
+                    HasDisaster = true,
+                    Disasters = new NaturalDisaster()
+                    {
+                        Tsunami = false,
+                        LandSlide = false,
+                        Earthquake = false,
+                        Cyclone = true,
+                        ForestFire = true,
+                        Drought = true,
+                        Cold = true,
+                        Epidemic = false,
+                        Pest = true,
+                        Epizootics = false
+                    },
+                    HasDisasterWarning = true,
+                    DisasterWarningMethods = new DisasterWarningMethod(){
+                        GovernmentProcess = true,
+                        CommunityPlan = true,
+                        ConsultingService = true,
+                        HasOther = true,
+                        Other = "yes"
+                    }
+                },
+                CommunityProject = new ManagementForFarming(){
+                    Doing = true,
+                    ProjectCount = 2,
+                    Details = new List<DetailManagementForFarming>(){
+                        new DetailManagementForFarming(){
+                            Name = "น้ำเพื่อชีวิต",
+                            Area = new Area(){
+                                Rai = 44,
+                                Ngan = 1,
+                                SqWa = 324
+                            },
+                            MemberCount = 324,
+                            AvgGroundWaterUse = 3500,
+                            GroundWaterCount = 2,
+                            AvgSurfaceWaterUse = 500
+                        },
+                        new DetailManagementForFarming(){
+                            Name = "น้ำเพื่อผักกาด",
+                            Area = new Area(){
+                                Rai = 58,
+                                Ngan = 3,
+                                SqWa = 52
+                            },
+                            MemberCount = 532,
+                            AvgGroundWaterUse = 6250,
+                            GroundWaterCount = 1,
+                            AvgSurfaceWaterUse = 600
+                        }
+                    }
+                }
+            };
         }
 
         [HttpPost]
