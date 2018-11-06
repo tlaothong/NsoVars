@@ -397,11 +397,11 @@ namespace VarsWebApi.Controllers
                             RiceField = false,
                             HasOther = false,
                             Other = "คันแทนา",
-                            FieldCount = 5,
+                            FieldCount = 2,
                             FieldsAreSameSize = true,
                             Fields = new List<FieldSize>(){
                                 new FieldSize(){
-                                    Shape = FieldShape.Area,
+                                    Shape = FieldShape.Rectangle,
                                     Area = new Area(){
                                         Rai = 0,
                                         Ngan = 0,
