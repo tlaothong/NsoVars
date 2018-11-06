@@ -391,7 +391,7 @@ namespace VarsWebApi.Controllers
                         Fish = new FishFarming()
                         {
                             Doing = true,
-                            Depression = false,
+                            Depression = true,
                             GardenGroove = false,
                             Stew = true,
                             RiceField = false,
@@ -406,6 +406,10 @@ namespace VarsWebApi.Controllers
                                         Rai = 0,
                                         Ngan = 0,
                                         SqWa = 18,
+                                    },
+                                     Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
                                     },
                                     Depth = 2
                                 }
@@ -441,6 +445,11 @@ namespace VarsWebApi.Controllers
                             Fields = new List<FieldSize>(){
                                 new FieldSize(){
                                     Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
                                     Rectangle = new RectanglePool(){
                                         Width = 5,
                                         Length = 4
@@ -594,9 +603,14 @@ namespace VarsWebApi.Controllers
                             }
                         },
                         IsCrab = false,
-                        IsReddish = false,
+                        Crab = new FishFarming() { },
                         IsShellFish = false,
+                        ShellFish = new CrocodileFarming() { },
                         IsTurtle = false,
+                        Turtle = new FishFarming() { },
+                        IsReddish = false,
+                        Reddish = new FishFarming() { },
+
                     }
                 },
                 Factory = new Factorial()
