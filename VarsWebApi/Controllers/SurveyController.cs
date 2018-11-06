@@ -606,7 +606,7 @@ namespace VarsWebApi.Controllers
                     {
                         MWA = new PlumbingInfo()
                         {
-                            Doing = false,
+                            Doing = true,
                             PlumbingUsage = new PlumbingUsage()
                             {
                                 WaterQuantity = WaterQuantity.UnknowNoMeter,
@@ -629,7 +629,7 @@ namespace VarsWebApi.Controllers
                         },
                         PWA = new PlumbingInfo()
                         {
-                            Doing = false,
+                            Doing = true,
                             PlumbingUsage = new PlumbingUsage()
                             {
                                 WaterQuantity = WaterQuantity.UnknowNoMeter,
@@ -649,8 +649,6 @@ namespace VarsWebApi.Controllers
                                     TurbidWater = true,
                                 }
                             }
-
-
                         },
                         Other = new PlumbingInfo()
                         {
