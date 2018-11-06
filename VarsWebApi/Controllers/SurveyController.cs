@@ -391,7 +391,7 @@ namespace VarsWebApi.Controllers
                         Fish = new FishFarming()
                         {
                             Doing = true,
-                            Depression = true,
+                            Depression = false,
                             GardenGroove = false,
                             Stew = true,
                             RiceField = false,
