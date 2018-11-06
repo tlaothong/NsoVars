@@ -711,6 +711,8 @@ namespace VarsWebApi.Controllers
                                         GroundWaterQuantity = GroundWaterQuantity.WaterBill,
                                         WaterBill = 578
                                     },
+                                    CubicMeterPerMonth = 0,
+                                    WaterBill = 0,
                                     HasPump = true,
                                     PumpCount = 1,
                                     Pumps = new List<Pump>(){
@@ -745,6 +747,7 @@ namespace VarsWebApi.Controllers
                                             FogWater = true,
                                             HardWater = true
                                         }
+                                        
                                     }
                                 }
                             }
@@ -768,6 +771,7 @@ namespace VarsWebApi.Controllers
                                             HorsePower = 67,
                                             SuctionPipeSize = 4,
                                             PipelineSize = 2.5,
+                                            PumpRate = 0
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
