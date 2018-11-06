@@ -391,7 +391,7 @@ namespace VarsWebApi.Controllers
                         Fish = new FishFarming()
                         {
                             Doing = true,
-                            Depression = false,
+                            Depression = true,
                             GardenGroove = false,
                             Stew = true,
                             RiceField = false,
@@ -401,7 +401,7 @@ namespace VarsWebApi.Controllers
                             FieldsAreSameSize = true,
                             Fields = new List<FieldSize>(){
                                 new FieldSize(){
-                                    Shape = FieldShape.Rectangle,
+                                    Shape = FieldShape.Area,
                                     Area = new Area(){
                                         Rai = 0,
                                         Ngan = 0,
