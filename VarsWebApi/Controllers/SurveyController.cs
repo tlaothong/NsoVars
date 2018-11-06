@@ -603,13 +603,137 @@ namespace VarsWebApi.Controllers
                             }
                         },
                         IsCrab = false,
-                        Crab = new FishFarming() { },
+                        Crab = new FishFarming()
+                        {
+                            Other = "คันแทนา",
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Area,
+                                    Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                     Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 2
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = true,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                Buying = false,
+                                RainingAsIs = true,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
                         IsShellFish = false,
-                        ShellFish = new FishFarming() { },
+                        ShellFish = new FishFarming()
+                        {
+                            Other = "คันแทนา",
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Area,
+                                    Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                     Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 2
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = true,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                Buying = false,
+                                RainingAsIs = true,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
                         IsTurtle = false,
-                        Turtle = new CrocodileFarming(),
+                        Turtle = new CrocodileFarming()
+                        {
+                            Other = "คันแทนา",
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                    Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 8,
+                                    },
+                                    Depth = 4
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = true,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                RainingAsIs = true,
+                                Buying = false,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
                         IsReddish = false,
-                        Reddish = new FishFarming() { },
+                        Reddish = new FishFarming()
+                        {
+                            Other = "คันแทนา",
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Area,
+                                    Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                     Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 2
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = true,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                Buying = false,
+                                RainingAsIs = true,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
                     }
                 },
                 Factory = new Factorial()
@@ -817,7 +941,7 @@ namespace VarsWebApi.Controllers
                                             FogWater = true,
                                             HardWater = true
                                         }
-                                        
+
                                     }
                                 }
                             }
