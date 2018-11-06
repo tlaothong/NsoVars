@@ -605,9 +605,9 @@ namespace VarsWebApi.Controllers
                         IsCrab = false,
                         Crab = new FishFarming() { },
                         IsShellFish = false,
-                        ShellFish = new CrocodileFarming() { },
+                        ShellFish  = new CrocodileFarming(){},
                         IsTurtle = false,
-                        Turtle = new FishFarming() { },
+                        Turtle  = new FishFarming(){},
                         IsReddish = false,
                         Reddish = new FishFarming() { },
 
