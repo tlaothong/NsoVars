@@ -857,8 +857,19 @@ namespace VarsWebApi.Controllers
                     River = new River()
                     {
                         HasPump = true,
-                        PumpCount = 1,
+                        PumpCount = 2,
                         Pumps = new List<Pump>(){
+                            new Pump(){
+                                PumpAuto = false,
+                                HoursPerPump = 2,
+                                NumberOfPumpsPerYear = 224,
+                                PumpRate = 6,
+                                EnergySource = EnergySource.ElecticPump,
+                                PumpType = PumpType.DontKnowYet,
+                                HorsePower = 87,
+                                SuctionPipeSize = 16,
+                                PipelineSize = 24
+                            },
                             new Pump(){
                                 PumpAuto = false,
                                 HoursPerPump = 2,
