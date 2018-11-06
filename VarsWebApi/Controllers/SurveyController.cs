@@ -606,11 +606,51 @@ namespace VarsWebApi.Controllers
                     {
                         MWA = new PlumbingInfo()
                         {
-                            Doing = false
+                            Doing = false,
+                            PlumbingUsage = new PlumbingUsage()
+                            {
+                                WaterQuantity = WaterQuantity.UnknowNoMeter,
+                                CubicMeterPerMonth = 0,
+                                WaterBill = 0
+                            },
+                            QualityProblem = new WaterProblem()
+                            {
+                                HasProblem = true,
+                                Problem = new Problem()
+                                {
+                                    FilmOfOil = true,
+                                    FogWater = true,
+                                    HardWater = true,
+                                    SaltWater = true,
+                                    Smell = true,
+                                    TurbidWater = true,
+                                }
+                            }
                         },
                         PWA = new PlumbingInfo()
                         {
-                            Doing = false
+                            Doing = false,
+                            PlumbingUsage = new PlumbingUsage()
+                            {
+                                WaterQuantity = WaterQuantity.UnknowNoMeter,
+                                CubicMeterPerMonth = 0,
+                                WaterBill = 0
+                            },
+                            QualityProblem = new WaterProblem()
+                            {
+                                HasProblem = true,
+                                Problem = new Problem()
+                                {
+                                    FilmOfOil = true,
+                                    FogWater = true,
+                                    HardWater = true,
+                                    SaltWater = true,
+                                    Smell = true,
+                                    TurbidWater = true,
+                                }
+                            }
+
+
                         },
                         Other = new PlumbingInfo()
                         {
