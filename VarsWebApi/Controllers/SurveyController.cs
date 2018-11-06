@@ -324,10 +324,25 @@ namespace VarsWebApi.Controllers
                             HasItem = true,
                             ItemCount = 2
                         },
+                        Buffalo = new HasAndCount()
+                        {
+                            HasItem = false,
+                            ItemCount = 0
+                        },
                         Pig = new HasAndCount()
                         {
                             HasItem = true,
                             ItemCount = 5
+                        },
+                        Goat = new HasAndCount()
+                        {
+                            HasItem = false,
+                            ItemCount = 0
+                        },
+                        Sheep = new HasAndCount()
+                        {
+                            HasItem = false,
+                            ItemCount = 0
                         },
                         Chicken = new HasAndCount()
                         {
@@ -338,6 +353,11 @@ namespace VarsWebApi.Controllers
                         {
                             HasItem = true,
                             ItemCount = 12
+                        },
+                        Goose = new HasAndCount()
+                        {
+                            HasItem = false,
+                            ItemCount = 0
                         },
                         Other = new HasAndCount()
                         {
@@ -1107,7 +1127,8 @@ namespace VarsWebApi.Controllers
                         Epizootics = false
                     },
                     HasDisasterWarning = true,
-                    DisasterWarningMethods = new DisasterWarningMethod(){
+                    DisasterWarningMethods = new DisasterWarningMethod()
+                    {
                         GovernmentProcess = true,
                         CommunityPlan = true,
                         ConsultingService = true,
@@ -1115,7 +1136,8 @@ namespace VarsWebApi.Controllers
                         Other = "yes"
                     }
                 },
-                CommunityProject = new ManagementForFarming(){
+                CommunityProject = new ManagementForFarming()
+                {
                     Doing = true,
                     ProjectCount = 2,
                     Details = new List<DetailManagementForFarming>(){
