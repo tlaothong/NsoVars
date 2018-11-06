@@ -605,12 +605,11 @@ namespace VarsWebApi.Controllers
                         IsCrab = false,
                         Crab = new FishFarming() { },
                         IsShellFish = false,
-                        ShellFish  = new CrocodileFarming(){},
+                        ShellFish = new FishFarming() { },
                         IsTurtle = false,
-                        Turtle  = new FishFarming(){},
+                        Turtle = new CrocodileFarming(),
                         IsReddish = false,
                         Reddish = new FishFarming() { },
-
                     }
                 },
                 Factory = new Factorial()
