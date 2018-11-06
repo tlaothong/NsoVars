@@ -359,6 +359,11 @@ namespace VarsWebApi.Controllers
                             HasItem = false,
                             ItemCount = 0
                         },
+                        SilkWool = new HasAndCount()
+                        {
+                            HasItem = false,
+                            ItemCount = 0
+                        },
                         Other = new HasAndCount()
                         {
                             HasItem = true,
