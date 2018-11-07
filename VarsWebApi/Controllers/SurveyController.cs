@@ -935,9 +935,9 @@ namespace VarsWebApi.Controllers
                                         HasProblem = true,
                                         Problem = new Problem(){
                                             TurbidWater = true,
-                                            SaltWater = false,
-                                            Smell = false,
-                                            FilmOfOil = false,
+                                            SaltWater = true,
+                                            Smell = true,
+                                            FilmOfOil = true,
                                             FogWater = true,
                                             HardWater = true
                                         }
@@ -982,10 +982,10 @@ namespace VarsWebApi.Controllers
                                         HasProblem = true,
                                         Problem = new Problem(){
                                             TurbidWater = true,
-                                            SaltWater = false,
-                                            Smell = false,
-                                            FilmOfOil = false,
-                                            FogWater = false,
+                                            SaltWater = true,
+                                            Smell = true,
+                                            FilmOfOil = true,
+                                            FogWater = true,
                                             HardWater = true
                                         }
                                     }
