@@ -398,7 +398,7 @@ namespace VarsWebApi.Controllers
                             HasOther = false,
                             Other = "คันแทนา",
                             FieldCount = 2,
-                            FieldsAreSameSize = true,
+                            FieldsAreSameSize = false,
                             Fields = new List<FieldSize>(){
                                 new FieldSize(){
                                     Shape = FieldShape.Area,
