@@ -411,7 +411,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 4
                                     },
-                                    Depth = 2
+                                    Depth = 2,
+                                    Diameter = 1
                                 }
                             },
 
@@ -454,7 +455,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 4
                                     },
-                                    Depth = 1
+                                    Depth = 1,
+                                    Diameter = 1,
                                 }
                             },
                             AnimalsCount = 1200,
@@ -516,7 +518,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 8,
                                     },
-                                    Depth = 4
+                                    Depth = 4,
+                                    Diameter = 1,
                                 }
                             },
                             AnimalsCount = 51,
@@ -618,7 +621,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 4
                                     },
-                                    Depth = 2
+                                    Depth = 2,
+                                    Diameter = 1,
                                 }
                             },
                             WaterSources = new WaterSources()
@@ -651,7 +655,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 4
                                     },
-                                    Depth = 2
+                                    Depth = 2,
+                                    Diameter = 1,
                                 }
                             },
                             WaterSources = new WaterSources()
@@ -684,7 +689,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 8,
                                     },
-                                    Depth = 4
+                                    Depth = 4,
+                                    Diameter = 1,
                                 }
                             },
                             WaterSources = new WaterSources()
@@ -717,7 +723,8 @@ namespace VarsWebApi.Controllers
                                         Width = 5,
                                         Length = 4
                                     },
-                                    Depth = 2
+                                    Depth = 2,
+                                    Diameter = 1,
                                 }
                             },
                             WaterSources = new WaterSources()
