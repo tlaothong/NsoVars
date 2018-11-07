@@ -413,6 +413,20 @@ namespace VarsWebApi.Controllers
                                     },
                                     Depth = 2,
                                     Diameter = 1
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Area,
+                                    Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                     Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 2,
+                                    Diameter = 1
                                 }
                             },
 
