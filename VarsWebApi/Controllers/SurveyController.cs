@@ -445,7 +445,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsShrimp = false,
+                        IsShrimp = true,
                         Shrimp = new FishFarming()
                         {
                             Doing = true,
@@ -458,6 +458,34 @@ namespace VarsWebApi.Controllers
                             FieldCount = 3,
                             FieldsAreSameSize = true,
                             Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
                                 new FieldSize(){
                                     Shape = FieldShape.Rectangle,
                                      Area = new Area(){
@@ -488,7 +516,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsFrog = false,
+                        IsFrog = true,
                         Frog = new FrogFarming()
                         {
                             Doing = true,
@@ -511,7 +539,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsCrocodile = false,
+                        IsCrocodile = true,
                         Crocodile = new CrocodileFarming()
                         {
                             Doing = true,
@@ -521,6 +549,20 @@ namespace VarsWebApi.Controllers
                             FieldCount = 2,
                             FieldsAreSameSize = true,
                             Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                    Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 8,
+                                    },
+                                    Depth = 4,
+                                    Diameter = 1,
+                                },
                                 new FieldSize(){
                                     Shape = FieldShape.Rectangle,
                                     Area = new Area(){
@@ -551,15 +593,15 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsSnappingTurtle = false,
+                        IsSnappingTurtle = true,
                         SnappingTurtle = new CrocodileFarming()
                         {
                             Doing = true,
                             Depression = false,
                             HasOther = true,
                             Other = "กะละมัง",
-                            FieldCount = 3,
-                            FieldsAreSameSize = false,
+                            FieldCount = 1,
+                            FieldsAreSameSize = true,
                             Fields = new List<FieldSize>(){
                                 new FieldSize(){
                                     Shape = FieldShape.Circle,
@@ -575,34 +617,6 @@ namespace VarsWebApi.Controllers
                                     Diameter = 1,
                                     Depth = 1
                                 },
-                                new FieldSize(){
-                                    Shape = FieldShape.Circle,
-                                    Area = new Area(){
-                                        Rai = 0,
-                                        Ngan = 0,
-                                        SqWa = 18,
-                                    },
-                                      Rectangle = new RectanglePool(){
-                                        Width = 5,
-                                        Length = 8,
-                                    },
-                                    Diameter = 2,
-                                    Depth = 1
-                                },
-                                new FieldSize(){
-                                    Shape = FieldShape.Circle,
-                                    Area = new Area(){
-                                        Rai = 0,
-                                        Ngan = 0,
-                                        SqWa = 18,
-                                    },
-                                      Rectangle = new RectanglePool(){
-                                        Width = 5,
-                                        Length = 8,
-                                    },
-                                    Diameter = 1,
-                                    Depth = 2
-                                }
                             },
                             AnimalsCount = 28,
                             WaterSources = new WaterSources()
