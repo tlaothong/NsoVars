@@ -597,7 +597,189 @@ namespace VarsWebApi.Controllers
                         SnappingTurtle = new CrocodileFarming()
                         {
                             Doing = true,
+                            Depression = true,
+                            HasOther = true,
+                            Other = "กะละมัง",
+                            FieldCount = 1,
+                            FieldsAreSameSize = true,
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Circle,
+                                    Area = new Area(){
+                                        Rai = 3,
+                                        Ngan = 3,
+                                        SqWa = 18,
+                                    },
+                                      Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 8,
+                                    },
+                                    Diameter = 1,
+                                    Depth = 1
+                                },
+                            },
+                            AnimalsCount = 28,
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = true,
+                                River = true,
+                                Irrigation = true,
+                                Rain = true,
+                                RainingAsIs = true,
+                                Buying = false,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
+                        IsCrab = true,
+                        Crab = new FishFarming()
+                        {
+                            Doing = true,
                             Depression = false,
+                            GardenGroove = false,
+                            Stew = true,
+                            RiceField = false,
+                            HasOther = false,
+                            Other = "คันแทนา",
+                            FieldCount = 3,
+                            FieldsAreSameSize = false,
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 5,
+                                        Ngan = 2,
+                                        SqWa = 15,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 1,
+                                        Ngan = 2,
+                                        SqWa = 10,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                }
+                            },
+                            AnimalsCount = 1200,
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = false,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                RainingAsIs = true,
+                                Buying = false,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
+                        IsShellFish = true,
+                        ShellFish = new FishFarming()
+                        {
+                            Doing = true,
+                            Depression = true,
+                            GardenGroove = false,
+                            Stew = true,
+                            RiceField = false,
+                            HasOther = false,
+                            Other = "คันแทนา",
+                            FieldCount = 3,
+                            FieldsAreSameSize = true,
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
+                                    Diameter = 1,
+                                }
+                            },
+                            AnimalsCount = 1200,
+                            WaterSources = new WaterSources()
+                            {
+                                Plumbing = true,
+                                UnderGround = true,
+                                Pool = false,
+                                River = false,
+                                Irrigation = true,
+                                Rain = true,
+                                RainingAsIs = true,
+                                Buying = false,
+                                HasOther = false,
+                                Other = "no"
+                            }
+                        },
+                        IsTurtle = true,
+                        Turtle = new CrocodileFarming()
+                        {
+                            Doing = true,
+                            Depression = true,
                             HasOther = true,
                             Other = "กะละมัง",
                             FieldCount = 1,
@@ -633,141 +815,77 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsCrab = false,
-                        Crab = new FishFarming()
+                        IsReddish = true,
+                        Reddish = new FishFarming()
                         {
+                            Doing = true,
+                            Depression = true,
+                            GardenGroove = false,
+                            Stew = true,
+                            RiceField = false,
+                            HasOther = false,
                             Other = "คันแทนา",
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Shape = FieldShape.Area,
-                                    Area = new Area(){
-                                        Rai = 0,
-                                        Ngan = 0,
-                                        SqWa = 18,
-                                    },
-                                     Rectangle = new RectanglePool(){
-                                        Width = 5,
-                                        Length = 4
-                                    },
-                                    Depth = 2,
-                                    Diameter = 1,
-                                }
-                            },
-                            WaterSources = new WaterSources()
-                            {
-                                Plumbing = true,
-                                UnderGround = true,
-                                Pool = true,
-                                River = false,
-                                Irrigation = true,
-                                Rain = true,
-                                Buying = false,
-                                RainingAsIs = true,
-                                HasOther = false,
-                                Other = "no"
-                            }
-                        },
-                        IsShellFish = false,
-                        ShellFish = new FishFarming()
-                        {
-                            Other = "คันแทนา",
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Shape = FieldShape.Area,
-                                    Area = new Area(){
-                                        Rai = 0,
-                                        Ngan = 0,
-                                        SqWa = 18,
-                                    },
-                                     Rectangle = new RectanglePool(){
-                                        Width = 5,
-                                        Length = 4
-                                    },
-                                    Depth = 2,
-                                    Diameter = 1,
-                                }
-                            },
-                            WaterSources = new WaterSources()
-                            {
-                                Plumbing = true,
-                                UnderGround = true,
-                                Pool = true,
-                                River = false,
-                                Irrigation = true,
-                                Rain = true,
-                                Buying = false,
-                                RainingAsIs = true,
-                                HasOther = false,
-                                Other = "no"
-                            }
-                        },
-                        IsTurtle = false,
-                        Turtle = new CrocodileFarming()
-                        {
-                            Other = "คันแทนา",
+                            FieldCount = 3,
+                            FieldsAreSameSize = false,
                             Fields = new List<FieldSize>(){
                                 new FieldSize(){
                                     Shape = FieldShape.Rectangle,
-                                    Area = new Area(){
+                                     Area = new Area(){
                                         Rai = 0,
                                         Ngan = 0,
                                         SqWa = 18,
                                     },
                                     Rectangle = new RectanglePool(){
                                         Width = 5,
-                                        Length = 8,
+                                        Length = 4
                                     },
-                                    Depth = 4,
+                                    Depth = 1,
                                     Diameter = 1,
-                                }
-                            },
-                            WaterSources = new WaterSources()
-                            {
-                                Plumbing = true,
-                                UnderGround = true,
-                                Pool = true,
-                                River = false,
-                                Irrigation = true,
-                                Rain = true,
-                                RainingAsIs = true,
-                                Buying = false,
-                                HasOther = false,
-                                Other = "no"
-                            }
-                        },
-                        IsReddish = false,
-                        Reddish = new FishFarming()
-                        {
-                            Other = "คันแทนา",
-                            Fields = new List<FieldSize>(){
+                                },
                                 new FieldSize(){
-                                    Shape = FieldShape.Area,
-                                    Area = new Area(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
                                         Rai = 0,
                                         Ngan = 0,
                                         SqWa = 18,
                                     },
-                                     Rectangle = new RectanglePool(){
+                                    Rectangle = new RectanglePool(){
                                         Width = 5,
                                         Length = 4
                                     },
-                                    Depth = 2,
+                                    Depth = 1,
+                                    Diameter = 1,
+                                },
+                                new FieldSize(){
+                                    Shape = FieldShape.Rectangle,
+                                     Area = new Area(){
+                                        Rai = 0,
+                                        Ngan = 0,
+                                        SqWa = 18,
+                                    },
+                                    Rectangle = new RectanglePool(){
+                                        Width = 5,
+                                        Length = 4
+                                    },
+                                    Depth = 1,
                                     Diameter = 1,
                                 }
                             },
+                            AnimalsCount = 1200,
                             WaterSources = new WaterSources()
                             {
                                 Plumbing = true,
                                 UnderGround = true,
-                                Pool = true,
+                                Pool = false,
                                 River = false,
                                 Irrigation = true,
                                 Rain = true,
-                                Buying = false,
                                 RainingAsIs = true,
+                                Buying = false,
                                 HasOther = false,
                                 Other = "no"
-                            }
+
+                            },
                         },
                     }
                 },
@@ -988,7 +1106,7 @@ namespace VarsWebApi.Controllers
                             WaterResources = new List<WaterConsumptionUsingPump>(){
                                 new WaterConsumptionUsingPump(){
                                     HasCubicMeterPerMonth = true,
-                                    CubicMeterPerMonth = 5,                                    
+                                    CubicMeterPerMonth = 5,
                                     HasPump = true,
                                     PumpCount = 1,
                                     Pumps = new List<Pump>(){
