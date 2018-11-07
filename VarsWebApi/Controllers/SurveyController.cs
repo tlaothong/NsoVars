@@ -431,7 +431,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsShrimp = true,
+                        IsShrimp = false,
                         Shrimp = new FishFarming()
                         {
                             Doing = true,
@@ -474,7 +474,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsFrog = true,
+                        IsFrog = false,
                         Frog = new FrogFarming()
                         {
                             Doing = true,
@@ -497,7 +497,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsCrocodile = true,
+                        IsCrocodile = false,
                         Crocodile = new CrocodileFarming()
                         {
                             Doing = true,
@@ -537,7 +537,7 @@ namespace VarsWebApi.Controllers
                                 Other = "no"
                             }
                         },
-                        IsSnappingTurtle = true,
+                        IsSnappingTurtle = false,
                         SnappingTurtle = new CrocodileFarming()
                         {
                             Doing = true,
