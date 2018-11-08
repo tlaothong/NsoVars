@@ -891,60 +891,60 @@ namespace VarsWebApi.Controllers
                 },
                 Factory = new Factorial()
                 {
-                    Name = "บ้านซอ",
-                    Category = "ยาสูบ",
-                    WorkersCount = 2,
-                    HeavyMachine = false,
+                    Name = "บ้านมอนด์",
+                    Category = "ขนม",
+                    WorkersCount = 500,
+                    HeavyMachine = true,
                     WaterSources = new WaterSources()
                     {
-                        Plumbing = true,
-                        UnderGround = true,
-                        Pool = true,
-                        River = false,
+                        Plumbing = false,
+                        UnderGround = false,
+                        Pool = false,
+                        River = true,
                         Irrigation = true,
                         Rain = true,
-                        Buying = false,
-                        HasOther = false,
-                        Other = "no"
+                        Buying = true,
+                        HasOther = true,
+                        Other = "ภูเขาไฟ"
                     },
-                    HasWasteWaterFromProduction = true,
-                    HasWasteWaterTreatment = true,
-                    WasteWaterReuse = false
+                    HasWasteWaterFromProduction = false,
+                    HasWasteWaterTreatment = false,
+                    WasteWaterReuse = true
                 },
                 Commerce = new Commercial()
                 {
-                    Name = "บ้านซอ",
-                    ServiceType = "โรงงาน",
-                    BuildingCode = "431",
+                    Name = "บ้านมอนด์",
+                    ServiceType = "โรงเรียน",
+                    BuildingCode = "433",
                     QuestionForAcademy = new Academy()
                     {
-                        PreSchool = new HasAndCount() { HasItem = true, ItemCount = 7 },
-                        Kindergarten = new HasAndCount() { HasItem = true, ItemCount = 12 },
-                        PrimarySchool = new HasAndCount() { HasItem = true, ItemCount = 24 },
-                        HighSchool = new HasAndCount() { HasItem = true, ItemCount = 33 },
-                        Vocational = new HasAndCount() { HasItem = true, ItemCount = 46 },
-                        HigherEducation = new HasAndCount() { HasItem = true, ItemCount = 19 },
-                        PersonnelCount = 15
+                        PreSchool = new HasAndCount() { HasItem = true, ItemCount = 8 },
+                        Kindergarten = new HasAndCount() { HasItem = true, ItemCount = 13 },
+                        PrimarySchool = new HasAndCount() { HasItem = true, ItemCount = 29 },
+                        HighSchool = new HasAndCount() { HasItem = true, ItemCount = 20 },
+                        Vocational = new HasAndCount() { HasItem = true, ItemCount = 35 },
+                        HigherEducation = new HasAndCount() { HasItem = true, ItemCount = 25 },
+                        PersonnelCount = 25
                     },
-                    HotelsAndResorts = new HotelsAndResorts() { RoomCount = 35, PersonnelCount = 5 },
-                    Hospital = new Hospital() { BedCount = 40, PersonnelCount = 25 },
-                    Building = new Building() { RoomCount = 40, OccupiedRoomCount = 35, PersonnelCount = 3 },
-                    Religious = new Religious() { PeopleCount = 7 },
+                    HotelsAndResorts = new HotelsAndResorts() { RoomCount = 23, PersonnelCount = 6 },
+                    Hospital = new Hospital() { BedCount = 50, PersonnelCount = 30 },
+                    Building = new Building() { RoomCount = 50, OccupiedRoomCount = 31, PersonnelCount = 8 },
+                    Religious = new Religious() { PeopleCount = 6 },
                     OtherBuilding = new OtherBuilding()
                     {
-                        PersonnelCount = 1,
+                        PersonnelCount = 8,
                     },
                     WaterSources = new WaterSources()
                     {
                         Plumbing = true,
-                        UnderGround = true,
+                        UnderGround = false,
                         Pool = true,
                         River = false,
-                        Irrigation = true,
-                        Rain = true,
-                        Buying = false,
-                        HasOther = false,
-                        Other = "no"
+                        Irrigation = false,
+                        Rain = false,
+                        Buying = true,
+                        HasOther = true,
+                        Other = "ภูเขา"
                     }
                 },
                 WaterUsage = new WaterUsage()
