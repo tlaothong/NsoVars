@@ -1448,28 +1448,28 @@ namespace VarsWebApi.Controllers
                         Package = new List<Package>(){
                         new Package(){
                             Name = "ขวด",
-                            Size = 1,
-                            Drink = 100
+                            Size = 2,
+                            Drink = 200
                         },
                         new Package(){
                             Name = "ถัง",
-                            Size = 1,
-                            Drink = 100
+                            Size = 3,
+                            Drink = 300
                         },
                         new Package(){
                             Name = "แทงค์",
                             Size = 1,
-                            Drink = 100
+                            Drink = 500
                         },
                         new Package(){
                             Name = "รถ",
-                            Size = 1,
-                            Drink = 100
+                            Size = 6,
+                            Drink = 150
                         },
                         new Package(){
                             Name = "รถถัง",
-                            Size = 1,
-                            Drink = 100
+                            Size = 5,
+                            Drink = 50
                         },
                     }
                     }
