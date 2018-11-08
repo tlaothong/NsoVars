@@ -48,13 +48,13 @@ namespace VarsWebApi.Controllers
                     WaterSources = new WaterSources()
                     {
                         Plumbing = true,
-                        UnderGround = false,
-                        Pool = false,
-                        River = false,
-                        Irrigation = false,
+                        UnderGround = true,
+                        Pool = true,
+                        River = true,
+                        Irrigation = true,
                         Rain = true,
                         Buying = true,
-                        HasOther = false,
+                        HasOther = true,
                         Other = "no"
                     },
                     GardeningUse = true
@@ -64,8 +64,50 @@ namespace VarsWebApi.Controllers
                     RicePlant = new PlantingInfo<RicePlantingField>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<RicePlantingField>(){
+                            new RicePlantingField(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                Area = new Area(){
+                                    Rai = 5,
+                                    Ngan = 3,
+                                    SqWa = 1
+                                },
+                                PlantingCount = 1,
+                                PlantingArea = PlantingArea.AllArea,
+                                AreaUsed = new List<Area>(){
+                                    new Area(){
+                                        Rai = 5,
+                                        Ngan = 3,
+                                        SqWa = 1
+                                    }
+                                },
+                                Harvests = new List<RicePlantingHarvest>
+                                {
+                                    new RicePlantingHarvest {
+                                        PlantingFromMonth = 6,
+                                        PlantingThruMonth = 11,
+                                        WaterFillingCount = 1,
+                                        WaterHeightCm = 2,
+                                    }
+                                },
+                                IrrigationField = true,
+                                WaterSources = new WaterSources(){
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    Buying = true,
+                                    RainingAsIs = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
                             new RicePlantingField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
@@ -113,7 +155,7 @@ namespace VarsWebApi.Controllers
                     AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<GrowingFieldWithNames>(){
                             new GrowingFieldWithNames(){
                                 Location = new Location(){
@@ -126,7 +168,41 @@ namespace VarsWebApi.Controllers
                                     Ngan = 2,
                                     SqWa = 78,
                                 },
+                                IrrigationField = true,
+                                PlantingTypeCount = 5,
+                                Plantings = new List<PlantItem> {
+                                    new PlantItem { Code = "232", Name = "ยาสูบ" },
+                                    new PlantItem { Code= "323", Name="แตงโม" }
+                                },
+                                OtherPlantings = new List<PlantItem> {
+                                    new PlantItem { Code = "3001", Name="ยาสูบชนิดใหม่" },
+                                },
+                                WaterSources = new WaterSources(){
+                                    Plumbing = true,
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    RainingAsIs = true,
+                                    Buying = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
+                            new GrowingFieldWithNames(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                Area = new Area(){
+                                    Rai = 5,
+                                    Ngan = 2,
+                                    SqWa = 78,
+                                },
                                 IrrigationField = false,
+                                PlantingTypeCount = 5,
                                 Plantings = new List<PlantItem> {
                                     new PlantItem { Code = "232", Name = "ยาสูบ" },
                                     new PlantItem { Code= "323", Name="แตงโม" }
@@ -152,8 +228,33 @@ namespace VarsWebApi.Controllers
                     RubberTree = new PlantingInfo<GrowingField>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<GrowingField>(){
+                            new GrowingField(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                Area = new Area(){
+                                    Rai = 15,
+                                    Ngan = 3,
+                                    SqWa = 300
+                                },
+                                IrrigationField = true,
+                                WaterSources = new WaterSources(){
+                                    Plumbing = true,
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    RainingAsIs = true,
+                                    Buying = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
                             new GrowingField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
@@ -184,7 +285,7 @@ namespace VarsWebApi.Controllers
                     PerennialPlant = new PlantingInfo<GrowingFieldWithNames>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<GrowingFieldWithNames>(){
                             new GrowingFieldWithNames(){
                                 Location = new Location(){
@@ -197,7 +298,44 @@ namespace VarsWebApi.Controllers
                                     Ngan = 2,
                                     SqWa = 255
                                 },
+                                IrrigationField = true,
+                                PlantingTypeCount = 5,
+                                Plantings = new List<PlantItem>(){
+                                    new PlantItem(){
+                                        Code = "358",
+                                        Name = "กล้วย"
+                                    },
+                                    new PlantItem(){
+                                        Code = "951",
+                                        Name = "แอ๊ปเปิ้ล"
+                                    }
+                                },
+                                WaterSources = new WaterSources(){
+                                    Plumbing = true,
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    RainingAsIs = true,
+                                    Buying = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
+                            new GrowingFieldWithNames(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                Area = new Area(){
+                                    Rai = 7,
+                                    Ngan = 2,
+                                    SqWa = 255
+                                },
                                 IrrigationField = false,
+                                PlantingTypeCount = 5,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "358",
@@ -226,7 +364,7 @@ namespace VarsWebApi.Controllers
                     HerbsPlant = new PlantingInfo<MixablePlantingField>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<MixablePlantingField>(){
                             new MixablePlantingField(){
                                 Location = new Location(){
@@ -239,7 +377,46 @@ namespace VarsWebApi.Controllers
                                     Ngan = 0,
                                     SqWa = 25
                                 },
+                                IrrigationField = true,
+                                PlantingTypeCount = 5,
+                                Plantings = new List<PlantItem>(){
+                                    new PlantItem(){
+                                        Code = "165",
+                                        Name = "พริกไทย"
+                                    },
+                                    new PlantItem(){
+                                        Code = "366",
+                                        Name = "คะน้า"
+                                    }
+                                },
+                                ThisPlantOnly = true,
+                                MixedWithPrimaryPlantCode = "778",
+                                WaterSources = new WaterSources(){
+                                    Plumbing = true,
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    RainingAsIs = true,
+                                    Buying = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
+                            new MixablePlantingField(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                Area = new Area(){
+                                    Rai = 1,
+                                    Ngan = 0,
+                                    SqWa = 25
+                                },
                                 IrrigationField = false,
+                                PlantingTypeCount = 5,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "165",
@@ -270,7 +447,7 @@ namespace VarsWebApi.Controllers
                     FlowerCrop = new PlantingInfo<MixablePlantingField>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<MixablePlantingField>(){
                             new MixablePlantingField(){
                                 Location = new Location(){
@@ -283,7 +460,46 @@ namespace VarsWebApi.Controllers
                                     Ngan = 0,
                                     SqWa = 25
                                 },
+                                IrrigationField = true,
+                                PlantingTypeCount = 5,
+                                Plantings = new List<PlantItem>(){
+                                    new PlantItem(){
+                                        Code = "117",
+                                        Name = "หญ้าปสูนาม"
+                                    },
+                                    new PlantItem(){
+                                        Code = "341",
+                                        Name = "กล้วยไม้"
+                                    }
+                                },
+                                ThisPlantOnly = true,
+                                MixedWithPrimaryPlantCode = "665",
+                                WaterSources = new WaterSources(){
+                                    Plumbing = true,
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    RainingAsIs = true,
+                                    Buying = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
+                            new MixablePlantingField(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                Area = new Area(){
+                                    Rai = 0,
+                                    Ngan = 0,
+                                    SqWa = 25
+                                },
                                 IrrigationField = false,
+                                PlantingTypeCount = 5,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "117",
@@ -314,8 +530,29 @@ namespace VarsWebApi.Controllers
                     MushroomPlant = new PlantingInfo<MushroomField>()
                     {
                         Doing = true,
-                        FieldCount = 1,
+                        FieldCount = 2,
                         Fields = new List<MushroomField>(){
+                            new MushroomField(){
+                                Location = new Location(){
+                                    Province = "ขอนแก่น",
+                                    District = "เมือง",
+                                    SubDistrict = "ในเมือง"
+                                },
+                                AreaSqM = 4,
+                                IrrigationField = true,
+                                WaterSources = new WaterSources(){
+                                    Plumbing = true,
+                                    UnderGround = true,
+                                    Pool = true,
+                                    River = true,
+                                    Irrigation = true,
+                                    Rain = true,
+                                    RainingAsIs = true,
+                                    Buying = true,
+                                    HasOther = true,
+                                    Other = "no"
+                                }
+                            },
                             new MushroomField(){
                                 Location = new Location(){
                                     Province = "ขอนแก่น",
