@@ -1482,6 +1482,22 @@ namespace VarsWebApi.Controllers
                         new YearsDisasterous()
                         {
                             Year = 1999,
+                            Count = 2,
+                            AvgDay = 2,
+                            AvgHour = 5,
+                            WaterHeightCm = 3
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 5,
+                            AvgDay = 4,
+                            AvgHour = 2,
+                            WaterHeightCm = 5
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 2009,
                             Count = 1,
                             AvgDay = 2,
                             AvgHour = 1,
@@ -1489,35 +1505,19 @@ namespace VarsWebApi.Controllers
                         },
                         new YearsDisasterous()
                         {
-                            Year = 1999,
-                            Count = 1,
+                            Year = 2010,
+                            Count = 5,
                             AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
+                            AvgHour = 2,
+                            WaterHeightCm = 1
                         },
                         new YearsDisasterous()
                         {
-                            Year = 1999,
-                            Count = 1,
+                            Year = 2012,
+                            Count = 2,
                             AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
-                        },
-                        new YearsDisasterous()
-                        {
-                            Year = 1999,
-                            Count = 1,
-                            AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
-                        },
-                        new YearsDisasterous()
-                        {
-                            Year = 1999,
-                            Count = 1,
-                            AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
+                            AvgHour = 5,
+                            WaterHeightCm = 1
                         }
                     }
                 },
