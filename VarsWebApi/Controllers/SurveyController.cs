@@ -170,7 +170,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 78,
                                 },
                                 IrrigationField = true,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem> {
                                     new PlantItem { Code = "232", Name = "ยาสูบ" },
                                     new PlantItem { Code= "323", Name="แตงโม" }
@@ -203,7 +203,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 78,
                                 },
                                 IrrigationField = false,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem> {
                                     new PlantItem { Code = "232", Name = "ยาสูบ" },
                                     new PlantItem { Code= "323", Name="แตงโม" }
@@ -300,7 +300,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 255
                                 },
                                 IrrigationField = true,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "358",
@@ -336,7 +336,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 255
                                 },
                                 IrrigationField = false,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "358",
@@ -379,7 +379,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = true,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "165",
@@ -417,7 +417,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "165",
@@ -462,7 +462,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = true,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "117",
@@ -500,7 +500,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-                                PlantingTypeCount = 5,
+                                PlantingTypeCount = 2,
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         Code = "117",
