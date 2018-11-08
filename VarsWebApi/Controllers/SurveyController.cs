@@ -914,60 +914,60 @@ namespace VarsWebApi.Controllers
                 },
                 Factory = new Factorial()
                 {
-                    Name = "บ้านซอ",
-                    Category = "ยาสูบ",
-                    WorkersCount = 2,
-                    HeavyMachine = false,
+                    Name = "บ้านมอนด์",
+                    Category = "ขนม",
+                    WorkersCount = 500,
+                    HeavyMachine = true,
                     WaterSources = new WaterSources()
                     {
-                        Plumbing = true,
-                        UnderGround = true,
-                        Pool = true,
-                        River = false,
+                        Plumbing = false,
+                        UnderGround = false,
+                        Pool = false,
+                        River = true,
                         Irrigation = true,
                         Rain = true,
-                        Buying = false,
-                        HasOther = false,
-                        Other = "no"
+                        Buying = true,
+                        HasOther = true,
+                        Other = "ภูเขาไฟ"
                     },
-                    HasWasteWaterFromProduction = true,
-                    HasWasteWaterTreatment = true,
-                    WasteWaterReuse = false
+                    HasWasteWaterFromProduction = false,
+                    HasWasteWaterTreatment = false,
+                    WasteWaterReuse = true
                 },
                 Commerce = new Commercial()
                 {
-                    Name = "บ้านซอ",
-                    ServiceType = "โรงงาน",
-                    BuildingCode = "431",
+                    Name = "บ้านมอนด์",
+                    ServiceType = "โรงเรียน",
+                    BuildingCode = "433",
                     QuestionForAcademy = new Academy()
                     {
-                        PreSchool = new HasAndCount() { HasItem = true, ItemCount = 7 },
-                        Kindergarten = new HasAndCount() { HasItem = true, ItemCount = 12 },
-                        PrimarySchool = new HasAndCount() { HasItem = true, ItemCount = 24 },
-                        HighSchool = new HasAndCount() { HasItem = true, ItemCount = 33 },
-                        Vocational = new HasAndCount() { HasItem = true, ItemCount = 46 },
-                        HigherEducation = new HasAndCount() { HasItem = true, ItemCount = 19 },
-                        PersonnelCount = 15
+                        PreSchool = new HasAndCount() { HasItem = true, ItemCount = 8 },
+                        Kindergarten = new HasAndCount() { HasItem = true, ItemCount = 13 },
+                        PrimarySchool = new HasAndCount() { HasItem = true, ItemCount = 29 },
+                        HighSchool = new HasAndCount() { HasItem = true, ItemCount = 20 },
+                        Vocational = new HasAndCount() { HasItem = true, ItemCount = 35 },
+                        HigherEducation = new HasAndCount() { HasItem = true, ItemCount = 25 },
+                        PersonnelCount = 25
                     },
-                    HotelsAndResorts = new HotelsAndResorts() { RoomCount = 35, PersonnelCount = 5 },
-                    Hospital = new Hospital() { BedCount = 40, PersonnelCount = 25 },
-                    Building = new Building() { RoomCount = 40, OccupiedRoomCount = 35, PersonnelCount = 3 },
-                    Religious = new Religious() { PeopleCount = 7 },
+                    HotelsAndResorts = new HotelsAndResorts() { RoomCount = 23, PersonnelCount = 6 },
+                    Hospital = new Hospital() { BedCount = 50, PersonnelCount = 30 },
+                    Building = new Building() { RoomCount = 50, OccupiedRoomCount = 31, PersonnelCount = 8 },
+                    Religious = new Religious() { PeopleCount = 6 },
                     OtherBuilding = new OtherBuilding()
                     {
-                        PersonnelCount = 1,
+                        PersonnelCount = 8,
                     },
                     WaterSources = new WaterSources()
                     {
                         Plumbing = true,
-                        UnderGround = true,
+                        UnderGround = false,
                         Pool = true,
                         River = false,
-                        Irrigation = true,
-                        Rain = true,
-                        Buying = false,
-                        HasOther = false,
-                        Other = "no"
+                        Irrigation = false,
+                        Rain = false,
+                        Buying = true,
+                        HasOther = true,
+                        Other = "ภูเขา"
                     }
                 },
                 WaterUsage = new WaterUsage()
@@ -979,19 +979,19 @@ namespace VarsWebApi.Controllers
                             Doing = true,
                             PlumbingUsage = new PlumbingUsage()
                             {
-                                WaterQuantity = WaterQuantity.UnknowNoMeter,
-                                CubicMeterPerMonth = 0,
-                                WaterBill = 0
+                                WaterQuantity = WaterQuantity.CubicMeterPerMonth,
+                                CubicMeterPerMonth = 10,
+                                WaterBill = 4
                             },
                             QualityProblem = new WaterProblem()
                             {
-                                HasProblem = true,
+                                HasProblem = false,
                                 Problem = new Problem()
                                 {
                                     FilmOfOil = true,
                                     FogWater = true,
-                                    HardWater = true,
-                                    SaltWater = true,
+                                    HardWater = false,
+                                    SaltWater = false,
                                     Smell = true,
                                     TurbidWater = true,
                                 }
@@ -1003,16 +1003,16 @@ namespace VarsWebApi.Controllers
                             PlumbingUsage = new PlumbingUsage()
                             {
                                 WaterQuantity = WaterQuantity.UnknowNoMeter,
-                                CubicMeterPerMonth = 0,
-                                WaterBill = 0
+                                CubicMeterPerMonth = 5,
+                                WaterBill = 50,
                             },
                             QualityProblem = new WaterProblem()
                             {
-                                HasProblem = true,
+                                HasProblem = false,
                                 Problem = new Problem()
                                 {
-                                    FilmOfOil = true,
-                                    FogWater = true,
+                                    FilmOfOil = false,
+                                    FogWater = false,
                                     HardWater = true,
                                     SaltWater = true,
                                     Smell = true,
@@ -1025,64 +1025,120 @@ namespace VarsWebApi.Controllers
                             Doing = true,
                             QualityProblem = new WaterProblem()
                             {
-                                HasProblem = true,
+                                HasProblem = false,
                                 Problem = new Problem()
                                 {
                                     TurbidWater = false,
                                     SaltWater = true,
                                     Smell = false,
                                     FilmOfOil = false,
-                                    FogWater = false,
+                                    FogWater = true,
                                     HardWater = false,
                                 }
                             },
                             PlumbingUsage = new PlumbingUsage()
                             {
-                                WaterQuantity = WaterQuantity.WaterBill,
-                                WaterBill = 956
+                                WaterQuantity = WaterQuantity.UnknowExcepted,
+                                CubicMeterPerMonth = 10,
+                                WaterBill = 956,
+
                             }
                         },
                         WaterActivityPWA = new WaterActivity()
                         {
-                            Drink = 0,
-                            Plant = 0,
-                            Agriculture = 0,
-                            Product = 0,
-                            Service = 0
+                            Drink = 20,
+                            Plant = 20,
+                            Agriculture = 20,
+                            Product = 20,
+                            Service = 20
                         },
                         WaterActivityMWA = new WaterActivity()
                         {
-                            Drink = 0,
-                            Plant = 0,
-                            Agriculture = 0,
-                            Product = 0,
-                            Service = 0
+                            Drink = 20,
+                            Plant = 20,
+                            Agriculture = 20,
+                            Product = 10,
+                            Service = 30
                         },
                         WaterActivityOther = new WaterActivity()
                         {
-                            Drink = 0,
+                            Drink = 5,
                             Plant = 5,
-                            Agriculture = 0,
+                            Agriculture = 5,
                             Product = 80,
-                            Service = 15
+                            Service = 5
                         },
-                        HasWaterNotRunning = false
+                        HasWaterNotRunning = true,
                     },
                     GroundWater = new GroundWater()
                     {
                         PrivateGroundWater = new PrivateGroundWater()
                         {
                             Doing = true,
-                            AllCount = 1,
-                            WaterResourceCount = 1,
+                            AllCount = 3,
+                            WaterResourceCount = 2,
                             WaterResources = new List<GroundWaterWell>(){
                                 new GroundWaterWell(){
                                     UsageType = new GroundWaterUsage(){
-                                        GroundWaterQuantity = GroundWaterQuantity.WaterBill,
-                                        WaterBill = 578
+                                        GroundWaterQuantity = GroundWaterQuantity.CubicMeterPerMonth,
+                                        UsageCubicMeters = 3000,
+                                        WaterBill = 1500,
                                     },
-                                    CubicMeterPerMonth = 0,
-                                    WaterBill = 0,
+                                    HasPump = true,
+                                    PumpCount = 2,
+                                    Pumps = new List<Pump>(){
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 5,
+                                            NumberOfPumpsPerYear = 500,
+                                            HasPumpRate = false,
+                                            PumpRate = 50,
+                                            EnergySource = EnergySource.PetrolPump,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 79.5,
+                                            SuctionPipeSize = 3,
+                                            PipelineSize = 2.5
+                                        },
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 8,
+                                            NumberOfPumpsPerYear = 1500,
+                                            HasPumpRate = true,
+                                            PumpRate = 80,
+                                            EnergySource = EnergySource.TwoWheeledTractors,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 79.5,
+                                            SuctionPipeSize = 3,
+                                            PipelineSize = 2.5
+                                        }
+                                    },
+                                    WaterActivities = new WaterActivity(){
+                                        Drink = 5,
+                                        Plant = 5,
+                                        Farm = 5,
+                                        Agriculture = 10,
+                                        Product = 60,
+                                        Service = 15
+                                    },
+                                    QualityProblem = new WaterProblem(){
+                                       HasProblem = false,
+                                        Problem = new Problem(){
+                                            TurbidWater = true,
+                                            SaltWater = false,
+                                            Smell = false,
+                                            FilmOfOil = false,
+                                            FogWater = true,
+                                            HardWater = true
+                                        }
+
+                                    }
+                                },
+                                 new GroundWaterWell(){
+                                    UsageType = new GroundWaterUsage(){
+                                        GroundWaterQuantity = GroundWaterQuantity.WaterBill,
+                                        UsageCubicMeters = 5000,
+                                        WaterBill = 300,
+                                    },
                                     HasPump = true,
                                     PumpCount = 1,
                                     Pumps = new List<Pump>(){
@@ -1119,7 +1175,8 @@ namespace VarsWebApi.Controllers
                                         }
 
                                     }
-                                }
+                                },
+
                             }
                         },
                         PublicGroundWater = new PublicGroundWater()
@@ -1129,14 +1186,26 @@ namespace VarsWebApi.Controllers
                             WaterResources = new List<WaterConsumptionUsingPump>(){
                                 new WaterConsumptionUsingPump(){
                                     HasCubicMeterPerMonth = true,
-                                    CubicMeterPerMonth = 5,
-                                    HasPump = true,
-                                    PumpCount = 1,
+                                    CubicMeterPerMonth = 3,
+                                    HasPump = false,
+                                    PumpCount = 2,
                                     Pumps = new List<Pump>(){
                                         new Pump(){
                                             PumpAuto = false,
                                             HoursPerPump = 8,
                                             NumberOfPumpsPerYear = 365,
+                                            HasPumpRate = true,
+                                            EnergySource = EnergySource.PetrolPump,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 67,
+                                            SuctionPipeSize = 4,
+                                            PipelineSize = 2.5,
+                                            PumpRate = 0
+                                        },
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 30,
+                                            NumberOfPumpsPerYear = 500,
                                             HasPumpRate = false,
                                             EnergySource = EnergySource.ElecticPump,
                                             PumpType = PumpType.DontKnowYet,
@@ -1147,21 +1216,21 @@ namespace VarsWebApi.Controllers
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
-                                        Drink = 0,
+                                        Drink = 20,
                                         Plant = 40,
-                                        Farm = 0,
-                                        Agriculture = 40,
-                                        Product = 0,
-                                        Service = 20
+                                        Farm = 20,
+                                        Agriculture = 20,
+                                        Product = 10,
+                                        Service = 10,
                                     },
                                     QualityProblem = new WaterProblem(){
                                         HasProblem = true,
                                         Problem = new Problem(){
                                             TurbidWater = true,
                                             SaltWater = true,
-                                            Smell = true,
-                                            FilmOfOil = true,
-                                            FogWater = true,
+                                            Smell = false,
+                                            FilmOfOil = false,
+                                            FogWater = false,
                                             HardWater = true
                                         }
                                     }
@@ -1172,12 +1241,12 @@ namespace VarsWebApi.Controllers
                     River = new River()
                     {
                         HasPump = true,
-                        PumpCount = 2,
+                        PumpCount = 3,
                         Pumps = new List<Pump>(){
                             new Pump(){
-                                PumpAuto = false,
-                                HoursPerPump = 2,
-                                NumberOfPumpsPerYear = 224,
+                                PumpAuto = true,
+                                HoursPerPump = 10,
+                                NumberOfPumpsPerYear = 300,
                                 PumpRate = 6,
                                 EnergySource = EnergySource.ElecticPump,
                                 PumpType = PumpType.DontKnowYet,
@@ -1190,12 +1259,23 @@ namespace VarsWebApi.Controllers
                                 HoursPerPump = 2,
                                 NumberOfPumpsPerYear = 224,
                                 PumpRate = 6,
-                                EnergySource = EnergySource.ElecticPump,
+                                EnergySource = EnergySource.PetrolPump,
                                 PumpType = PumpType.DontKnowYet,
                                 HorsePower = 87,
                                 SuctionPipeSize = 16,
                                 PipelineSize = 24
-                            }
+                            },
+                             new Pump(){
+                                PumpAuto = false,
+                                HoursPerPump = 8,
+                                NumberOfPumpsPerYear = 1000,
+                                PumpRate = 6,
+                                EnergySource = EnergySource.TwoWheeledTractors,
+                                PumpType = PumpType.DontKnowYet,
+                                HorsePower = 87,
+                                SuctionPipeSize = 16,
+                                PipelineSize = 24
+                            },
                         },
                         WaterActivities = new WaterActivity()
                         {
@@ -1212,7 +1292,7 @@ namespace VarsWebApi.Controllers
                             Problem = new Problem()
                             {
                                 TurbidWater = true,
-                                SaltWater = true
+                                SaltWater = false,
 
                             }
                         }
@@ -1220,11 +1300,27 @@ namespace VarsWebApi.Controllers
                     Pool = new Pool()
                     {
                         Doing = true,
-                        PoolCount = 1,
-                        HasSameSize = true,
+                        PoolCount = 2,
+                        HasSameSize = false,
                         PoolSizes = new List<FieldSize>(){
                             new FieldSize(){
                                 Shape = FieldShape.Rectangle,
+                                Area = new Area()
+                                {
+                                    Rai = 2,
+                                    Ngan = 1,
+                                    SqWa = 300
+                                },
+                                Depth = 3,
+                                Rectangle = new RectanglePool()
+                                {
+                                    Width = 0,
+                                    Length = 0
+                                },
+                                Diameter = 25
+                            },
+                             new FieldSize(){
+                                Shape = FieldShape.Circle,
                                 Area = new Area()
                                 {
                                     Rai = 2,
@@ -1282,14 +1378,14 @@ namespace VarsWebApi.Controllers
                                     Service = 0
                                 },
                                 QualityProblem = new WaterProblem(){
-                                    HasProblem = true,
+                                    HasProblem = false,
                                     Problem = new Problem(){
-                                        TurbidWater = true,
+                                        TurbidWater = false,
                                         SaltWater = false,
                                         Smell = false,
                                         FilmOfOil = false,
-                                        FogWater = false,
-                                        HardWater = false
+                                        FogWater = true,
+                                        HardWater = true
                                     }
                                 }
                             }
@@ -1298,9 +1394,9 @@ namespace VarsWebApi.Controllers
                     Irrigation = new Irrigation()
                     {
                         HasCubicMeterPerMonth = true,
-                        CubicMeterPerMonth = 75,
+                        CubicMeterPerMonth = 150,
                         HasPump = true,
-                        PumpCount = 1,
+                        PumpCount = 2,
                         Pumps = new List<Pump>()
                         {
                             new Pump(){
@@ -1314,15 +1410,27 @@ namespace VarsWebApi.Controllers
                                  HorsePower = 100,
                                  SuctionPipeSize = 6,
                                  PipelineSize = 4
+                            },
+                            new Pump(){
+                                 PumpAuto = true,
+                                 HoursPerPump = 16,
+                                 NumberOfPumpsPerYear = 200,
+                                 HasPumpRate = false,
+                                 PumpRate = 120,
+                                 EnergySource = EnergySource.ElecticPump,
+                                 PumpType = PumpType.DontKnowYet,
+                                 HorsePower = 100,
+                                 SuctionPipeSize = 6,
+                                 PipelineSize = 4
                             }
                         },
                         WaterActivities = new WaterActivity()
                         {
                             Drink = 0,
                             Plant = 5,
-                            Farm = 0,
+                            Farm = 10,
                             Agriculture = 0,
-                            Product = 80,
+                            Product = 70,
                             Service = 15
                         },
                         QualityProblem = new WaterProblem()
@@ -1331,8 +1439,8 @@ namespace VarsWebApi.Controllers
                             Problem = new Problem()
                             {
                                 TurbidWater = true,
-                                SaltWater = true,
-                                Smell = true,
+                                SaltWater = false,
+                                Smell = false,
                                 FilmOfOil = true,
                                 FogWater = true,
                                 HardWater = true
@@ -1344,16 +1452,16 @@ namespace VarsWebApi.Controllers
                         RainContainers = new List<RainContainer>
                         {
                             new RainContainer() {
-                                Category = "โอ่ง",
-                                Size = 1000,
-                                Count = 5
+                                Category = "โอ่งมังกร",
+                                Size = 1500,
+                                Count = 15
                             }
                         },
                         WaterActivities = new WaterActivity()
                         {
-                            Drink = 60,
+                            Drink = 50,
                             Plant = 5,
-                            Agriculture = 0,
+                            Agriculture = 10,
                             Product = 20,
                             Service = 15
                         }
@@ -1363,28 +1471,28 @@ namespace VarsWebApi.Controllers
                         Package = new List<Package>(){
                         new Package(){
                             Name = "ขวด",
-                            Size = 1,
-                            Drink = 100
+                            Size = 2,
+                            Drink = 200
                         },
                         new Package(){
                             Name = "ถัง",
-                            Size = 1,
-                            Drink = 100
+                            Size = 3,
+                            Drink = 300
                         },
                         new Package(){
                             Name = "แทงค์",
                             Size = 1,
-                            Drink = 100
+                            Drink = 500
                         },
                         new Package(){
                             Name = "รถ",
-                            Size = 1,
-                            Drink = 100
+                            Size = 6,
+                            Drink = 150
                         },
                         new Package(){
                             Name = "รถถัง",
-                            Size = 1,
-                            Drink = 100
+                            Size = 5,
+                            Drink = 50
                         },
                     }
                     }
@@ -1397,6 +1505,22 @@ namespace VarsWebApi.Controllers
                         new YearsDisasterous()
                         {
                             Year = 1999,
+                            Count = 2,
+                            AvgDay = 2,
+                            AvgHour = 5,
+                            WaterHeightCm = 3
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 1999,
+                            Count = 5,
+                            AvgDay = 4,
+                            AvgHour = 2,
+                            WaterHeightCm = 5
+                        },
+                        new YearsDisasterous()
+                        {
+                            Year = 2009,
                             Count = 1,
                             AvgDay = 2,
                             AvgHour = 1,
@@ -1404,43 +1528,27 @@ namespace VarsWebApi.Controllers
                         },
                         new YearsDisasterous()
                         {
-                            Year = 1999,
-                            Count = 1,
+                            Year = 2010,
+                            Count = 5,
                             AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
+                            AvgHour = 2,
+                            WaterHeightCm = 1
                         },
                         new YearsDisasterous()
                         {
-                            Year = 1999,
-                            Count = 1,
+                            Year = 2012,
+                            Count = 2,
                             AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
-                        },
-                        new YearsDisasterous()
-                        {
-                            Year = 1999,
-                            Count = 1,
-                            AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
-                        },
-                        new YearsDisasterous()
-                        {
-                            Year = 1999,
-                            Count = 1,
-                            AvgDay = 2,
-                            AvgHour = 1,
-                            WaterHeightCm = 2
+                            AvgHour = 5,
+                            WaterHeightCm = 1
                         }
                     }
                 },
                 Closing = new ClosingInfo()
                 {
-                    Informer = "SorrY",
-                    FactorialCategoryCode = "3245",
-                    ServiceTypeCode = "29",
+                    Informer = "DoreamonDiaDomonBarbgon",
+                    FactorialCategoryCode = "3360",
+                    ServiceTypeCode = "31",
                 }
             };
         }
