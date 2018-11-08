@@ -956,19 +956,19 @@ namespace VarsWebApi.Controllers
                             Doing = true,
                             PlumbingUsage = new PlumbingUsage()
                             {
-                                WaterQuantity = WaterQuantity.UnknowNoMeter,
-                                CubicMeterPerMonth = 0,
-                                WaterBill = 0
+                                WaterQuantity = WaterQuantity.CubicMeterPerMonth,
+                                CubicMeterPerMonth = 10,
+                                WaterBill = 4
                             },
                             QualityProblem = new WaterProblem()
                             {
-                                HasProblem = true,
+                                HasProblem = false,
                                 Problem = new Problem()
                                 {
                                     FilmOfOil = true,
                                     FogWater = true,
-                                    HardWater = true,
-                                    SaltWater = true,
+                                    HardWater = false,
+                                    SaltWater = false,
                                     Smell = true,
                                     TurbidWater = true,
                                 }
@@ -980,16 +980,16 @@ namespace VarsWebApi.Controllers
                             PlumbingUsage = new PlumbingUsage()
                             {
                                 WaterQuantity = WaterQuantity.UnknowNoMeter,
-                                CubicMeterPerMonth = 0,
-                                WaterBill = 0
+                                CubicMeterPerMonth = 5,
+                                WaterBill = 50,
                             },
                             QualityProblem = new WaterProblem()
                             {
-                                HasProblem = true,
+                                HasProblem = false,
                                 Problem = new Problem()
                                 {
-                                    FilmOfOil = true,
-                                    FogWater = true,
+                                    FilmOfOil = false,
+                                    FogWater = false,
                                     HardWater = true,
                                     SaltWater = true,
                                     Smell = true,
@@ -1002,48 +1002,50 @@ namespace VarsWebApi.Controllers
                             Doing = true,
                             QualityProblem = new WaterProblem()
                             {
-                                HasProblem = true,
+                                HasProblem = false,
                                 Problem = new Problem()
                                 {
                                     TurbidWater = false,
                                     SaltWater = true,
                                     Smell = false,
                                     FilmOfOil = false,
-                                    FogWater = false,
+                                    FogWater = true,
                                     HardWater = false,
                                 }
                             },
                             PlumbingUsage = new PlumbingUsage()
                             {
-                                WaterQuantity = WaterQuantity.WaterBill,
-                                WaterBill = 956
+                                WaterQuantity = WaterQuantity.UnknowExcepted,
+                                CubicMeterPerMonth = 10,
+                                WaterBill = 956,
+
                             }
                         },
                         WaterActivityPWA = new WaterActivity()
                         {
-                            Drink = 0,
-                            Plant = 0,
-                            Agriculture = 0,
-                            Product = 0,
-                            Service = 0
+                            Drink = 20,
+                            Plant = 20,
+                            Agriculture = 20,
+                            Product = 20,
+                            Service = 20
                         },
                         WaterActivityMWA = new WaterActivity()
                         {
-                            Drink = 0,
-                            Plant = 0,
-                            Agriculture = 0,
-                            Product = 0,
-                            Service = 0
+                            Drink = 20,
+                            Plant = 20,
+                            Agriculture = 20,
+                            Product = 10,
+                            Service = 30
                         },
                         WaterActivityOther = new WaterActivity()
                         {
-                            Drink = 0,
+                            Drink = 5,
                             Plant = 5,
-                            Agriculture = 0,
+                            Agriculture = 5,
                             Product = 80,
-                            Service = 15
+                            Service = 5
                         },
-                        HasWaterNotRunning = false
+                        HasWaterNotRunning = true,
                     },
                     GroundWater = new GroundWater()
                     {
