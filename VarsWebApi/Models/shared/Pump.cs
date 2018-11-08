@@ -63,17 +63,17 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดแรงม้า / วัตต์ เท่าไร
         /// </summary>
-        public double HorsePower { get; set; }
+        public HorsePower HorsePower { get; set; }
 
         /// <summary>
         /// ขนาดท่อดูดเท่าไร (นิ้ว/หุน/มิลลิเมตร ***ให้เลือกหน่วยได้)
         /// </summary>
-        public double SuctionPipeSize { get; set; }
+        public SuctionPipeSize SuctionPipeSize { get; set; }
 
         /// <summary>
         /// ขนาดท่อส่งเท่าไร (นิ้ว/หุน/มิลลิเมตร ***ให้เลือกหน่วยได้)
         /// </summary>
-        public double PipelineSize { get; set; }
+        public PipelineSize PipelineSize { get; set; }
 
     }
 }

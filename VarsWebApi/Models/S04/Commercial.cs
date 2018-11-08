@@ -26,7 +26,7 @@ namespace VarsWebApi.Models
         /// <remarks>
         /// หากเป็น ส่วนกลาง ให้ใช้เป็นประเภทเดียวกับ สิ่งปลุกสร้างหลัก
         /// </remarks>
-        public string BuildingCode { get; set; }
+        public BuildingType BuildingCode { get; set; }
 
         /// <summary>
         /// สถานศึกษา/โรงเรียน/สถาบันการศึกษา
