@@ -1371,9 +1371,9 @@ namespace VarsWebApi.Controllers
                     Irrigation = new Irrigation()
                     {
                         HasCubicMeterPerMonth = true,
-                        CubicMeterPerMonth = 75,
+                        CubicMeterPerMonth = 150,
                         HasPump = true,
-                        PumpCount = 1,
+                        PumpCount = 2,
                         Pumps = new List<Pump>()
                         {
                             new Pump(){
@@ -1387,15 +1387,27 @@ namespace VarsWebApi.Controllers
                                  HorsePower = 100,
                                  SuctionPipeSize = 6,
                                  PipelineSize = 4
+                            },
+                            new Pump(){
+                                 PumpAuto = true,
+                                 HoursPerPump = 16,
+                                 NumberOfPumpsPerYear = 200,
+                                 HasPumpRate = false,
+                                 PumpRate = 120,
+                                 EnergySource = EnergySource.ElecticPump,
+                                 PumpType = PumpType.DontKnowYet,
+                                 HorsePower = 100,
+                                 SuctionPipeSize = 6,
+                                 PipelineSize = 4
                             }
                         },
                         WaterActivities = new WaterActivity()
                         {
                             Drink = 0,
                             Plant = 5,
-                            Farm = 0,
+                            Farm = 10,
                             Agriculture = 0,
-                            Product = 80,
+                            Product = 70,
                             Service = 15
                         },
                         QualityProblem = new WaterProblem()
@@ -1404,8 +1416,8 @@ namespace VarsWebApi.Controllers
                             Problem = new Problem()
                             {
                                 TurbidWater = true,
-                                SaltWater = true,
-                                Smell = true,
+                                SaltWater = false,
+                                Smell = false,
                                 FilmOfOil = true,
                                 FogWater = true,
                                 HardWater = true
