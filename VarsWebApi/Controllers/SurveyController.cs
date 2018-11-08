@@ -18,6 +18,29 @@ namespace VarsWebApi.Controllers
             return new HouseHoldSample()
             {
                 _id = "1234",
+                EA = "AA04S",
+                BuildingId = "1150AWQ",
+                SubUnit = new SubUnit(){
+                    RoomNumber = "77B",
+                    Access = new List<SubUnitAccess>(){
+                        SubUnitAccess.HasPersonAndAccept,
+                    },
+                    HasPlumbing = true,
+                    HasPlumbingMeter = true,
+                    IsPlumbingMeterXWA = true,
+                    HasGroundWater = true,
+                    HasGroundWaterMeter = true
+                },
+                IsHouseHold = true,
+                IsAgriculture = true,
+                IsFactorial = true,
+                IsCommercial = true,
+                Comments = new List<Comment>(){
+                    new Comment(){
+                        At = DateTime.Now,
+                        Text = "Good Man"
+                    }
+                },
                 Residence = new Residential()
                 {
                     MemberCount = 5,
@@ -1426,7 +1449,49 @@ namespace VarsWebApi.Controllers
         [HttpGet]
         public ActionResult<BuildingSample> GetBuilding()
         {
-            return new BuildingSample();
+            return new BuildingSample(){
+                EA = "5678842",
+                Ordering = 1,
+                Road = "ถนนลาดยาง",
+                Alley = "ซอยลูกรัง",
+                Name = "บ้านซอ",
+                HouseNo = "999/8",
+                Latitude = 16.482835,
+                Longitude = 102.819165,
+                BuildingType = BuildingType.Factory,
+                Other = "no",
+                Access = new List<BuildingAccess>(){
+                   BuildingAccess.HasPersonAndAccept,
+                },
+                VacancyCount = 3,
+                AbandonedCount = 5,
+                UnitCount = 12,
+                UnitAccess = UnitAccess.Allow,
+                VacantRoomCount = 6,
+                OccupiedRoomCount = 6,
+                WaterQuantity = 6500,
+                WaterBill = 2000,
+                FloorCount = 2,
+                Comments = new List<Comment>(){
+                    new Comment(){
+                        At = DateTime.Now,
+                        Text = "บ้านนี้หมาดุ"
+                    }
+                },
+                RecCtrl = new RecordControl(){
+                    CreatedDateTime = DateTime.Now,
+                    LastModified = DateTime.Now,
+                    DeletedDateTime = DateTime.Now,
+                    LastUpload = DateTime.Now,
+                    LastDownload =  DateTime.Now,
+                    Logs = new List<RecordControlLog>(){
+                        new RecordControlLog(){
+                            At = DateTime.Now,
+                            OperationCode = "77AAB"
+                        }
+                    }
+                }
+            };
         }
 
         [Route("community")]
