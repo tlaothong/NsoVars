@@ -1218,12 +1218,12 @@ namespace VarsWebApi.Controllers
                     River = new River()
                     {
                         HasPump = true,
-                        PumpCount = 2,
+                        PumpCount = 3,
                         Pumps = new List<Pump>(){
                             new Pump(){
-                                PumpAuto = false,
-                                HoursPerPump = 2,
-                                NumberOfPumpsPerYear = 224,
+                                PumpAuto = true,
+                                HoursPerPump = 10,
+                                NumberOfPumpsPerYear = 300,
                                 PumpRate = 6,
                                 EnergySource = EnergySource.ElecticPump,
                                 PumpType = PumpType.DontKnowYet,
@@ -1236,12 +1236,23 @@ namespace VarsWebApi.Controllers
                                 HoursPerPump = 2,
                                 NumberOfPumpsPerYear = 224,
                                 PumpRate = 6,
-                                EnergySource = EnergySource.ElecticPump,
+                                EnergySource = EnergySource.PetrolPump,
                                 PumpType = PumpType.DontKnowYet,
                                 HorsePower = 87,
                                 SuctionPipeSize = 16,
                                 PipelineSize = 24
-                            }
+                            },
+                             new Pump(){
+                                PumpAuto = false,
+                                HoursPerPump = 8,
+                                NumberOfPumpsPerYear = 1000,
+                                PumpRate = 6,
+                                EnergySource = EnergySource.TwoWheeledTractors,
+                                PumpType = PumpType.DontKnowYet,
+                                HorsePower = 87,
+                                SuctionPipeSize = 16,
+                                PipelineSize = 24
+                            },
                         },
                         WaterActivities = new WaterActivity()
                         {
@@ -1258,7 +1269,7 @@ namespace VarsWebApi.Controllers
                             Problem = new Problem()
                             {
                                 TurbidWater = true,
-                                SaltWater = true
+                                SaltWater = false,
 
                             }
                         }
