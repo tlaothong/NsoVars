@@ -20,7 +20,8 @@ namespace VarsWebApi.Controllers
                 _id = "1234",
                 EA = "AA04S",
                 BuildingId = "1150AWQ",
-                SubUnit = new SubUnit(){
+                SubUnit = new SubUnit()
+                {
                     RoomNumber = "77B",
                     Access = new List<SubUnitAccess>(){
                         SubUnitAccess.HasPersonAndAccept,
@@ -1529,7 +1530,11 @@ namespace VarsWebApi.Controllers
                             Problem = new Problem()
                             {
                                 TurbidWater = true,
-                                SaltWater = false,
+                                SaltWater = true,
+                                Smell = false,
+                                FilmOfOil = true,
+                                FogWater = false,
+                                HardWater = true
 
                             }
                         }
@@ -1709,27 +1714,43 @@ namespace VarsWebApi.Controllers
                         new Package(){
                             Name = "ขวด",
                             Size = 2,
-                            Drink = 200
+                            Drink = 200,
+                            Agriculture = 100 ,
+                            Factory = 200 ,
+                            Service = 300 ,
+
                         },
                         new Package(){
                             Name = "ถัง",
                             Size = 3,
-                            Drink = 300
+                            Drink = 300,
+                            Agriculture = 100 ,
+                            Factory = 200 ,
+                            Service = 300 ,
                         },
                         new Package(){
                             Name = "แทงค์",
                             Size = 1,
-                            Drink = 500
+                            Drink = 500,
+                            Agriculture = 100 ,
+                            Factory = 200 ,
+                            Service = 300 ,
                         },
                         new Package(){
                             Name = "รถ",
                             Size = 6,
-                            Drink = 150
+                            Drink = 150,
+                            Agriculture = 100 ,
+                            Factory = 200 ,
+                            Service = 300 ,
                         },
                         new Package(){
                             Name = "รถถัง",
                             Size = 5,
-                            Drink = 50
+                            Drink = 50,
+                            Agriculture = 100 ,
+                            Factory = 200 ,
+                            Service = 300 ,
                         },
                     }
                     }
@@ -1794,7 +1815,8 @@ namespace VarsWebApi.Controllers
         [HttpGet]
         public ActionResult<BuildingSample> GetBuilding()
         {
-            return new BuildingSample(){
+            return new BuildingSample()
+            {
                 EA = "5678842",
                 Ordering = 1,
                 Road = "ถนนลาดยาง",
@@ -1823,12 +1845,13 @@ namespace VarsWebApi.Controllers
                         Text = "บ้านนี้หมาดุ"
                     }
                 },
-                RecCtrl = new RecordControl(){
+                RecCtrl = new RecordControl()
+                {
                     CreatedDateTime = DateTime.Now,
                     LastModified = DateTime.Now,
                     DeletedDateTime = DateTime.Now,
                     LastUpload = DateTime.Now,
-                    LastDownload =  DateTime.Now,
+                    LastDownload = DateTime.Now,
                     Logs = new List<RecordControlLog>(){
                         new RecordControlLog(){
                             At = DateTime.Now,
