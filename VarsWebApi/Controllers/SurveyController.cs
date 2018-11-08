@@ -1163,14 +1163,26 @@ namespace VarsWebApi.Controllers
                             WaterResources = new List<WaterConsumptionUsingPump>(){
                                 new WaterConsumptionUsingPump(){
                                     HasCubicMeterPerMonth = true,
-                                    CubicMeterPerMonth = 5,
-                                    HasPump = true,
-                                    PumpCount = 1,
+                                    CubicMeterPerMonth = 3,
+                                    HasPump = false,
+                                    PumpCount = 2,
                                     Pumps = new List<Pump>(){
                                         new Pump(){
                                             PumpAuto = false,
                                             HoursPerPump = 8,
                                             NumberOfPumpsPerYear = 365,
+                                            HasPumpRate = true,
+                                            EnergySource = EnergySource.PetrolPump,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 67,
+                                            SuctionPipeSize = 4,
+                                            PipelineSize = 2.5,
+                                            PumpRate = 0
+                                        },
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 30,
+                                            NumberOfPumpsPerYear = 500,
                                             HasPumpRate = false,
                                             EnergySource = EnergySource.ElecticPump,
                                             PumpType = PumpType.DontKnowYet,
@@ -1181,21 +1193,21 @@ namespace VarsWebApi.Controllers
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
-                                        Drink = 0,
+                                        Drink = 20,
                                         Plant = 40,
-                                        Farm = 0,
-                                        Agriculture = 40,
-                                        Product = 0,
-                                        Service = 20
+                                        Farm = 20,
+                                        Agriculture = 20,
+                                        Product = 10,
+                                        Service = 10,
                                     },
                                     QualityProblem = new WaterProblem(){
                                         HasProblem = true,
                                         Problem = new Problem(){
                                             TurbidWater = true,
                                             SaltWater = true,
-                                            Smell = true,
-                                            FilmOfOil = true,
-                                            FogWater = true,
+                                            Smell = false,
+                                            FilmOfOil = false,
+                                            FogWater = false,
                                             HardWater = true
                                         }
                                     }
