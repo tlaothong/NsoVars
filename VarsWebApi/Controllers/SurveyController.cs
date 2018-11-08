@@ -1523,9 +1523,9 @@ namespace VarsWebApi.Controllers
                 },
                 Closing = new ClosingInfo()
                 {
-                    Informer = "SorrY",
-                    FactorialCategoryCode = "3245",
-                    ServiceTypeCode = "29",
+                    Informer = "DoreamonDiaDomonBarbgon",
+                    FactorialCategoryCode = "3360",
+                    ServiceTypeCode = "31",
                 }
             };
         }
