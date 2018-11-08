@@ -1429,16 +1429,16 @@ namespace VarsWebApi.Controllers
                         RainContainers = new List<RainContainer>
                         {
                             new RainContainer() {
-                                Category = "โอ่ง",
-                                Size = 1000,
-                                Count = 5
+                                Category = "โอ่งมังกร",
+                                Size = 1500,
+                                Count = 15
                             }
                         },
                         WaterActivities = new WaterActivity()
                         {
-                            Drink = 60,
+                            Drink = 50,
                             Plant = 5,
-                            Agriculture = 0,
+                            Agriculture = 10,
                             Product = 20,
                             Service = 15
                         }
