@@ -1277,11 +1277,27 @@ namespace VarsWebApi.Controllers
                     Pool = new Pool()
                     {
                         Doing = true,
-                        PoolCount = 1,
-                        HasSameSize = true,
+                        PoolCount = 2,
+                        HasSameSize = false,
                         PoolSizes = new List<FieldSize>(){
                             new FieldSize(){
                                 Shape = FieldShape.Rectangle,
+                                Area = new Area()
+                                {
+                                    Rai = 2,
+                                    Ngan = 1,
+                                    SqWa = 300
+                                },
+                                Depth = 3,
+                                Rectangle = new RectanglePool()
+                                {
+                                    Width = 0,
+                                    Length = 0
+                                },
+                                Diameter = 25
+                            },
+                             new FieldSize(){
+                                Shape = FieldShape.Circle,
                                 Area = new Area()
                                 {
                                     Rai = 2,
@@ -1339,14 +1355,14 @@ namespace VarsWebApi.Controllers
                                     Service = 0
                                 },
                                 QualityProblem = new WaterProblem(){
-                                    HasProblem = true,
+                                    HasProblem = false,
                                     Problem = new Problem(){
-                                        TurbidWater = true,
+                                        TurbidWater = false,
                                         SaltWater = false,
                                         Smell = false,
                                         FilmOfOil = false,
-                                        FogWater = false,
-                                        HardWater = false
+                                        FogWater = true,
+                                        HardWater = true
                                     }
                                 }
                             }
