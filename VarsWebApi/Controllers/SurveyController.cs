@@ -1052,16 +1052,70 @@ namespace VarsWebApi.Controllers
                         PrivateGroundWater = new PrivateGroundWater()
                         {
                             Doing = true,
-                            AllCount = 1,
-                            WaterResourceCount = 1,
+                            AllCount = 3,
+                            WaterResourceCount = 2,
                             WaterResources = new List<GroundWaterWell>(){
                                 new GroundWaterWell(){
                                     UsageType = new GroundWaterUsage(){
-                                        GroundWaterQuantity = GroundWaterQuantity.WaterBill,
-                                        WaterBill = 578
+                                        GroundWaterQuantity = GroundWaterQuantity.CubicMeterPerMonth,
+                                        UsageCubicMeters = 3000,
+                                        WaterBill = 1500,
                                     },
-                                    CubicMeterPerMonth = 0,
-                                    WaterBill = 0,
+                                    HasPump = true,
+                                    PumpCount = 2,
+                                    Pumps = new List<Pump>(){
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 5,
+                                            NumberOfPumpsPerYear = 500,
+                                            HasPumpRate = false,
+                                            PumpRate = 50,
+                                            EnergySource = EnergySource.PetrolPump,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 79.5,
+                                            SuctionPipeSize = 3,
+                                            PipelineSize = 2.5
+                                        },
+                                        new Pump(){
+                                            PumpAuto = false,
+                                            HoursPerPump = 8,
+                                            NumberOfPumpsPerYear = 1500,
+                                            HasPumpRate = true,
+                                            PumpRate = 80,
+                                            EnergySource = EnergySource.TwoWheeledTractors,
+                                            PumpType = PumpType.DontKnowYet,
+                                            HorsePower = 79.5,
+                                            SuctionPipeSize = 3,
+                                            PipelineSize = 2.5
+                                        }
+                                    },
+                                    WaterActivities = new WaterActivity(){
+                                        Drink = 5,
+                                        Plant = 5,
+                                        Farm = 5,
+                                        Agriculture = 10,
+                                        Product = 60,
+                                        Service = 15
+                                    },
+                                    QualityProblem = new WaterProblem(){
+                                       HasProblem = false,
+                                        Problem = new Problem(){
+                                            TurbidWater = true,
+                                            SaltWater = false,
+                                            Smell = false,
+                                            FilmOfOil = false,
+                                            FogWater = true,
+                                            HardWater = true
+                                        }
+
+                                    }
+                                },
+                                 new GroundWaterWell(){
+                                    UsageType = new GroundWaterUsage(){
+                                        GroundWaterQuantity = GroundWaterQuantity.WaterBill,
+                                        UsageCubicMeters = 5000,
+                                        WaterBill = 300,
+                                    },
                                     HasPump = true,
                                     PumpCount = 1,
                                     Pumps = new List<Pump>(){
@@ -1098,7 +1152,8 @@ namespace VarsWebApi.Controllers
                                         }
 
                                     }
-                                }
+                                },
+
                             }
                         },
                         PublicGroundWater = new PublicGroundWater()
