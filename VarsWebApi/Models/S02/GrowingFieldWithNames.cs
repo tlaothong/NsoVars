@@ -10,13 +10,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class GrowingFieldWithNames : GrowingField
     {
-        /// <summary>
-        /// จำนวนของชนิดพืชที่ปลูก
-        /// </summary>
-        /// <remarks>
-        /// Max 5
-        /// </remarks>
-        public int PlantingTypeCount { get; set; }
+       
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาที่แปลงนี้ปลูกพืช ชนิดใด (ระบุได้ไม่เกิน 5 ชนิด) - รวมอื่นๆ
         /// </summary>
