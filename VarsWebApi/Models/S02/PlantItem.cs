@@ -14,7 +14,7 @@ namespace VarsWebApi.Models
         /// Max 5
         /// </remarks>
         public int PlantingCount { get; set; }
-        public List<Plant> Plant { get; set; }
+        public List<Plant> Plants { get; set; }
     }
 
     
