@@ -175,7 +175,7 @@ namespace VarsWebApi.Controllers
                                     new PlantItem()
                                     {
                                         PlantingCount = 2,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -193,7 +193,7 @@ namespace VarsWebApi.Controllers
                                 OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -233,7 +233,7 @@ namespace VarsWebApi.Controllers
                                     new PlantItem()
                                     {
                                         PlantingCount = 2,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -251,7 +251,7 @@ namespace VarsWebApi.Controllers
                                 OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -354,7 +354,7 @@ namespace VarsWebApi.Controllers
                                 new PlantItem()
                                     {
                                         PlantingCount = 2,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -372,7 +372,7 @@ namespace VarsWebApi.Controllers
                                 OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -411,7 +411,7 @@ namespace VarsWebApi.Controllers
                                         new PlantItem()
                                     {
                                         PlantingCount = 2,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -429,7 +429,7 @@ namespace VarsWebApi.Controllers
                                 OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -474,7 +474,7 @@ namespace VarsWebApi.Controllers
                                 Plantings = new List<PlantItem>(){
                                     new PlantItem(){
                                         PlantingCount = 2,
-                                        Plant = new List<Plant>(){
+                                        Plants = new List<Plant>(){
                                             new Plant()
                                             {
                                                 Code = "165",
@@ -493,7 +493,7 @@ namespace VarsWebApi.Controllers
                                  OtherPlantings = new List<PlantItem>{
                                         new PlantItem {
                                             PlantingCount = 1,
-                                            Plant = new List<Plant>(){
+                                            Plants = new List<Plant>(){
                                                 new Plant(){
                                                      Code = "3001",
                                                 Name ="ยาสูบชนิดใหม่"
@@ -534,7 +534,7 @@ namespace VarsWebApi.Controllers
                                     new PlantItem()
                                     {
                                         PlantingCount = 2,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -552,7 +552,7 @@ namespace VarsWebApi.Controllers
                                  OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -600,7 +600,7 @@ namespace VarsWebApi.Controllers
 
                                     new PlantItem(){
                                         PlantingCount = 2 ,
-                                         Plant = new List<Plant>()
+                                         Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -618,7 +618,7 @@ namespace VarsWebApi.Controllers
                                 OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -659,7 +659,7 @@ namespace VarsWebApi.Controllers
                                     new PlantItem()
                                     {
                                      PlantingCount = 2,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -677,7 +677,7 @@ namespace VarsWebApi.Controllers
                                 OtherPlantings = new List<PlantItem> {
                                     new PlantItem {
                                         PlantingCount = 1,
-                                        Plant = new List<Plant>()
+                                        Plants = new List<Plant>()
                                         {
                                             new Plant()
                                             {
@@ -1511,7 +1511,7 @@ namespace VarsWebApi.Controllers
                                             PumpType = PumpType.PayanakPump,
                                             HorsePower = HorsePower.Num1,
                                             SuctionPipeSize = SuctionPipeSize.Num1,
-                                            //PipelineSize = PipelineSize.Num1,
+                                            PipelineSize = PipelineSize.Num1,
                                         },
                                         new Pump(){
                                             PumpAuto = false,
@@ -1523,7 +1523,7 @@ namespace VarsWebApi.Controllers
                                             PumpType = PumpType.PayanakPump,
                                             HorsePower = HorsePower.Num1,
                                             SuctionPipeSize = SuctionPipeSize.Num1,
-                                            //PipelineSize = PipelineSize.Num1,
+                                            PipelineSize = PipelineSize.Num1,
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
@@ -1566,7 +1566,7 @@ namespace VarsWebApi.Controllers
                                             PumpType = PumpType.PayanakPump,
                                             HorsePower = HorsePower.Num1,
                                             SuctionPipeSize = SuctionPipeSize.Num1,
-                                            //PipelineSize = PipelineSize.asdadsad,
+                                            PipelineSize = PipelineSize.Num1,
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
@@ -1613,7 +1613,7 @@ namespace VarsWebApi.Controllers
                                             PumpType = PumpType.PayanakPump,
                                             HorsePower = HorsePower.Num1,
                                             SuctionPipeSize = SuctionPipeSize.Num1,
-                                            //PipelineSize = PipelineSize.asdadsad,
+                                            PipelineSize = PipelineSize.Num1,
                                             PumpRate = 0
                                         },
                                         new Pump(){
@@ -1625,7 +1625,7 @@ namespace VarsWebApi.Controllers
                                             PumpType = PumpType.PayanakPump,
                                             HorsePower = HorsePower.Num1,
                                             SuctionPipeSize = SuctionPipeSize.Num1,
-                                            //PipelineSize = PipelineSize.asdadsad,
+                                            PipelineSize = PipelineSize.Num1,
                                             PumpRate = 0
                                         }
                                     },
@@ -1666,7 +1666,7 @@ namespace VarsWebApi.Controllers
                                 PumpType = PumpType.PayanakPump,
                                 HorsePower = HorsePower.Num1,
                                 SuctionPipeSize = SuctionPipeSize.Num1,
-                                //PipelineSize = PipelineSize.asdadsad,
+                                PipelineSize = PipelineSize.Num1,
                             },
                             new Pump(){
                                 PumpAuto = false,
@@ -1677,7 +1677,7 @@ namespace VarsWebApi.Controllers
                                 PumpType = PumpType.PayanakPump,
                                 HorsePower = HorsePower.Num1,
                                 SuctionPipeSize = SuctionPipeSize.Num1,
-                                //PipelineSize = PipelineSize.asdadsad,
+                                PipelineSize = PipelineSize.Num1,
                             },
                              new Pump(){
                                 PumpAuto = false,
@@ -1688,7 +1688,7 @@ namespace VarsWebApi.Controllers
                                 PumpType = PumpType.PayanakPump,
                                 HorsePower = HorsePower.Num1,
                                 SuctionPipeSize = SuctionPipeSize.Num1,
-                                //PipelineSize = PipelineSize.asdadsad,
+                                PipelineSize = PipelineSize.Num1,
                             },
                         },
                         WaterActivities = new WaterActivity()
@@ -1772,7 +1772,7 @@ namespace VarsWebApi.Controllers
                                         PumpType = PumpType.PayanakPump,
                                         HorsePower = HorsePower.Num1,
                                         SuctionPipeSize = SuctionPipeSize.Num1,
-                                        //PipelineSize = PipelineSize.asdadsad,
+                                        PipelineSize = PipelineSize.Num1,
                                     },
                                     new Pump(){
                                         PumpAuto = false,
@@ -1784,7 +1784,7 @@ namespace VarsWebApi.Controllers
                                         PumpType = PumpType.PayanakPump,
                                         HorsePower = HorsePower.Num1,
                                         SuctionPipeSize = SuctionPipeSize.Num1,
-                                        //PipelineSize = PipelineSize.asdadsad,
+                                        PipelineSize = PipelineSize.Num1,
                                     }
                                 },
                                 WaterActivities = new WaterActivity(){
@@ -1827,7 +1827,7 @@ namespace VarsWebApi.Controllers
                                  PumpType = PumpType.PayanakPump,
                                  HorsePower = HorsePower.Num1,
                                  SuctionPipeSize = SuctionPipeSize.Num1,
-                                 //PipelineSize = PipelineSize.asdadsad,
+                                 PipelineSize = PipelineSize.Num1
                             },
                             new Pump(){
                                  PumpAuto = true,
@@ -1839,7 +1839,7 @@ namespace VarsWebApi.Controllers
                                  PumpType = PumpType.PayanakPump,
                                  HorsePower = HorsePower.Num1,
                                  SuctionPipeSize = SuctionPipeSize.Num1,
-                                 //PipelineSize = PipelineSize.asdadsad,
+                                 PipelineSize = PipelineSize.Num1,
                             }
                         },
                         WaterActivities = new WaterActivity()
