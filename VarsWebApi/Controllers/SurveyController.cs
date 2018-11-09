@@ -170,38 +170,27 @@ namespace VarsWebApi.Controllers
                                     SqWa = 78,
                                 },
                                 IrrigationField = true,
-                                Plantings = new List<PlantItem>()
-                                {
-                                    new PlantItem()
-                                    {
-                                        PlantingCount = 2,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "232",
-                                                Name ="ยาสูบ"
-                                            },
-                                            new Plant()
-                                            {
-                                                Code = "323",
-                                                Name ="แตงโม"
-                                            }
+                                Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "232",
+                                            Name = "ยาสูบ"
+                                        },
+                                         new Plant(){
+                                            Code = "323",
+                                            Name = "แตงโม"
                                         }
                                     }
                                 },
-                                OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
+                                    }
                                 },
                                 WaterSources = new WaterSources(){
                                     Plumbing = true,
@@ -228,39 +217,28 @@ namespace VarsWebApi.Controllers
                                     SqWa = 78,
                                 },
                                 IrrigationField = false,
-
-                                Plantings = new List<PlantItem>(){
-                                    new PlantItem()
-                                    {
-                                        PlantingCount = 2,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "232",
-                                                Name ="ยาสูบ"
-                                            },
-                                            new Plant()
-                                            {
-                                                Code = "323",
-                                                Name ="แตงโม"
-                                            }
+                                Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "232",
+                                            Name = "ยาสูบ"
+                                        },
+                                         new Plant(){
+                                            Code = "323",
+                                            Name = "แตงโม"
                                         }
                                     }
                                 },
-                                OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
-                                } ,
+                                    }
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,
@@ -350,37 +328,27 @@ namespace VarsWebApi.Controllers
                                     SqWa = 255
                                 },
                                 IrrigationField = true,
-                                Plantings = new List<PlantItem>(){
-                                new PlantItem()
-                                    {
-                                        PlantingCount = 2,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "232",
-                                                Name ="ยาสูบ"
-                                            },
-                                            new Plant()
-                                            {
-                                                Code = "323",
-                                                Name ="แตงโม"
-                                            }
+                                Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "232",
+                                            Name = "ยาสูบ"
+                                        },
+                                         new Plant(){
+                                            Code = "323",
+                                            Name = "แตงโม"
                                         }
                                     }
                                 },
-                                OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
+                                    }
                                 },
                                 WaterSources = new WaterSources(){
                                     Plumbing = true,
@@ -407,37 +375,27 @@ namespace VarsWebApi.Controllers
                                     SqWa = 255
                                 },
                                 IrrigationField = false,
-                                Plantings = new List<PlantItem>(){
-                                        new PlantItem()
-                                    {
-                                        PlantingCount = 2,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "232",
-                                                Name ="ยาสูบ"
-                                            },
-                                            new Plant()
-                                            {
-                                                Code = "323",
-                                                Name ="แตงโม"
-                                            }
+                                Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "232",
+                                            Name = "ยาสูบ"
+                                        },
+                                         new Plant(){
+                                            Code = "323",
+                                            Name = "แตงโม"
                                         }
                                     }
                                 },
-                                OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
+                                    }
                                 },
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
@@ -471,11 +429,10 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = true,
-                                Plantings = new List<PlantItem>(){
-                                    new PlantItem(){
-                                        PlantingCount = 2,
-                                        Plants = new List<Plant>(){
-                                            new Plant()
+                                    Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                       new Plant()
                                             {
                                                 Code = "165",
                                                 Name = "พริกไทย"
@@ -485,22 +442,16 @@ namespace VarsWebApi.Controllers
                                                 Code = "366",
                                                 Name = "คะน้า"
                                             }
+                                    }
+                                },
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
                                     }
-
-
-                                },
-                                 OtherPlantings = new List<PlantItem>{
-                                        new PlantItem {
-                                            PlantingCount = 1,
-                                            Plants = new List<Plant>(){
-                                                new Plant(){
-                                                     Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                                }
-                                            }
-                                        }
-
                                 },
                                 ThisPlantOnly = true,
                                 MixedWithPrimaryPlantCode = "778",
@@ -529,14 +480,13 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-                                Plantings = new List<PlantItem>()
-                                {
-                                    new PlantItem()
-                                    {
-                                        PlantingCount = 2,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
+
+
+
+                                            Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                       new Plant()
                                             {
                                                 Code = "165",
                                                 Name = "พริกไทย"
@@ -545,22 +495,17 @@ namespace VarsWebApi.Controllers
                                             {
                                                 Code = "366",
                                                 Name = "คะน้า"
-                                            },
-                                        }
+                                            }
                                     }
                                 },
-                                 OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
+                                    }
                                 },
                                 ThisPlantOnly = false,
                                 MixedWithPrimaryPlantCode = "778",
@@ -596,37 +541,29 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = true,
-                                Plantings = new List<PlantItem>(){
-
-                                    new PlantItem(){
-                                        PlantingCount = 2 ,
-                                         Plants = new List<Plant>()
-                                        {
-                                            new Plant()
+                                Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                       new Plant()
                                             {
                                                 Code = "117",
-                                        Name = "หญ้าปสูนาม"
+                                                Name = "หญ้าปสูนาม"
                                             },
                                             new Plant()
                                             {
                                                 Code = "341",
-                                        Name = "กล้วยไม้"
+                                                Name = "กล้วยไม้"
                                             }
-                                        }
-                                    },
+                                    }
                                 },
-                                OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
+                                    }
                                 },
                                 ThisPlantOnly = true,
                                 MixedWithPrimaryPlantCode = "665",
@@ -655,13 +592,10 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-                                Plantings = new List<PlantItem>(){
-                                    new PlantItem()
-                                    {
-                                     PlantingCount = 2,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
+                                Plantings = new PlantItem(){
+                                    PlantingCount = 2,
+                                    Plants = new List<Plant>(){
+                                       new Plant()
                                             {
                                                 Code = "117",
                                                 Name = "หญ้าปสูนาม"
@@ -671,21 +605,16 @@ namespace VarsWebApi.Controllers
                                                 Code = "341",
                                                 Name = "กล้วยไม้"
                                             }
-                                        }
                                     }
                                 },
-                                OtherPlantings = new List<PlantItem> {
-                                    new PlantItem {
-                                        PlantingCount = 1,
-                                        Plants = new List<Plant>()
-                                        {
-                                            new Plant()
-                                            {
-                                                Code = "3001",
-                                                Name ="ยาสูบชนิดใหม่"
-                                            }
+                                OtherPlantings = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                            Code = "3001",
+                                                Name = "ยาสูบชนิดใหม่"
                                         }
-                                    },
+                                    }
                                 },
                                 ThisPlantOnly = false,
                                 MixedWithPrimaryPlantCode = "665",
