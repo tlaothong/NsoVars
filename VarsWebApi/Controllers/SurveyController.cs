@@ -1509,9 +1509,9 @@ namespace VarsWebApi.Controllers
                                             PumpRate = 50,
                                             EnergySource = EnergySource.PetrolPump,
                                             PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.Num1,
-                                            SuctionPipeSize = SuctionPipeSize.Num1,
-                                            PipelineSize = PipelineSize.Num1,
+                                            HorsePower = HorsePower.W10001_14000H15_20,
+                                            SuctionPipeSize = SuctionPipeSize.SP1,
+                                            PipelineSize = PipelineSize.PS1,
                                         },
                                         new Pump(){
                                             PumpAuto = false,
@@ -1521,9 +1521,9 @@ namespace VarsWebApi.Controllers
                                             PumpRate = 80,
                                             EnergySource = EnergySource.TwoWheeledTractors,
                                             PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.Num1,
-                                            SuctionPipeSize = SuctionPipeSize.Num1,
-                                            PipelineSize = PipelineSize.Num1,
+                                            HorsePower = HorsePower.W10001_12000H14_16,
+                                            SuctionPipeSize = SuctionPipeSize.SP112_2,
+                                            PipelineSize = PipelineSize.PS112_2,
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
@@ -1564,9 +1564,9 @@ namespace VarsWebApi.Controllers
                                             PumpRate = 30,
                                             EnergySource = EnergySource.ElecticPump,
                                             PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.Num1,
-                                            SuctionPipeSize = SuctionPipeSize.Num1,
-                                            PipelineSize = PipelineSize.Num1,
+                                            HorsePower = HorsePower.W10001_12000H14_16,
+                                            SuctionPipeSize = SuctionPipeSize.SP112_2,
+                                            PipelineSize = PipelineSize.PS112_2,
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
@@ -1611,9 +1611,9 @@ namespace VarsWebApi.Controllers
                                             HasPumpRate = true,
                                             EnergySource = EnergySource.PetrolPump,
                                             PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.Num1,
-                                            SuctionPipeSize = SuctionPipeSize.Num1,
-                                            PipelineSize = PipelineSize.Num1,
+                                            HorsePower = HorsePower.W10001_14000H15_25,
+                                            SuctionPipeSize = SuctionPipeSize.SP12_3,
+                                            PipelineSize = PipelineSize.PS4_8,
                                             PumpRate = 0
                                         },
                                         new Pump(){
@@ -1623,9 +1623,9 @@ namespace VarsWebApi.Controllers
                                             HasPumpRate = false,
                                             EnergySource = EnergySource.ElecticPump,
                                             PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.Num1,
-                                            SuctionPipeSize = SuctionPipeSize.Num1,
-                                            PipelineSize = PipelineSize.Num1,
+                                            HorsePower = HorsePower.W25001_30000H35_40,
+                                            SuctionPipeSize = SuctionPipeSize.SP12_1,
+                                            PipelineSize = PipelineSize.PS12_3,
                                             PumpRate = 0
                                         }
                                     },
@@ -1664,9 +1664,9 @@ namespace VarsWebApi.Controllers
                                 PumpRate = 6,
                                 EnergySource = EnergySource.ElecticPump,
                                 PumpType = PumpType.PayanakPump,
-                                HorsePower = HorsePower.Num1,
-                                SuctionPipeSize = SuctionPipeSize.Num1,
-                                PipelineSize = PipelineSize.Num1,
+                                HorsePower = HorsePower.W200_300H02_04,
+                                SuctionPipeSize = SuctionPipeSize.SP12_3,
+                                PipelineSize = PipelineSize.PS112_3,
                             },
                             new Pump(){
                                 PumpAuto = false,
@@ -1675,9 +1675,9 @@ namespace VarsWebApi.Controllers
                                 PumpRate = 6,
                                 EnergySource = EnergySource.PetrolPump,
                                 PumpType = PumpType.PayanakPump,
-                                HorsePower = HorsePower.Num1,
-                                SuctionPipeSize = SuctionPipeSize.Num1,
-                                PipelineSize = PipelineSize.Num1,
+                                HorsePower = HorsePower.W20001_25000H25_35,
+                                SuctionPipeSize = SuctionPipeSize.SP12_1,
+                                PipelineSize = PipelineSize.PS12_4,
                             },
                              new Pump(){
                                 PumpAuto = false,
@@ -1686,9 +1686,9 @@ namespace VarsWebApi.Controllers
                                 PumpRate = 6,
                                 EnergySource = EnergySource.TwoWheeledTractors,
                                 PumpType = PumpType.PayanakPump,
-                                HorsePower = HorsePower.Num1,
-                                SuctionPipeSize = SuctionPipeSize.Num1,
-                                PipelineSize = PipelineSize.Num1,
+                                HorsePower = HorsePower.W14000_18000H19_24,
+                                SuctionPipeSize = SuctionPipeSize.SP12_6,
+                                PipelineSize = PipelineSize.PS4_8,
                             },
                         },
                         WaterActivities = new WaterActivity()
@@ -1770,9 +1770,9 @@ namespace VarsWebApi.Controllers
                                         PumpRate = 40,
                                         EnergySource = EnergySource.ElecticPump,
                                         PumpType = PumpType.PayanakPump,
-                                        HorsePower = HorsePower.Num1,
-                                        SuctionPipeSize = SuctionPipeSize.Num1,
-                                        PipelineSize = PipelineSize.Num1,
+                                        HorsePower = HorsePower.W14000_18000H19_24,
+                                        SuctionPipeSize = SuctionPipeSize.SP12_3,
+                                        PipelineSize = PipelineSize.PS3,
                                     },
                                     new Pump(){
                                         PumpAuto = false,
@@ -1782,9 +1782,9 @@ namespace VarsWebApi.Controllers
                                         PumpRate = 60,
                                         EnergySource = EnergySource.ElecticPump,
                                         PumpType = PumpType.PayanakPump,
-                                        HorsePower = HorsePower.Num1,
-                                        SuctionPipeSize = SuctionPipeSize.Num1,
-                                        PipelineSize = PipelineSize.Num1,
+                                        HorsePower = HorsePower.W11001_12000H15_16,
+                                        SuctionPipeSize = SuctionPipeSize.SP11_12,
+                                        PipelineSize = PipelineSize.PS112_2,
                                     }
                                 },
                                 WaterActivities = new WaterActivity(){
@@ -1825,9 +1825,9 @@ namespace VarsWebApi.Controllers
                                  PumpRate = 60,
                                  EnergySource = EnergySource.ElecticPump,
                                  PumpType = PumpType.PayanakPump,
-                                 HorsePower = HorsePower.Num1,
-                                 SuctionPipeSize = SuctionPipeSize.Num1,
-                                 PipelineSize = PipelineSize.Num1
+                                 HorsePower = HorsePower.W1000_2500H1_3,
+                                 SuctionPipeSize = SuctionPipeSize.SP12_112,
+                                 PipelineSize = PipelineSize.PS12_112
                             },
                             new Pump(){
                                  PumpAuto = true,
@@ -1837,9 +1837,9 @@ namespace VarsWebApi.Controllers
                                  PumpRate = 120,
                                  EnergySource = EnergySource.ElecticPump,
                                  PumpType = PumpType.PayanakPump,
-                                 HorsePower = HorsePower.Num1,
-                                 SuctionPipeSize = SuctionPipeSize.Num1,
-                                 PipelineSize = PipelineSize.Num1,
+                                 HorsePower = HorsePower.W100_200H01_02,
+                                 SuctionPipeSize = SuctionPipeSize.SP12_3,
+                                 PipelineSize = PipelineSize.PS112,
                             }
                         },
                         WaterActivities = new WaterActivity()
