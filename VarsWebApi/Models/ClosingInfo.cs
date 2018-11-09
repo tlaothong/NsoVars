@@ -14,10 +14,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ประเภทสถานประกอบการผลิต 
         /// </summary>
-        public string FactorialCategoryCode { get; set; }
+        public FactorialCategory FactorialCategoryCode { get; set; }
         /// <summary>
         /// ประเภทสถานประกอบการบริการ 
         /// </summary>
-        public string ServiceTypeCode { get; set; }
+        public ServiceType ServiceTypeCode { get; set; }
     }
 }

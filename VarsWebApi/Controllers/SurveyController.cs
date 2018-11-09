@@ -1981,8 +1981,8 @@ namespace VarsWebApi.Controllers
                 Closing = new ClosingInfo()
                 {
                     Informer = "DoreamonDiaDomonBarbgon",
-                    FactorialCategoryCode = "3360",
-                    ServiceTypeCode = "31",
+                    FactorialCategoryCode = FactorialCategory.ArtificialMetal,
+                    ServiceTypeCode = ServiceType.Accommodation,
                 }
             };
         }
