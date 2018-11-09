@@ -7,7 +7,15 @@ namespace VarsWebApi.Models
 {
     public class PlantItem
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
+        /// <summary>
+        /// จำนวนของชนิดพืชที่ปลูก
+        /// </summary>
+        /// <remarks>
+        /// Max 5
+        /// </remarks>
+        public int PlantingCount { get; set; }
+        public List<Plant> Plant { get; set; }
     }
+
+    
 }
