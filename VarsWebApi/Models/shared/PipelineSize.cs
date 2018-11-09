@@ -11,90 +11,80 @@ namespace VarsWebApi.Models
     public enum PipelineSize
     {
         /// <summary>
-        /// (1/2)-1
+        /// 1/2-1
         /// </summary>
-        Num1 = 1,
+        PS12_1 = 1,
         /// <summary>
         /// 1 (1/2)
         /// </summary>
-        Num1 = 2,
+        PS112 = 2,
         /// <summary>
         /// 1 (1/2)-2
         /// </summary>
-        Num1 = 3,
+        PS112_2 = 3,
         /// <summary>
         /// 1/2-1 (1/2)
         /// </summary>
-        Num1 = 4,
-        /// <summary>
-        /// 1/2- 1 (1/2)
-        /// </summary>
-        Num1 = 5,
+        PS12_112 = 4,
         /// <summary>
         /// 1 (1/2)-3
         /// </summary>
-        Num1 = 6,
+        PS112_3 = 5,
         /// <summary>
         /// 1-3
         /// </summary>
-        Num1 = 7,
+        PS1_3 = 6,
         /// <summary>
         /// 1-4
         /// </summary>
-        Num1 = 8,
+        PS1_4 = 7,
         /// <summary>
         /// 1-5
         /// </summary>
-        Num1 = 9,
+        PS1_5 = 8,
         /// <summary>
         /// 1/2-2
         /// </summary>
-        Num1 = 10,
+        PS12_2 = 9,
         /// <summary>
         /// 1/2-3
         /// </summary>
-        Num1 = 11,
+        PS12_3 = 10,
         /// <summary>
         /// 2-3
         /// </summary>
-        Num1 = 12,
+        PS2_3 = 11,
         /// <summary>
         /// 2-4
         /// </summary>
-        Num1 = 13,
+        PS2_4 = 12,
         /// <summary>
         /// 4
         /// </summary>
-        Num1 = 14,
+        PS4 = 13,
         /// <summary>
         /// 1/2-4
         /// </summary>
-        Num1 = 15,
+        PS12_4 = 14,
         /// <summary>
         /// 5
         /// </summary>
-        Num1 = 16,
+        PS5 = 15,
         /// <summary>
         /// 6
         /// </summary>
-        Num1 = 17,
+        PS6 = 16,
         /// <summary>
         /// 4-8
         /// </summary>
-        Num1 = 18,
+        PS4_8 = 17,
         /// <summary>
         /// 3
         /// </summary>
-        Num1 = 19,
+        PS3 = 18,
         /// <summary>
         /// 1
         /// </summary>
-        Num1 = 20,
-
-
-
-
-
-
+        PS1 = 19,
     }
 }
