@@ -1941,8 +1941,11 @@ namespace VarsWebApi.Controllers
                 UnitAccess = UnitAccess.Allow,
                 VacantRoomCount = 6,
                 OccupiedRoomCount = 6,
-                WaterQuantity = 6500,
-                WaterBill = 2000,
+                WaterQuantity = new PlumbingUsage(){
+                    WaterQuantity = WaterQuantity.WaterBill,
+                    CubicMeterPerMonth = 142,
+                    WaterBill= 243,
+                },
                 FloorCount = 2,
                 Comments = new List<Comment>(){
                     new Comment(){

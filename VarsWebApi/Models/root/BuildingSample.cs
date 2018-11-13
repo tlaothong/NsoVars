@@ -90,11 +90,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ปริมาณน้ำ
         /// </summary>
-        public int? WaterQuantity { get; set; }
-        /// <summary>
-        ///  ค่าน้ำ
-        /// </summary>
-        public int? WaterBill { get; set; }
+        public PlumbingUsage WaterQuantity { get; set; }
         /// <summary>
         ///  จำนวนชั้น (สำหรับอาคารสูง 4 หรือ 5)
         /// </summary>
