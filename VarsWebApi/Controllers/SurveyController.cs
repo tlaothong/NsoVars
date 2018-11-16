@@ -1933,9 +1933,7 @@ namespace VarsWebApi.Controllers
                 Longitude = 102.819165,
                 BuildingType = BuildingType.Factory,
                 Other = "no",
-                Access = new List<BuildingAccess>(){
-                   BuildingAccess.HasPersonAndAccept,
-                },
+                Access = BuildingAccess.HasPersonAndAccept,
                 VacancyCount = 3,
                 AbandonedCount = 5,
                 UnitCount = 12,
