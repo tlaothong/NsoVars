@@ -1922,6 +1922,7 @@ namespace VarsWebApi.Controllers
         {
             return new BuildingSample()
             {
+                _id = "Kitty1234",
                 EA = "5678842",
                 Ordering = 1,
                 Road = "ถนนลาดยาง",
