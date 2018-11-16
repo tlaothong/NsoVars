@@ -1939,7 +1939,7 @@ namespace VarsWebApi.Controllers
                 VacancyCount = 3,
                 AbandonedCount = 5,
                 UnitCount = 12,
-                UnitAccess = UnitAccess.Allow,
+                UnitAccess = UnitAccess.NotAllowGiveInfo,
                 VacantRoomCount = 6,
                 OccupiedRoomCount = 6,
                 WaterQuantity = new PlumbingUsage(){
