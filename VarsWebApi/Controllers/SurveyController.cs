@@ -454,7 +454,14 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = true,
-                                MixedWithPrimaryPlantCode = "778",
+                                PrimaryPlant = new List<Plant>()
+                                {
+                                    new Plant()
+                                    {
+                                        Code = "366",
+                                        Name = "คะน้า"
+                                    }
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = true,
                                     UnderGround = true,
@@ -508,7 +515,14 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = false,
-                                MixedWithPrimaryPlantCode = "778",
+                               PrimaryPlant = new List<Plant>()
+                                {
+                                    new Plant()
+                                    {
+                                        Code = "366",
+                                        Name = "คะน้า"
+                                    }
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,
@@ -566,7 +580,14 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = true,
-                                MixedWithPrimaryPlantCode = "665",
+                                PrimaryPlant = new List<Plant>()
+                                {
+                                    new Plant()
+                                    {
+                                        Code = "366",
+                                        Name = "คะน้า"
+                                    }
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = true,
                                     UnderGround = true,
@@ -617,7 +638,14 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = false,
-                                MixedWithPrimaryPlantCode = "665",
+                                PrimaryPlant = new List<Plant>()
+                                {
+                                    new Plant()
+                                    {
+                                        Code = "366",
+                                        Name = "คะน้า"
+                                    }
+                                },
                                 WaterSources = new WaterSources(){
                                     Plumbing = false,
                                     UnderGround = false,

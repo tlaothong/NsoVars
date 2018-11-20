@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// รายชื่อพืชที่ปลูกหลัก (เป็นรหัส)
         /// </summary>
-        public string MixedWithPrimaryPlantCode { get; set; }
+        public List<Plant> PrimaryPlant { get; set; }
 
     }
 }
