@@ -449,17 +449,18 @@ namespace VarsWebApi.Controllers
                                     Plants = new List<Plant>(){
                                         new Plant(){
                                             Code = "3001",
-                                                Name = "ยาสูบชนิดใหม่"
+                                            Name = "ยาสูบชนิดใหม่"
                                         }
                                     }
                                 },
                                 ThisPlantOnly = true,
-                                PrimaryPlant = new List<Plant>()
-                                {
-                                    new Plant()
-                                    {
-                                        Code = "366",
+                                 PrimaryPlant = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                          Code = "366",
                                         Name = "คะน้า"
+                                        }
                                     }
                                 },
                                 WaterSources = new WaterSources(){
@@ -487,10 +488,7 @@ namespace VarsWebApi.Controllers
                                     SqWa = 25
                                 },
                                 IrrigationField = false,
-
-
-
-                                            Plantings = new PlantItem(){
+                                Plantings = new PlantItem(){
                                     PlantingCount = 2,
                                     Plants = new List<Plant>(){
                                        new Plant()
@@ -515,12 +513,16 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = false,
-                               PrimaryPlant = new List<Plant>()
+                                PrimaryPlant = new PlantItem()
                                 {
-                                    new Plant()
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>()
                                     {
-                                        Code = "366",
-                                        Name = "คะน้า"
+                                        new Plant()
+                                        {
+                                            Code = "341",
+                                            Name = "กล้วยไม้"
+                                        }
                                     }
                                 },
                                 WaterSources = new WaterSources(){
@@ -580,12 +582,13 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = true,
-                                PrimaryPlant = new List<Plant>()
-                                {
-                                    new Plant()
-                                    {
-                                        Code = "366",
+                                PrimaryPlant = new PlantItem(){
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>(){
+                                        new Plant(){
+                                          Code = "366",
                                         Name = "คะน้า"
+                                        }
                                     }
                                 },
                                 WaterSources = new WaterSources(){
@@ -638,12 +641,16 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 ThisPlantOnly = false,
-                                PrimaryPlant = new List<Plant>()
+                                PrimaryPlant = new PlantItem()
                                 {
-                                    new Plant()
+                                    PlantingCount = 1,
+                                    Plants = new List<Plant>()
                                     {
-                                        Code = "366",
-                                        Name = "คะน้า"
+                                        new Plant()
+                                        {
+                                            Code = "341",
+                                            Name = "กล้วยไม้"
+                                        }
                                     }
                                 },
                                 WaterSources = new WaterSources(){
@@ -1968,10 +1975,11 @@ namespace VarsWebApi.Controllers
                 UnitAccess = UnitAccess.NotAllowGiveInfo,
                 VacantRoomCount = 6,
                 OccupiedRoomCount = 6,
-                WaterQuantity = new PlumbingUsage(){
+                WaterQuantity = new PlumbingUsage()
+                {
                     WaterQuantity = WaterQuantity.WaterBill,
                     CubicMeterPerMonth = 142,
-                    WaterBill= 243,
+                    WaterBill = 243,
                 },
                 FloorCount = 2,
                 Comments = new List<Comment>(){
