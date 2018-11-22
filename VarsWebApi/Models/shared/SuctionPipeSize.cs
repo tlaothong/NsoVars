@@ -110,5 +110,9 @@ namespace VarsWebApi.Models
         /// 11 - 12
         /// </summary>
         SP11_12 = 25,
+        /// <summary>
+        /// "ไม่มีท่อดูด"
+        /// </summary>
+        Nodata = 26,
     }
 }
