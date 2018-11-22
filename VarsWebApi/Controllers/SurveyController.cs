@@ -25,9 +25,6 @@ namespace VarsWebApi.Controllers
                     RoomNumber = "77B",
                     Access = new List<SubUnitAccess>(){
                         SubUnitAccess.HasPersonAndAccept,
-                        SubUnitAccess.HasPersonNoAccept,
-                        SubUnitAccess.NoPerson,
-
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
@@ -42,7 +39,15 @@ namespace VarsWebApi.Controllers
                 Comments = new List<Comment>(){
                     new Comment(){
                         // At = DateTime.Now,
-                        Text = "Good Man" + DateTime.Now ,
+                        Text = "Good Man" ,
+                    },
+                      new Comment(){
+                        // At = DateTime.Now,
+                        Text = "Good Man" ,
+                    },
+                      new Comment(){
+                        // At = DateTime.Now,
+                        Text = "Good Man" ,
                     },
             
                 },
