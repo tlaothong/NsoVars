@@ -41,6 +41,14 @@ namespace VarsWebApi.Controllers
                         // At = DateTime.Now,
                         Text = "Good Man" ,
                     },
+                      new Comment(){
+                        // At = DateTime.Now,
+                        Text = "Good Man" ,
+                    },
+                      new Comment(){
+                        // At = DateTime.Now,
+                        Text = "Good Man" ,
+                    },
             
                 },
                 Residence = new Residential()
