@@ -39,7 +39,7 @@ namespace VarsWebApi.Controllers
                 Comments = new List<Comment>(){
                     new Comment(){
                         // At = DateTime.Now,
-                        Text = $("Good Man" {DateTime.Now}),
+                        Text = "Good Man" + DateTime.Now,
                     }
                 },
                 Residence = new Residential()
