@@ -38,10 +38,9 @@ namespace VarsWebApi.Controllers
                 IsCommercial = true,
                 Comments = new List<Comment>(){
                     new Comment(){
-                        // At = DateTime.Now,
+                        At = DateTime.Now,
                         Text = "Good Man" ,
                     },
-            
                 },
                 Residence = new Residential()
                 {
