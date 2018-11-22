@@ -25,12 +25,15 @@ namespace VarsWebApi.Controllers
                     RoomNumber = "77B",
                     Access = new List<SubUnitAccess>(){
                         SubUnitAccess.HasPersonAndAccept,
+                        SubUnitAccess.HasPersonNoAccept,
+                        SubUnitAccess.NoPerson,
+
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
                     IsPlumbingMeterXWA = true,
                     HasGroundWater = true,
-                    HasGroundWaterMeter = true
+                    HasGroundWaterMeter = true,
                 },
                 IsHouseHold = true,
                 IsAgriculture = true,
