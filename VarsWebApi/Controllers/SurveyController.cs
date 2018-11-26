@@ -24,8 +24,8 @@ namespace VarsWebApi.Controllers
                 {
                     RoomNumber = "77B",
                     AccessCount =  0,
-                    Access = new List<SubUnitAccess>(){
-                        SubUnitAccess.HasPersonAndAccept,
+                    Accesses = new List<Access>(){
+                        Access.HasPersonAndAccept,
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
