@@ -23,6 +23,7 @@ namespace VarsWebApi.Controllers
                 SubUnit = new SubUnit()
                 {
                     RoomNumber = "77B",
+                    AccessCount =  0,
                     Access = new List<SubUnitAccess>(){
                         SubUnitAccess.HasPersonAndAccept,
                     },

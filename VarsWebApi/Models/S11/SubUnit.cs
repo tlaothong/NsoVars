@@ -11,7 +11,7 @@ namespace VarsWebApi.Models
         /// หมายเลขห้อง, ใช้ '-' แทนส่วนกลาง
         /// </summary>
         public string RoomNumber { get; set; }
-
+        public int AccessCount { get; set; }
         public List<SubUnitAccess> Access { get; set; }
 
         /// <summary>
