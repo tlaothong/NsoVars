@@ -1981,11 +1981,11 @@ namespace VarsWebApi.Controllers
                             NameTitle = NameTitle.Master,
                             FirstName = "O",
                             LastName = "0",
-                            Registration = Relationship.tenant,
+                            Relationship = Relationship.relative,
                             Sex = Sex.Male,
                             Age = 20,
                             Nationality = Nationality.NoNationality_998,
-                            Relationship = Registration.NoInThailand
+                            Registration = Registration.NoInThailand
                         }
                     }
                 },
