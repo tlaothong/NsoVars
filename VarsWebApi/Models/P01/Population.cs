@@ -6,49 +6,19 @@ using System.Threading.Tasks;
 namespace VarsWebApi.Models
 {
     /// <summary>
-    /// สำมะโนประชากรและเคหะ
+    /// สำมะโนประชากร
     /// </summary>
     public class Population
     {
         /// <summary>
-        /// คำคำหน้าชื่อ
+        /// จำนวนคน
         /// </summary>
-        public NameTitle NameTitle { get; set; }
-        public string OtherTitle { get; set; }
+        public int PersonCount { get; set; }
 
         /// <summary>
-        /// ชื่อตัว
+        /// ข้อมูลบุคคล
         /// </summary>
-        public string FirstName { get; set; }
-
-        /// <summary>
-        /// ชื่อสกุล
-        /// </summary>
-        public string LastName { get; set; }
-
-        /// <summary>
-        /// ความสัมพันธ์กับหัวหน้าครัวเรือน
-        /// </summary>
-        public Relationship Relationship { get; set; }
-
-        /// <summary>
-        /// เพศ
-        /// </summary>
-        public Sex Sex { get; set; }
-
-        /// <summary>
-        /// อายุ
-        /// </summary>
-        public int Age { get; set; }
-
-        /// <summary>
-        /// สัญชาติ
-        /// </summary>
-        public Nationality Nationality { get; set; }
-
-        /// <summary>
-        /// การมีชื่อในทะเบียนบ้าน
-        /// </summary>
-        public Registration Registration { get; set; }
+        public List<Person> Persons { get; set; }
+        
     }
 }

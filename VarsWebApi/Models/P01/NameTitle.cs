@@ -28,12 +28,12 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เด็กชาย
         /// </summary>
-        Boy = 4,
+        Master = 4,
 
         /// <summary>
         /// เด็กหญิง
         /// </summary>
-        Girl = 5,
+        Lessie = 5,
 
         /// <summary>
         /// อื่นๆ

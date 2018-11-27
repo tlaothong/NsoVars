@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VarsWebApi.Models
-{
+namespace VarsWebApi.Models {
     /// <summary>
     /// ครัวเรือน - หน่วยตัวอย่าง
     /// </summary>
-    public class HouseHoldSample : ModelBase
-    {
+    public class HouseHoldSample : ModelBase {
         public string EA { get; set; }
         public string BuildingId { get; set; }
 
@@ -70,6 +68,10 @@ namespace VarsWebApi.Models
         /// </summary>
         public ClosingInfo Closing { get; set; }
 
+        /// <summary>
+        /// สำมะโนประชากร
+        /// </summary>
+        public Population Population { get; set; }
 
         /// <summary>
         /// Record Control Compartment

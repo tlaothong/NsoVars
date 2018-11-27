@@ -1953,6 +1953,42 @@ namespace VarsWebApi.Controllers
                         }
                     }
                 },
+                Population = new Population(){
+                    PersonCount = 3,
+                    Persons = new List<Person>(){
+                        new Person(){
+                            NameTitle = NameTitle.Mr,
+                            FirstName = "Sorr",
+                            LastName = "Na",
+                            Relationship = Relationship.HeadFamily,
+                            Sex = Sex.Male,
+                            Age = 25,
+                            Nationality = Nationality.Thai_764,
+                            Registration = Registration.InThisHouse
+                        },
+                        new Person(){
+                            NameTitle = NameTitle.Lessie,
+                            FirstName = "Nerd",
+                            LastName = "OK",
+                            Relationship = Relationship.tenant,
+                            Sex = Sex.Female,
+                            Age = 19,
+                            Nationality = Nationality.Myanmar_2,
+                            Registration = Registration.NoThisHouseButOtherProvince,
+                            OtherProvince = "Yala"
+                        },
+                        new Person(){
+                            NameTitle = NameTitle.Master,
+                            FirstName = "O",
+                            LastName = "0",
+                            Registration = Relationship.tenant,
+                            Sex = Sex.Male,
+                            Age = 20,
+                            Nationality = Nationality.NoNationality_998,
+                            Relationship = Registration.NoInThailand
+                        }
+                    }
+                },
                 Closing = new ClosingInfo()
                 {
                     Informer = "DoreamonDiaDomonBarbgon",
