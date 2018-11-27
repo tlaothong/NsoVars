@@ -1957,7 +1957,7 @@ namespace VarsWebApi.Controllers
                     PersonCount = 3,
                     Persons = new List<Person>(){
                         new Person(){
-                            NameTitle = NameTitle.Mr,
+                            NameTitle = NameTitle.Mister,
                             FirstName = "Sorr",
                             LastName = "Na",
                             Relationship = Relationship.HeadFamily,
@@ -1970,22 +1970,22 @@ namespace VarsWebApi.Controllers
                             NameTitle = NameTitle.Lessie,
                             FirstName = "Nerd",
                             LastName = "OK",
-                            Relationship = Relationship.tenant,
+                            Relationship = Relationship.Tenant,
                             Sex = Sex.Female,
                             Age = 19,
                             Nationality = Nationality.Myanmar_2,
-                            Registration = Registration.NoThisHouseButOtherProvince,
+                            Registration = Registration.NoThisHouseOtherProvince,
                             OtherProvince = "Yala"
                         },
                         new Person(){
                             NameTitle = NameTitle.Master,
                             FirstName = "O",
                             LastName = "0",
-                            Relationship = Relationship.relative,
+                            Relationship = Relationship.Relative,
                             Sex = Sex.Male,
                             Age = 20,
                             Nationality = Nationality.NoNationality_998,
-                            Registration = Registration.NoInThailand
+                            Registration = Registration.NotInThailand
                         }
                     }
                 },

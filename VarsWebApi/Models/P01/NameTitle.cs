@@ -13,12 +13,12 @@ namespace VarsWebApi.Models
         /// <summary>
         /// นาย 
         /// </summary>
-        Mr = 1,
+        Mister = 1,
 
         /// <summary>
         /// นาง
         /// </summary>
-        Ms = 2,
+        Mistress = 2,
 
         /// <summary>
         /// นางสาว

@@ -18,21 +18,21 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ไม่มีในบ้านนี้แต่มีในบ้านอื่นในจังหวัดนี้
         /// </summary>
-        NoThisHouseButInThisProvince = 2,
+        NoThisHouseInThisProvince = 2,
 
         /// <summary>
         /// ไม่มีในบ้านนี้แต่มีในจังหวัดอื่น
         /// </summary>
-        NoThisHouseButOtherProvince = 3,
+        NoThisHouseOtherProvince = 3,
 
         /// <summary>
         /// ไมมีในประเทศไทย แต่มีในประเทศอื่น
         /// </summary>
-        NoInThailand = 4,
+        NotInThailand = 4,
 
         /// <summary>
         /// ไม่มีที่ใดเลย
         /// </summary>
-        No = 5
+        NoWhere = 5
     }
 }

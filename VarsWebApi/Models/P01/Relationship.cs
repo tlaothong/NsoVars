@@ -35,22 +35,22 @@ namespace VarsWebApi.Models
         /// <summary>
         /// บุตรของบุตร
         /// </summary>
-        ChildOfChild = 6,
+        Grandchild = 6,
 
         /// <summary>
         /// พ่อ, แม่, พ่อแม่ของคู่สมรส
         /// </summary>
-        SpouseParents = 7,
+        Parents = 7,
 
         /// <summary>
         /// ญาติอื่นๆ
         /// </summary>
-        relative = 8,
+        Relative = 8,
 
         /// <summary>
         /// ผู้อาศัย/คนรับใช้/คนงาน
         /// </summary>
-        tenant = 9,
+        Tenant = 9,
 
         /// <summary>
         /// คนงาน/พระสงฆ์/เณร/อื่นๆ
