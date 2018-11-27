@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// รหัสการเข้าพบยูนิตย่อย
     /// </summary>
-    public enum SubUnitAccess 
+    public enum Access 
     {
         /// <summary>
         /// 1 มีผู้ให้ข้อมูลให้ความร่วมมือ

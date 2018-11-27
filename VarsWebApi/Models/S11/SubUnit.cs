@@ -11,8 +11,8 @@ namespace VarsWebApi.Models
         /// หมายเลขห้อง, ใช้ '-' แทนส่วนกลาง
         /// </summary>
         public string RoomNumber { get; set; }
-
-        public List<SubUnitAccess> Access { get; set; }
+        public int AccessCount { get; set; }
+        public List<Access> Accesses { get; set; }
 
         /// <summary>
         /// P1 - ใช้น้ำประปาหรือไม่
