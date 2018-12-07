@@ -23,12 +23,12 @@ namespace VarsWebApi.Controllers
                 SubUnit = new SubUnit()
                 {
                     RoomNumber = "77B",
-                    AccessCount =  0,
+                    AccessCount = 0,
                     Accesses = new List<Access>(){
                         Access.HasPersonAndAccept,
                         Access.HasPersonAndAccept,
                         Access.HasPersonAndAccept,
-                    },     
+                    },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
                     IsPlumbingMeterXWA = true,
@@ -1953,7 +1953,8 @@ namespace VarsWebApi.Controllers
                         }
                     }
                 },
-                Population = new Population(){
+                Population = new Population()
+                {
                     PersonCount = 3,
                     Persons = new List<Person>(){
                         new Person(){
@@ -2205,5 +2206,84 @@ namespace VarsWebApi.Controllers
         {
             throw new NotImplementedException();
         }
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> GetQR()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> GetLogin()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> GetUsername()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpPost]
+        //public void SendData([FromBody] string value)
+        //{
+        //}
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> HomeGetEA()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpPost]
+        //public void HomeBuilding([FromBody] string value)
+        //{
+        //}
+
+        //[HttpPost]
+        //public void HomeCommunity([FromBody] string value)
+        //{
+        //}
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> HomeGetCommunity()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> BuildingGetLocation()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpPost]
+        //public void BuildingData([FromBody] string value)
+        //{
+        //}
+
+        //[HttpPost]
+        //public void UnitData([FromBody] string value)
+        //{
+        //}
+
+        //[HttpPost]
+        //public void SN21([FromBody] string value)
+        //{
+        //}
+
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> SN21()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        //[HttpPost]
+        //public void SN22([FromBody] string value)
+        //{
+        //}
+
+
     }
 }
