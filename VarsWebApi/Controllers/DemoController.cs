@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using VarsWebApi.Models;
 
@@ -12,18 +12,51 @@ namespace VarsWebApi.Controllers
     [ApiController]
     public class DemoController : ControllerBase
     {
-        [HttpPost]
-        public void Post(HouseHoldSample sample)
+        public UserLogin data()
         {
-            throw new NotImplementedException();
+            var collection = new UserLogin()
+            {
+                IdUser = "11223344",
+                Email = "Test@gmail.com",
+                Name = "Anan sobi",
+                IdQr = "abcd1234",
+                Password = "12341234",
+            };
+            return collection;
         }
 
         [HttpGet]
         public string GetQR(string qr)
         {
-            // 
-            return "ID";
+            var data = new UserLogin()
+            {
+                IdUser = "11223344",
+                Email = "Test@gmail.com",
+                Name = "Anan sobi",
+                IdQr = "abcd1234",
+                Password = "12341234"
+            };
+            var result = data.IdQr.ToString();
+            return result;
         }
+
+        //[HttpGet("{id}")]
+        //public IEnumerable<UserLogin> Getuser(string id)
+        //{
+        //    var dataList = new List<UserLogin>();
+        //    var data = new UserLogin()
+        //    {
+        //        IdUser = "11223344",
+        //        Email = "Test@gmail.com",
+        //        Name = "Anan sobi",
+        //        IdQr = "abcd1234",
+        //        Password = "12341234"
+        //    };
+        //    dataList.Add(data);
+        //    var xxx = dataList.Find(it => it.IdQr == id).T;
+        //    return xxx;
+        //}
+
 
         /*[HttpGet]
         public bool GetLogin(string id, string password)
