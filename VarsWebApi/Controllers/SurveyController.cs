@@ -2201,18 +2201,8 @@ namespace VarsWebApi.Controllers
             };
         }
 
-        [HttpPost]
-        public void Post(HouseHoldSample sample)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        [HttpGet]
-        public string GetQR(string qr)
-        {
-            // 
-            return "ID";
-        }
         
     }
 }
