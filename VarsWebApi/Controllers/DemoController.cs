@@ -25,50 +25,50 @@ namespace VarsWebApi.Controllers
             return "ID";
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public bool GetLogin(string id, string password)
         {
             // login success or fail
             return true;
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public string GetDataUsername(string id)
         {
             return "data user";
-        }
+        }*/
 
-        [HttpPost]
+        /*[HttpPost]
         public void SetPassword([FromBody] string id, string password)
         {
             //replace password by ID
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public string LoadWork(string userid)
         {
             return "id ea";
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public string IEnumerable<GetAllEA>(string idEA)
         {
             return "something in every ea";
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public string GetBuildingEA(string idEA)
         {
             return "data ea";
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public string GetCommunityEA(string idEA)
         {
             return "data ea";
-        }
+        }*/
 
-        [HttpGet]
+        /*[HttpGet]
         public string GetFSEA(string idEA)
         {
             return "data ea";
@@ -126,7 +126,7 @@ namespace VarsWebApi.Controllers
         //[HttpPost]
         //public void SN22([FromBody] string value)
         //{
-        //}
+        //}*/
 
 
     }
