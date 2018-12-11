@@ -21,7 +21,7 @@ namespace VarsWebApi.Controllers
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
-            CollectionWork = test.GetCollection<Work>("login");
+            CollectionWork = test.GetCollection<Work>("work");
 
         }
 
