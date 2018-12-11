@@ -5,161 +5,100 @@ using Microsoft.AspNetCore.Http;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using VarsWebApi.Models;
+using MongoDB.Driver;
 
 namespace VarsWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class DemoController : ControllerBase
     {
-        public UserLogin data()
+        MongoClient db;
+        IMongoCollection<UserLogin> Collection;
+        IMongoCollection<Work> CollectionWork;
+        public DemoController()
         {
-            var collection = new UserLogin()
-            {
-                IdUser = "11223344",
-                Email = "Test@gmail.com",
-                Name = "Anan sobi",
-                IdQr = "abcd1234",
-                Password = "12341234",
-            };
-            return collection;
+            db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
+            var test = db.GetDatabase("demowater");
+            Collection = test.GetCollection<UserLogin>("login");
+            CollectionWork = test.GetCollection<Work>("login");
+
         }
 
         [HttpGet]
-        public string GetQR(string qr)
+        public IEnumerable<UserLogin> GetAllUser()
         {
-            var data = new UserLogin()
-            {
-                IdUser = "11223344",
-                Email = "Test@gmail.com",
-                Name = "Anan sobi",
-                IdQr = "abcd1234",
-                Password = "12341234"
-            };
-            var result = data.IdQr.ToString();
-            return result;
+            var data = Collection.Find(x => true).ToList();
+            return data;
         }
 
-        //[HttpGet("{id}")]
-        //public IEnumerable<UserLogin> Getuser(string id)
-        //{
-        //    var dataList = new List<UserLogin>();
-        //    var data = new UserLogin()
-        //    {
-        //        IdUser = "11223344",
-        //        Email = "Test@gmail.com",
-        //        Name = "Anan sobi",
-        //        IdQr = "abcd1234",
-        //        Password = "12341234"
-        //    };
-        //    dataList.Add(data);
-        //    var xxx = dataList.Find(it => it.IdQr == id).T;
-        //    return xxx;
-        //}
-
-
-        /*[HttpGet]
-        public bool GetLogin(string id, string password)
+        [HttpPost]
+        public bool CreateIdQr([FromBody]UserLogin model)
         {
-            // login success or fail
+            model._idqr = Guid.NewGuid().ToString();
+            Collection.InsertOne(model);
             return true;
-        }*/
+        }
 
-        /*[HttpGet]
-        public string GetDataUsername(string id)
+        [HttpGet("{qr}")]
+        public IEnumerable<UserLogin> GetQR(string qr)
         {
-            return "data user";
-        }*/
-
-        /*[HttpPost]
-        public void SetPassword([FromBody] string id, string password)
-        {
-            //replace password by ID
-        }*/
-
-        /*[HttpGet]
-        public string LoadWork(string userid)
-        {
-            return "id ea";
-        }*/
-
-        /*[HttpGet]
-        public string IEnumerable<GetAllEA>(string idEA)
-        {
-            return "something in every ea";
-        }*/
-
-        /*[HttpGet]
-        public string GetBuildingEA(string idEA)
-        {
-            return "data ea";
-        }*/
-
-        /*[HttpGet]
-        public string GetCommunityEA(string idEA)
-        {
-            return "data ea";
-        }*/
-
-        /*[HttpGet]
-        public string GetFSEA(string idEA)
-        {
-            return "data ea";
+            return Collection.Find(x => x._idqr == qr).ToList();
         }
 
         [HttpPost]
-        public void HomeBuilding([FromBody] string value)
+        public void SetPasswordUser([FromBody]UserLogin request)
         {
-            ///
+            var data = Collection.Find(x => x._idqr == request._idqr).FirstOrDefault();
+            data.Password = request.Password;
+            Collection.ReplaceOne(x => x._idqr == request._idqr, data);
+        }
+
+        [HttpGet("{userId}")]
+        public IEnumerable<UserLogin> GetUser(string userId)
+        {
+            return Collection.Find(x => x.IdUser == userId).ToList();
         }
 
         [HttpPost]
-        public void HomeCommunity([FromBody] string value)
+        public bool CreateWork([FromBody]Work model)
         {
+            model.IdEA = Guid.NewGuid().ToString();
+            CollectionWork.InsertOne(model);
+            return true;
         }
 
         [HttpGet]
-        public string HomeGetCommunity()
+        public IEnumerable<Work> GetAllWork()
         {
-            return "data commu";
+            var data = CollectionWork.Find(x => true).ToList();
+            return data;
         }
 
-        [HttpGet]
-        public string HomeBuilding()
+        [HttpGet("{id}")]
+        public IEnumerable<Work> GetWork(string id)
         {
-            return "data building";
+            return CollectionWork.Find(x => x.IdEA == id).ToList();
         }
 
-        [HttpPost]
-        public void BuildingInfo([FromBody] string value)
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetBuildingEA(string IdEA)
         {
+            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
-        //[HttpPost]
-        //public void BuildingData([FromBody] string value)
-        //{
-        //}
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetBuildingCommunity(string IdEA)
+        {
+            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        }
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetBuildingFS(string IdEA)
+        {
+            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        }
 
-        //[HttpPost]
-        //public void UnitData([FromBody] string value)
-        //{
-        //}
 
-        //[HttpPost]
-        //public void SN21([FromBody] string value)
-        //{
-        //}
-
-        //[HttpGet]
-        //public ActionResult<IEnumerable<string>> SN21()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        //[HttpPost]
-        //public void SN22([FromBody] string value)
-        //{
-        //}*/
 
 
     }
