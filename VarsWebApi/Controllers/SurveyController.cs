@@ -28,8 +28,8 @@ namespace VarsWebApi.Controllers
                         Access.HasPersonAndAccept,
                         Access.HasPersonNoAccept,
                         Access.NoPerson,
-                        Access.AbandonedHouse,
                         Access.Vacancy,
+                        Access.AbandonedHouse,
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
@@ -2021,7 +2021,7 @@ namespace VarsWebApi.Controllers
                 Access = BuildingAccess.HasPersonAndAccept,
                 VacancyCount = 3,
                 AbandonedCount = 5,
-                UnitCount = 12,
+                UnitCount = 2,
                 UnitAccess = UnitAccess.NotAllowGiveInfo,
                 VacantRoomCount = 6,
                 OccupiedRoomCount = 6,
@@ -2203,8 +2203,8 @@ namespace VarsWebApi.Controllers
             };
         }
 
-       
 
-        
+
+
     }
 }
