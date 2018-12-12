@@ -2021,7 +2021,7 @@ namespace VarsWebApi.Controllers
                 Access = BuildingAccess.HasPersonAndAccept,
                 VacancyCount = 3,
                 AbandonedCount = 5,
-                UnitCount = 2,
+                UnitCount = 3,
                 UnitAccess = UnitAccess.NotAllowGiveInfo,
                 VacantRoomCount = 6,
                 OccupiedRoomCount = 6,
