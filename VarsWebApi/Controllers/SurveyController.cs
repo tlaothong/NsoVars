@@ -26,8 +26,6 @@ namespace VarsWebApi.Controllers
                     AccessCount = 0,
                     Accesses = new List<Access>(){
                         Access.HasPersonAndAccept,
-                        Access.HasPersonAndAccept,
-                        Access.HasPersonAndAccept,
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
