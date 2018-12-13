@@ -23,11 +23,11 @@ namespace VarsWebApi.Controllers
                 SubUnit = new SubUnit()
                 {
                     RoomNumber = "77B",
-                    AccessCount = 2,
+                    AccessCount = 3,
                     Accesses = new List<Access>{
-                        2,
-                        3,
-                        1,
+                        Access.HasPersonNoAccept,
+                        Access.NoPerson,
+                        Access.HasPersonAndAccept,
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
