@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public string RoomNumber { get; set; }
         public int AccessCount { get; set; }
-        public Access Access { get; set; }
+        public List<Access> Accesses { get; set; }
 
         /// <summary>
         /// P1 - ใช้น้ำประปาหรือไม่
