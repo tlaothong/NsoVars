@@ -24,13 +24,10 @@ namespace VarsWebApi.Controllers
                 {
                     RoomNumber = "77B",
                     AccessCount = 0,
-                    Accesses = new List<Access>(){
-                        Access.HasPersonAndAccept,
-                        Access.HasPersonNoAccept,
-                        Access.NoPerson,
-                        Access.Vacancy,
-                        Access.AbandonedHouse,
-                    },
+                    Access = Access.HasPersonAndAccept,
+                    // Access = new List<Access>{
+                    //     Access.HasPersonAndAccept,
+                    // }
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
                     IsPlumbingMeterXWA = true,
