@@ -41,9 +41,9 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{qr}")]
-        public IEnumerable<UserLogin> GetQR(string qr)
+        public UserLogin GetUserByQRCode(string qr)
         {
-            return Collection.Find(x => x._idqr == qr).ToList();
+            return Collection.Find(x => x._idqr == qr).FirstOrDefault();
         }
 
         [HttpPost]
@@ -55,9 +55,9 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{userId}")]
-        public IEnumerable<UserLogin> GetUser(string userId)
+        public UserLogin GetUserByID(string userId)
         {
-            return Collection.Find(x => x.IdUser == userId).ToList();
+            return Collection.Find(x => x.IdUser == userId).FirstOrDefault();
         }
 
         [HttpPost]
@@ -76,9 +76,9 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Work> GetWork(string id)
+        public Work GetWorkByWorkID(string id)
         {
-            return CollectionWork.Find(x => x.IdEA == id).ToList();
+            return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
         }
 
         [HttpGet("{IdEA}")]
