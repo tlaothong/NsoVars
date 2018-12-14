@@ -8,7 +8,6 @@ namespace VarsWebApi.Models
 {
     public class Work
     {
-        [BsonId]
         public string IdEA { get; set; }
         public string UserId { get; set; }
         public string Province { get; set; }

@@ -66,10 +66,10 @@ namespace VarsWebApi.Controllers
             return true;
         }
 
-        [HttpGet]
-        public IEnumerable<Work> GetAllWorkByWorkUserID(string Id)
+        [HttpGet"{id}"]
+        public IEnumerable<Work> GetAllWorkByWorkUserID(string id)
         {
-            return CollectionWork.Find(x => x.UserId == Id).ToList();
+            return CollectionWork.Find(x => x.UserId == id).ToList();
         }
 
         [HttpGet("{id}")]
