@@ -63,7 +63,6 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public bool CreateWork([FromBody]Work model)
         {
-            model.IdEA = Guid.NewGuid().ToString();
             CollectionWork.InsertOne(model);
             return true;
         }
