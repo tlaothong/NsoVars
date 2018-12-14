@@ -28,8 +28,7 @@ namespace VarsWebApi.Controllers
         [HttpGet]
         public IEnumerable<UserLogin> GetAllUser()
         {
-            var data = Collection.Find(x => true).ToList();
-            return data;
+            return Collection.Find(x => true).ToList();
         }
 
         [HttpPost]
@@ -70,8 +69,7 @@ namespace VarsWebApi.Controllers
         [HttpGet]
         public IEnumerable<Work> GetAllWork()
         {
-            var data = CollectionWork.Find(x => true).ToList();
-            return data;
+            return CollectionWork.Find(x => true).ToList();
         }
 
         [HttpGet("{id}")]
