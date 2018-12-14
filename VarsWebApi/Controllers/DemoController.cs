@@ -92,6 +92,7 @@ namespace VarsWebApi.Controllers
         {
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
+
         [HttpGet("{IdEA}")]
         public IEnumerable<Work> GetBuildingFS(string IdEA)
         {
