@@ -17,7 +17,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดของบรรจุภัณ
         /// </summary>
-        public double Size { get; set; }
+        public string Size { get; set; }
         /// <summary>
         /// จำนวน
         /// </summary>

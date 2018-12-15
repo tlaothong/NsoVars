@@ -1840,10 +1840,35 @@ namespace VarsWebApi.Controllers
                         RainContainers = new List<RainContainer>
                         {
                             new RainContainer() {
-                                Category = "โอ่งมังกร",
-                                Size = 1500,
+                                Category = "1. แท้งค์น้ำ สแตนเลส",
+                                Size = "10,000 - 15,000",
+                                Count = 3
+                            },
+                            new RainContainer() {
+                                Category = "2. แท้งค์น้ำ โพลิเมอร์/พลาสติก'",
+                                Size = "100 - 1,000",
+                                Count = 9
+                            },
+                            new RainContainer() {
+                                Category = "3. แท้งค์น้ำ ไฟเบอร์กลาส'",
+                                Size = "5,000 - 10,000",
+                                Count = 1
+                            },
+                            new RainContainer() {
+                                Category = "3. แท้งค์น้ำ ไฟเบอร์กลาส'",
+                                Size = "5,000 - 10,000",
                                 Count = 15
-                            }
+                            },
+                            new RainContainer() {
+                                Category = "5. โอ่ง ปูน/ดินเผา",
+                                Size = "300 - 1,000",
+                                Count = 15
+                            },
+                            new RainContainer() {
+                                Category = "กะละมัง",
+                                Size = "1",
+                                Count = 10
+                            },
                         },
                         WaterActivities = new WaterActivity()
                         {
