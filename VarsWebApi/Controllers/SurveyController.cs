@@ -404,7 +404,7 @@ namespace VarsWebApi.Controllers
                                     }
                                 },
                                 WaterSources = new WaterSources(){
-                                    Plumbing = false,  
+                                    Plumbing = false,
                                     UnderGround = false,
                                     Pool = true,
                                     River = false,
@@ -1855,7 +1855,7 @@ namespace VarsWebApi.Controllers
                                 Count = 1
                             },
                             new RainContainer() {
-                                Category = "3. แท้งค์น้ำ ไฟเบอร์กลาส'",
+                                Category = "4. แท้งค์น้ำ ไฟเบอร์กลาส'",
                                 Size = "5,000 - 10,000",
                                 Count = 15
                             },
@@ -1865,8 +1865,13 @@ namespace VarsWebApi.Controllers
                                 Count = 15
                             },
                             new RainContainer() {
-                                Category = "กะละมัง",
+                                Category = "6. กะละมัง",
                                 Size = "1",
+                                Count = 10
+                            },
+                            new RainContainer() {
+                                Category = "7. กะละมัง",
+                                Size = "300 - 1,000",
                                 Count = 10
                             },
                         },
