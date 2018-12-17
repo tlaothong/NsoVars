@@ -1844,7 +1844,37 @@ namespace VarsWebApi.Controllers
                         {
                             new RainContainer() {
                                 Category = "โอ่งมังกร",
-                                Size = 1500,
+                                Size = "1500",
+                                Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
+                                Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
+                                Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
+                                Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
+                                Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
+                                Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
                                 Count = 15
                             }
                         },
