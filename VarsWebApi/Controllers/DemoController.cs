@@ -73,6 +73,12 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
+        public int GetCountWorkByIDUser(string id)
+        {
+            return CollectionWork.Find(x => x.IdUser == id).ToList().Count();
+        }
+
+        [HttpGet("{id}")]
         public Work GetWorkByIdEA(string id)
         {
             return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
@@ -84,17 +90,17 @@ namespace VarsWebApi.Controllers
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetCommunityByIdEA(string IdEA)
-        {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        }
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<Work> GetCommunityByIdEA(string IdEA)
+        //{
+        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        //}
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetFSByIdEA(string IdEA)
-        {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        }
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<Work> GetFSByIdEA(string IdEA)
+        //{
+        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        //}
 
 
 
