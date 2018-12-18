@@ -54,9 +54,9 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{userId}")]
-        public UserLogin GetUserByID(string userId)
+        public UserLogin GetUserByID(string IdUser)
         {
-            return Collection.Find(x => x.IdUser == userId).FirstOrDefault();
+            return Collection.Find(x => x.IdUser == IdUser).FirstOrDefault();
         }
 
         [HttpPost]
@@ -67,13 +67,13 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Work> GetAllWorkByUserID(string id)
+        public IEnumerable<Work> GetAllWorkByIDUser(string id)
         {
-            return CollectionWork.Find(x => x.UserId == id).ToList();
+            return CollectionWork.Find(x => x.IdUser == id).ToList();
         }
 
         [HttpGet("{id}")]
-        public Work GetWorkByWorkUserIdEA(string id)
+        public Work GetWorkByIdEA(string id)
         {
             return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
         }
