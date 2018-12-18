@@ -79,19 +79,19 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingEA(string IdEA)
+        public IEnumerable<Work> GetBuildingByIdEA(string IdEA)
         {
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
         [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingCommunity(string IdEA)
+        public IEnumerable<Work> GetCommunityByIdEA(string IdEA)
         {
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
         [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingFS(string IdEA)
+        public IEnumerable<Work> GetFSByIdEA(string IdEA)
         {
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
