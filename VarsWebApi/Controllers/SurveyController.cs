@@ -23,10 +23,11 @@ namespace VarsWebApi.Controllers
                 SubUnit = new SubUnit()
                 {
                     RoomNumber = "77B",
-                    AccessCount = 2,
+                    AccessCount = 3,
                     Accesses = new List<Access>{
                         Access.HasPersonNoAccept,
                         Access.NoPerson,
+                        Access.HasPersonAndAccept
                     },
                     HasPlumbing = true,
                     HasPlumbingMeter = true,
@@ -41,11 +42,15 @@ namespace VarsWebApi.Controllers
                 Comments = new List<Comment>(){
                     new Comment(){
                         At = DateTime.Now,
-                        Text = "Good Man" ,
+                        Text = "Comment1" ,
                     },
                     new Comment(){
                         At = DateTime.Now,
-                        Text = "Good Man" ,
+                        Text = "Comment2" ,
+                    },
+                    new Comment(){
+                        At = DateTime.Now,
+                        Text = "Comment3" ,
                     },
                 },
                 Residence = new Residential()
