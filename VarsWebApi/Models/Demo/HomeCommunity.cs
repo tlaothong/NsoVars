@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-    public class HomeBuildingCommunity
+    public class HomeCommunity
     {
         public string address { get; set; }
         public string name { get; set; }
