@@ -102,6 +102,11 @@ namespace VarsWebApi.Controllers
             return CollectionHomeBuilding.Find(x =>true).ToList();
         }
 
+        [HttpGet]
+        public int GetCountBuildingByIdUser()
+        {
+            return CollectionHomeBuilding.Find(x => true).ToList().Count();
+        }
         //[HttpGet("{IdEA}")]
         //public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
         //{
