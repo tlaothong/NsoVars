@@ -16,12 +16,17 @@ namespace VarsWebApi.Controllers
         MongoClient db;
         IMongoCollection<UserLogin> Collection;
         IMongoCollection<Work> CollectionWork;
+        IMongoCollection<HomeBuildingEA> CollectionHomeBuilding;
+        IMongoCollection<HomeCommunity> CollectionHomeCommunity;
+
         public DemoController()
         {
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
             CollectionWork = test.GetCollection<Work>("work");
+            CollectionHomeBuilding = test.GetCollection<HomeBuildingEA>("homebuilding");
+            CollectionHomeCommunity = test.GetCollection<HomeCommunity>("homecommunity");
 
         }
 
@@ -85,22 +90,22 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingByIdEA(string IdEA)
+        public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
+        {
+            return CollectionHomeBuilding.Find(x => x.IdEA == IdEA).ToList();
+        }
+
+        [HttpGet("{IdEA}")]
+        public IEnumerable<HomeCommunity> GetCommunityByIdEA(string IdEA)
+        {
+            return CollectionHomeCommunity.Find(x => x.IdEA == IdEA).ToList();
+        }
+
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetFSByIdEA(string IdEA)
         {
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
-
-        //[HttpGet("{IdEA}")]
-        //public IEnumerable<Work> GetCommunityByIdEA(string IdEA)
-        //{
-        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        //}
-
-        //[HttpGet("{IdEA}")]
-        //public IEnumerable<Work> GetFSByIdEA(string IdEA)
-        //{
-        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        //}
 
 
 
