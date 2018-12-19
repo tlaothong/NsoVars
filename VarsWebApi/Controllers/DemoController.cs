@@ -16,8 +16,8 @@ namespace VarsWebApi.Controllers
         MongoClient db;
         IMongoCollection<UserLogin> Collection;
         IMongoCollection<Work> CollectionWork;
-        IMongoCollection<HomeBuildingEA> CollectionHomeBuilding;
-        IMongoCollection<HomeCommunity> CollectionHomeCommunity;
+        IMongoCollection<BuildingSample> CollectionHomeBuilding;
+        IMongoCollection<CommunitySample> CollectionHomeCommunity;
 
         public DemoController()
         {
@@ -25,8 +25,8 @@ namespace VarsWebApi.Controllers
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
             CollectionWork = test.GetCollection<Work>("work");
-            CollectionHomeBuilding = test.GetCollection<HomeBuildingEA>("homebuilding");
-            CollectionHomeCommunity = test.GetCollection<HomeCommunity>("homecommunity");
+            CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
+            CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
 
         }
 
@@ -89,23 +89,36 @@ namespace VarsWebApi.Controllers
             return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
+        [HttpPost]
+        public void CreateBuilding([FromBody]BuildingSample data)
         {
-            return CollectionHomeBuilding.Find(x => x.IdEA == IdEA).ToList();
+            data._id = Guid.NewGuid().ToString();
+            CollectionHomeBuilding.InsertOne(data);
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<HomeCommunity> GetCommunityByIdEA(string IdEA)
+        [HttpGet]
+        public IEnumerable<BuildingSample> GetAllBuildingByIdUser()
         {
-            return CollectionHomeCommunity.Find(x => x.IdEA == IdEA).ToList();
+            return CollectionHomeBuilding.Find(x =>true).ToList();
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetFSByIdEA(string IdEA)
-        {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        }
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
+        //{
+        //    return CollectionHomeBuilding.Find(x => x.IdEA == IdEA).ToList();
+        //}
+
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<HomeCommunity> GetCommunityByIdEA(string IdEA)
+        //{
+        //    return CollectionHomeCommunity.Find(x => x.IdEA == IdEA).ToList();
+        //}
+
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<Work> GetFSByIdEA(string IdEA)
+        //{
+        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        //}
 
 
 
