@@ -97,15 +97,27 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<BuildingSample> GetAllBuildingByIdUser()
+        public IEnumerable<BuildingSample> GetAllBuilding()
         {
             return CollectionHomeBuilding.Find(x =>true).ToList();
         }
 
         [HttpGet]
-        public int GetCountBuildingByIdUser()
+        public int GetCountBuilding()
         {
             return CollectionHomeBuilding.Find(x => true).ToList().Count();
+        }
+
+        [HttpGet]
+        public IEnumerable<CommunitySample> GetAllCommunity()
+        {
+            return CollectionHomeCommunity.Find(x => true).ToList();
+        }
+
+        [HttpGet]
+        public int GetCountCommunity()
+        {
+            return CollectionHomeCommunity.Find(x => true).ToList().Count();
         }
         //[HttpGet("{IdEA}")]
         //public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
