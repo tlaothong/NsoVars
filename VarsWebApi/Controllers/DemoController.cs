@@ -16,12 +16,17 @@ namespace VarsWebApi.Controllers
         MongoClient db;
         IMongoCollection<UserLogin> Collection;
         IMongoCollection<Work> CollectionWork;
+        IMongoCollection<BuildingSample> CollectionHomeBuilding;
+        IMongoCollection<CommunitySample> CollectionHomeCommunity;
+
         public DemoController()
         {
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
             CollectionWork = test.GetCollection<Work>("work");
+            CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
+            CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
 
         }
 
@@ -54,9 +59,9 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{userId}")]
-        public UserLogin GetUserByID(string userId)
+        public UserLogin GetUserByID(string IdUser)
         {
-            return Collection.Find(x => x.IdUser == userId).FirstOrDefault();
+            return Collection.Find(x => x.IdUser == IdUser).FirstOrDefault();
         }
 
         [HttpPost]
@@ -67,34 +72,58 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Work> GetAllWorkByUserID(string id)
+        public IEnumerable<Work> GetAllWorkByIDUser(string id)
         {
-            return CollectionWork.Find(x => x.UserId == id).ToList();
+            return CollectionWork.Find(x => x.IdUser == id).ToList();
         }
 
         [HttpGet("{id}")]
-        public Work GetWorkByWorkUserIdEA(string id)
+        public int GetCountWorkByIDUser(string id)
+        {
+            return CollectionWork.Find(x => x.IdUser == id).ToList().Count();
+        }
+
+        [HttpGet("{id}")]
+        public Work GetWorkByIdEA(string id)
         {
             return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingEA(string IdEA)
+        [HttpPost]
+        public void CreateBuilding([FromBody]BuildingSample data)
         {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+            data._id = Guid.NewGuid().ToString();
+            CollectionHomeBuilding.InsertOne(data);
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingCommunity(string IdEA)
+        [HttpGet]
+        public IEnumerable<BuildingSample> GetAllBuildingByIdUser()
         {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+            return CollectionHomeBuilding.Find(x =>true).ToList();
         }
 
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingFS(string IdEA)
+        [HttpGet]
+        public int GetCountBuildingByIdUser()
         {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+            return CollectionHomeBuilding.Find(x => true).ToList().Count();
         }
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
+        //{
+        //    return CollectionHomeBuilding.Find(x => x.IdEA == IdEA).ToList();
+        //}
+
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<HomeCommunity> GetCommunityByIdEA(string IdEA)
+        //{
+        //    return CollectionHomeCommunity.Find(x => x.IdEA == IdEA).ToList();
+        //}
+
+        //[HttpGet("{IdEA}")]
+        //public IEnumerable<Work> GetFSByIdEA(string IdEA)
+        //{
+        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        //}
 
 
 
