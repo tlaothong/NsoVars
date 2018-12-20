@@ -2126,6 +2126,7 @@ namespace VarsWebApi.Controllers
         {
             return new CommunitySample()
             {
+                _id = "",
                 Management = new CommunityWaterManagement()
                 {
                     HasPublicWater = true,

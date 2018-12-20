@@ -9,7 +9,7 @@ namespace VarsWebApi.Models
     /// ข้อมูลการเพาะปลูกพืช
     /// </summary>
     /// <typeparam name="T">ข้อมูลการเพาะปลูกเฉพาะสำหรับพืชแต่ละแบบ</typeparam>
-    public class PlantingInfo<T> : ModelBase
+    public class PlantingInfo<T>
     {
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้ปลูกพืช xxx หรือไม่
