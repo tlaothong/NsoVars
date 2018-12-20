@@ -1845,42 +1845,42 @@ namespace VarsWebApi.Controllers
                         RainContainers = new List<RainContainer>
                         {
                             new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "แท้งค์น้ำ สแตนเลส",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "แท้งค์น้ำ โพลิเมอร์/พลาสติก",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "แท้งค์น้ำ ไฟเบอร์กลาส",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "แท้งค์น้ำ ปูน/ซีเมนต์",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "โอ่ง ปูน/ดินเผา",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "ถัง โพลิเมอร์/พลาสติก",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "โอ่ง ปูน/ดินเผา",
                                 Size = "1500",
                                 Count = 15
                             },
                              new RainContainer() {
-                                Category = "โอ่งมังกร",
+                                Category = "แท้งค์น้ำ ปูน/ซีเมนต์",
                                 Size = "1500",
                                 Count = 15
                             }
