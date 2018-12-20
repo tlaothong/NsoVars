@@ -8,7 +8,7 @@ namespace VarsWebApi.Models {
     /// <summary>
     /// 2. การทำการเกษตร
     /// </summary>
-    public class Agriculture : ModelBase 
+    public class Agriculture 
     {
         /// <summary>
         /// 2.1 ข้าว
