@@ -1873,6 +1873,11 @@ namespace VarsWebApi.Controllers
                                 Category = "โอ่งมังกร",
                                 Size = "1500",
                                 Count = 15
+                            },
+                             new RainContainer() {
+                                Category = "โอ่งมังกร",
+                                Size = "1500",
+                                Count = 15
                             }
                         },
                         WaterActivities = new WaterActivity()
