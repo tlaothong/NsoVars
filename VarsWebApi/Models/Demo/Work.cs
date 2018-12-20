@@ -16,5 +16,6 @@ namespace VarsWebApi.Models
         public string SubDistrict { get; set; }
         public string Administrative { get; set; }
         public string Municipalities { get; set; }
+
     }
 }

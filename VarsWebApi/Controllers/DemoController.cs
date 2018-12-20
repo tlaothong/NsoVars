@@ -108,6 +108,13 @@ namespace VarsWebApi.Controllers
             return CollectionHomeBuilding.Find(x => true).ToList().Count();
         }
 
+        [HttpPost]
+        public void CreateCommunity([FromBody]CommunitySample data)
+        {
+            data._id = Guid.NewGuid().ToString();
+            CollectionHomeCommunity.InsertOne(data);
+        }
+
         [HttpGet]
         public IEnumerable<CommunitySample> GetAllCommunity()
         {

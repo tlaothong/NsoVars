@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
     /// <summary>
     /// พื้นที่ย่อย
     /// </summary>
-    public class CommunitySample
+    public class CommunitySample: ModelBase
     {
         /// <summary>
         /// การจัดการน้ำในหมู่บ้าน / ชุมชน
