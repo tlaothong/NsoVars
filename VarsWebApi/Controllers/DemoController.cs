@@ -91,7 +91,7 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpPost]
-        public void CreateBuilding([FromBody]BuildingSample data)
+        public bool CreateBuilding([FromBody]BuildingSample data)
         {
             if (data._id == null)
             {
@@ -103,6 +103,7 @@ namespace VarsWebApi.Controllers
                 CollectionHomeBuilding.ReplaceOne(x => x._id == data._id, data);
             }
 
+            return true;
             //return CollectionHomeBuilding.Find(x => x._id == data._id).FirstOrDefault();
         }
 
