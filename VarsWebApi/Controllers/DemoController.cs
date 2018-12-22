@@ -6,6 +6,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using VarsWebApi.Models;
 using MongoDB.Driver;
+using VarsWebApi.Models.Demo;
 
 namespace VarsWebApi.Controllers
 {
@@ -15,7 +16,7 @@ namespace VarsWebApi.Controllers
     {
         MongoClient db;
         IMongoCollection<UserLogin> Collection;
-        IMongoCollection<Work> CollectionWork;
+        IMongoCollection<EAInfo> CollectionWork;
         IMongoCollection<BuildingSample> CollectionHomeBuilding;
         IMongoCollection<CommunitySample> CollectionHomeCommunity;
 
@@ -24,7 +25,7 @@ namespace VarsWebApi.Controllers
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
-            CollectionWork = test.GetCollection<Work>("work");
+            CollectionWork = test.GetCollection<EAInfo>("work");
             CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
             CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
 
@@ -65,14 +66,14 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpPost]
-        public bool CreateWork([FromBody]Work model)
+        public bool CreateWork([FromBody]EAInfo model)
         {
             CollectionWork.InsertOne(model);
             return true;
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Work> GetAllWorkByIDUser(string id)
+        public IEnumerable<EAInfo> GetAllWorkByIDUser(string id)
         {
             return CollectionWork.Find(x => x.IdUser == id).ToList();
         }
@@ -84,9 +85,9 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public Work GetWorkByIdEA(string id)
+        public EAInfo GetWorkByIdEA(string id)
         {
-            return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
+            return CollectionWork.Find(x => x._id == id).FirstOrDefault();
         }
 
         [HttpPost]
