@@ -91,29 +91,16 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpPost]
-        public string CreateBuilding([FromBody]BuildingSample data)
+        public void CreateBuilding([FromBody]BuildingSample data)
         {
             data._id = Guid.NewGuid().ToString();
             CollectionHomeBuilding.InsertOne(data);
-
-            //if (data._id == null)
-            //{
-            //    data._id = Guid.NewGuid().ToString();
-            //    CollectionHomeBuilding.InsertOne(data);
-            //}
-            //else
-            //{
-            //    CollectionHomeBuilding.ReplaceOne(x => x._id == data._id, data);
-            //}
-
-            return data._id;
-            //return CollectionHomeBuilding.Find(x => x._id == data._id).FirstOrDefault();
         }
 
         [HttpGet]
         public IEnumerable<BuildingSample> GetAllBuilding()
         {
-            return CollectionHomeBuilding.Find(x => true).ToList();
+            return CollectionHomeBuilding.Find(x =>true).ToList();
         }
 
         [HttpGet]
