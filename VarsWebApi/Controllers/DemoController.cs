@@ -91,22 +91,37 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpPost]
-        public void CreateBuilding([FromBody]BuildingSample data)
+        public BuildingSample CreateBuilding([FromBody]BuildingSample data)
         {
-            data._id = Guid.NewGuid().ToString();
-            CollectionHomeBuilding.InsertOne(data);
+            var existingData = CollectionHomeBuilding.Find(it => it._id == data._id).FirstOrDefault();
+
+            if (existingData == null)
+            {
+                data._id = Guid.NewGuid().ToString();
+                CollectionHomeBuilding.InsertOne(data);
+            }
+            else
+            {
+                CollectionHomeBuilding.ReplaceOne((it) => it._id == data._id, data);
+            }
+            return data;
         }
 
         [HttpGet]
         public IEnumerable<BuildingSample> GetAllBuilding()
         {
-            return CollectionHomeBuilding.Find(x =>true).ToList();
+            return CollectionHomeBuilding.Find(x => true).ToList();
         }
 
         [HttpGet]
         public int GetCountBuilding()
         {
-            return CollectionHomeBuilding.Find(x => true).ToList().Count();
+            var result = CollectionHomeBuilding.Find(x => true).ToList().Count();
+            if (result == null)
+            {
+                return 0;
+            }
+            return result;
         }
 
         [HttpPost]
