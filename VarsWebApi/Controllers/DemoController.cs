@@ -124,6 +124,12 @@ namespace VarsWebApi.Controllers
             return result;
         }
 
+        [HttpDelete("{id}")]
+        public void RemoveBuilding(string id)
+        {
+            CollectionHomeBuilding.DeleteOne(x => x._id == id);            
+        }
+
         [HttpPost]
         public void CreateCommunity([FromBody]CommunitySample data)
         {
