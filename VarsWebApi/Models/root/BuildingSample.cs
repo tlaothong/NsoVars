@@ -53,14 +53,9 @@ namespace VarsWebApi.Models
         public string Other { get; set; }
 
         /// <summary>
-        /// จำนวนครั้งที่เข้าพบ
-        /// </summary>
-        public int BuildingAccessCount { get; set; }
-
-        /// <summary>
         /// รหัสการเข้าพบ บ้าน/อาคาร/สิ่งปลูกสร้าง
         /// </summary>
-        public List<BuildingAccess> Access { get; set; }
+        public BuildingAccess Access { get; set; }
 
         /// <summary>
         /// จำนวนบ้านว่าง 
