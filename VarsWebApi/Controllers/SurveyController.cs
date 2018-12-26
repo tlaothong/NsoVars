@@ -279,7 +279,7 @@ namespace VarsWebApi.Controllers
                                 Area = new Area(){
                                     Rai = 15,
                                     Ngan = 3,
-                                    SqWa = 300
+                                    SqWa = 50
                                 },
                                 IrrigationField = true,
                                 WaterSources = new WaterSources(){
@@ -304,7 +304,7 @@ namespace VarsWebApi.Controllers
                                 Area = new Area(){
                                     Rai = 15,
                                     Ngan = 3,
-                                    SqWa = 300
+                                    SqWa = 50
                                 },
                                 IrrigationField = true,
                                 WaterSources = new WaterSources(){
@@ -336,7 +336,7 @@ namespace VarsWebApi.Controllers
                                 Area = new Area(){
                                     Rai = 7,
                                     Ngan = 2,
-                                    SqWa = 255
+                                    SqWa = 50
                                 },
                                 IrrigationField = true,
                                 Plantings = new PlantItem(){
@@ -383,7 +383,7 @@ namespace VarsWebApi.Controllers
                                 Area = new Area(){
                                     Rai = 7,
                                     Ngan = 2,
-                                    SqWa = 255
+                                    SqWa = 50
                                 },
                                 IrrigationField = false,
                                 Plantings = new PlantItem(){
@@ -1718,7 +1718,7 @@ namespace VarsWebApi.Controllers
                                 {
                                     Rai = 2,
                                     Ngan = 1,
-                                    SqWa = 300
+                                    SqWa = 50
                                 },
                                 Depth = 3,
                                 Rectangle = new RectanglePool()
@@ -2143,9 +2143,9 @@ namespace VarsWebApi.Controllers
                             ProjectArea = new FieldSize(){
                                 Shape = FieldShape.Rectangle,
                                 Area = new Area(){
-                                    Rai = 362,
+                                    Rai = 1,
                                     Ngan = 2,
-                                    SqWa = 132
+                                    SqWa = 50
                                 },
                                 Depth = 3,
                                 Rectangle = new RectanglePool(){
@@ -2245,7 +2245,7 @@ namespace VarsWebApi.Controllers
                             Area = new Area(){
                                 Rai = 44,
                                 Ngan = 1,
-                                SqWa = 324
+                                SqWa = 50
                             },
                             MemberCount = 324,
                             AvgGroundWaterUse = 3500,

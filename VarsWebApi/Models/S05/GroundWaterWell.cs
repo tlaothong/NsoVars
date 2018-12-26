@@ -20,14 +20,14 @@ namespace VarsWebApi.Models
         /// </remarks>
         public GroundWaterUsage UsageType { get; set; }
 
-        /// <summary>
-        /// ปริมาณน้ำ ลบ.ม./เดือน  
-        /// </summary>
-        public int? CubicMeterPerMonth { get; set; }
+        // /// <summary>
+        // /// ปริมาณน้ำ ลบ.ม./เดือน  
+        // /// </summary>
+        // public int? CubicMeterPerMonth { get; set; }
 
-        /// <summary>
-        /// ไม่ทราบปริมาณน้้าแต่ทราบค่าน้้า 
-        /// </summary>
-        public int? WaterBill { get; set; }
+        // /// <summary>
+        // /// ไม่ทราบปริมาณน้้าแต่ทราบค่าน้้า 
+        // /// </summary>
+        // public int? WaterBill { get; set; }
     }
 }
