@@ -738,8 +738,7 @@ namespace VarsWebApi.Controllers
                         },
                         Buffalo = new HasAndCount()
                         {
-                            HasItem = false,
-                            ItemCount = 0
+                            HasItem = false
                         },
                         Pig = new HasAndCount()
                         {
@@ -749,12 +748,10 @@ namespace VarsWebApi.Controllers
                         Goat = new HasAndCount()
                         {
                             HasItem = false,
-                            ItemCount = 0
                         },
                         Sheep = new HasAndCount()
                         {
                             HasItem = false,
-                            ItemCount = 0
                         },
                         Chicken = new HasAndCount()
                         {
@@ -769,12 +766,10 @@ namespace VarsWebApi.Controllers
                         Goose = new HasAndCount()
                         {
                             HasItem = false,
-                            ItemCount = 0
                         },
                         SilkWool = new HasAndCount()
                         {
                             HasItem = false,
-                            ItemCount = 0
                         },
                         Other = new HasAndCount()
                         {
