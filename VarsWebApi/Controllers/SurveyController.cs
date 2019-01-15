@@ -781,7 +781,6 @@ namespace VarsWebApi.Controllers
                             HasItem = true,
                             ItemCount = 2
                         },
-                        OtherName = "Dog",
                         WaterSources = new WaterSources()
                         {
                             Plumbing = true,
@@ -1458,6 +1457,7 @@ namespace VarsWebApi.Controllers
                             Service = 5
                         },
                         HasWaterNotRunning = true,
+                        WaterNotRunningCount = 3,
                     },
                     GroundWater = new GroundWater()
                     {
