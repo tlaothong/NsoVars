@@ -16,12 +16,14 @@ namespace VarsWebApi.Controllers
         MongoClient db;
         IMongoCollection<UserLogin> Collection;
         IMongoCollection<Work> CollectionWork;
+        IMongoCollection<Department> CollectionDepartment;
         public DemoController()
         {
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
             CollectionWork = test.GetCollection<Work>("work");
+            CollectionDepartment = test.GetCollection<Department>("department");
 
         }
 
@@ -59,6 +61,7 @@ namespace VarsWebApi.Controllers
             return Collection.Find(x => x.IdUser == userId).FirstOrDefault();
         }
 
+
         [HttpPost]
         public bool CreateWork([FromBody]Work model)
         {
@@ -67,9 +70,18 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Work> GetAllWorkByUserID(string id)
+        public IEnumerable<Department> GetAllWorkByUserID(string id)
         {
-            return CollectionWork.Find(x => x.UserId == id).ToList();
+            var user = Collection.Find(it => it.IdUser == id).FirstOrDefault();
+            var result = new List<Department> { };
+            foreach (var item in user.IdEA)
+            {
+                var get = CollectionDepartment.Find(it => it._id == item).FirstOrDefault();
+                result.Add(get);
+
+            }
+            return result;
+            //return CollectionWork.Find(x => x.UserId == id).ToList();
         }
 
         [HttpGet("{id}")]
@@ -96,6 +108,11 @@ namespace VarsWebApi.Controllers
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
+        [HttpGet()]
+        public IEnumerable<Department> GetDepartment()
+        {
+            return CollectionDepartment.Find(x => true).ToList();
+        }
 
 
 
