@@ -2025,8 +2025,11 @@ namespace VarsWebApi.Controllers
                             LastName = "Na",
                             Relationship = Relationship.HeadFamily,
                             Sex = Sex.Male,
-                            Age = 25,
-                            Nationality = Nationality.Thai_764,
+                            BirthDate = BirthDate.BirthDate_10,
+                            BirthMonth = BirthMonth.BirthMonth_4,
+                            BirthYear = BirthYear.BirthYear_2462,
+                            Age = Age.Year100,
+                            Nationality = Nationality.Code_Thailand,
                             Registration = Registration.InThisHouse
                         },
                         new Person(){
@@ -2035,8 +2038,11 @@ namespace VarsWebApi.Controllers
                             LastName = "OK",
                             Relationship = Relationship.Tenant,
                             Sex = Sex.Female,
-                            Age = 19,
-                            Nationality = Nationality.Myanmar_2,
+                            BirthDate = BirthDate.BirthDate_12,
+                            BirthMonth = BirthMonth.BirthMonth_7,
+                            BirthYear = BirthYear.BirthYear_2519,
+                            Age = Age.Year43,
+                            Nationality = Nationality.Code_TimorLeste,
                             Registration = Registration.NoThisHouseOtherProvince,
                             OtherProvince = "Yala"
                         },
@@ -2046,8 +2052,11 @@ namespace VarsWebApi.Controllers
                             LastName = "0",
                             Relationship = Relationship.Relative,
                             Sex = Sex.Male,
-                            Age = 20,
-                            Nationality = Nationality.NoNationality_998,
+                            BirthDate = BirthDate.BirthDate_14,
+                            BirthMonth = BirthMonth.BirthMonth_9,
+                            BirthYear = BirthYear.BirthYear_2546,
+                            Age = Age.Year16,
+                            Nationality = Nationality.Code_Uganda,
                             Registration = Registration.NotInThailand
                         }
                     }

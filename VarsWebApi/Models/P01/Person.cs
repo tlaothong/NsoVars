@@ -41,9 +41,24 @@ namespace VarsWebApi.Models
         public Sex Sex { get; set; }
 
         /// <summary>
+        /// วันที่เกิด
+        /// </summary>
+        public BirthDate BirthDate { get; set; }
+
+        /// <summary>
+        /// เดือนเกิด
+        /// </summary>
+        public BirthMonth BirthMonth { get; set; }
+
+        /// <summary>
+        /// ปีเกิด
+        /// </summary>
+        public BirthYear BirthYear { get; set; }
+
+        /// <summary>
         /// อายุ
         /// </summary>
-        public int Age { get; set; }
+        public Age Age { get; set; }
 
         /// <summary>
         /// สัญชาติ
