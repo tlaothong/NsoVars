@@ -6,7 +6,6 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using VarsWebApi.Models;
 using MongoDB.Driver;
-using VarsWebApi.Models.Demo;
 
 namespace VarsWebApi.Controllers
 {
@@ -16,18 +15,14 @@ namespace VarsWebApi.Controllers
     {
         MongoClient db;
         IMongoCollection<UserLogin> Collection;
-        IMongoCollection<EAInfo> CollectionWork;
-        IMongoCollection<BuildingSample> CollectionHomeBuilding;
-        IMongoCollection<CommunitySample> CollectionHomeCommunity;
+        IMongoCollection<Work> CollectionWork;
         IMongoCollection<Department> CollectionDepartment;
         public DemoController()
         {
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
             var test = db.GetDatabase("demowater");
             Collection = test.GetCollection<UserLogin>("login");
-            CollectionWork = test.GetCollection<EAInfo>("work");
-            CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
-            CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
+            CollectionWork = test.GetCollection<Work>("work");
             CollectionDepartment = test.GetCollection<Department>("department");
 
         }
@@ -61,14 +56,14 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{userId}")]
-        public UserLogin GetUserByID(string IdUser)
+        public UserLogin GetUserByID(string userId)
         {
-            return Collection.Find(x => x.IdUser == IdUser).FirstOrDefault();
+            return Collection.Find(x => x.IdUser == userId).FirstOrDefault();
         }
 
 
         [HttpPost]
-        public bool CreateWork([FromBody]EAInfo model)
+        public bool CreateWork([FromBody]Work model)
         {
             CollectionWork.InsertOne(model);
             return true;
@@ -83,98 +78,44 @@ namespace VarsWebApi.Controllers
             {
                 var get = CollectionDepartment.Find(it => it._id == item).FirstOrDefault();
                 result.Add(get);
-
             }
             return result;
-            //return CollectionWork.Find(x => x.UserId == id).ToList();
         }
 
         [HttpGet("{id}")]
-        public EAInfo GetWorkByIdEA(string id)
+        public Work GetWorkByWorkUserIdEA(string id)
         {
-            return CollectionWork.Find(x => x._id == id).FirstOrDefault();
+            return CollectionWork.Find(x => x.IdEA == id).FirstOrDefault();
         }
 
-        [HttpPost]
-        public BuildingSample CreateBuilding([FromBody]BuildingSample data)
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetBuildingEA(string IdEA)
         {
-            var existingData = CollectionHomeBuilding.Find(it => it._id == data._id).FirstOrDefault();
-
-            if (existingData == null)
-            {
-                data._id = Guid.NewGuid().ToString();
-                CollectionHomeBuilding.InsertOne(data);
-            }
-            else
-            {
-                CollectionHomeBuilding.ReplaceOne((it) => it._id == data._id, data);
-            }
-            return data;
+            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
-        [HttpGet]
-        public IEnumerable<BuildingSample> GetAllBuilding()
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetBuildingCommunity(string IdEA)
         {
-            return CollectionHomeBuilding.Find(x => true).ToList();
+            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
+        }
+
+        [HttpGet("{IdEA}")]
+        public IEnumerable<Work> GetBuildingFS(string IdEA)
+        {
+            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
 
         [HttpGet]
-        public int GetCountBuilding()
-        {
-            var result = CollectionHomeBuilding.Find(x => true).ToList().Count();
-            if (result == null)
-            {
-                return 0;
-            }
-            return result;
-        }
-
-        [HttpDelete("{id}")]
-        public void RemoveBuilding(string id)
-        {
-            CollectionHomeBuilding.DeleteOne(x => x._id == id);            
-        }
-
-        [HttpPost]
-        public void CreateCommunity([FromBody]CommunitySample data)
-        {
-            data._id = Guid.NewGuid().ToString();
-            CollectionHomeCommunity.InsertOne(data);
-        }
-
-        [HttpGet]
-        public IEnumerable<CommunitySample> GetAllCommunity()
-        {
-            return CollectionHomeCommunity.Find(x => true).ToList();
-        }
-
-        [HttpGet]
-        public int GetCountCommunity()
-        {
-            return CollectionHomeCommunity.Find(x => true).ToList().Count();
-        }
-        //[HttpGet("{IdEA}")]
-        //public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
-        //{
-        //    return CollectionHomeBuilding.Find(x => x.IdEA == IdEA).ToList();
-        //}
-
-        //[HttpGet("{IdEA}")]
-        //public IEnumerable<HomeCommunity> GetCommunityByIdEA(string IdEA)
-        //{
-        //    return CollectionHomeCommunity.Find(x => x.IdEA == IdEA).ToList();
-        //}
-
-        //[HttpGet("{IdEA}")]
-        //public IEnumerable<Work> GetFSByIdEA(string IdEA)
-        //{
-        //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        //}
-
-        [HttpGet()]
         public IEnumerable<Department> GetDepartment()
         {
             return CollectionDepartment.Find(x => true).ToList();
+        }
+
+        [HttpGet("{userId}")]
+        public int GetCountWorkByIDUser(string userId) {
+            var getUser = Collection.Find(it => it.IdUser == userId).FirstOrDefault();
+            return getUser.IdEA.Count() > 0 ? getUser.IdEA.Count() : 0;
         }
 
 
