@@ -33,6 +33,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ไม่มีที่ใดเลย
         /// </summary>
-        NoWhere = 5
+        NoWhere = 5,
+
+        /// <summary>
+        /// ไม่ทราบ
+        /// </summary>
+        Unknow = 9
     }
 }

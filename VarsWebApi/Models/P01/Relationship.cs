@@ -55,6 +55,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// คนงาน/พระสงฆ์/เณร/อื่นๆ
         /// </summary>
-        Other = 0,
+        Other = 10,
     }
 }
