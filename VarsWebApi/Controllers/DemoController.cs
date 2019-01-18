@@ -19,7 +19,7 @@ namespace VarsWebApi.Controllers
         IMongoCollection<EAInfo> CollectionWork;
         IMongoCollection<BuildingSample> CollectionHomeBuilding;
         IMongoCollection<CommunitySample> CollectionHomeCommunity;
-
+        IMongoCollection<Department> CollectionDepartment;
         public DemoController()
         {
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
@@ -28,6 +28,7 @@ namespace VarsWebApi.Controllers
             CollectionWork = test.GetCollection<EAInfo>("work");
             CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
             CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
+            CollectionDepartment = test.GetCollection<Department>("department");
 
         }
 
@@ -65,6 +66,7 @@ namespace VarsWebApi.Controllers
             return Collection.Find(x => x.IdUser == IdUser).FirstOrDefault();
         }
 
+
         [HttpPost]
         public bool CreateWork([FromBody]EAInfo model)
         {
@@ -73,15 +75,18 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<EAInfo> GetAllWorkByIDUser(string id)
+        public IEnumerable<Department> GetAllWorkByUserID(string id)
         {
-            return CollectionWork.Find(x => x.IdUser == id).ToList();
-        }
+            var user = Collection.Find(it => it.IdUser == id).FirstOrDefault();
+            var result = new List<Department> { };
+            foreach (var item in user.IdEA)
+            {
+                var get = CollectionDepartment.Find(it => it._id == item).FirstOrDefault();
+                result.Add(get);
 
-        [HttpGet("{id}")]
-        public int GetCountWorkByIDUser(string id)
-        {
-            return CollectionWork.Find(x => x.IdUser == id).ToList().Count();
+            }
+            return result;
+            //return CollectionWork.Find(x => x.UserId == id).ToList();
         }
 
         [HttpGet("{id}")]
@@ -166,6 +171,11 @@ namespace VarsWebApi.Controllers
         //    return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         //}
 
+        [HttpGet()]
+        public IEnumerable<Department> GetDepartment()
+        {
+            return CollectionDepartment.Find(x => true).ToList();
+        }
 
 
 
