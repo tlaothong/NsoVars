@@ -17,6 +17,9 @@ namespace VarsWebApi.Controllers
         IMongoCollection<UserLogin> Collection;
         IMongoCollection<Work> CollectionWork;
         IMongoCollection<Department> CollectionDepartment;
+        IMongoCollection<BuildingSample> CollectionHomeBuilding;
+        IMongoCollection<CommunitySample> CollectionHomeCommunity;
+
         public DemoController()
         {
             db = new MongoClient("mongodb://abcd1234:abcd1234@ds127624.mlab.com:27624/demowater");
@@ -24,7 +27,9 @@ namespace VarsWebApi.Controllers
             Collection = test.GetCollection<UserLogin>("login");
             CollectionWork = test.GetCollection<Work>("work");
             CollectionDepartment = test.GetCollection<Department>("department");
-
+            CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
+            CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
+            CollectionDepartment = test.GetCollection<Department>("department");
         }
 
         [HttpGet]
@@ -113,12 +118,11 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpGet("{userId}")]
-        public int GetCountWorkByIDUser(string userId) {
+        public int GetCountWorkByIDUser(string userId)
+        {
             var getUser = Collection.Find(it => it.IdUser == userId).FirstOrDefault();
             return getUser.IdEA.Count() > 0 ? getUser.IdEA.Count() : 0;
         }
-
-
 
     }
 }
