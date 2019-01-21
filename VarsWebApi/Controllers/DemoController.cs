@@ -124,5 +124,65 @@ namespace VarsWebApi.Controllers
             return getUser.IdEA.Count() > 0 ? getUser.IdEA.Count() : 0;
         }
 
+        [HttpPost]
+        public BuildingSample CreateBuilding([FromBody]BuildingSample data)
+        {
+            var existingData = CollectionHomeBuilding.Find(it => it._id == data._id).FirstOrDefault();
+
+            if (existingData == null)
+            {
+                data._id = Guid.NewGuid().ToString();
+                CollectionHomeBuilding.InsertOne(data);
+            }
+            else
+            {
+                CollectionHomeBuilding.ReplaceOne((it) => it._id == data._id, data);
+            }
+            return data;
+        }
+
+
+        [HttpPost]
+        public void CreateCommunity([FromBody]CommunitySample data)
+        {
+            data._id = Guid.NewGuid().ToString();
+            CollectionHomeCommunity.InsertOne(data);
+        }
+
+        [HttpDelete("{id}")]
+        public void RemoveBuilding(string id)
+        {
+            CollectionHomeBuilding.DeleteOne(x => x._id == id);
+        }
+
+        [HttpGet]
+        public IEnumerable<BuildingSample> GetAllBuilding()
+        {
+            return CollectionHomeBuilding.Find(x => true).ToList();
+        }
+
+        [HttpGet]
+        public int GetCountBuilding()
+        {
+            var result = CollectionHomeBuilding.Find(x => true).ToList().Count();
+            if (result == null)
+            {
+                return 0;
+            }
+            return result;
+        }
+
+        [HttpGet]
+        public IEnumerable<CommunitySample> GetAllCommunity()
+        {
+            return CollectionHomeCommunity.Find(x => true).ToList();
+        }
+
+        [HttpGet]
+        public int GetCountCommunity()
+        {
+            return CollectionHomeCommunity.Find(x => true).ToList().Count();
+        }
+
     }
 }
