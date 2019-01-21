@@ -58,22 +58,22 @@ namespace VarsWebApi.Models
         /// 4.รถไถเดินตาม
         /// </remarks>
         // TODO: Not sure
-        public PumpType PumpType { get; set; }
+        public string PumpType { get; set; }
 
         /// <summary>
         /// ขนาดแรงม้า / วัตต์ เท่าไร
         /// </summary>
-        public HorsePower HorsePower { get; set; }
+        public string HorsePower { get; set; }
 
         /// <summary>
         /// ขนาดท่อดูดเท่าไร (นิ้ว/หุน/มิลลิเมตร ***ให้เลือกหน่วยได้)
         /// </summary>
-        public SuctionPipeSize SuctionPipeSize { get; set; }
+        public string SuctionPipeSize { get; set; }
 
         /// <summary>
         /// ขนาดท่อส่งเท่าไร (นิ้ว/หุน/มิลลิเมตร ***ให้เลือกหน่วยได้)
         /// </summary>
-        public PipelineSize PipelineSize { get; set; }
+        public string PipelineSize { get; set; }
 
     }
 }

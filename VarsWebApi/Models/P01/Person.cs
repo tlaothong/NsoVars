@@ -63,7 +63,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// สัญชาติ
         /// </summary>
-        public Nationality Nationality { get; set; }
+        public string Nationality { get; set; }
 
         /// <summary>
         /// การมีชื่อในทะเบียนบ้าน
