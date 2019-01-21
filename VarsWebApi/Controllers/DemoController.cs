@@ -19,6 +19,7 @@ namespace VarsWebApi.Controllers
         IMongoCollection<EAInfo> CollectionWork;
         IMongoCollection<BuildingSample> CollectionHomeBuilding;
         IMongoCollection<CommunitySample> CollectionHomeCommunity;
+        IMongoCollection<Department> CollectionDepartment;
 
         public DemoController()
         {
@@ -28,7 +29,7 @@ namespace VarsWebApi.Controllers
             CollectionWork = test.GetCollection<EAInfo>("work");
             CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
             CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
-
+            CollectionDepartment = test.GetCollection<Department>("department");
         }
 
         [HttpGet]
@@ -148,6 +149,15 @@ namespace VarsWebApi.Controllers
         {
             return CollectionHomeCommunity.Find(x => true).ToList().Count();
         }
+
+        [HttpGet]
+        public IEnumerable<Department> GetDepartment()
+        {
+            return CollectionDepartment.Find(x => true).ToList();
+        }
+
+     
+
         //[HttpGet("{IdEA}")]
         //public IEnumerable<HomeBuildingEA> GetBuildingByIdEA(string IdEA)
         //{
