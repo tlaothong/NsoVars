@@ -1478,10 +1478,10 @@ namespace VarsWebApi.Controllers
                                             HasPumpRate = false,
                                             PumpRate = 50,
                                             EnergySource = EnergySource.PetrolPump,
-                                            PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.W10001_14000H15_20,
-                                            SuctionPipeSize = SuctionPipeSize.SP1,
-                                            PipelineSize = PipelineSize.PS1,
+                                            PumpType = "เทอร์ไบร์",
+                                            HorsePower = "4001-5000 / 5 - 7",
+                                            SuctionPipeSize = "-",
+                                            PipelineSize = "1/2-4",
                                         },
                                         new Pump(){
                                             PumpAuto = false,
@@ -1490,10 +1490,10 @@ namespace VarsWebApi.Controllers
                                             HasPumpRate = true,
                                             PumpRate = 80,
                                             EnergySource = EnergySource.TwoWheeledTractors,
-                                            PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.W10001_12000H14_16,
-                                            SuctionPipeSize = SuctionPipeSize.SP112_2,
-                                            PipelineSize = PipelineSize.PS112_2,
+                                            PumpType = "ปั๊มหอยโข่ง",
+                                            HorsePower = "200-400 / 0.2 - 0.5",
+                                            SuctionPipeSize = "(1/2)-2",
+                                            PipelineSize = "(1/2)-2",
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
@@ -1533,10 +1533,10 @@ namespace VarsWebApi.Controllers
                                             HasPumpRate = true,
                                             PumpRate = 30,
                                             EnergySource = EnergySource.ElecticPump,
-                                            PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.W10001_12000H14_16,
-                                            SuctionPipeSize = SuctionPipeSize.SP112_2,
-                                            PipelineSize = PipelineSize.PS112_2,
+                                            PumpType = "ปั๊มชัก",
+                                            HorsePower = "100-200 / 0.1 - 0.2",
+                                            SuctionPipeSize = "1/2-2",
+                                            PipelineSize = "1/2-2",
                                         }
                                     },
                                     WaterActivities = new WaterActivity(){
@@ -1580,10 +1580,10 @@ namespace VarsWebApi.Controllers
                                             NumberOfPumpsPerYear = 365,
                                             HasPumpRate = true,
                                             EnergySource = EnergySource.PetrolPump,
-                                            PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.W10001_14000H15_25,
-                                            SuctionPipeSize = SuctionPipeSize.SP12_3,
-                                            PipelineSize = PipelineSize.PS4_8,
+                                            PumpType = "เทอร์ไบร์",
+                                            HorsePower = "<4000 / <5",
+                                            SuctionPipeSize = "-",
+                                            PipelineSize = "1/2-4",
                                             PumpRate = 0
                                         },
                                         new Pump(){
@@ -1592,10 +1592,10 @@ namespace VarsWebApi.Controllers
                                             NumberOfPumpsPerYear = 500,
                                             HasPumpRate = false,
                                             EnergySource = EnergySource.ElecticPump,
-                                            PumpType = PumpType.PayanakPump,
-                                            HorsePower = HorsePower.W25001_30000H35_40,
-                                            SuctionPipeSize = SuctionPipeSize.SP12_1,
-                                            PipelineSize = PipelineSize.PS12_3,
+                                            PumpType = "ปั๊มหอยโข่ง/ปั๊มพญานาค",
+                                            HorsePower = "7001-8000 /  9.5 - 11",
+                                            SuctionPipeSize = "7-8",
+                                            PipelineSize = "7-8",
                                             PumpRate = 0
                                         }
                                     },
@@ -1633,10 +1633,10 @@ namespace VarsWebApi.Controllers
                                 NumberOfPumpsPerYear = 300,
                                 PumpRate = 6,
                                 EnergySource = EnergySource.ElecticPump,
-                                PumpType = PumpType.PayanakPump,
-                                HorsePower = HorsePower.W200_300H02_04,
-                                SuctionPipeSize = SuctionPipeSize.SP12_3,
-                                PipelineSize = PipelineSize.PS112_3,
+                                PumpType = "ปั๊มเจ็ท",
+                                HorsePower = "5000-12000 / 6.5 - 16",
+                                SuctionPipeSize = "1",
+                                PipelineSize = "1",
                             },
                             new Pump(){
                                 PumpAuto = false,
@@ -1644,10 +1644,10 @@ namespace VarsWebApi.Controllers
                                 NumberOfPumpsPerYear = 224,
                                 PumpRate = 6,
                                 EnergySource = EnergySource.PetrolPump,
-                                PumpType = PumpType.PayanakPump,
-                                HorsePower = HorsePower.W20001_25000H25_35,
-                                SuctionPipeSize = SuctionPipeSize.SP12_1,
-                                PipelineSize = PipelineSize.PS12_4,
+                                PumpType = "ปั๊มน้ำอัตโนมัติ ถังกลม/ ถังเหลี่ยม",
+                                HorsePower = "50-100 / 0.05 - 0.1",
+                                SuctionPipeSize = "(1/2)-1",
+                                PipelineSize = "(1/2)-1",
                             },
                              new Pump(){
                                 PumpAuto = false,
@@ -1655,10 +1655,10 @@ namespace VarsWebApi.Controllers
                                 NumberOfPumpsPerYear = 1000,
                                 PumpRate = 6,
                                 EnergySource = EnergySource.TwoWheeledTractors,
-                                PumpType = PumpType.PayanakPump,
-                                HorsePower = HorsePower.W14000_18000H19_24,
-                                SuctionPipeSize = SuctionPipeSize.SP12_6,
-                                PipelineSize = PipelineSize.PS4_8,
+                                PumpType = "ปั๊มไดโว่/ปั๊มจุ่ม/ปั๊มแช่",
+                                HorsePower = "101-200 / 0.1 - 0.2",
+                                SuctionPipeSize = "-",
+                                PipelineSize = "(1/2)-1",
                             },
                         },
                         WaterActivities = new WaterActivity()
@@ -1739,10 +1739,10 @@ namespace VarsWebApi.Controllers
                                         HasPumpRate = true,
                                         PumpRate = 40,
                                         EnergySource = EnergySource.ElecticPump,
-                                        PumpType = PumpType.PayanakPump,
-                                        HorsePower = HorsePower.W14000_18000H19_24,
-                                        SuctionPipeSize = SuctionPipeSize.SP12_3,
-                                        PipelineSize = PipelineSize.PS3,
+                                        PumpType = "ปั๊มชัก",
+                                        HorsePower = "100-200 / 0.1 - 0.2",
+                                        SuctionPipeSize = "1/2-2",
+                                        PipelineSize = "1/2-2",
                                     },
                                     new Pump(){
                                         PumpAuto = false,
@@ -1751,10 +1751,10 @@ namespace VarsWebApi.Controllers
                                         HasPumpRate = true,
                                         PumpRate = 60,
                                         EnergySource = EnergySource.ElecticPump,
-                                        PumpType = PumpType.PayanakPump,
-                                        HorsePower = HorsePower.W11001_12000H15_16,
-                                        SuctionPipeSize = SuctionPipeSize.SP11_12,
-                                        PipelineSize = PipelineSize.PS112_2,
+                                        PumpType = "ปั๊มหอยโข่ง/ปั๊มพญานาค",
+                                        HorsePower = "4001-4500 / 5.5 - 6",
+                                        SuctionPipeSize = "3",
+                                        PipelineSize = "3",
                                     }
                                 },
                                 WaterActivities = new WaterActivity(){
@@ -1794,10 +1794,10 @@ namespace VarsWebApi.Controllers
                                  HasPumpRate = true,
                                  PumpRate = 60,
                                  EnergySource = EnergySource.ElecticPump,
-                                 PumpType = PumpType.PayanakPump,
-                                 HorsePower = HorsePower.W1000_2500H1_3,
-                                 SuctionPipeSize = SuctionPipeSize.SP12_112,
-                                 PipelineSize = PipelineSize.PS12_112
+                                 PumpType = "ปั๊มซับเมิร์ส/ปั๊มแบบจุ่ม",
+                                 HorsePower = "200-500 / 0.2 - 0.7",
+                                 SuctionPipeSize = "-",
+                                 PipelineSize = "1 (1/2)-2"
                             },
                             new Pump(){
                                  PumpAuto = true,
@@ -1806,10 +1806,10 @@ namespace VarsWebApi.Controllers
                                  HasPumpRate = false,
                                  PumpRate = 120,
                                  EnergySource = EnergySource.ElecticPump,
-                                 PumpType = PumpType.PayanakPump,
-                                 HorsePower = HorsePower.W100_200H01_02,
-                                 SuctionPipeSize = SuctionPipeSize.SP12_3,
-                                 PipelineSize = PipelineSize.PS112,
+                                 PumpType = "ปั๊มน้ำอัตโนมัติ ถังกลม/ ถังเหลี่ยม",
+                                 HorsePower = "101-200 / 0.1 - 0.3",
+                                 SuctionPipeSize = "1(1/2)-2",
+                                 PipelineSize = "1(1/2)-2",
                             }
                         },
                         WaterActivities = new WaterActivity()
@@ -2029,7 +2029,7 @@ namespace VarsWebApi.Controllers
                             BirthMonth = BirthMonth.BirthMonth_4,
                             BirthYear = BirthYear.BirthYear_2462,
                             Age = Age.Year100,
-                            Nationality = Nationality.Code_Thailand,
+                            Nationality = "จีน",
                             Registration = Registration.InThisHouse
                         },
                         new Person(){
@@ -2042,7 +2042,7 @@ namespace VarsWebApi.Controllers
                             BirthMonth = BirthMonth.BirthMonth_7,
                             BirthYear = BirthYear.BirthYear_2519,
                             Age = Age.Year43,
-                            Nationality = Nationality.Code_TimorLeste,
+                            Nationality = "ไทย",
                             Registration = Registration.NoThisHouseOtherProvince,
                             OtherProvince = "Yala"
                         },
@@ -2056,7 +2056,7 @@ namespace VarsWebApi.Controllers
                             BirthMonth = BirthMonth.BirthMonth_9,
                             BirthYear = BirthYear.BirthYear_2546,
                             Age = Age.Year16,
-                            Nationality = Nationality.Code_Uganda,
+                            Nationality = "ไทย",
                             Registration = Registration.NotInThailand
                         }
                     }
