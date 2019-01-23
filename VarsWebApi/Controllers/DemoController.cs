@@ -19,6 +19,7 @@ namespace VarsWebApi.Controllers
         IMongoCollection<Department> CollectionDepartment;
         IMongoCollection<BuildingSample> CollectionHomeBuilding;
         IMongoCollection<CommunitySample> CollectionHomeCommunity;
+        IMongoCollection<HouseHoldSample> CollectionHouseHold;
 
         public DemoController()
         {
@@ -30,6 +31,7 @@ namespace VarsWebApi.Controllers
             CollectionHomeBuilding = test.GetCollection<BuildingSample>("homebuilding");
             CollectionHomeCommunity = test.GetCollection<CommunitySample>("homecommunity");
             CollectionDepartment = test.GetCollection<Department>("department");
+            CollectionHouseHold = test.GetCollection<HouseHoldSample>("household");
         }
 
         [HttpGet]
@@ -38,40 +40,17 @@ namespace VarsWebApi.Controllers
             return Collection.Find(x => true).ToList();
         }
 
-        [HttpPost]
-        public bool CreateIdQr([FromBody]UserLogin model)
-        {
-            model._idqr = Guid.NewGuid().ToString();
-            Collection.InsertOne(model);
-            return true;
-        }
-
+       
         [HttpGet("{qr}")]
         public UserLogin GetUserByQRCode(string qr)
         {
             return Collection.Find(x => x._idqr == qr).FirstOrDefault();
         }
 
-        [HttpPost]
-        public void SetPasswordUser([FromBody]UserLogin request)
-        {
-            var data = Collection.Find(x => x._idqr == request._idqr).FirstOrDefault();
-            data.Password = request.Password;
-            Collection.ReplaceOne(x => x._idqr == request._idqr, data);
-        }
-
         [HttpGet("{userId}")]
         public UserLogin GetUserByID(string userId)
         {
             return Collection.Find(x => x.IdUser == userId).FirstOrDefault();
-        }
-
-
-        [HttpPost]
-        public bool CreateWork([FromBody]Work model)
-        {
-            CollectionWork.InsertOne(model);
-            return true;
         }
 
         [HttpGet("{id}")]
@@ -124,35 +103,16 @@ namespace VarsWebApi.Controllers
             return getUser.IdEA.Count() > 0 ? getUser.IdEA.Count() : 0;
         }
 
-        [HttpPost]
-        public BuildingSample CreateBuilding([FromBody]BuildingSample data)
+        [HttpGet]
+        public IEnumerable<CommunitySample> GetAllCommunity()
         {
-            var existingData = CollectionHomeBuilding.Find(it => it._id == data._id).FirstOrDefault();
-
-            if (existingData == null)
-            {
-                data._id = Guid.NewGuid().ToString();
-                CollectionHomeBuilding.InsertOne(data);
-            }
-            else
-            {
-                CollectionHomeBuilding.ReplaceOne((it) => it._id == data._id, data);
-            }
-            return data;
+            return CollectionHomeCommunity.Find(x => true).ToList();
         }
 
-
-        [HttpPost]
-        public void CreateCommunity([FromBody]CommunitySample data)
+        [HttpGet]
+        public int GetCountCommunity()
         {
-            data._id = Guid.NewGuid().ToString();
-            CollectionHomeCommunity.InsertOne(data);
-        }
-
-        [HttpDelete("{id}")]
-        public void RemoveBuilding(string id)
-        {
-            CollectionHomeBuilding.DeleteOne(x => x._id == id);
+            return CollectionHomeCommunity.Find(x => true).ToList().Count();
         }
 
         [HttpGet]
@@ -172,17 +132,67 @@ namespace VarsWebApi.Controllers
             return result;
         }
 
-        [HttpGet]
-        public IEnumerable<CommunitySample> GetAllCommunity()
+        [HttpPost]
+        public bool CreateIdQr([FromBody]UserLogin model)
         {
-            return CollectionHomeCommunity.Find(x => true).ToList();
+            model._idqr = Guid.NewGuid().ToString();
+            Collection.InsertOne(model);
+            return true;
         }
 
-        [HttpGet]
-        public int GetCountCommunity()
+
+        [HttpPost]
+        public void SetPasswordUser([FromBody]UserLogin request)
         {
-            return CollectionHomeCommunity.Find(x => true).ToList().Count();
+            var data = Collection.Find(x => x._idqr == request._idqr).FirstOrDefault();
+            data.Password = request.Password;
+            Collection.ReplaceOne(x => x._idqr == request._idqr, data);
         }
 
+        [HttpPost]
+        public BuildingSample CreateBuilding([FromBody]BuildingSample data)
+        {
+            if (data._id == null)
+            {
+                data._id = Guid.NewGuid().ToString();
+                CollectionHomeBuilding.InsertOne(data);
+            }
+            else
+            {
+                CollectionHomeBuilding.ReplaceOne((it) => it._id == data._id, data);
+            }
+            return data;
+        }
+
+        [HttpPost]
+        public void CreateCommunity([FromBody]CommunitySample data)
+        {
+            data._id = Guid.NewGuid().ToString();
+            CollectionHomeCommunity.InsertOne(data);
+        }
+
+        [HttpPost]
+        public bool CreateWork([FromBody]Work model)
+        {
+            CollectionWork.InsertOne(model);
+            return true;
+        }
+       
+        [HttpDelete("{id}")]
+        public void RemoveBuilding(string id)
+        {
+            CollectionHomeBuilding.DeleteOne(x => x._id == id);
+        }
+
+        [HttpPost]
+        public void CreateUnit([FromBody]HouseHoldSample data) {
+            if (data._id == null) {
+                data._id = Guid.NewGuid().ToString();
+                CollectionHouseHold.InsertOne(data);
+            }
+            else{
+                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+            }
+        }
     }
 }
