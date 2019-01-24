@@ -164,7 +164,7 @@ namespace VarsWebApi.Controllers
             return data;
         }
 
-        [HttpGet]
+        [HttpGet("{id_DB}")]
         public BuildingSample GetBuilding(string id_BD)
         {
             return CollectionHomeBuilding.Find(it=>it._id == id_BD).FirstOrDefault();
