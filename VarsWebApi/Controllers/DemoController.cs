@@ -164,6 +164,12 @@ namespace VarsWebApi.Controllers
             return data;
         }
 
+        [HttpGet]
+        public BuildingSample GetBuilding(string id_BD)
+        {
+            return CollectionHomeBuilding.Find(it=>it._id == id_BD);
+        }
+
         [HttpPost]
         public void CreateCommunity([FromBody]CommunitySample data)
         {
@@ -198,10 +204,18 @@ namespace VarsWebApi.Controllers
             {
                 CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
             }
-
-
         }
 
+        [HttpGet]
+        public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
+        {
+            return CollectionHouseHold.Find(it => it.BuildingId == Id_BD).ToList();
+        }
 
+        [HttpGet]
+        public HouseHoldSample GetdataOfUnit(string id_unit)
+        {
+            return CollectionHouseHold.Find(it => it._id == id_unit).FirstOrDefault();
+        }
     }
 }
