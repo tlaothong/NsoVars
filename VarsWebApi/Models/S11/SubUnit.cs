@@ -17,19 +17,19 @@ namespace VarsWebApi.Models
         /// <summary>
         /// P1 - ใช้น้ำประปาหรือไม่
         /// </summary>
-        public bool HasPlumbing { get; set; }
+        public bool? HasPlumbing { get; set; }
         /// <summary>
         /// P2.1 - มีมิเตอรน้ำประปาแยกจากส่วนกลางหรือไม่ 
         /// </summary>
-        public bool HasPlumbingMeter { get; set; }
+        public bool? HasPlumbingMeter { get; set; }
         /// <summary>
         /// P2.2 - ถ้ามเป็นมิเตอร์ของการประปาส่วนภูมิภาค/นครหลวงใช่หรือไม่
         /// </summary>
-        public bool IsPlumbingMeterXWA { get; set; }
+        public bool? IsPlumbingMeterXWA { get; set; }
         /// <summary>
         /// P3 - ใช้น้ำบาดาลหรือไม่
         /// </summary>
-        public bool HasGroundWater { get; set; }
+        public bool? HasGroundWater { get; set; }
         /// <summary>
         /// P4 - มีมิเตอร์น้ำบาดาลแยกจากส่วนกลางหรือไม่
         /// </summary>

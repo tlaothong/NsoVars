@@ -19,19 +19,19 @@ namespace VarsWebApi.Models {
         /// <summary>
         /// G1 - สถานที่นี้มีผู้อยู่อาศัยติดต่อกันนานเกิน 3 เดือนใช่หรือไม่ 
         /// </summary>
-        public bool IsHouseHold { get; set; }
+        public bool? IsHouseHold { get; set; }
         /// <summary>
         /// G2 - ผู้ที่อาศัยอยู่ในสถานที่นี้มีพื้นที่ปลกูพืชเลี้ยงสัตว์หรือท้าการเกษตรเองใช่หรือไม่ 
         /// </summary>
-        public bool IsAgriculture { get; set; }
+        public bool? IsAgriculture { get; set; }
         /// <summary>
         /// G3 - สถานที่นี้ใช้เพื่อทำการผลิตใช่หรือไม่ 
         /// </summary>
-        public bool IsFactorial { get; set; }
+        public bool? IsFactorial { get; set; }
         /// <summary>
         /// G4 - สถานที่นี้ใช้เพื่อทำการบริการใช่หรือไม่ 
         /// </summary>
-        public bool IsCommercial { get; set; }
+        public bool? IsCommercial { get; set; }
 
         /// <summary>
         /// บันทึกปัญหา/อุปสรรค หรือข้อความทั่วไปเพื่อเตือนความจำ
