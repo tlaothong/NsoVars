@@ -40,7 +40,7 @@ namespace VarsWebApi.Controllers
             return Collection.Find(x => true).ToList();
         }
 
-       
+
         [HttpGet("{qr}")]
         public UserLogin GetUserByQRCode(string qr)
         {
@@ -80,12 +80,6 @@ namespace VarsWebApi.Controllers
 
         [HttpGet("{IdEA}")]
         public IEnumerable<Work> GetBuildingCommunity(string IdEA)
-        {
-            return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
-        }
-
-        [HttpGet("{IdEA}")]
-        public IEnumerable<Work> GetBuildingFS(string IdEA)
         {
             return CollectionWork.Find(x => x.IdEA == IdEA).ToList();
         }
@@ -130,6 +124,12 @@ namespace VarsWebApi.Controllers
                 return 0;
             }
             return result;
+        }
+
+        [HttpGet("{IdEA}")]
+        public IEnumerable<BuildingSample> GetBuildingByIdEA(string IdEA)
+        {
+            return CollectionHomeBuilding.Find(it => it.EA == IdEA).ToList();
         }
 
         [HttpPost]
@@ -177,7 +177,7 @@ namespace VarsWebApi.Controllers
             CollectionWork.InsertOne(model);
             return true;
         }
-       
+
         [HttpDelete("{id}")]
         public void RemoveBuilding(string id)
         {
@@ -185,14 +185,23 @@ namespace VarsWebApi.Controllers
         }
 
         [HttpPost]
-        public void CreateUnit([FromBody]HouseHoldSample data) {
-            if (data._id == null) {
+        public void CreateUnit([FromBody]HouseHoldSample data)
+        {
+            var unit = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
+            if (unit == null)
+            {
                 data._id = Guid.NewGuid().ToString();
                 CollectionHouseHold.InsertOne(data);
+
             }
-            else{
+            else
+            {
                 CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
             }
+
+
         }
+
+
     }
 }
