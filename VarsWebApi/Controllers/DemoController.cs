@@ -206,13 +206,13 @@ namespace VarsWebApi.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("{Id_BD}")]
         public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
         {
             return CollectionHouseHold.Find(it => it.BuildingId == Id_BD).ToList();
         }
 
-        [HttpGet]
+        [HttpGet("{id_unit}")]
         public HouseHoldSample GetdataOfUnit(string id_unit)
         {
             return CollectionHouseHold.Find(it => it._id == id_unit).FirstOrDefault();
