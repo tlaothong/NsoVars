@@ -40,6 +40,17 @@ namespace VarsWebApi.Controllers
             return Collection.Find(x => true).ToList();
         }
 
+        [HttpGet]
+        public bool GetLogin(UserLogin data)
+        {
+            var user = Collection.Find(it => (it.IdUser == data.IdUser) && (it.Password == data.Password)).FirstOrDefault();
+            if (user != null)
+            {
+                return true;
+            }
+            return false;
+
+        }
 
         [HttpGet("{qr}")]
         public UserLogin GetUserByQRCode(string qr)
@@ -167,7 +178,7 @@ namespace VarsWebApi.Controllers
         [HttpGet("{id_BD}")]
         public BuildingSample GetBuilding(string id_BD)
         {
-            return CollectionHomeBuilding.Find(it=>it._id == id_BD).FirstOrDefault();
+            return CollectionHomeBuilding.Find(it => it._id == id_BD).FirstOrDefault();
         }
 
         [HttpPost]
