@@ -40,10 +40,10 @@ namespace VarsWebApi.Controllers
             return Collection.Find(x => true).ToList();
         }
 
-        [HttpGet("{userid}/{password}")]
-        public bool GetLogin(string userid, string password)
+        [HttpGet("{data}")]
+        public bool GetLogin(UserLogin data)
         {
-            var user = Collection.Find(it => (it.IdUser == userid) && (it.Password == password)).FirstOrDefault();
+            var user = Collection.Find(it => (it.IdUser == data.IdUser) && (it.Password == data.Password)).FirstOrDefault();
             if (user != null)
             {
                 return true;
