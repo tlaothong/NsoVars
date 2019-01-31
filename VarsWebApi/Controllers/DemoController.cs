@@ -175,6 +175,23 @@ namespace VarsWebApi.Controllers
             return data;
         }
 
+        [HttpPost]
+        public HouseHoldSample CreateUnit([FromBody]HouseHoldSample data)
+        {
+            var unit = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
+            if (unit == null)
+            {
+                data._id = Guid.NewGuid().ToString();
+                CollectionHouseHold.InsertOne(data);
+
+            }
+            else
+            {
+                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+            }
+            return data;
+        }
+
         [HttpGet("{id_BD}")]
         public BuildingSample GetBuilding(string id_BD)
         {
@@ -201,21 +218,7 @@ namespace VarsWebApi.Controllers
             CollectionHomeBuilding.DeleteOne(x => x._id == id);
         }
 
-        [HttpPost]
-        public void CreateUnit([FromBody]HouseHoldSample data)
-        {
-            var unit = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
-            if (unit == null)
-            {
-                data._id = Guid.NewGuid().ToString();
-                CollectionHouseHold.InsertOne(data);
-
-            }
-            else
-            {
-                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
-            }
-        }
+        
 
         [HttpGet("{Id_BD}")]
         public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
