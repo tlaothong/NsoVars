@@ -178,8 +178,7 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public HouseHoldSample CreateUnit([FromBody]HouseHoldSample data)
         {
-            var unit = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
-            if (unit == null)
+            if (data._id == null)
             {
                 data._id = Guid.NewGuid().ToString();
                 CollectionHouseHold.InsertOne(data);
