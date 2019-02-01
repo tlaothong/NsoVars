@@ -6,6 +6,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using VarsWebApi.Models;
 using MongoDB.Driver;
+using Newtonsoft.Json;
 
 namespace VarsWebApi.Controllers
 {
@@ -184,10 +185,12 @@ namespace VarsWebApi.Controllers
                 CollectionHouseHold.InsertOne(data);
 
             }
-            else
-            {
-                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
-            }
+            return CollectionHouseHold.Find(it=>it._id == data._id).FirstOrDefault();
+        }
+
+        [HttpPost]
+        public HouseHoldSample UpdateUnit([FromBody]HouseHoldSample data) {
+            CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
             return data;
         }
 
@@ -217,7 +220,7 @@ namespace VarsWebApi.Controllers
             CollectionHomeBuilding.DeleteOne(x => x._id == id);
         }
 
-        
+
 
         [HttpGet("{Id_BD}")]
         public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
