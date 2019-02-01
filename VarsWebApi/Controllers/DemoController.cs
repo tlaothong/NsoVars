@@ -189,7 +189,7 @@ namespace VarsWebApi.Controllers
             {
                 CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
             }
-            return data;
+            return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
         }
 
         [HttpGet("{id_BD}")]
