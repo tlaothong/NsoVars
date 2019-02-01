@@ -185,12 +185,10 @@ namespace VarsWebApi.Controllers
                 CollectionHouseHold.InsertOne(data);
 
             }
-            return CollectionHouseHold.Find(it=>it._id == data._id).FirstOrDefault();
-        }
-
-        [HttpPost]
-        public HouseHoldSample UpdateUnit([FromBody]HouseHoldSample data) {
-            CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+            else
+            {
+                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+            }
             return data;
         }
 
