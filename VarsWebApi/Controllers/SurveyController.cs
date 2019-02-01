@@ -35,8 +35,8 @@ namespace VarsWebApi.Controllers
                     HasGroundWater = true,
                     HasGroundWaterMeter = true,
                 },
-                IsHouseHold = true,
-                IsAgriculture = true,
+                IsHouseHold = false,
+                IsAgriculture = false,
                 IsFactorial = true,
                 IsCommercial = true,
                 Comments = new List<Comment>(){
