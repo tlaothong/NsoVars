@@ -144,6 +144,31 @@ namespace VarsWebApi.Controllers
             return CollectionHomeBuilding.Find(it => it.EA == IdEA).ToList();
         }
 
+
+        [HttpGet("{Id_BD}")]
+        public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
+        {
+            return CollectionHouseHold.Find(it => it.BuildingId == Id_BD).ToList();
+        }
+
+        [HttpGet("{id_unit}")]
+        public HouseHoldSample GetdataOfUnit(string id_unit)
+        {
+            return CollectionHouseHold.Find(it => it._id == id_unit).FirstOrDefault();
+        }
+
+          [HttpGet("{id_BD}")]
+        public BuildingSample GetBuilding(string id_BD)
+        {
+            return CollectionHomeBuilding.Find(it => it._id == id_BD).FirstOrDefault();
+        }
+
+        [HttpDelete("{id}")]
+        public void RemoveBuilding(string id)
+        {
+            CollectionHomeBuilding.DeleteOne(x => x._id == id);
+        }
+
         [HttpPost]
         public bool CreateIdQr([FromBody]UserLogin model)
         {
@@ -151,7 +176,6 @@ namespace VarsWebApi.Controllers
             Collection.InsertOne(model);
             return true;
         }
-
 
         [HttpPost]
         public void SetPasswordUser([FromBody]UserLogin request)
@@ -191,20 +215,7 @@ namespace VarsWebApi.Controllers
             }
             return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
         }
-
-        [HttpGet("{id_BD}")]
-        public BuildingSample GetBuilding(string id_BD)
-        {
-            return CollectionHomeBuilding.Find(it => it._id == id_BD).FirstOrDefault();
-        }
-
-        [HttpPost]
-        public void CreateCommunity([FromBody]CommunitySample data)
-        {
-            data._id = Guid.NewGuid().ToString();
-            CollectionHomeCommunity.InsertOne(data);
-        }
-
+      
         [HttpPost]
         public bool CreateWork([FromBody]Work model)
         {
@@ -212,24 +223,21 @@ namespace VarsWebApi.Controllers
             return true;
         }
 
-        [HttpDelete("{id}")]
-        public void RemoveBuilding(string id)
+        [HttpPost]
+        public CommunitySample CreateCommunity([FromBody]CommunitySample data)
         {
-            CollectionHomeBuilding.DeleteOne(x => x._id == id);
+            if (data._id == null)
+            {
+                data._id = Guid.NewGuid().ToString();
+                CollectionHomeCommunity.InsertOne(data);
+            }
+            else
+            {
+                CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
+            }
+            return data;
         }
 
 
-
-        [HttpGet("{Id_BD}")]
-        public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
-        {
-            return CollectionHouseHold.Find(it => it.BuildingId == Id_BD).ToList();
-        }
-
-        [HttpGet("{id_unit}")]
-        public HouseHoldSample GetdataOfUnit(string id_unit)
-        {
-            return CollectionHouseHold.Find(it => it._id == id_unit).FirstOrDefault();
-        }
     }
 }
