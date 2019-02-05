@@ -250,10 +250,15 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public CommunitySample CreateCommunity([FromBody]CommunitySample data)
         {
-            if (data._id == null)
+            var dataCom = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
+            if (data._id == null && data._id != data._id)
             {
                 data._id = Guid.NewGuid().ToString();
                 CollectionHomeCommunity.InsertOne(data);
+            }
+            if (data._id == dataCom._id && data._id != null)
+            {
+                CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
             else
             {
@@ -261,6 +266,8 @@ namespace VarsWebApi.Controllers
                 data.Management = form.Management;
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
+           
+           
             return data;
         }
 
