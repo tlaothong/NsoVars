@@ -10,6 +10,7 @@ namespace VarsWebApi.Models
     /// </summary>
     public class CommunitySample: ModelBase
     {
+        public string EA { get; set; }
         /// <summary>
         /// การจัดการน้ำในหมู่บ้าน / ชุมชน
         /// </summary>
