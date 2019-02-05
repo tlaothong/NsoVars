@@ -169,6 +169,12 @@ namespace VarsWebApi.Controllers
             return CollectionHomeCommunity.Find(it => it.EA == id_ea).ToList();
         }
 
+        [HttpGet("{id_com}")]
+        public CommunitySample GetCommunity(string id_com)
+        {
+            return CollectionHomeCommunity.Find(it => it._id == id_com).FirstOrDefault();
+        }
+
         [HttpDelete("{id}")]
         public void RemoveBuilding(string id)
         {
