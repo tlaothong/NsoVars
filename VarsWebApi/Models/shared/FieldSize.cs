@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ความลึกของบ่อกี่เมตร 
         /// </summary>
-        public int Depth { get; set; }
+        public int? Depth { get; set; }
         /// <summary>
         ///  ถ้าบ่อเป็นสี่เหลี่ยม กว้าง ยาว ลึกเท่าไร 
         /// </summary>
@@ -26,6 +26,6 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ถ้าบ่อเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึก เท่าไร 
         /// </summary>
-        public int Diameter { get; set; }
+        public int? Diameter { get; set; }
     }
 }

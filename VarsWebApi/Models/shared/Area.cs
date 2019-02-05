@@ -13,14 +13,14 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ไร่
         /// </summary>
-        public int Rai { get; set; }
+        public int? Rai { get; set; }
         /// <summary>
         /// งาน
         /// </summary>
-        public int Ngan { get; set; }
+        public int? Ngan { get; set; }
         /// <summary>
         /// ตารางวา
         /// </summary>
-        public int SqWa { get; set; }
+        public int? SqWa { get; set; }
     }
 }

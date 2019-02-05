@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ในหมู่บ้าน/ชุมชนแห่งนี้มีโครงการจัดการน้้าเพื่อการเกษตรชุมชน โดยใช้พื้นที่สาธารณะหรือไม่ (โครงการที่ใช้งบประมาณจากส่วนท้องถิ่น)  
         /// </summary>
-        public bool Doing { get; set; }
+        public bool? Doing { get; set; }
 
         /// <summary>
         ///  หาก “มี” มีกี่โครงการ

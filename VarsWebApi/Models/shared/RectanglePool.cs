@@ -14,12 +14,12 @@ namespace VarsWebApi.Models
         /// ความกว้าง
         /// </summary>
         /// <value></value>
-        public int Width { get; set; }
+        public int? Width { get; set; }
 
         /// <summary>
         /// ความยาว
         /// </summary>
         /// <value></value>
-        public int Length { get; set; }
+        public int? Length { get; set; }
     }
 }
