@@ -213,7 +213,10 @@ namespace VarsWebApi.Controllers
             {
                 data._id = Guid.NewGuid().ToString();
                 data.Residence = new Residential();
+                data.Residence.WaterSources = new WaterSources();
+
                 data.Agriculture = new Agriculture();
+                data.Agriculture.RicePlant = new PlantingInfo<RicePlantingField>();
                 data.Factory = new Factorial();
                 data.Commerce = new Commercial();
                 data.WaterUsage = new WaterUsage();
