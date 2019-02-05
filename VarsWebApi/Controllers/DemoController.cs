@@ -233,6 +233,8 @@ namespace VarsWebApi.Controllers
             }
             else
             {
+                var form = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
+                data.Management = form.Management;
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
             return data;
