@@ -212,6 +212,15 @@ namespace VarsWebApi.Controllers
             if (data._id == null)
             {
                 data._id = Guid.NewGuid().ToString();
+                data.Residence = new Residential();
+                data.Agriculture = new Agriculture();
+                data.Factory = new Factorial();
+                data.Commerce = new Commercial();
+                data.WaterUsage = new WaterUsage();
+                data.Disaster = new Disasterous();
+                data.Closing = new ClosingInfo();
+                data.Population = new Population();
+                data.RecCtrl = new RecordControl();
                 CollectionHouseHold.InsertOne(data);
 
             }
