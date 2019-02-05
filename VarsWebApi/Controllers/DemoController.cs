@@ -218,18 +218,356 @@ namespace VarsWebApi.Controllers
             if (data._id == null)
             {
                 data._id = Guid.NewGuid().ToString();
-                data.Residence = new Residential();
-                data.Residence.WaterSources = new WaterSources();
-
-                data.Agriculture = new Agriculture();
-                data.Agriculture.RicePlant = new PlantingInfo<RicePlantingField>();
-                data.Factory = new Factorial();
-                data.Commerce = new Commercial();
-                data.WaterUsage = new WaterUsage();
-                data.Disaster = new Disasterous();
+                data.Comments = new List<Comment>();
+                data.Residence = new Residential()
+                {
+                    WaterSources = new WaterSources()
+                };
+                data.Agriculture = new Agriculture()
+                {
+                    RicePlant = new PlantingInfo<RicePlantingField>()
+                    {
+                        Fields = new List<RicePlantingField>(){
+                            new RicePlantingField(){
+                                Location = new Location(),
+                                Area = new Area(),
+                                AreaUsed = new List<Area>(){
+                                    new Area()
+                                },
+                                Harvests = new List<RicePlantingHarvest>(){
+                                    new RicePlantingHarvest(),
+                                },
+                                WaterSources = new WaterSources(),
+                            }
+                        },
+                    },
+                    AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
+                    {
+                        Fields = new List<GrowingFieldWithNames>(){
+                            new GrowingFieldWithNames(){
+                                Location = new Location(),
+                                Area = new Area(),
+                                WaterSources = new WaterSources(),
+                                Plantings = new PlantItem(){
+                                    Plants = new List<Plant>{
+                                        new Plant()
+                                    }
+                                },
+                                OtherPlantings = new PlantItem(){
+                                    Plants = new List<Plant>(){
+                                        new Plant(),
+                                    }
+                                }
+                            }
+                        },
+                    },
+                    RubberTree = new PlantingInfo<GrowingField>()
+                    {
+                        Fields = new List<GrowingField>(){
+                                new GrowingField(){
+                                    Location = new Location(),
+                                    Area = new Area(),
+                                    WaterSources = new WaterSources()
+                                }
+                        },
+                    },
+                    PerennialPlant = new PlantingInfo<GrowingFieldWithNames>(){
+                        Fields = new List<GrowingFieldWithNames>(){
+                            new GrowingFieldWithNames(){
+                                Location = new Location(),
+                                Area = new Area(),
+                                Plantings = new PlantItem(){
+                                    Plants = new List<Plant>(){
+                                        new Plant()
+                                    }
+                                },
+                                OtherPlantings = new PlantItem(){
+                                    Plants = new List<Plant>(){
+                                        new Plant()
+                                    }
+                                },
+                                WaterSources = new WaterSources()
+                            }
+                        }
+                    },
+                    HerbsPlant = new PlantingInfo<MixablePlantingField>()
+                    {
+                        Fields = new List<MixablePlantingField>(){
+                            new MixablePlantingField(){
+                                Location = new Location(),
+                                Area = new Area(),
+                                Plantings = new PlantItem(){
+                                    Plants = new List<Plant>()
+                                },
+                                PrimaryPlant = new PlantItem(){
+                                    Plants = new List<Plant>()
+                                },
+                                OtherPlantings = new PlantItem(){
+                                    Plants = new List<Plant>()
+                                },
+                                WaterSources = new WaterSources()
+                            }
+                        }
+                    },
+                    FlowerCrop = new PlantingInfo<MixablePlantingField>()
+                    {
+                        Fields = new List<MixablePlantingField>(){
+                            new MixablePlantingField(){
+                                Location = new Location(),
+                                Area = new Area(),
+                                Plantings = new PlantItem(){
+                                    Plants = new List<Plant>()
+                                },
+                                PrimaryPlant = new PlantItem(){
+                                    Plants = new List<Plant>()
+                                },
+                                OtherPlantings = new PlantItem(){
+                                    Plants = new List<Plant>()
+                                }
+                            }
+                        },
+                    },
+                    MushroomPlant = new PlantingInfo<MushroomField>()
+                    {
+                        Fields = new List<MushroomField>(){
+                            new MushroomField(){
+                                Location = new Location(),
+                                WaterSources = new WaterSources(),
+                            }
+                        },
+                    },
+                    AnimalFarm = new Farming()
+                    {
+                        Cow = new HasAndCount(),
+                        Buffalo = new HasAndCount(),
+                        Pig = new HasAndCount(),
+                        Goat = new HasAndCount(),
+                        Sheep = new HasAndCount(),
+                        Chicken = new HasAndCount(),
+                        Goose = new HasAndCount(),
+                        SilkWool = new HasAndCount(),
+                        Other = new HasAndCount(),
+                        WaterSources = new WaterSources()
+                    },
+                    AquaticAnimals = new AquaticAnimals(){
+                        Fish = new FishFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        },
+                        Shrimp = new FishFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        },
+                        Frog = new FrogFarming(){
+                            WaterSources = new WaterSources()
+                        },
+                        Crocodile = new CrocodileFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        },
+                        SnappingTurtle = new CrocodileFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        },
+                        Crab = new FishFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        },
+                        ShellFish = new FishFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        },
+                        Reddish = new FishFarming(){
+                            Fields = new List<FieldSize>(){
+                                new FieldSize(){
+                                    Area = new Area(),
+                                    Rectangle = new RectanglePool()
+                                }
+                            },
+                            WaterSources = new WaterSources()
+                        }
+                    }
+                };
+                data.Factory = new Factorial()
+                {
+                    WaterSources = new WaterSources(),
+                };
+                data.Commerce = new Commercial()
+                {
+                    QuestionForAcademy = new Academy()
+                    {
+                        PreSchool = new HasAndCount(),
+                        Kindergarten = new HasAndCount(),
+                        PrimarySchool = new HasAndCount(),
+                        HighSchool = new HasAndCount(),
+                        Vocational = new HasAndCount(),
+                        HigherEducation = new HasAndCount(),
+                    },
+                    HotelsAndResorts = new HotelsAndResorts(),
+                    Hospital = new Hospital(),
+                    Building = new Building(),
+                    Religious = new Religious(),
+                    OtherBuilding = new OtherBuilding(),
+                    WaterSources = new WaterSources(),
+                };
+                data.WaterUsage = new WaterUsage()
+                {
+                    Plumbing = new Plumbing()
+                    {
+                        MWA = new PlumbingInfo()
+                        {
+                            QualityProblem = new WaterProblem()
+                            {
+                                Problem = new Problem(),
+                            },
+                            PlumbingUsage = new PlumbingUsage(),
+                        },
+                        PWA = new PlumbingInfo()
+                        {
+                            QualityProblem = new WaterProblem()
+                            {
+                                Problem = new Problem(),
+                            },
+                            PlumbingUsage = new PlumbingUsage(),
+                        },
+                        Other = new PlumbingInfo()
+                        {
+                            QualityProblem = new WaterProblem()
+                            {
+                                Problem = new Problem(),
+                            },
+                            PlumbingUsage = new PlumbingUsage(),
+                        },
+                        WaterActivityMWA = new WaterActivity(),
+                        WaterActivityPWA = new WaterActivity(),
+                        WaterActivityOther = new WaterActivity(),
+                    },
+                    GroundWater = new GroundWater()
+                    {
+                        PrivateGroundWater = new PrivateGroundWater()
+                        {
+                            WaterResources = new List<GroundWaterWell>(){
+                                new GroundWaterWell(){
+                                    Pumps = new List<Pump>(){
+                                        new Pump()
+                                    },
+                                    WaterActivities = new WaterActivity(),
+                                    QualityProblem = new WaterProblem(){
+                                        Problem = new Problem()
+                                    }
+                                }
+                            },
+                        },
+                        PublicGroundWater = new PublicGroundWater()
+                        {
+                            WaterResources = new List<WaterConsumptionUsingPump>(){
+                                new WaterConsumptionUsingPump(){
+                                    Pumps = new List<Pump>(){
+                                        new Pump()
+                                    },
+                                    WaterActivities = new WaterActivity(),
+                                    QualityProblem = new WaterProblem(){
+                                        Problem = new Problem()
+                                    }
+                                }
+                            },
+                        },
+                    },
+                    River = new River()
+                    {
+                        Pumps = new List<Pump>(){
+                            new Pump()
+                        },
+                        WaterActivities = new WaterActivity(),
+                        QualityProblem = new WaterProblem()
+                        {
+                            Problem = new Problem()
+                        },
+                    },
+                    Pool = new Pool(){
+                        PoolSizes = new List<FieldSize>(){
+                            new FieldSize(){
+                                Area = new Area(),
+                                Rectangle = new RectanglePool()
+                            }
+                        },
+                        WaterResources = new List<WaterConsumptionUsingPump>(){
+                            new WaterConsumptionUsingPump(){
+                                Pumps = new List<Pump>(){
+                                    new Pump()
+                                },
+                                WaterActivities = new WaterActivity(),
+                                QualityProblem = new WaterProblem(){
+                                    Problem = new Problem()
+                                },
+                            }
+                        }
+                    },
+                    Irrigation = new Irrigation(){
+                        Pumps = new List<Pump>(){
+                            new Pump()
+                        },
+                        WaterActivities = new WaterActivity(),
+                        QualityProblem = new WaterProblem(),
+                    },
+                    Rain = new Rain(){
+                        RainContainers = new List<RainContainer>(){
+                            new RainContainer()
+                        },
+                        WaterActivities = new WaterActivity()
+                    },
+                    Buying = new Buying(){
+                        Package = new List<Package>(){
+                            new Package()
+                        }
+                    }
+                };
+                data.Disaster = new Disasterous(){
+                    YearsDisasterous = new List<YearsDisasterous>(){
+                        new YearsDisasterous()
+                    }
+                };
                 data.Closing = new ClosingInfo();
-                data.Population = new Population();
-                data.RecCtrl = new RecordControl();
+                data.Population = new Population(){
+                    Persons = new List<Person>(){
+                        new Person()
+                    }
+                };
+                data.RecCtrl = new RecordControl(){
+                    Logs = new List<RecordControlLog>(){
+                        new RecordControlLog()
+                    }
+                };
                 CollectionHouseHold.InsertOne(data);
 
             }
@@ -239,7 +577,7 @@ namespace VarsWebApi.Controllers
             }
             return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
         }
-      
+
         [HttpPost]
         public bool CreateWork([FromBody]Work model)
         {
