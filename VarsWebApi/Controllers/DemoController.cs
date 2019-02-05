@@ -256,7 +256,7 @@ namespace VarsWebApi.Controllers
                 data._id = Guid.NewGuid().ToString();
                 CollectionHomeCommunity.InsertOne(data);
             }
-            if (data._id == dataCom._id && data._id != null)
+            if (data._id == dataCom._id)
             {
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
