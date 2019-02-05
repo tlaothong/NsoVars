@@ -22,21 +22,21 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  จำนวนครัวเรือนที่เป็นสมาชิกโครงการมีจำนวนเท่าไร 
         /// </summary>
-        public int MemberCount { get; set; }
+        public int? MemberCount { get; set; }
 
         /// <summary>
         ///  โครงการใช้น้้าผิวดินปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ) 
         /// </summary>
-        public int AvgSurfaceWaterUse { get; set; }
+        public int? AvgSurfaceWaterUse { get; set; }
 
         /// <summary>
         ///   โครงการมีบ่อน้้าบาดาลจำนวนกี่บ่อ  
         /// </summary>
-        public int GroundWaterCount { get; set; }
+        public int? GroundWaterCount { get; set; }
 
         /// <summary>
         ///   โครงการใช้น้้าบาดาลปริมาณโดยเฉลี่ยเดือนละเท่าไร (ให้รวมทุกพื้นที่ของโครงการ)  
         /// </summary>
-        public int AvgGroundWaterUse { get; set; }
+        public int? AvgGroundWaterUse { get; set; }
     }
 }

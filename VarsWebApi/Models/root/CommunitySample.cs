@@ -19,6 +19,5 @@ namespace VarsWebApi.Models
         /// โครงการจัดการน้้าเพื่อการเกษตรชุมชน  โดยใช้พื้นที่สาธารณะ
         /// </summary>
         public ManagementForFarming CommunityProject { get; set; }
-
     }
 }

@@ -10,7 +10,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มี แหล่งน้้าสาธารณะ (สระน้้า/ หนอง/ บึง/ อ่างเก็บน้้า) หรือไม่ 
         /// </summary>
-        public bool HasPublicWater { get; set; }
+        public bool? HasPublicWater { get; set; }
 
         /// <summary>
         /// หาก “มี” มีจ้านวนกี่แหล่ง
@@ -26,22 +26,22 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  น้้าประปาส่วนภูมิภาค  
         /// </summary>
-        public bool PWA { get; set; }
+        public bool? PWA { get; set; }
 
         /// <summary>
         ///   น้้าประปานครหลวง 
         /// </summary>
-        public bool MWA { get; set; }
+        public bool? MWA { get; set; }
 
         /// <summary>
         ///   น้้าประปาอื่นๆ 
         /// </summary>
-        public bool OtherPlumbing { get; set; }
+        public bool? OtherPlumbing { get; set; }
 
         /// <summary>
         /// ในหมู่บ้าน/ชุมชน เป็นที่ตั้งของแหล่งผลิตน้้าประปาอื่นๆ (หมู่บ้าน, อบต., เทศบาล, ชุมชน, นิคม, ภูเขา, ฯลฯ)  ใช่หรือไม่ 
         /// </summary>
-        public bool HasWaterService { get; set; }
+        public bool? HasWaterService { get; set; }
 
         /// <summary>
         /// หาก “ใช่” ในหมู่บ้าน/ชุมชน มีแหล่งผลิตน้้าประปาอื่นๆ กี่หน่วยงาน 
@@ -56,13 +56,13 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนมีระบบบ้าบัดน้้าเสียหรือไม่  (ให้กา  ใน  เพียงข้อเดียว) 
         /// </summary>
-        public bool HasWaterTreatment { get; set; }
+        public bool? HasWaterTreatment { get; set; }
 
 
         /// <summary>
         /// ในช่วงเวลา 5 ปีที่ผ่านมา หมู่บ้าน/ชุมชนแห่งนี้เคยเกิดภัยธรรมชาติหรือไม่  
         /// </summary>
-        public bool HasDisaster { get; set; }
+        public bool? HasDisaster { get; set; }
         /// <summary>
         /// ถ้าเคย ภัยธรรมชาติที่เกิดมีอะไรบ้าง (ให้เลือกได้หลายข้อ) 
         /// </summary>
@@ -71,7 +71,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในหมู่บ้าน/ชุมชนแห่งนี้มีการเตือนภัยและมาตรการช่วยเหลือน้้าท่วมหรือไม่  
         /// </summary>
-        public bool HasDisasterWarning { get; set; }
+        public bool? HasDisasterWarning { get; set; }
         /// <summary>
         ///  ถ้ามีลักษณะการดำเนินการเป็นอย่างไร (ให้เลือกได้หลายข้อ)   
         /// </summary>
