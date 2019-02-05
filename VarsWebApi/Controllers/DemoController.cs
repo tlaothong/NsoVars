@@ -157,10 +157,16 @@ namespace VarsWebApi.Controllers
             return CollectionHouseHold.Find(it => it._id == id_unit).FirstOrDefault();
         }
 
-          [HttpGet("{id_BD}")]
+        [HttpGet("{id_BD}")]
         public BuildingSample GetBuilding(string id_BD)
         {
             return CollectionHomeBuilding.Find(it => it._id == id_BD).FirstOrDefault();
+        }
+
+        [HttpGet("{id_ea}")]
+        public IEnumerable<CommunitySample> GetAllCommunityByIdEA(string id_ea)
+        {
+            return CollectionHomeCommunity.Find(it => it.EA == id_ea).ToList();
         }
 
         [HttpDelete("{id}")]
