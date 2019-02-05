@@ -15,27 +15,27 @@ namespace VarsWebApi.Models
         /// <summary>
         /// แหล่งน้้านี้ใช้ท้าน้้าประปา
         /// </summary>
-        public bool UseForPlumbing { get; set; }
+        public bool? UseForPlumbing { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้ท้าการผลิต/อุตสาหกรรม 
         /// </summary>
-        public bool UseForFactory { get; set; }
+        public bool? UseForFactory { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้เพื่อการเกษตร 
         /// </summary>
-        public bool UseForFarming { get; set; }
+        public bool? UseForFarming { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้เพื่อการบริการ 
         /// </summary>
-        public bool UseForService { get; set; }
+        public bool? UseForService { get; set; }
 
         /// <summary>
         /// แหล่งน้้านี้ใช้เพื่อวัตถุประสงค์อื่นๆ
         /// </summary>
-        public bool UseForOther { get; set; }
+        public bool? UseForOther { get; set; }
         /// <summary>
         /// ระบุชื่อหากใช้แหล่งน้ำนี้เพื่อประโยชน์อื่นๆ
         /// </summary>

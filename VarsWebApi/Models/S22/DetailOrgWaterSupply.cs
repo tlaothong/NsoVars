@@ -14,7 +14,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ใช้น้้าผิวดิน (สระน้้า แม่น้้า/ล้าคลอง) หรือไม่  
         /// </summary>
-        public bool HasSurfaceWater { get; set; }
+        public bool? HasSurfaceWater { get; set; }
         /// <summary>
         /// ถ้า “ใช้” ใช้น้้าผิวดินผลิตน้้าประปาโดยเฉลี่ยต่อเดือน ปริมาณเท่าไร  
         /// </summary>
@@ -22,7 +22,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ใช้น้้าจาก บ่อบาดาล หรือไม่   
         /// </summary>
-        public bool UseGroundWater { get; set; }
+        public bool? UseGroundWater { get; set; }
         /// <summary>
         ///  ถ้า “ใช้” ใช้น้้าจากบ่อบาดาลกี่บ่อ   
         /// </summary>
@@ -36,12 +36,12 @@ namespace VarsWebApi.Models
         /// <summary>
         /// น้้าประปาราคาขายหน่วยละเท่าไร 
         /// </summary>
-        public double PlumbingPrice { get; set; }
+        public double? PlumbingPrice { get; set; }
 
         /// <summary>
         ///  ค่าเช่ามิเตอร์คิดเดือนละเท่าไร  
         /// </summary>
-        public double MeterRentalFee { get; set; }
+        public double? MeterRentalFee { get; set; }
 
         /// <summary>
         ///  การผลิตน้้าประปา มีระบบการฆ่าเชื้อโรคหรือไม่ 
