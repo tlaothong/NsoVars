@@ -227,10 +227,10 @@ namespace VarsWebApi.Controllers
                 {
                     RicePlant = new PlantingInfo<RicePlantingField>()
                     {
-                        Fields = new List<RicePlantingField>()
+                        Fields = new List<RicePlantingField>{}
                     },
                     AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
-                    {                        
+                    {
                         Fields = new List<GrowingFieldWithNames>(){
                             new GrowingFieldWithNames(){
                                 Location = new Location(),
@@ -559,10 +559,10 @@ namespace VarsWebApi.Controllers
                 CollectionHouseHold.InsertOne(data);
 
             }
-            // else
-            // {
-            //     CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
-            // }
+            else
+            {
+                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+            }
             return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
         }
 
@@ -576,24 +576,24 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public CommunitySample CreateCommunity([FromBody]CommunitySample data)
         {
-            var dataCom = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
-            if (data._id == null && data._id != data._id)
+            if (data._id == null)
             {
                 data._id = Guid.NewGuid().ToString();
                 CollectionHomeCommunity.InsertOne(data);
             }
-            if (data._id == dataCom._id)
-            {
-                CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
-            }
             else
             {
                 var form = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
-                data.Management = form.Management;
+                if (data.Management == null)
+                {
+                    data.Management = form.Management;
+                }
+                else
+                {
+                    data.CommunityProject = form.CommunityProject;
+                }
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
-           
-           
             return data;
         }
 
