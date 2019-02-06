@@ -68,10 +68,11 @@ namespace VarsWebApi
                 };
             });
 
-            app.UseCors(bldr =>
-            {
-                bldr.AllowAnyOrigin();
-            });
+        app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            // app.UseCors(bldr =>
+            // {
+            //     bldr.AllowAnyOrigin();
+            // });
 
             app.UseMvcWithDefaultRoute();
         }
