@@ -572,15 +572,6 @@ namespace VarsWebApi.Controllers
             }
             else
             {
-                var form = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
-                if (data.Management == null)
-                {
-                    data.Management = form.Management;
-                }
-                else
-                {
-                    data.CommunityProject = form.CommunityProject;
-                }
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
             return data;
