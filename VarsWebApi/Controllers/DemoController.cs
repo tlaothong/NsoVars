@@ -127,17 +127,6 @@ namespace VarsWebApi.Controllers
             return CollectionHomeBuilding.Find(x => true).ToList();
         }
 
-        [HttpGet]
-        public int GetCountBuilding()
-        {
-            var result = CollectionHomeBuilding.Find(x => true).ToList().Count();
-            if (result == null)
-            {
-                return 0;
-            }
-            return result;
-        }
-
         [HttpGet("{IdEA}")]
         public IEnumerable<BuildingSample> GetBuildingByIdEA(string IdEA)
         {
@@ -596,13 +585,5 @@ namespace VarsWebApi.Controllers
             }
             return data;
         }
-
-        [HttpGet]
-        public string test()
-        {
-            return "Test Na";
-        }
-
-
     }
 }
