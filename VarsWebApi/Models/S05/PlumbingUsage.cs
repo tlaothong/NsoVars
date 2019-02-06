@@ -20,7 +20,7 @@ namespace VarsWebApi.Models
         /// 3.ไม่ทราบปริมาณน้้าและค่าน้้าเนื่องจากไม่มีมิเตอร์แยกจากส่วนกลาง
         /// 4.ไม่ทราบปริมาณน้้าและค่าน้้าเนื่องจากได้รับการยกเว้น   
         /// </remarks>
-        public WaterQuantity? WaterQuantity { get; set; }
+        public WaterQuantity WaterQuantity { get; set; }
         /// <summary>
         /// ปริมาณน้ำ ลบ.ม./เดือน  
         /// </summary>

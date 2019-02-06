@@ -68,7 +68,7 @@ namespace VarsWebApi
                 };
             });
 
-        app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             // app.UseCors(bldr =>
             // {
             //     bldr.AllowAnyOrigin();

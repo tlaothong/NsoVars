@@ -33,6 +33,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// P4 - มีมิเตอร์น้ำบาดาลแยกจากส่วนกลางหรือไม่
         /// </summary>
-        public bool? HasGroundWaterMeter { get; set; }
+        public bool HasGroundWaterMeter { get; set; }
     }
 }
