@@ -69,7 +69,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// N - จำนวนครัวเรือน/สถานประกอบการรวมทั้งหมดในบ้าน/อาคาร/สิ่งปลูกสร้าง 
         /// </summary>
-        public int UnitCount { get; set; }
+        public int? UnitCount { get; set; }
 
         /// <summary>
         /// ได้รับอนุญาตให้เก็บข้อมูลผู้พักอาศัยในอาคารหรือไม่
