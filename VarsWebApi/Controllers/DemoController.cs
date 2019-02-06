@@ -227,10 +227,10 @@ namespace VarsWebApi.Controllers
                 {
                     RicePlant = new PlantingInfo<RicePlantingField>()
                     {
-                        Fields = new List<RicePlantingField>{}
+                        Fields = new List<RicePlantingField>()
                     },
                     AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
-                    {
+                    {                        
                         Fields = new List<GrowingFieldWithNames>(){
                             new GrowingFieldWithNames(){
                                 Location = new Location(),
@@ -576,19 +576,15 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public CommunitySample CreateCommunity([FromBody]CommunitySample data)
         {
-            if (data._id == null)
+            var dataCom = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
+            if (data._id == null && data._id != data._id)
             {
                 data._id = Guid.NewGuid().ToString();
-                data.CommunityProject = new ManagementForFarming()
-                {
-                    Details = new List<DetailManagementForFarming>
-                    {
-                        new DetailManagementForFarming(){
-                            Area = new Area()
-                        }
-                    }
-                };
                 CollectionHomeCommunity.InsertOne(data);
+            }
+            if (data._id == dataCom._id)
+            {
+                CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
             else
             {
@@ -596,6 +592,8 @@ namespace VarsWebApi.Controllers
                 data.Management = form.Management;
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
+           
+           
             return data;
         }
 
