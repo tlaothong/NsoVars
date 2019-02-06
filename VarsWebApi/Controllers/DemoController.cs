@@ -220,98 +220,26 @@ namespace VarsWebApi.Controllers
                     },
                     AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
                     {
-                        Fields = new List<GrowingFieldWithNames>(){
-                            new GrowingFieldWithNames(){
-                                Location = new Location(),
-                                Area = new Area(),
-                                WaterSources = new WaterSources(),
-                                Plantings = new PlantItem(){
-                                    Plants = new List<Plant>{
-                                        new Plant()
-                                    }
-                                },
-                                OtherPlantings = new PlantItem(){
-                                    Plants = new List<Plant>(){
-                                        new Plant(),
-                                    }
-                                }
-                            }
-                        },
+                        Fields = new List<GrowingFieldWithNames>(),
                     },
                     RubberTree = new PlantingInfo<GrowingField>()
                     {
-                        Fields = new List<GrowingField>(){
-                                new GrowingField(){
-                                    Location = new Location(),
-                                    Area = new Area(),
-                                    WaterSources = new WaterSources()
-                                }
-                        },
+                        Fields = new List<GrowingField>(),
                     },
                     PerennialPlant = new PlantingInfo<GrowingFieldWithNames>(){
-                        Fields = new List<GrowingFieldWithNames>(){
-                            new GrowingFieldWithNames(){
-                                Location = new Location(),
-                                Area = new Area(),
-                                Plantings = new PlantItem(){
-                                    Plants = new List<Plant>(){
-                                        new Plant()
-                                    }
-                                },
-                                OtherPlantings = new PlantItem(){
-                                    Plants = new List<Plant>(){
-                                        new Plant()
-                                    }
-                                },
-                                WaterSources = new WaterSources()
-                            }
-                        }
+                        Fields = new List<GrowingFieldWithNames>()
                     },
                     HerbsPlant = new PlantingInfo<MixablePlantingField>()
                     {
-                        Fields = new List<MixablePlantingField>(){
-                            new MixablePlantingField(){
-                                Location = new Location(),
-                                Area = new Area(),
-                                Plantings = new PlantItem(){
-                                    Plants = new List<Plant>()
-                                },
-                                PrimaryPlant = new PlantItem(){
-                                    Plants = new List<Plant>()
-                                },
-                                OtherPlantings = new PlantItem(){
-                                    Plants = new List<Plant>()
-                                },
-                                WaterSources = new WaterSources()
-                            }
-                        }
+                        Fields = new List<MixablePlantingField>()
                     },
                     FlowerCrop = new PlantingInfo<MixablePlantingField>()
                     {
-                        Fields = new List<MixablePlantingField>(){
-                            new MixablePlantingField(){
-                                Location = new Location(),
-                                Area = new Area(),
-                                Plantings = new PlantItem(){
-                                    Plants = new List<Plant>()
-                                },
-                                PrimaryPlant = new PlantItem(){
-                                    Plants = new List<Plant>()
-                                },
-                                OtherPlantings = new PlantItem(){
-                                    Plants = new List<Plant>()
-                                }
-                            }
-                        },
+                        Fields = new List<MixablePlantingField>()
                     },
                     MushroomPlant = new PlantingInfo<MushroomField>()
                     {
-                        Fields = new List<MushroomField>(){
-                            new MushroomField(){
-                                Location = new Location(),
-                                WaterSources = new WaterSources(),
-                            }
-                        },
+                        Fields = new List<MushroomField>()
                     },
                     AnimalFarm = new Farming()
                     {
@@ -328,69 +256,34 @@ namespace VarsWebApi.Controllers
                     },
                     AquaticAnimals = new AquaticAnimals(){
                         Fish = new FishFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
                         Shrimp = new FishFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
                         Frog = new FrogFarming(){
                             WaterSources = new WaterSources()
                         },
                         Crocodile = new CrocodileFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
                         SnappingTurtle = new CrocodileFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
                         Crab = new FishFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
                         ShellFish = new FishFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
                         Reddish = new FishFarming(){
-                            Fields = new List<FieldSize>(){
-                                new FieldSize(){
-                                    Area = new Area(),
-                                    Rectangle = new RectanglePool()
-                                }
-                            },
+                            Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         }
                     }
@@ -453,38 +346,16 @@ namespace VarsWebApi.Controllers
                     {
                         PrivateGroundWater = new PrivateGroundWater()
                         {
-                            WaterResources = new List<GroundWaterWell>(){
-                                new GroundWaterWell(){
-                                    Pumps = new List<Pump>(){
-                                        new Pump()
-                                    },
-                                    WaterActivities = new WaterActivity(),
-                                    QualityProblem = new WaterProblem(){
-                                        Problem = new Problem()
-                                    }
-                                }
-                            },
+                            WaterResources = new List<GroundWaterWell>(),
                         },
                         PublicGroundWater = new PublicGroundWater()
                         {
-                            WaterResources = new List<WaterConsumptionUsingPump>(){
-                                new WaterConsumptionUsingPump(){
-                                    Pumps = new List<Pump>(){
-                                        new Pump()
-                                    },
-                                    WaterActivities = new WaterActivity(),
-                                    QualityProblem = new WaterProblem(){
-                                        Problem = new Problem()
-                                    }
-                                }
-                            },
+                            WaterResources = new List<WaterConsumptionUsingPump>(),
                         },
                     },
                     River = new River()
                     {
-                        Pumps = new List<Pump>(){
-                            new Pump()
-                        },
+                        Pumps = new List<Pump>(),
                         WaterActivities = new WaterActivity(),
                         QualityProblem = new WaterProblem()
                         {
@@ -492,58 +363,31 @@ namespace VarsWebApi.Controllers
                         },
                     },
                     Pool = new Pool(){
-                        PoolSizes = new List<FieldSize>(){
-                            new FieldSize(){
-                                Area = new Area(),
-                                Rectangle = new RectanglePool()
-                            }
-                        },
-                        WaterResources = new List<WaterConsumptionUsingPump>(){
-                            new WaterConsumptionUsingPump(){
-                                Pumps = new List<Pump>(){
-                                    new Pump()
-                                },
-                                WaterActivities = new WaterActivity(),
-                                QualityProblem = new WaterProblem(){
-                                    Problem = new Problem()
-                                },
-                            }
-                        }
+                        PoolSizes = new List<FieldSize>(),
+                        WaterResources = new List<WaterConsumptionUsingPump>()
                     },
                     Irrigation = new Irrigation(){
-                        Pumps = new List<Pump>(){
-                            new Pump()
-                        },
+                        Pumps = new List<Pump>(),
                         WaterActivities = new WaterActivity(),
                         QualityProblem = new WaterProblem(),
                     },
                     Rain = new Rain(){
-                        RainContainers = new List<RainContainer>(){
-                            new RainContainer()
-                        },
+                        RainContainers = new List<RainContainer>(),
                         WaterActivities = new WaterActivity()
                     },
                     Buying = new Buying(){
-                        Package = new List<Package>(){
-                            new Package()
-                        }
+                        Package = new List<Package>()
                     }
                 };
                 data.Disaster = new Disasterous(){
-                    YearsDisasterous = new List<YearsDisasterous>(){
-                        new YearsDisasterous()
-                    }
+                    YearsDisasterous = new List<YearsDisasterous>()
                 };
                 data.Closing = new ClosingInfo();
                 data.Population = new Population(){
-                    Persons = new List<Person>(){
-                        new Person()
-                    }
+                    Persons = new List<Person>()
                 };
                 data.RecCtrl = new RecordControl(){
-                    Logs = new List<RecordControlLog>(){
-                        new RecordControlLog()
-                    }
+                    Logs = new List<RecordControlLog>()
                 };
                 CollectionHouseHold.InsertOne(data);
 
