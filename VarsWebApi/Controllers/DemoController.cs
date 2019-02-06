@@ -227,19 +227,7 @@ namespace VarsWebApi.Controllers
                 {
                     RicePlant = new PlantingInfo<RicePlantingField>()
                     {
-                        Fields = new List<RicePlantingField>(){
-                            new RicePlantingField(){
-                                Location = new Location(),
-                                Area = new Area(),
-                                AreaUsed = new List<Area>(){
-                                    new Area()
-                                },
-                                Harvests = new List<RicePlantingHarvest>(){
-                                    new RicePlantingHarvest(),
-                                },
-                                WaterSources = new WaterSources(),
-                            }
-                        },
+                        Fields = new List<RicePlantingField>{}
                     },
                     AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
                     {
