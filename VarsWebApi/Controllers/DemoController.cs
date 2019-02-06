@@ -588,15 +588,19 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public CommunitySample CreateCommunity([FromBody]CommunitySample data)
         {
-            var dataCom = CollectionHomeCommunity.Find(it => it._id == data._id).FirstOrDefault();
-            if (data._id == null && data._id != data._id)
+            if (data._id == null)
             {
                 data._id = Guid.NewGuid().ToString();
+                data.CommunityProject = new ManagementForFarming()
+                {
+                    Details = new List<DetailManagementForFarming>
+                    {
+                        new DetailManagementForFarming(){
+                            Area = new Area()
+                        }
+                    }
+                };
                 CollectionHomeCommunity.InsertOne(data);
-            }
-            if (data._id == dataCom._id)
-            {
-                CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
             else
             {
@@ -604,8 +608,6 @@ namespace VarsWebApi.Controllers
                 data.Management = form.Management;
                 CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
             }
-           
-           
             return data;
         }
 
