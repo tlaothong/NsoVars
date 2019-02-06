@@ -559,10 +559,10 @@ namespace VarsWebApi.Controllers
                 CollectionHouseHold.InsertOne(data);
 
             }
-            else
-            {
-                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
-            }
+            // else
+            // {
+            //     CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+            // }
             return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
         }
 
