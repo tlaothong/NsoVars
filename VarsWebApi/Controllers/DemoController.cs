@@ -597,6 +597,12 @@ namespace VarsWebApi.Controllers
             return data;
         }
 
+        [HttpGet]
+        public string test()
+        {
+            return "Test Na";
+        }
+
 
     }
 }
