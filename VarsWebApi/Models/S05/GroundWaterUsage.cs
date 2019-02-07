@@ -23,11 +23,11 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ลบ.ม./เดือน  
         /// </summary>
-        public int UsageCubicMeters { get; set; }
+        public int? UsageCubicMeters { get; set; }
         /// <summary>
         /// ไม่ทราบปริมาณน้้าแต่ทราบค่าน้้า 
         /// </summary>
-        public int WaterBill { get; set; }
+        public int? WaterBill { get; set; }
               
     }
     

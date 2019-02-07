@@ -13,7 +13,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ทราบปริมาณน้ำที่นำมาใช้โดยเฉลี่ยต่อเดือนหรือไม่
         /// </summary>
-        public bool HasCubicMeterPerMonth { get; set; }
+        public bool? HasCubicMeterPerMonth { get; set; }
 
         /// <summary>
         /// ปริมาณน้ำ ลบ.ม./เดือน  

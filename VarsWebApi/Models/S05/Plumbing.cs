@@ -45,10 +45,10 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   ในรอบ 12 เดือนที่ผ่านมา มีเหตุการณ์ที่น้ำประปาไม่ไหล ติดต่อกันเกิน 3 วันหรือไม่   
         /// </summary>
-        public bool HasWaterNotRunning { get; set; }
+        public bool? HasWaterNotRunning { get; set; }
          /// <summary>
         ///   ถ้ามีเกิดเหตุการณ์ลักษณะนี้เป็นเวลากี่เดือน 
         /// </summary>
-        public int WaterNotRunningCount { get; set; }
+        public int? WaterNotRunningCount { get; set; }
     }
 }

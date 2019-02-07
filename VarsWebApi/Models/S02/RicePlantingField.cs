@@ -18,7 +18,7 @@ namespace VarsWebApi.Models {
         /// <summary>
         ///  ในรอบ 12 เดือนที่ผ่านมาใช้พื้นที่นี้ท้านากี่ครั้ง 
         /// </summary>
-        public int PlantingCount { get; set; }
+        public int? PlantingCount { get; set; }
         /// <summary>
         ///  แต่ละครั้งท้ากี่ไร่ ท้าทั้งแปลงทุกครั้งหรือไม่ ถ้าใช่เลือก 
         /// </summary>
@@ -39,7 +39,7 @@ namespace VarsWebApi.Models {
         /// <summary>
         /// นาแปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่ 
         /// </summary>
-        public bool IrrigationField { get; set; }
+        public bool? IrrigationField { get; set; }
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง  
         /// </summary>

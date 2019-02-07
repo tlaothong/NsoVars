@@ -12,24 +12,24 @@ namespace VarsWebApi.Models
         /// <summary>
         /// เป็นเครื่องสูบน้้าอัตโนมัติ ใช่หรือไม่ (ถ้าใช่ ให้ถามเครื่องถัดไป)
         /// </summary>
-        public bool PumpAuto { get; set; }
+        public bool? PumpAuto { get; set; }
 
         /// <summary>
         /// ใช้ระยะเวลาในการสูบน้้าต่อครั้งเท่าไร (ชั่วโมง) 
         /// </summary>
-        public int HoursPerPump { get; set; }
+        public int? HoursPerPump { get; set; }
        
 
         // TODO:Name, Missing
         /// <summary>
         /// ในระยะเวลา 1 ปีสูบน้้ากี่ครั้ง
         /// </summary>
-        public int NumberOfPumpsPerYear { get; set; }
+        public int? NumberOfPumpsPerYear { get; set; }
 
         /// <summary>
         /// ทราบอัตราการสูบหรือไม่
         /// </summary>
-        public bool HasPumpRate { get; set; }
+        public bool? HasPumpRate { get; set; }
 
         /// <summary>
         /// มีอัตราการสูบเท่าไร (ลบ.ม./ชม.)

@@ -14,7 +14,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 5 ปีที่ผ่านมา (2556-2560) ที่อยู่อาศัยนี้ประสบปัญหาอุทกภัย (น้ำท่วมขัง น้ำรอการระบาย) หรือไม่
         /// </summary>
-        public bool Flooded { get; set; }
+        public bool? Flooded { get; set; }
 
         /// <summary>
         /// มีปัญหาอุทกภัยรอบ 5 ปีที่ผ่านมา (2556-2560)

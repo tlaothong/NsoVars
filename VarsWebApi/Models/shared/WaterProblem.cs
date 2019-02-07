@@ -12,7 +12,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// มีปัญหาคุณภาพน้้า หรือไม่
         /// </summary>
-        public bool HasProblem { get; set; }
+        public bool? HasProblem { get; set; }
 
         /// <summary>
         /// ปัญหา

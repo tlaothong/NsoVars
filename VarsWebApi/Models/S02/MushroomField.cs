@@ -18,11 +18,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดพื้นที่เท่าไร กี่ตางรางวา
         /// </summary>
-        public int AreaSqM { get; set; }
+        public int? AreaSqM { get; set; }
         /// <summary>
         /// ตั้งอยู่ในเขตชลประทานหรือไม่
         /// </summary>
-        public bool IrrigationField { get; set; }
+        public bool? IrrigationField { get; set; }
         /// <summary>
         /// ใช้น้้าจากแหล่งใดบ้าง
         /// </summary>

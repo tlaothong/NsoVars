@@ -8,7 +8,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// มีบ่อน้้าบาดาลส่วนตัว / สาธารณะ หรือไม่
         /// </summary>
-        public bool Doing { get; set; }
+        public bool? Doing { get; set; }
 
         /// <summary>
         ///  ในรอบ 12 เดือนที่ผ่านมา มีบ่อน้้าบาดาลที่ใช้อยู่กี่บ่อ / สระ

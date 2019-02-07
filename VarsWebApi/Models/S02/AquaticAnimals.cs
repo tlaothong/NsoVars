@@ -8,11 +8,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ท้าการเพาะเลี้ยง เพาะฟัก อนุบาลสัตว์น้้าในพื้นที่น้้าจืดหรือไม่ 
         /// </summary>
-        public bool Doing { get; set; }
+        public bool? Doing { get; set; }
         /// <summary>
         /// Check ปลา
         /// </summary>
-        public bool IsFish { get; set; }
+        public bool? IsFish { get; set; }
         /// <summary>
         /// ปลา
         /// </summary>
@@ -20,7 +20,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check กุ้ง
         /// </summary>
-        public bool IsShrimp { get; set; }    
+        public bool? IsShrimp { get; set; }    
         /// <summary>
         /// กุ้ง
         /// </summary>
@@ -28,7 +28,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check กบ
         /// </summary>
-        public bool IsFrog { get; set; }
+        public bool? IsFrog { get; set; }
         /// <summary>
         /// กบ
         /// </summary>
@@ -36,7 +36,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check จระเช้
         /// </summary>
-        public bool IsCrocodile { get; set; }
+        public bool? IsCrocodile { get; set; }
         /// <summary>
         /// จระเข้
         /// </summary>
@@ -44,7 +44,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check ตะพาบน้ำ
         /// </summary>
-        public bool IsSnappingTurtle { get; set; }
+        public bool? IsSnappingTurtle { get; set; }
         /// <summary>
         /// ตะพาบน้ำ
         /// </summary>
@@ -52,7 +52,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check ปู
         /// </summary>
-        public bool IsCrab { get; set; }
+        public bool? IsCrab { get; set; }
         /// <summary>
         /// ปู
         /// </summary>
@@ -60,7 +60,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check หอย
         /// </summary>
-        public bool IsShellFish { get; set; }
+        public bool? IsShellFish { get; set; }
         /// <summary>
         /// หอย
         /// </summary>
@@ -68,7 +68,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check เต่า
         /// </summary>
-        public bool IsTurtle { get; set; }
+        public bool? IsTurtle { get; set; }
         /// <summary>
         /// เต่า
         /// </summary>
@@ -76,7 +76,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// Check ไรแดง
         /// </summary>
-        public bool IsReddish { get; set; }
+        public bool? IsReddish { get; set; }
         /// <summary>
         /// ไรแดง
         /// </summary>

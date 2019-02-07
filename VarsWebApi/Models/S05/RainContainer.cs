@@ -21,6 +21,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวน
         /// </summary>
-        public int Count { get; set; }
+        public int? Count { get; set; }
     }
 }
