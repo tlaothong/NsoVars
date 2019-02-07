@@ -251,6 +251,7 @@ namespace VarsWebApi.Controllers
                         Chicken = new HasAndCount(),
                         Goose = new HasAndCount(),
                         SilkWool = new HasAndCount(),
+                        Duck =new HasAndCount(),
                         Other = new HasAndCount(),
                         WaterSources = new WaterSources()
                     },
