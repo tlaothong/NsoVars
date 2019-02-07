@@ -12,11 +12,11 @@ namespace VarsWebApi.Models
          /// <summary>
         ///  ลักษณะการเลี้ยงเป็นบ่อ
         /// </summary>
-        public  bool? Depression { get; set; }
+        public  bool Depression { get; set; }
          /// <summary>
         ///  ลักษณะการเลี้ยงในที่อื่นๆ
         /// </summary>
-        public bool? HasOther { get; set; }
+        public bool HasOther { get; set; }
         public  string Other { get; set; }
          /// <summary>
         ///  ถ้าเลี้ยงในบ่อ หรือร่องสวน มีจ้านวนบ่อหรือ ร่องสวนรวมเท่าไร 
