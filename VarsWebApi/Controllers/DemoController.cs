@@ -286,6 +286,10 @@ namespace VarsWebApi.Controllers
                         Reddish = new FishFarming(){
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
+                        },
+                        Turtle = new CrocodileFarming(){
+                            Fields = new List<FieldSize>(),
+                            WaterSources = new WaterSources()
                         }
                     }
                 };
