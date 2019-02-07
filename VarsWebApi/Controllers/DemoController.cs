@@ -207,7 +207,9 @@ namespace VarsWebApi.Controllers
             if (data._id == null)
             {
                 data._id = Guid.NewGuid().ToString();
-                data.Comments = new List<Comment>();
+                data.Comments = new List<Comment>(){
+                    new Comment()
+                };
                 data.Residence = new Residential()
                 {
                     WaterSources = new WaterSources()
