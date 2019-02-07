@@ -374,11 +374,13 @@ namespace VarsWebApi.Controllers
                     Irrigation = new Irrigation(){
                         Pumps = new List<Pump>(),
                         WaterActivities = new WaterActivity(),
-                        QualityProblem = new WaterProblem(),
+                        QualityProblem = new WaterProblem(){
+                            Problem = new Problem()
+                        },
                     },
                     Rain = new Rain(){
                         RainContainers = new List<RainContainer>(),
-                        WaterActivities = new WaterActivity()
+                        WaterActivities = new WaterActivity(){}
                     },
                     Buying = new Buying(){
                         Package = new List<Package>()
