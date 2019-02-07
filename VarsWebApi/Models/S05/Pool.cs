@@ -18,7 +18,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดสระน้้าทั้งหมดเท่ากันหรือไม่ (ให้ถามถ้าจ้านวนสระในข้อ 5.4.2 มากกว่า 1 สระ)
         /// </summary>
-        public bool HasSameSize { get; set; }
+        public bool? HasSameSize { get; set; }
 
         /// <summary>
         /// ถามขนาดของสระ

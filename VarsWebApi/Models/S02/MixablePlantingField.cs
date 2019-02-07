@@ -17,7 +17,7 @@ namespace VarsWebApi.Models
         ///     True - 1. ปลูกเฉพาะ พืชผัก สมุนไพร
         ///     False - 2. ปลูกแบบปะปนกัน กับพืชชนิดอื่น
         /// </remarks>
-        public bool ThisPlantOnly { get; set; }
+        public bool? ThisPlantOnly { get; set; }
 
         /// <summary>
         /// รายชื่อพืชที่ปลูกหลัก

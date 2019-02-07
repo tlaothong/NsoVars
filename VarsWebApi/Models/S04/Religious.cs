@@ -12,6 +12,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนพระสงฆ์ สามเณร ชี เด็กวัด ผู้มาประกอบศาสนกิจ
         /// </summary>
-        public int PeopleCount { get; set; }
+        public int? PeopleCount { get; set; }
     }
 }

@@ -13,18 +13,18 @@ namespace VarsWebApi.Models
         /// <summary>
         ///   การทำนา เริ่มทำเดือนใด   
         /// </summary>
-        public int PlantingFromMonth { get; set; }
+        public int? PlantingFromMonth { get; set; }
         /// <summary>
         ///   การทำนา ทำถึงเดือนใด   
         /// </summary>
-        public int PlantingThruMonth { get; set; }
+        public int? PlantingThruMonth { get; set; }
         /// <summary>
         /// การทำนา ปล่อยน้้าเข้านากี่ครั้ง (ถ้าไม่ได้ปล่อยน้ำให้กรอก 0)
         /// </summary>
-        public int WaterFillingCount { get; set; }
+        public int? WaterFillingCount { get; set; }
         /// <summary>
         /// การทำนา โดยเฉลี่ยแต่ละครั้งปล่อยน้้าสูง กี่ เซนติเมตร
         /// </summary>
-        public double WaterHeightCm { get; set; }
+        public double? WaterHeightCm { get; set; }
     }
 }

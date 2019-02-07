@@ -12,11 +12,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนห้องพัก
         /// </summary>
-        public int RoomCount { get; set; }
+        public int? RoomCount { get; set; }
 
          /// <summary>
         /// จำนวนบุคลากรรวมทั้งหมดทุกประเภท
         /// </summary>
-        public int PersonnelCount { get; set; }
+        public int? PersonnelCount { get; set; }
     }
 }

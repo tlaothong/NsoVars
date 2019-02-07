@@ -43,7 +43,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนบุคลากรรวมทั้งหมดทุกประเภท
         /// </summary>
-        public int PersonnelCount { get; set; }
+        public int? PersonnelCount { get; set; }
 
 
     }

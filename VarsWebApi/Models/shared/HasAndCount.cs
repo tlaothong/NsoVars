@@ -13,11 +13,11 @@ namespace VarsWebApi.Models
         /// <summary>
         /// มีหรือไม่
         /// </summary>
-        public bool HasItem { get; set; }
+        public bool? HasItem { get; set; }
         /// <summary>
         /// จำนวนเท่าไหร่
         /// </summary>
-        public int ItemCount { get; set; }
+        public int? ItemCount { get; set; }
         
     }
 }

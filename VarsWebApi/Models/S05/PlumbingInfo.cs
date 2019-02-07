@@ -9,7 +9,7 @@ namespace VarsWebApi.Models
         /// <summary>
         ///  ใช้หรือไม่
         /// </summary>
-        public bool Doing { get; set; }
+        public bool? Doing { get; set; }
 
         /// <summary>
         /// ปัญหาคุณภาพน้ำ

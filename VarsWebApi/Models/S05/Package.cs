@@ -21,21 +21,21 @@ namespace VarsWebApi.Models
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่ออุปโภคบริโภค  
         /// </summary>
-        public int Drink { get; set; }
+        public int? Drink { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อทำเกษตร 
         /// </summary>        
-        public int Agriculture { get; set; }
+        public int? Agriculture { get; set; }
         
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อผลิตสินค้า  
         /// </summary>
-        public int Factory { get; set; }
+        public int? Factory { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่อการบริการ
         /// </summary>
-        public int Service { get; set; }
+        public int? Service { get; set; }
     }
 }

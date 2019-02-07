@@ -23,7 +23,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ที่แปลงนี้ตั้งอยู่ในเขตชลประทานหรือไม่
         /// </summary>
-        public bool IrrigationField { get; set; }
+        public bool? IrrigationField { get; set; }
 
         /// <summary>
         /// ที่แปลงนี้ใช้น้้าจากแหล่งใดบ้าง
