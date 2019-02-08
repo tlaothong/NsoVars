@@ -143,6 +143,7 @@ namespace VarsWebApi.Controllers
             {
                 result.Add(new Unit
                 {
+                    _id = item._id,
                     EA = item.EA,
                     BuildingId = item.BuildingId,
                     SubUnit = item.SubUnit,
