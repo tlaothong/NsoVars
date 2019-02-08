@@ -135,9 +135,25 @@ namespace VarsWebApi.Controllers
 
 
         [HttpGet("{Id_BD}")]
-        public IEnumerable<HouseHoldSample> GetUnitByIdBuilding(string Id_BD)
+        public List<Unit> GetUnitByIdBuilding(string Id_BD)
         {
-            return CollectionHouseHold.Find(it => it.BuildingId == Id_BD).ToList();
+            var unitNew = CollectionHouseHold.Find(it => it.BuildingId == Id_BD).ToList();
+            var result = new List<Unit>();
+            foreach (var item in unitNew)
+            {
+                result.Add(new Unit
+                {
+                    EA = item.EA,
+                    BuildingId = item.BuildingId,
+                    SubUnit = item.SubUnit,
+                    IsHouseHold = item.IsHouseHold,
+                    IsAgriculture = item.IsAgriculture,
+                    IsFactorial = item.IsFactorial,
+                    IsCommercial = item.IsCommercial,
+                    Comments = item.Comments,
+                });
+            }
+            return result;
         }
 
         [HttpGet("{id_unit}")]
@@ -218,7 +234,7 @@ namespace VarsWebApi.Controllers
                 {
                     RicePlant = new PlantingInfo<RicePlantingField>()
                     {
-                        Fields = new List<RicePlantingField>{}
+                        Fields = new List<RicePlantingField> { }
                     },
                     AgronomyPlant = new PlantingInfo<GrowingFieldWithNames>()
                     {
@@ -228,7 +244,8 @@ namespace VarsWebApi.Controllers
                     {
                         Fields = new List<GrowingField>(),
                     },
-                    PerennialPlant = new PlantingInfo<GrowingFieldWithNames>(){
+                    PerennialPlant = new PlantingInfo<GrowingFieldWithNames>()
+                    {
                         Fields = new List<GrowingFieldWithNames>()
                     },
                     HerbsPlant = new PlantingInfo<MixablePlantingField>()
@@ -253,43 +270,53 @@ namespace VarsWebApi.Controllers
                         Chicken = new HasAndCount(),
                         Goose = new HasAndCount(),
                         SilkWool = new HasAndCount(),
-                        Duck =new HasAndCount(),
+                        Duck = new HasAndCount(),
                         Other = new HasAndCount(),
                         WaterSources = new WaterSources()
                     },
-                    AquaticAnimals = new AquaticAnimals(){
-                        Fish = new FishFarming(){
+                    AquaticAnimals = new AquaticAnimals()
+                    {
+                        Fish = new FishFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        Shrimp = new FishFarming(){
+                        Shrimp = new FishFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        Frog = new FrogFarming(){
+                        Frog = new FrogFarming()
+                        {
                             WaterSources = new WaterSources()
                         },
-                        Crocodile = new CrocodileFarming(){
+                        Crocodile = new CrocodileFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        SnappingTurtle = new CrocodileFarming(){
+                        SnappingTurtle = new CrocodileFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        Crab = new FishFarming(){
+                        Crab = new FishFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        ShellFish = new FishFarming(){
+                        ShellFish = new FishFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        Reddish = new FishFarming(){
+                        Reddish = new FishFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         },
-                        Turtle = new CrocodileFarming(){
+                        Turtle = new CrocodileFarming()
+                        {
                             Fields = new List<FieldSize>(),
                             WaterSources = new WaterSources()
                         }
@@ -369,33 +396,41 @@ namespace VarsWebApi.Controllers
                             Problem = new Problem()
                         },
                     },
-                    Pool = new Pool(){
+                    Pool = new Pool()
+                    {
                         PoolSizes = new List<FieldSize>(),
                         WaterResources = new List<WaterConsumptionUsingPump>()
                     },
-                    Irrigation = new Irrigation(){
+                    Irrigation = new Irrigation()
+                    {
                         Pumps = new List<Pump>(),
                         WaterActivities = new WaterActivity(),
-                        QualityProblem = new WaterProblem(){
+                        QualityProblem = new WaterProblem()
+                        {
                             Problem = new Problem()
                         },
                     },
-                    Rain = new Rain(){
+                    Rain = new Rain()
+                    {
                         RainContainers = new List<RainContainer>(),
-                        WaterActivities = new WaterActivity(){}
+                        WaterActivities = new WaterActivity() { }
                     },
-                    Buying = new Buying(){
+                    Buying = new Buying()
+                    {
                         Package = new List<Package>()
                     }
                 };
-                data.Disaster = new Disasterous(){
+                data.Disaster = new Disasterous()
+                {
                     YearsDisasterous = new List<YearsDisasterous>()
                 };
                 data.Closing = new ClosingInfo();
-                data.Population = new Population(){
+                data.Population = new Population()
+                {
                     Persons = new List<Person>()
                 };
-                data.RecCtrl = new RecordControl(){
+                data.RecCtrl = new RecordControl()
+                {
                     Logs = new List<RecordControlLog>()
                 };
                 CollectionHouseHold.InsertOne(data);
