@@ -221,9 +221,9 @@ namespace VarsWebApi.Controllers
         [HttpPost]
         public HouseHoldSample CreateUnit([FromBody]HouseHoldSample data)
         {
-            if (data._id == null)
+            var find = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
+            if (find == null)
             {
-                data._id = Guid.NewGuid().ToString();
                 data.Comments = new List<Comment>(){
                     new Comment()
                 };
@@ -439,7 +439,7 @@ namespace VarsWebApi.Controllers
             }
             else
             {
-                CollectionHouseHold.ReplaceOne((it) => it._id == data._id, data);
+                CollectionHouseHold.ReplaceOne((it) => it._id == find._id, data);
             }
             return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
         }
@@ -465,5 +465,7 @@ namespace VarsWebApi.Controllers
             }
             return data;
         }
+
+
     }
 }
