@@ -16,7 +16,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ขนาดของภาชนะ 
         /// </summary>
-        public double Size { get; set; }
+        public double? Size { get; set; }
 
         /// <summary>
         /// จำนวนที่ซื้อต่อเดือน เพื่ออุปโภคบริโภค  
