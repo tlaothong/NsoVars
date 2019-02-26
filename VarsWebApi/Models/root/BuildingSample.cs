@@ -56,7 +56,7 @@ namespace VarsWebApi.Models
         /// <summary>
         /// รหัสการเข้าพบ บ้าน/อาคาร/สิ่งปลูกสร้าง
         /// </summary>
-        public BuildingAccess Access { get; set; }
+        public List<BuildingAccess> Access { get; set; }
 
         /// <summary>
         /// จำนวนบ้านว่าง 
