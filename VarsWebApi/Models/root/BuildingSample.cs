@@ -52,6 +52,7 @@ namespace VarsWebApi.Models
         /// </summary>
         public string Other { get; set; }
 
+        public int AccessCount { get; set; }
         /// <summary>
         /// รหัสการเข้าพบ บ้าน/อาคาร/สิ่งปลูกสร้าง
         /// </summary>
