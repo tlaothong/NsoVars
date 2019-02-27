@@ -107,5 +107,7 @@ namespace VarsWebApi.Models
         /// Record Control Compartment
         /// </summary>
         public RecordControl RecCtrl { get; set; }
+
+        public string Status { get; set; }
     }
 }
