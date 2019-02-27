@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VarsWebApi.Models {
+namespace VarsWebApi.Models
+{
     /// <summary>
     /// ครัวเรือน - หน่วยตัวอย่าง
     /// </summary>
-    public class HouseHoldSample : ModelBase {
+    public class HouseHoldSample : ModelBase
+    {
         public string EA { get; set; }
         public string BuildingId { get; set; }
 
@@ -37,6 +39,8 @@ namespace VarsWebApi.Models {
         /// บันทึกปัญหา/อุปสรรค หรือข้อความทั่วไปเพื่อเตือนความจำ
         /// </summary>
         public List<Comment> Comments { get; set; }
+
+        public string Status { get; set; }
 
         /// <summary>
         /// ครัวเรือนที่อยู่อาศัย
