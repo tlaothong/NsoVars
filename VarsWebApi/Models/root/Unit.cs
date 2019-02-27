@@ -39,5 +39,7 @@ namespace VarsWebApi.Models
         /// บันทึกปัญหา/อุปสรรค หรือข้อความทั่วไปเพื่อเตือนความจำ
         /// </summary>
         public List<Comment> Comments { get; set; }
+
+        public string Status { get; set; }
     }
 }
