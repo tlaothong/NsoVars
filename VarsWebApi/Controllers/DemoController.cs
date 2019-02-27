@@ -413,17 +413,42 @@ namespace VarsWebApi.Controllers
                     },
                     Rain = new Rain()
                     {
-                        RainContainers = new List<RainContainer>(),
+                        RainContainers = new List<RainContainer>(){
+                            new RainContainer(),
+                            new RainContainer(),
+                            new RainContainer(),
+                            new RainContainer(),
+                            new RainContainer(),
+                            new RainContainer(),
+                            new RainContainer(),
+                            new RainContainer(),
+                        },
                         WaterActivities = new WaterActivity() { }
                     },
                     Buying = new Buying()
                     {
-                        Package = new List<Package>()
+                        Package = new List<Package>(){
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                            new Package(),
+                        }
                     }
                 };
                 data.Disaster = new Disasterous()
                 {
-                    YearsDisasterous = new List<YearsDisasterous>()
+                    YearsDisasterous = new List<YearsDisasterous>(){
+                        new YearsDisasterous(),
+                        new YearsDisasterous(),
+                        new YearsDisasterous(),
+                        new YearsDisasterous(),
+                        new YearsDisasterous(),
+                    }
                 };
                 data.Closing = new ClosingInfo();
                 data.Population = new Population()
