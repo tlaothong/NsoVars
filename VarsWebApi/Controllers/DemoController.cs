@@ -223,6 +223,7 @@ namespace VarsWebApi.Controllers
         public HouseHoldSample CreateUnit([FromBody]HouseHoldSample data)
         {
             var find = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
+            var building = GetBuilding(data.BuildingId);
             if (find == null)
             {
                 data.Residence = new Residential()
@@ -459,9 +460,28 @@ namespace VarsWebApi.Controllers
                 };
                 CollectionHouseHold.InsertOne(data);
 
+                if (data.Status == "complete")
+                {
+                    building.UnitCountComplete++;
+                    if (building.UnitCountComplete == building.UnitCount)
+                    {
+                        building.Status = "done-all";
+                    }
+                    CollectionHomeBuilding.ReplaceOne(it => it._id == building._id, building);
+                }
             }
             else
             {
+                if (find.Status != data.Status && (find.Status == "complete" || data.Status == "complete"))
+                {
+                    building.UnitCountComplete += (data.Status == "complete") ? 1 : -1;
+                    if (building.UnitCountComplete == building.UnitCount)
+                    {
+                        building.Status = "done-all";
+                    }
+                    CollectionHomeBuilding.ReplaceOne(it => it._id == building._id, building);
+                }
+
                 CollectionHouseHold.ReplaceOne((it) => it._id == find._id, data);
             }
             return CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault(); ;
