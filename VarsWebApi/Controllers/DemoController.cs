@@ -224,9 +224,6 @@ namespace VarsWebApi.Controllers
             var find = CollectionHouseHold.Find(it => it._id == data._id).FirstOrDefault();
             if (find == null)
             {
-                data.Comments = new List<Comment>(){
-                    new Comment()
-                };
                 data.Residence = new Residential()
                 {
                     WaterSources = new WaterSources()
