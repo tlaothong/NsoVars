@@ -152,6 +152,7 @@ namespace VarsWebApi.Controllers
                     IsFactorial = item.IsFactorial,
                     IsCommercial = item.IsCommercial,
                     Comments = item.Comments,
+                    Status = item.Status,
                 });
             }
             return result;
