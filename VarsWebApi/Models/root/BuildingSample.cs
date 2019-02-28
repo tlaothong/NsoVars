@@ -67,6 +67,8 @@ namespace VarsWebApi.Models
         /// </summary>
         public int? AbandonedCount { get; set; }
 
+        public int? UnitCountComplete { get; set; }
+
         /// <summary>
         /// N - จำนวนครัวเรือน/สถานประกอบการรวมทั้งหมดในบ้าน/อาคาร/สิ่งปลูกสร้าง 
         /// </summary>
