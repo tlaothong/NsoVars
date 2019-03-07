@@ -509,6 +509,105 @@ namespace VarsWebApi.Controllers
             return data;
         }
 
+        [HttpGet]
+        public double? WaterUsageRate(string UnitId, string BuildingId, string CommunityId)
+        {
+            var Unit = GetdataOfUnit(UnitId);
+            var Building = GetBuilding("d9147110-228c-443d-aefd-dcb3f09d58cb");//10//a1
+            //8b29c30e - 0764 - 4931 - 9b3d - 4b2ea7c3ed01 //1
+            //aa1 //pwa 500
+            var Community = GetCommunity("c55affa2-ec02-4239-8ce0-689f59936b69");
 
+
+            if (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
+            {
+                var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+            else if (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
+            {
+                var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+            else if (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
+            {
+                var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.Other.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityOther.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+
+            else if (((Building.BuildingType == BuildingType.SingleHouse)
+                || (Building.BuildingType == BuildingType.TownHouse)
+                || (Building.BuildingType == BuildingType.ShopHouse)
+                || (Building.BuildingType == BuildingType.Apartment)
+                || (Building.BuildingType == BuildingType.Religious)
+                || (Building.BuildingType == BuildingType.GreenHouse))
+                && (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            {
+                var WaterBill = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterBill / 10.5;
+                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+
+            else if (((Building.BuildingType == BuildingType.SingleHouse)
+               || (Building.BuildingType == BuildingType.TownHouse)
+               || (Building.BuildingType == BuildingType.ShopHouse)
+               || (Building.BuildingType == BuildingType.Apartment)
+               || (Building.BuildingType == BuildingType.Religious)
+               || (Building.BuildingType == BuildingType.GreenHouse))
+               && (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            {
+                var WaterBill = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterBill / 16.6;
+                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+
+            else if (((Building.BuildingType == BuildingType.Office)
+             || (Building.BuildingType == BuildingType.Hotel)
+             || (Building.BuildingType == BuildingType.PublicHospital)
+             || (Building.BuildingType == BuildingType.PrivateHospital)
+             || (Building.BuildingType == BuildingType.GovernmentOffice)
+             || (Building.BuildingType == BuildingType.PublicSchool)
+             || (Building.BuildingType == BuildingType.PrivateSchool)
+             || (Building.BuildingType == BuildingType.Factory)
+             || (Building.BuildingType == BuildingType.UnderConstruction)
+             || (Building.BuildingType == BuildingType.Other))
+             && (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            {
+                var WaterBill = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterBill / 13;
+                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+
+            else if (((Building.BuildingType == BuildingType.Office)
+              || (Building.BuildingType == BuildingType.Hotel)
+              || (Building.BuildingType == BuildingType.PublicHospital)
+              || (Building.BuildingType == BuildingType.PrivateHospital)
+              || (Building.BuildingType == BuildingType.GovernmentOffice)
+              || (Building.BuildingType == BuildingType.PublicSchool)
+              || (Building.BuildingType == BuildingType.PrivateSchool)
+              || (Building.BuildingType == BuildingType.Factory)
+              || (Building.BuildingType == BuildingType.UnderConstruction)
+              || (Building.BuildingType == BuildingType.Other))
+              && (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            {
+                var WaterBill = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterBill / 26;
+                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
+                return CubicMeterPerMonth;
+            }
+
+            // else if (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill)
+            // {
+            //     // if (Community.Management.WaterServiceCount == 1)
+            //     // {
+            //     var WaterBill = (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterBill - Community.Management.WaterServices[0].MeterRentalFee) / Community.Management.WaterServices[0].PlumbingPrice;
+            //     var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityOther.Drink / 100) * 12;
+
+            //     return CubicMeterPerMonth;
+            //     // }
+            // }
+
+            return 0;
+
+        }
     }
 }
