@@ -21,7 +21,7 @@
         /// <summary>
         ///  ภาคใต้
         /// </summary>
-        Southern = 5,
+        Southern = 5
 
     }
 }
