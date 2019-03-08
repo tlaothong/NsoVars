@@ -1,17 +1,27 @@
 ﻿namespace VarsWebApi.Models.Demo
 {
-    public class Region
+    public enum Region
     {
         /// <summary>
-        ///  ในเขตเทศบาล 
+        /// กรุงเทพมหานคร
         /// </summary>
-        /// 
-        public string InsideMunicipality { get; set; }
+        BangKok = 1,
         /// <summary>
-        ///  นอกเขตเทศบาล 
+        ///  ภาคกลาง
         /// </summary>
-        /// 
-        public string OutsideMunicipality { get; set; }
+        Central = 2,
+        /// <summary>
+        ///  ภาคเหนือ
+        /// </summary>
+        North = 3,
+        /// <summary>
+        ///  ภาคตะวันออกเฉียงเหนือ
+        /// </summary>
+        NorthEast = 4,
+        /// <summary>
+        ///  ภาคใต้
+        /// </summary>
+        Southern = 5,
 
     }
 }
