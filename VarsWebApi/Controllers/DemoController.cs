@@ -70,9 +70,9 @@ namespace VarsWebApi.Controllers
         {
             var user = Collection.Find(it => it.IdUser == id).FirstOrDefault();
             var result = new List<Department> { };
-            foreach (var item in user.IdEA)
+            foreach (var item in user.EAList)
             {
-                var get = CollectionDepartment.Find(it => it._id == item).FirstOrDefault();
+                var get = CollectionDepartment.Find(it => it._id == item._id).FirstOrDefault();
                 result.Add(get);
             }
             return result;
@@ -106,7 +106,7 @@ namespace VarsWebApi.Controllers
         public int GetCountWorkByIDUser(string userId)
         {
             var getUser = Collection.Find(it => it.IdUser == userId).FirstOrDefault();
-            return getUser.IdEA.Count() > 0 ? getUser.IdEA.Count() : 0;
+            return getUser.EAList.Count() > 0 ? getUser.EAList.Count() : 0;
         }
 
         [HttpGet]
