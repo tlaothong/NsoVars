@@ -15,7 +15,6 @@ namespace VarsWebApi.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string _id { get; set; }
         public List<EAInfo> EAList { get; set; }
 
     }
