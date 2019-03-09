@@ -504,7 +504,7 @@ namespace VarsWebApi.Controllers
             }
             else
             {
-                CollectionHomeCommunity.ReplaceOne((it) => it._id == data._id, data);
+                CollectionHomeCommunity.ReplaceOne(it => it._id == data._id, data);
             }
             return data;
         }
@@ -513,101 +513,307 @@ namespace VarsWebApi.Controllers
         public double? WaterUsageRate(string UnitId, string BuildingId, string CommunityId)
         {
             var Unit = GetdataOfUnit(UnitId);
-            var Building = GetBuilding("d9147110-228c-443d-aefd-dcb3f09d58cb");//10//a1
-            //8b29c30e - 0764 - 4931 - 9b3d - 4b2ea7c3ed01 //1
-            //aa1 //pwa 500
-            var Community = GetCommunity("c55affa2-ec02-4239-8ce0-689f59936b69");
+            var Building = GetBuilding("d9147110-228c-443d-aefd-dcb3f09d58cb");//10
+            var Community = GetCommunity(CommunityId);
 
+            // // WaterUsage.Plumbing.MWA - ทราบปริมาณน้ำ 
+            // if (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
+            // {
+            //     var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
+            //// WaterUsage.Plumbing.PWA - ทราบปริมาณน้ำ
+            // else if (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
+            // {
+            //     var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
+            //// WaterUsage.Plumbing.Other - ทราบปริมาณน้ำ
+            // else if (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
+            // {
+            //     var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.Other.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityOther.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
 
-            if (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
-            {
-                var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
-            else if (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
-            {
-                var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
-            else if (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterQuantity == WaterQuantity.CubicMeterPerMonth)
-            {
-                var CubicMeterPerMonth = Unit.WaterUsage.Plumbing.Other.PlumbingUsage.CubicMeterPerMonth * (Unit.WaterUsage.Plumbing.WaterActivityOther.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
+            //// WaterUsage.Plumbing.MWA - ไม่ทราบปริมาณน้ำ TYPE:A
+            // else if (((Building.BuildingType == BuildingType.SingleHouse)
+            //     || (Building.BuildingType == BuildingType.TownHouse)
+            //     || (Building.BuildingType == BuildingType.ShopHouse)
+            //     || (Building.BuildingType == BuildingType.Apartment)
+            //     || (Building.BuildingType == BuildingType.Religious)
+            //     || (Building.BuildingType == BuildingType.GreenHouse))
+            //     && (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            // {
+            //     var WaterBill = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterBill / 10.5;
+            //     var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
 
-            else if (((Building.BuildingType == BuildingType.SingleHouse)
-                || (Building.BuildingType == BuildingType.TownHouse)
-                || (Building.BuildingType == BuildingType.ShopHouse)
-                || (Building.BuildingType == BuildingType.Apartment)
-                || (Building.BuildingType == BuildingType.Religious)
-                || (Building.BuildingType == BuildingType.GreenHouse))
-                && (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
-            {
-                var WaterBill = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterBill / 10.5;
-                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
+            //// WaterUsage.Plumbing.PWA - ไม่ทราบปริมาณน้ำ TYPE:A
+            // else if (((Building.BuildingType == BuildingType.SingleHouse)
+            //    || (Building.BuildingType == BuildingType.TownHouse)
+            //    || (Building.BuildingType == BuildingType.ShopHouse)
+            //    || (Building.BuildingType == BuildingType.Apartment)
+            //    || (Building.BuildingType == BuildingType.Religious)
+            //    || (Building.BuildingType == BuildingType.GreenHouse))
+            //    && (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            // {
+            //     var WaterBill = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterBill / 16.6;
+            //     var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
 
-            else if (((Building.BuildingType == BuildingType.SingleHouse)
-               || (Building.BuildingType == BuildingType.TownHouse)
-               || (Building.BuildingType == BuildingType.ShopHouse)
-               || (Building.BuildingType == BuildingType.Apartment)
-               || (Building.BuildingType == BuildingType.Religious)
-               || (Building.BuildingType == BuildingType.GreenHouse))
-               && (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
-            {
-                var WaterBill = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterBill / 16.6;
-                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
+            //// WaterUsage.Plumbing.MWA - ไม่ทราบปริมาณน้ำ TYPE:B
+            // else if (((Building.BuildingType == BuildingType.Office)
+            //  || (Building.BuildingType == BuildingType.Hotel)
+            //  || (Building.BuildingType == BuildingType.PublicHospital)
+            //  || (Building.BuildingType == BuildingType.PrivateHospital)
+            //  || (Building.BuildingType == BuildingType.GovernmentOffice)
+            //  || (Building.BuildingType == BuildingType.PublicSchool)
+            //  || (Building.BuildingType == BuildingType.PrivateSchool)
+            //  || (Building.BuildingType == BuildingType.Factory)
+            //  || (Building.BuildingType == BuildingType.UnderConstruction)
+            //  || (Building.BuildingType == BuildingType.Other))
+            //  && (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            // {
+            //     var WaterBill = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterBill / 13;
+            //     var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
 
-            else if (((Building.BuildingType == BuildingType.Office)
-             || (Building.BuildingType == BuildingType.Hotel)
-             || (Building.BuildingType == BuildingType.PublicHospital)
-             || (Building.BuildingType == BuildingType.PrivateHospital)
-             || (Building.BuildingType == BuildingType.GovernmentOffice)
-             || (Building.BuildingType == BuildingType.PublicSchool)
-             || (Building.BuildingType == BuildingType.PrivateSchool)
-             || (Building.BuildingType == BuildingType.Factory)
-             || (Building.BuildingType == BuildingType.UnderConstruction)
-             || (Building.BuildingType == BuildingType.Other))
-             && (Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
-            {
-                var WaterBill = Unit.WaterUsage.Plumbing.MWA.PlumbingUsage.WaterBill / 13;
-                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityMWA.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
+            //// WaterUsage.Plumbing.PWA - ไม่ทราบปริมาณน้ำ TYPE:B
+            // else if (((Building.BuildingType == BuildingType.Office)
+            //   || (Building.BuildingType == BuildingType.Hotel)
+            //   || (Building.BuildingType == BuildingType.PublicHospital)
+            //   || (Building.BuildingType == BuildingType.PrivateHospital)
+            //   || (Building.BuildingType == BuildingType.GovernmentOffice)
+            //   || (Building.BuildingType == BuildingType.PublicSchool)
+            //   || (Building.BuildingType == BuildingType.PrivateSchool)
+            //   || (Building.BuildingType == BuildingType.Factory)
+            //   || (Building.BuildingType == BuildingType.UnderConstruction)
+            //   || (Building.BuildingType == BuildingType.Other))
+            //   && (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
+            // {
+            //     var WaterBill = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterBill / 26;
+            //     var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
+            //     return CubicMeterPerMonth;
+            // }
 
-            else if (((Building.BuildingType == BuildingType.Office)
-              || (Building.BuildingType == BuildingType.Hotel)
-              || (Building.BuildingType == BuildingType.PublicHospital)
-              || (Building.BuildingType == BuildingType.PrivateHospital)
-              || (Building.BuildingType == BuildingType.GovernmentOffice)
-              || (Building.BuildingType == BuildingType.PublicSchool)
-              || (Building.BuildingType == BuildingType.PrivateSchool)
-              || (Building.BuildingType == BuildingType.Factory)
-              || (Building.BuildingType == BuildingType.UnderConstruction)
-              || (Building.BuildingType == BuildingType.Other))
-              && (Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill))
-            {
-                var WaterBill = Unit.WaterUsage.Plumbing.PWA.PlumbingUsage.WaterBill / 26;
-                var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityPWA.Drink / 100) * 12;
-                return CubicMeterPerMonth;
-            }
-
+            //// WaterUsage.Plumbing.Other - ไม่ทราบปริมาณน้ำ
             // else if (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill)
             // {
-            //     // if (Community.Management.WaterServiceCount == 1)
-            //     // {
-            //     var WaterBill = (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterBill - Community.Management.WaterServices[0].MeterRentalFee) / Community.Management.WaterServices[0].PlumbingPrice;
+            //     var ServicesCount = Community.Management.WaterServices;
+            //     double Meter = 0;
+            //     double Price = 0;
+            //     for (int i = 0; i < Community.Management.WaterServiceCount; i++)
+            //     {
+            //         foreach (var item in ServicesCount)
+            //         {
+            //             Meter += item.MeterRentalFee ?? 0;
+            //             Price += item.PlumbingPrice ?? 0;
+            //         }
+            //     }
+            //     var avgMeter = Meter / Community.Management.WaterServiceCount;
+            //     var avgPlumbing = Price / Community.Management.WaterServiceCount;
+
+            //     var WaterBill = (Unit.WaterUsage.Plumbing.Other.PlumbingUsage.WaterBill - avgMeter) / avgPlumbing;
             //     var CubicMeterPerMonth = WaterBill * (Unit.WaterUsage.Plumbing.WaterActivityOther.Drink / 100) * 12;
 
             //     return CubicMeterPerMonth;
-            //     // }
+
             // }
 
-            return 0;
+            //WaterUsage.Rain - ทราบปริมาณน้ำ
+            // else if (WaterUsage.Rain)
+            var index0 = new double?();
+            switch (Unit.WaterUsage.Rain.RainContainers[0].Size)
+            {
+                case "100 - 1,000": index0 = (550 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
+                case "1,000 - 5,000": index0 = (3000 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
+                case "5,000 - 10,000": index0 = (7500 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
+                case "10,000 - 15,000": index0 = (12500 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
+            }
 
+            var index1 = new double?();
+            switch (Unit.WaterUsage.Rain.RainContainers[1].Size)
+            {
+                case "100 - 1,000": index1 = (550 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
+                case "1,000 - 5,000": index1 = (3000 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
+                case "5,000 - 10,000": index1 = (7500 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
+                case "10,000 - 15,000": index1 = (12500 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
+            }
+
+            var index2 = new double?();
+            switch (Unit.WaterUsage.Rain.RainContainers[2].Size)
+            {
+                case "500 - 1,000": index2 = (750 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
+                case "1,000 - 5,000": index2 = (3000 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
+                case "5,000 - 10,000": index2 = (7500 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
+                case "10,000 - 15,000": index2 = (12500 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
+                case "15,000 - 20,000": index2 = (17500 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
+            }
+
+            var index3 = new double?();
+            switch (Unit.WaterUsage.Rain.RainContainers[3].Size)
+            {
+                case "5,000 - 10,000": index3 = (7500 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
+                case "10,000 - 20,000": index3 = (15000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
+                case "20,000 - 30,000": index3 = (25000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
+                case "30,000 - 40,000": index3 = (35000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
+                case "40,000 - 50,000": index3 = (45000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
+            }
+
+            var index4 = new double?();
+            switch (Unit.WaterUsage.Rain.RainContainers[4].Size)
+            {
+                case "50 - 300": index4 = (175 * Unit.WaterUsage.Rain.RainContainers[4].Count); return index4; break;
+                case "300 - 1,000": index4 = (650 * Unit.WaterUsage.Rain.RainContainers[4].Count); return index4; break;
+                case "1,000 - 2,000": index4 = (1500 * Unit.WaterUsage.Rain.RainContainers[4].Count); return index4; break;
+            }
+
+            var index5 = new double?();
+            switch (Unit.WaterUsage.Rain.RainContainers[5].Size)
+            {
+                case "50 - 200": index5 = (125 * Unit.WaterUsage.Rain.RainContainers[5].Count); return index5; break;
+                case "200 - 300": index5 = (250 * Unit.WaterUsage.Rain.RainContainers[5].Count); return index5; break;
+            }
+
+            var index6 = new double?();
+            if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ สแตนเลส" || Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ โพลิเมอร์/พลาสติก")
+            {
+                switch (Unit.WaterUsage.Rain.RainContainers[6].Size)
+                {
+                    case "100 - 1,000": index6 = (550 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
+                    case "1,000 - 5,000": index6 = (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
+                    case "5,000 - 10,000": index6 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
+                    case "10,000 - 15,000": index6 = (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
+                } 
+            }
+
+
+            // double? rainType = ((550 * Unit.WaterUsage.Rain.RainContainers[0].Count) +
+            //                         (3000 * Unit.WaterUsage.Rain.RainContainers[0].Count) +
+            //                         (7500 * Unit.WaterUsage.Rain.RainContainers[0].Count) +
+            //                         (12500 * Unit.WaterUsage.Rain.RainContainers[0].Count)) +
+
+            //                         ((550 * Unit.WaterUsage.Rain.RainContainers[1].Count) +
+            //                         (3000 * Unit.WaterUsage.Rain.RainContainers[1].Count) +
+            //                         (7500 * Unit.WaterUsage.Rain.RainContainers[1].Count) +
+            //                         (12500 * Unit.WaterUsage.Rain.RainContainers[1].Count)) +
+
+            //                         ((750 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
+            //                         (3000 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
+            //                         (7500 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
+            //                         (12500 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
+            //                         (17500 * Unit.WaterUsage.Rain.RainContainers[2].Count)) +
+
+            //                         ((7500 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
+            //                         (15000 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
+            //                         (25000 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
+            //                         (35000 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
+            //                         (45000 * Unit.WaterUsage.Rain.RainContainers[3].Count)) +
+
+            //                         ((175 * Unit.WaterUsage.Rain.RainContainers[4].Count) +
+            //                         (650 * Unit.WaterUsage.Rain.RainContainers[4].Count) +
+            //                         (1500 * Unit.WaterUsage.Rain.RainContainers[4].Count)) +
+
+            //                         ((125 * Unit.WaterUsage.Rain.RainContainers[5].Count) +
+            //                         (250 * Unit.WaterUsage.Rain.RainContainers[5].Count));
+            double? other1 = 0;
+            if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ สแตนเลส" || Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ โพลิเมอร์/พลาสติก")
+            {
+                other1 = (550 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ ไฟเบอร์กลาส")
+            {
+                other1 = (750 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                 (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                 (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                 (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                                 (17500 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ ปูน/ซีเมนต์")
+            {
+                other1 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                             (15000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                             (25000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                             (35000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                             (45000 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "โอ่ง ปูน/ดินเผา")
+            {
+                other1 = (175 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                           (650 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                           (1500 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "ถัง โพลิเมอร์/พลาสติก")
+            {
+                other1 = (125 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
+                         (250 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+            }
+
+            double? other2 = 0;
+            if (Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ สแตนเลส" || Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ โพลิเมอร์/พลาสติก")
+            {
+                other2 = (550 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                (3000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                (12500 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ ไฟเบอร์กลาส")
+            {
+                other2 = (750 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                 (3000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                 (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                 (12500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                                 (17500 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ ปูน/ซีเมนต์")
+            {
+                other2 = (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                             (15000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                             (25000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                             (35000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                             (45000 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "โอ่ง ปูน/ดินเผา")
+            {
+                other2 = (175 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                           (650 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                           (1500 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+            }
+            else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "ถัง โพลิเมอร์/พลาสติก")
+            {
+                other2 = (125 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
+                         (250 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+            }
+
+
+            // double? quantityOfRain = rainType + other1 + other2;
+            // double? CubicMeterPerMonth = (quantityOfRain * (Unit.WaterUsage.Rain.WaterActivities.Drink / 100)) / 1000;
+            // return CubicMeterPerMonth;
+            return 0;
+            // }
+
+            ////WaterUsage.Buying - ทราบปริมาณน้ำ
+            //// else if (WaterUsage.Buying)
+            // double? quantityOfBuying = (Unit.WaterUsage.Buying.Package[0].Size / 1000 * Unit.WaterUsage.Buying.Package[0].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[1].Size / 1000 * Unit.WaterUsage.Buying.Package[1].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[2].Size / 1000 * Unit.WaterUsage.Buying.Package[2].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[3].Size / 1000 * Unit.WaterUsage.Buying.Package[3].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[4].Size / 1000 * Unit.WaterUsage.Buying.Package[4].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[5].Size * Unit.WaterUsage.Buying.Package[5].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[6].Size * Unit.WaterUsage.Buying.Package[6].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[7].Size * Unit.WaterUsage.Buying.Package[7].Drink) +
+            //                             (Unit.WaterUsage.Buying.Package[8].Size * Unit.WaterUsage.Buying.Package[8].Drink);
+
+            // var CubicMeterPerMonth = quantityOfBuying / 1000;
+            // return CubicMeterPerMonth;
+            //// }
         }
     }
 }
+
