@@ -623,59 +623,59 @@ namespace VarsWebApi.Controllers
 
             // }
 
-            //WaterUsage.Rain - ทราบปริมาณน้ำ
+            ////WaterUsage.Rain - ทราบปริมาณน้ำ
             // else if (WaterUsage.Rain)
             var index0 = new double?();
             switch (Unit.WaterUsage.Rain.RainContainers[0].Size)
             {
-                case "100 - 1,000": index0 = (550 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
-                case "1,000 - 5,000": index0 = (3000 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
-                case "5,000 - 10,000": index0 = (7500 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
-                case "10,000 - 15,000": index0 = (12500 * Unit.WaterUsage.Rain.RainContainers[0].Count); return index0; break;
+                case "100 - 1,000": index0 = (550 * Unit.WaterUsage.Rain.RainContainers[0].Count); break;
+                case "1,000 - 5,000": index0 = (3000 * Unit.WaterUsage.Rain.RainContainers[0].Count); break;
+                case "5,000 - 10,000": index0 = (7500 * Unit.WaterUsage.Rain.RainContainers[0].Count); break;
+                case "10,000 - 15,000": index0 = (12500 * Unit.WaterUsage.Rain.RainContainers[0].Count); break;
             }
 
             var index1 = new double?();
             switch (Unit.WaterUsage.Rain.RainContainers[1].Size)
             {
-                case "100 - 1,000": index1 = (550 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
-                case "1,000 - 5,000": index1 = (3000 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
-                case "5,000 - 10,000": index1 = (7500 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
-                case "10,000 - 15,000": index1 = (12500 * Unit.WaterUsage.Rain.RainContainers[1].Count); return index1; break;
+                case "100 - 1,000": index1 = (550 * Unit.WaterUsage.Rain.RainContainers[1].Count); break;
+                case "1,000 - 5,000": index1 = (3000 * Unit.WaterUsage.Rain.RainContainers[1].Count); break;
+                case "5,000 - 10,000": index1 = (7500 * Unit.WaterUsage.Rain.RainContainers[1].Count); break;
+                case "10,000 - 15,000": index1 = (12500 * Unit.WaterUsage.Rain.RainContainers[1].Count); break;
             }
 
             var index2 = new double?();
             switch (Unit.WaterUsage.Rain.RainContainers[2].Size)
             {
-                case "500 - 1,000": index2 = (750 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
-                case "1,000 - 5,000": index2 = (3000 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
-                case "5,000 - 10,000": index2 = (7500 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
-                case "10,000 - 15,000": index2 = (12500 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
-                case "15,000 - 20,000": index2 = (17500 * Unit.WaterUsage.Rain.RainContainers[2].Count); return index2; break;
+                case "500 - 1,000": index2 = (750 * Unit.WaterUsage.Rain.RainContainers[2].Count); break;
+                case "1,000 - 5,000": index2 = (3000 * Unit.WaterUsage.Rain.RainContainers[2].Count); break;
+                case "5,000 - 10,000": index2 = (7500 * Unit.WaterUsage.Rain.RainContainers[2].Count); break;
+                case "10,000 - 15,000": index2 = (12500 * Unit.WaterUsage.Rain.RainContainers[2].Count); break;
+                case "15,000 - 20,000": index2 = (17500 * Unit.WaterUsage.Rain.RainContainers[2].Count); break;
             }
 
             var index3 = new double?();
             switch (Unit.WaterUsage.Rain.RainContainers[3].Size)
             {
-                case "5,000 - 10,000": index3 = (7500 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
-                case "10,000 - 20,000": index3 = (15000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
-                case "20,000 - 30,000": index3 = (25000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
-                case "30,000 - 40,000": index3 = (35000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
-                case "40,000 - 50,000": index3 = (45000 * Unit.WaterUsage.Rain.RainContainers[3].Count); return index3; break;
+                case "5,000 - 10,000": index3 = (7500 * Unit.WaterUsage.Rain.RainContainers[3].Count); break;
+                case "10,000 - 20,000": index3 = (15000 * Unit.WaterUsage.Rain.RainContainers[3].Count); break;
+                case "20,000 - 30,000": index3 = (25000 * Unit.WaterUsage.Rain.RainContainers[3].Count); break;
+                case "30,000 - 40,000": index3 = (35000 * Unit.WaterUsage.Rain.RainContainers[3].Count); break;
+                case "40,000 - 50,000": index3 = (45000 * Unit.WaterUsage.Rain.RainContainers[3].Count); break;
             }
 
             var index4 = new double?();
             switch (Unit.WaterUsage.Rain.RainContainers[4].Size)
             {
-                case "50 - 300": index4 = (175 * Unit.WaterUsage.Rain.RainContainers[4].Count); return index4; break;
-                case "300 - 1,000": index4 = (650 * Unit.WaterUsage.Rain.RainContainers[4].Count); return index4; break;
-                case "1,000 - 2,000": index4 = (1500 * Unit.WaterUsage.Rain.RainContainers[4].Count); return index4; break;
+                case "50 - 300": index4 = (175 * Unit.WaterUsage.Rain.RainContainers[4].Count); break;
+                case "300 - 1,000": index4 = (650 * Unit.WaterUsage.Rain.RainContainers[4].Count); break;
+                case "1,000 - 2,000": index4 = (1500 * Unit.WaterUsage.Rain.RainContainers[4].Count); break;
             }
 
             var index5 = new double?();
             switch (Unit.WaterUsage.Rain.RainContainers[5].Size)
             {
-                case "50 - 200": index5 = (125 * Unit.WaterUsage.Rain.RainContainers[5].Count); return index5; break;
-                case "200 - 300": index5 = (250 * Unit.WaterUsage.Rain.RainContainers[5].Count); return index5; break;
+                case "50 - 200": index5 = (125 * Unit.WaterUsage.Rain.RainContainers[5].Count); break;
+                case "200 - 300": index5 = (250 * Unit.WaterUsage.Rain.RainContainers[5].Count); break;
             }
 
             var index6 = new double?();
@@ -683,119 +683,106 @@ namespace VarsWebApi.Controllers
             {
                 switch (Unit.WaterUsage.Rain.RainContainers[6].Size)
                 {
-                    case "100 - 1,000": index6 = (550 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
-                    case "1,000 - 5,000": index6 = (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
-                    case "5,000 - 10,000": index6 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
-                    case "10,000 - 15,000": index6 = (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count); return index6; break;
+                    case "100 - 1,000": index6 = (550 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                    case "1,000 - 5,000": index6 = (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                    case "5,000 - 10,000": index6 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                    case "10,000 - 15,000": index6 = (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
                 } 
-            }
-
-
-            // double? rainType = ((550 * Unit.WaterUsage.Rain.RainContainers[0].Count) +
-            //                         (3000 * Unit.WaterUsage.Rain.RainContainers[0].Count) +
-            //                         (7500 * Unit.WaterUsage.Rain.RainContainers[0].Count) +
-            //                         (12500 * Unit.WaterUsage.Rain.RainContainers[0].Count)) +
-
-            //                         ((550 * Unit.WaterUsage.Rain.RainContainers[1].Count) +
-            //                         (3000 * Unit.WaterUsage.Rain.RainContainers[1].Count) +
-            //                         (7500 * Unit.WaterUsage.Rain.RainContainers[1].Count) +
-            //                         (12500 * Unit.WaterUsage.Rain.RainContainers[1].Count)) +
-
-            //                         ((750 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
-            //                         (3000 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
-            //                         (7500 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
-            //                         (12500 * Unit.WaterUsage.Rain.RainContainers[2].Count) +
-            //                         (17500 * Unit.WaterUsage.Rain.RainContainers[2].Count)) +
-
-            //                         ((7500 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
-            //                         (15000 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
-            //                         (25000 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
-            //                         (35000 * Unit.WaterUsage.Rain.RainContainers[3].Count) +
-            //                         (45000 * Unit.WaterUsage.Rain.RainContainers[3].Count)) +
-
-            //                         ((175 * Unit.WaterUsage.Rain.RainContainers[4].Count) +
-            //                         (650 * Unit.WaterUsage.Rain.RainContainers[4].Count) +
-            //                         (1500 * Unit.WaterUsage.Rain.RainContainers[4].Count)) +
-
-            //                         ((125 * Unit.WaterUsage.Rain.RainContainers[5].Count) +
-            //                         (250 * Unit.WaterUsage.Rain.RainContainers[5].Count));
-            double? other1 = 0;
-            if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ สแตนเลส" || Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ โพลิเมอร์/พลาสติก")
-            {
-                other1 = (550 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count);
             }
             else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ ไฟเบอร์กลาส")
             {
-                other1 = (750 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                 (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                 (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                 (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                                 (17500 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+                switch (Unit.WaterUsage.Rain.RainContainers[6].Size)
+                {
+                case "500 - 1,000": index6 = (750 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "1,000 - 5,000": index6 = (3000 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "5,000 - 10,000": index6 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "10,000 - 15,000": index6 = (12500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "15,000 - 20,000": index6 = (17500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                } 
             }
             else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "แท้งค์น้ำ ปูน/ซีเมนต์")
             {
-                other1 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                             (15000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                             (25000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                             (35000 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                             (45000 * Unit.WaterUsage.Rain.RainContainers[6].Count);
+                switch (Unit.WaterUsage.Rain.RainContainers[6].Size)
+                {
+                case "5,000 - 10,000": index6 = (7500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "10,000 - 20,000": index6 = (15000 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "20,000 - 30,000": index6 = (25000 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "30,000 - 40,000": index6 = (35000 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "40,000 - 50,000": index6 = (45000 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                } 
             }
             else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "โอ่ง ปูน/ดินเผา")
             {
-                other1 = (175 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                           (650 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                           (1500 * Unit.WaterUsage.Rain.RainContainers[6].Count);
-            }
+                switch (Unit.WaterUsage.Rain.RainContainers[6].Size)
+                {
+                case "50 - 300": index6 = (175 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "300 - 1,000": index6 = (650 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "1,000 - 2,000": index6 = (1500 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                } 
+            }         
             else if (Unit.WaterUsage.Rain.RainContainers[6].Category == "ถัง โพลิเมอร์/พลาสติก")
             {
-                other1 = (125 * Unit.WaterUsage.Rain.RainContainers[6].Count) +
-                         (250 * Unit.WaterUsage.Rain.RainContainers[6].Count);
-            }
+                switch (Unit.WaterUsage.Rain.RainContainers[6].Size)
+                {
+                case "50 - 200": index6 = (125 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                case "200 - 300": index6 = (250 * Unit.WaterUsage.Rain.RainContainers[6].Count); break;
+                } 
+            }               
 
-            double? other2 = 0;
+            var index7 = new double?();
             if (Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ สแตนเลส" || Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ โพลิเมอร์/พลาสติก")
             {
-                other2 = (550 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                (3000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                (12500 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+                switch (Unit.WaterUsage.Rain.RainContainers[7].Size)
+                {
+                    case "100 - 1,000": index7 = (550 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                    case "1,000 - 5,000": index7 = (3000 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                    case "5,000 - 10,000": index7 = (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                    case "10,000 - 15,000": index7 = (12500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                } 
             }
             else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ ไฟเบอร์กลาส")
             {
-                other2 = (750 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                 (3000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                 (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                 (12500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                                 (17500 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+                switch (Unit.WaterUsage.Rain.RainContainers[7].Size)
+                {
+                case "500 - 1,000": index7 = (750 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "1,000 - 5,000": index7 = (3000 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "5,000 - 10,000": index7 = (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "10,000 - 15,000": index7 = (12500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "15,000 - 20,000": index7 = (17500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                } 
             }
             else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "แท้งค์น้ำ ปูน/ซีเมนต์")
             {
-                other2 = (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                             (15000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                             (25000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                             (35000 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                             (45000 * Unit.WaterUsage.Rain.RainContainers[7].Count);
+                switch (Unit.WaterUsage.Rain.RainContainers[7].Size)
+                {
+                case "5,000 - 10,000": index7 = (7500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "10,000 - 20,000": index7 = (15000 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "20,000 - 30,000": index7 = (25000 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "30,000 - 40,000": index7 = (35000 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "40,000 - 50,000": index7 = (45000 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                } 
             }
             else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "โอ่ง ปูน/ดินเผา")
             {
-                other2 = (175 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                           (650 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                           (1500 * Unit.WaterUsage.Rain.RainContainers[7].Count);
-            }
+                switch (Unit.WaterUsage.Rain.RainContainers[7].Size)
+                {
+                case "50 - 300": index7 = (175 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "300 - 1,000": index7 = (650 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "1,000 - 2,000": index7 = (1500 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                } 
+            }         
             else if (Unit.WaterUsage.Rain.RainContainers[7].Category == "ถัง โพลิเมอร์/พลาสติก")
             {
-                other2 = (125 * Unit.WaterUsage.Rain.RainContainers[7].Count) +
-                         (250 * Unit.WaterUsage.Rain.RainContainers[7].Count);
-            }
+                switch (Unit.WaterUsage.Rain.RainContainers[7].Size)
+                {
+                case "50 - 200": index7 = (125 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                case "200 - 300": index7 = (250 * Unit.WaterUsage.Rain.RainContainers[7].Count); break;
+                } 
+            }               
 
-
-            // double? quantityOfRain = rainType + other1 + other2;
-            // double? CubicMeterPerMonth = (quantityOfRain * (Unit.WaterUsage.Rain.WaterActivities.Drink / 100)) / 1000;
-            // return CubicMeterPerMonth;
-            return 0;
+            var quantityOfRain = (index0 ?? 0) + (index1 ?? 0) + ( index2 ?? 0) + ( index3 ?? 0) + ( index4 ?? 0) + ( index5 ?? 0) + ( index6 ?? 0) + ( index7 ?? 0) ;
+            var CubicMeterPerMonth = (quantityOfRain * (Unit.WaterUsage.Rain.WaterActivities.Drink / 100)) / 1000;
+            return CubicMeterPerMonth;
             // }
 
             ////WaterUsage.Buying - ทราบปริมาณน้ำ
