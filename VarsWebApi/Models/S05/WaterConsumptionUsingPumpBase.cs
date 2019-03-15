@@ -31,5 +31,9 @@ namespace VarsWebApi.Models
         /// ปัญหาคุณภาพน้้า
         /// </summary>
         public WaterProblem QualityProblem { get; set; }
+         /// <summary>
+        /// ตั้งอยู่ที่ใด
+        /// </summary>
+        public Location Location { get; set; }
     }
 }
