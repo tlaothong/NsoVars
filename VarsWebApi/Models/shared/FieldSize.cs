@@ -27,5 +27,9 @@ namespace VarsWebApi.Models
         ///  ถ้าบ่อเป็นวงกลม เส้นผ่านศูนย์กลางกี่เมตร ลึก เท่าไร 
         /// </summary>
         public int? Diameter { get; set; }
+         /// <summary>
+        /// ตั้งอยู่ที่ใด
+        /// </summary>
+        public Location Location { get; set; }
     }
 }
