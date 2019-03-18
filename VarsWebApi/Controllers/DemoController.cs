@@ -828,10 +828,21 @@ namespace VarsWebApi.Controllers
         // //     return (value.Count ?? 0);
         // // }
 
-        [HttpGet("{userId}")]
-        public double WaterUsageRate(string userId)
+        /// ใช้ Id ของ HouseHold
+        // [HttpGet("{userId}")]
+        // public double WaterUsageRate(string userId)
+        // {
+        //     var unit = GetdataOfUnit(userId) ?? new HouseHoldSample();
+        //     var calculateWaterUsage = new CalculateWaterUsage();
+        //     var sumWaterUsage = calculateWaterUsage.CalcWaterUsage(unit.WaterUsage);
+        //     var member = unit.Residence?.MemberCount ?? 1;
+        //     return sumWaterUsage / member;
+        // }
+
+        /// ไม่ใช้ Id ของ HouseHold
+        [HttpGet]
+        public double WaterUsageRate([FromBody]HouseHoldSample unit)
         {
-            var unit = GetdataOfUnit(userId) ?? new HouseHoldSample();
             var calculateWaterUsage = new CalculateWaterUsage();
             var sumWaterUsage = calculateWaterUsage.CalcWaterUsage(unit.WaterUsage);
             var member = unit.Residence?.MemberCount ?? 1;
