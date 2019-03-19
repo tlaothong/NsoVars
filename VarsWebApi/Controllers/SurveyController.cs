@@ -2147,7 +2147,7 @@ namespace VarsWebApi.Controllers
                             UseForService = true,
                             UseForOther = true,
                             Other = "no",
-                            ProjectArea = new FieldSize(){
+                            ProjectArea = new FieldSizeForCommu(){
                                 Shape = FieldShape.Rectangle,
                                 Area = new Area(){
                                     Rai = 1,
@@ -2170,7 +2170,7 @@ namespace VarsWebApi.Controllers
                             UseForService = true,
                             UseForOther = true,
                             Other = "no",
-                            ProjectArea = new FieldSize(){
+                            ProjectArea = new FieldSizeForCommu(){
                                 Shape = FieldShape.Rectangle,
                                 Area = new Area(){
                                     Rai = 14,
