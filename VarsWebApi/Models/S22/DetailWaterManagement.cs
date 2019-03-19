@@ -44,6 +44,6 @@ namespace VarsWebApi.Models
         /// <summary>
         /// พื้นที่ของแหล่งน้ำ
         /// </summary>
-        public FieldSize ProjectArea { get; set; }
+        public FieldSizeForCommu ProjectArea { get; set; }
     }
 }
