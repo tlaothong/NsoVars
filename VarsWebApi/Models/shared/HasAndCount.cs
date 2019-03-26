@@ -18,6 +18,10 @@ namespace VarsWebApi.Models
         /// จำนวนเท่าไหร่
         /// </summary>
         public int ItemCount { get; set; }
+        /// <summary>
+        /// ชื่อสัตว์อื่นๆ
+        /// </summary>
+         public int AnimalName { get; set; }
         
     }
 }
