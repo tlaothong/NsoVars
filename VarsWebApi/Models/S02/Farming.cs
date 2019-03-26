@@ -56,6 +56,10 @@ namespace VarsWebApi.Models
         /// อื่นๆ(เช่น ฟาร์มสุนัข แมว กระต่าย หนู นกกระจอกเทศ)
         /// </summary>
         public HasAndCount Other { get; set; }
+        /// <summary>
+        /// ชื่อสัตว์อื่นๆ
+        /// </summary>
+        public string OtherName { get; set; }
         // public string OtherName { get; set; }
         // /// <summary>
         // /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
