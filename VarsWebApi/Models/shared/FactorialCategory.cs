@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-   
+
     public enum FactorialCategory
     {
         /// <summary>
@@ -115,6 +115,18 @@ namespace VarsWebApi.Models
         /// <summary>
         /// กิจกรรมการบำบัดและบริการจัดการของเสียอื่นๆ 
         /// </summary>
-        Treatment = 27,  
+        Treatment = 27,
+        /// <summary>
+        /// การทำเหมืองถ่านหินและลิกไนต์ 
+        /// </summary>
+        CoalLignite = 28,
+        /// <summary>
+        /// การทำเหมืองสินแร่โลหะ 
+        /// </summary>
+        MetalOreMining = 29,
+        /// <summary>
+        /// การทำเหมืองแร่และเหมืองหินอื่นๆ 
+        /// </summary>
+        OtherMining = 30,
     }
 }

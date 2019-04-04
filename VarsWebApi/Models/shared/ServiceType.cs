@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace VarsWebApi.Models
 {
-   
+
     public enum ServiceType
     {
         /// <summary>
@@ -195,6 +195,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// ศาสนสถาน 
         /// </summary>
-        Religious = 47, 
+        Religious = 47,
+        /// <summary>
+        /// การราชการ การป้องกันประเทศ และการประกันสังคมภาคบังคับ 
+        /// </summary>
+        Government = 48,
     }
 }
