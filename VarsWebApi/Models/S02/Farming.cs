@@ -60,7 +60,10 @@ namespace VarsWebApi.Models
         /// ชื่อสัตว์อื่นๆ
         /// </summary>
         public string OtherName { get; set; }
-        // public string OtherName { get; set; }
+        /// หน่วยของสัตว์
+        /// </summary>
+        public string AnimalUnit { get; set; }
+        /// <summary>
         // /// <summary>
         // /// การเลี้ยงสัตว์นี้ใช้น้้าจากแหล่งใดบ้าง
         // /// </summary>
