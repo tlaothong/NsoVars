@@ -399,9 +399,566 @@ namespace VarsWebApi
                 PipelineSize = "1/2-4",
                 PumpRate = 160
             },
-
-
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.ElecticPump,
+                PumpType = "ปั๊มชัก",
+                Power = "3501-4500 / 4.5 - 6",
+                SuctionPipeSize = "1/2-4",
+                PipelineSize = "1/2-4",
+                PumpRate = 200
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "2000-4000 / 2 - 5",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 500
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "4001-5000 / 5 - 7",
+                SuctionPipeSize = "1/2-3",
+                PipelineSize = "1/2-3",
+                PumpRate = 800
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "5001-6000 / 7 - 8",
+                SuctionPipeSize = "1/2-3",
+                PipelineSize = "1/2-3",
+                PumpRate = 900
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6001-7000 / 8 - 9",
+                SuctionPipeSize = "1/2-4",
+                PipelineSize = "1/2-4",
+                PumpRate = 1200
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "7001-8000 / 9 - 11",
+                SuctionPipeSize = "1/2-3",
+                PipelineSize = "1/2-3",
+                PumpRate = 1500
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-9000 / 11 - 12",
+                SuctionPipeSize = "1/2-3",
+                PipelineSize = "1/2-3",
+                PumpRate = 1800
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-9000 / 11 - 12",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 2000
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-9000 / 11 - 12",
+                SuctionPipeSize = "5",
+                PipelineSize = "5",
+                PumpRate = 2000
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-9000 / 11 - 12",
+                SuctionPipeSize = "6",
+                PipelineSize = "6",
+                PumpRate = 2200
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9001-11000 / 12 - 15",
+                SuctionPipeSize = "4-8",
+                PipelineSize = "4-8",
+                PumpRate = 2600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "11001-13500 / 15 - 18",
+                SuctionPipeSize = "4-8",
+                PipelineSize = "4-8",
+                PumpRate = 3000
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "14000-18000 / 19 - 24",
+                SuctionPipeSize = "4-8",
+                PipelineSize = "4-8",
+                PumpRate = 3500
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.SolaPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = ">18000 / >24",
+                SuctionPipeSize = "4-8",
+                PipelineSize = "4-8",
+                PumpRate = 4000
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "1000-2500 / 1 - 3",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 400
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "2501-3500 / 3 - 5",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 500
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "3501-4000 / 5 - 5.5",
+                SuctionPipeSize = "1/2-3",
+                PipelineSize = "1/2-3",
+                PumpRate = 800
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "4001-4500 / 5.5 - 6",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "4001-4500 / 5.5 - 6",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 950
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "4501-5000 / 6 - 7",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 700
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "4501-5000 / 6 - 7",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1100
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "5001-6000 / 7 - 8",
+                SuctionPipeSize = "1/2-4",
+                PipelineSize = "1/2-4",
+                PumpRate = 1500
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6001-7000 / 8 - 9",
+                SuctionPipeSize = "1/2-4",
+                PipelineSize = "1/2-4",
+                PumpRate = 1600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.PetrolPump,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = ">7000 / >9",
+                SuctionPipeSize = "1/2-4",
+                PipelineSize = "1/2-4",
+                PumpRate = 1900
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "<5500 / <7",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "<5500 / <7",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 700
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "<5500 / <7",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1000
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "5500-6000 / 7 - 8",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 700
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "5500-6000 / 7 - 8",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 800
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "5500-6000 / 7 - 8",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1200
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6001-6500 / 8 - 9",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 800
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6001-6500 / 8 - 9",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 900
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6001-6500 / 8 - 9",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1200
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6501-7000 / 9 - 9.5",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 900
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6501-7000 / 9 - 9.5",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1000
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "6501-7000 / 9 - 9.5",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1300
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "7001-7500 / 9.5 - 10",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 1000
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "7001-7500 / 9.5 - 10",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1200
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "7001-7500 / 9.5 - 10",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1500
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "7501-8000 / 10 - 10.5",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 1200
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "7501-8000 / 10 - 10.5",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1300
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-8500 / 10.5 - 11",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 1300
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-8500 / 10.5 - 11",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1400
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8001-8500 / 10.5 - 11",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1700
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8501-9000 / 11 - 12",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 1500
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8501-9000 / 11 - 12",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8501-9000 / 11 - 12",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 1900
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "8501-9000 / 11 - 12",
+                SuctionPipeSize = "6",
+                PipelineSize = "6",
+                PumpRate = 2200
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9001-9500 / 12 - 13",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 1600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9001-9500 / 12 - 13",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 1700
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9001-9500 / 12 - 13",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 2000
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9001-9500 / 12 - 13",
+                SuctionPipeSize = "6",
+                PipelineSize = "6",
+                PumpRate = 2300
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9501-10500 / 13 - 14",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 2000
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9501-10500 / 13 - 14",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 2100
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9501-10500 / 13 - 14",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 2400
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "9501-10500 / 13 - 14",
+                SuctionPipeSize = "6",
+                PipelineSize = "6",
+                PumpRate = 2700
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "10501-11500 / 14 - 15",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 2300
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "10501-11500 / 14 - 15",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 2400
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "10501-11500 / 14 - 15",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 2700
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = "10501-11500 / 14 - 15",
+                SuctionPipeSize = "6",
+                PipelineSize = "6",
+                PumpRate = 3000
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = ">11500 / >15",
+                SuctionPipeSize = "1/2-2",
+                PipelineSize = "1/2-2",
+                PumpRate = 2500
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = ">11500 / >15",
+                SuctionPipeSize = "3",
+                PipelineSize = "3",
+                PumpRate = 2600
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = ">11500 / >15",
+                SuctionPipeSize = "4",
+                PipelineSize = "4",
+                PumpRate = 2900
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มหอยโข่ง",
+                Power = ">11500 / >15",
+                SuctionPipeSize = "6",
+                PipelineSize = "6",
+                PumpRate = 3200
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "ปั๊มเจ็ท",
+                Power = "5000-12000 / 6.5 - 16",
+                SuctionPipeSize = "1",
+                PipelineSize = "1",
+                PumpRate = 40
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "เทอร์ไบร์",
+                Power = "<4000 / <5",
+                SuctionPipeSize = "-",
+                PipelineSize = "1/2-4",
+                PumpRate = 200
+            },
+            new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "เทอร์ไบร์",
+                Power = "4001-5000 / 5 - 7",
+                SuctionPipeSize = "-",
+                PipelineSize = "1/2-4",
+                PumpRate = 300
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "เทอร์ไบร์",
+                Power = "5001-6000 / 7 - 8",
+                SuctionPipeSize = "-",
+                PipelineSize = "1/2-4",
+                PumpRate = 450
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "เทอร์ไบร์",
+                Power = "6001-7500 / 8 - 10",
+                SuctionPipeSize = "-",
+                PipelineSize = "1/2-4",
+                PumpRate = 600
+            },
+             new PumpRateModel {
+                EnergyFromPump = EnergySource.TwoWheeledTractors,
+                PumpType = "เทอร์ไบร์",
+                Power = ">7500 / >10",
+                SuctionPipeSize = "-",
+                PipelineSize = "1/2-4",
+                PumpRate = 800
+            },
         };
-
     }
 }
