@@ -6,13 +6,28 @@ namespace VarsWebApi
 {
     public class CalculateWaterUsage
     {
-        public double CalcPlumping(Plumbing plumbing)
+        public double CalcWaterUsage(WaterUsageRate waterUsageRate)
         {
-            var sum = CalcMWA(plumbing) + CalcPWA(plumbing) + CalcOther(plumbing);
+            var waterUsage = waterUsageRate.Unit.WaterUsage;
+            var buildingType = waterUsageRate.BuildingType;
+            var waterServices = waterUsageRate.WaterServices;
+            var sum = CalcPlumping(waterUsage?.Plumbing, buildingType, waterServices)
+            + CalcGroundWater(waterUsage?.GroundWater, buildingType)
+            + CalcPool(waterUsage?.Pool)
+            + CalcRiver(waterUsage?.River)
+            + CalcIrrigation(waterUsage?.Irrigation)
+            + CalcRain(waterUsage?.Rain)
+            + CalcBuying(waterUsage?.Buying);
             return sum;
         }
 
-        public double CalcMWA(Plumbing plumbing)
+        public double CalcPlumping(Plumbing plumbing, BuildingType buildingType, List<DetailOrgWaterSupply> waterServices)
+        {
+            var sum = CalcMWA(plumbing, buildingType) + CalcPWA(plumbing, buildingType) + CalcOther(plumbing, waterServices);
+            return sum;
+        }
+
+        public double CalcMWA(Plumbing plumbing, BuildingType buildingType)
         {
             if (plumbing?.MWA?.Doing == true)
             {
@@ -22,15 +37,14 @@ namespace VarsWebApi
                 }
                 else if (plumbing.MWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill)
                 {
-                    // buildingType
-                    return plumbing.MWA.PlumbingUsage.WaterBill.Value;
+                    return plumbing.MWA.PlumbingUsage.WaterBill.Value / WaterPricePlumping(buildingType, "MWA");
                 }
                 return 0;
             }
             return 0;
         }
 
-        public double CalcPWA(Plumbing plumbing)
+        public double CalcPWA(Plumbing plumbing, BuildingType buildingType)
         {
             if (plumbing?.PWA?.Doing == true)
             {
@@ -40,15 +54,14 @@ namespace VarsWebApi
                 }
                 else if (plumbing.PWA.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill)
                 {
-                    // buildingType
-                    return plumbing.PWA.PlumbingUsage.WaterBill.Value;
+                    return plumbing.PWA.PlumbingUsage.WaterBill.Value / WaterPricePlumping(buildingType, "PWA");
                 }
                 return 0;
             }
             return 0;
         }
 
-        public double CalcOther(Plumbing plumbing)
+        public double CalcOther(Plumbing plumbing, List<DetailOrgWaterSupply> waterServices)
         {
             if (plumbing?.Other?.Doing == true)
             {
@@ -58,41 +71,39 @@ namespace VarsWebApi
                 }
                 else if (plumbing.Other.PlumbingUsage.WaterQuantity == WaterQuantity.WaterBill)
                 {
-                    // waterServices
-                    return plumbing.Other.PlumbingUsage.WaterBill.Value;
+                    return (plumbing.Other.PlumbingUsage.WaterBill.Value - waterServices.Average(it => it.MeterRentalFee.Value)) / waterServices.Average(it => it.PlumbingPrice.Value);
                 }
                 return 0;
             }
             return 0;
         }
 
-        public double CalcGroundWater(GroundWater groundWater)
+        public double CalcGroundWater(GroundWater groundWater, BuildingType buildingType)
         {
-            var sum = CalcPrivate(groundWater?.PrivateGroundWater) + CalcPublic(groundWater?.PublicGroundWater);
+            var sum = CalcPrivate(groundWater?.PrivateGroundWater, buildingType) + CalcPublic(groundWater?.PublicGroundWater);
             return sum;
         }
 
-        public double CalcPrivate(PrivateGroundWater privateGroundWater)
+        public double CalcPrivate(PrivateGroundWater privateGroundWater, BuildingType buildingType)
         {
             if (privateGroundWater?.Doing == true)
             {
-                return privateGroundWater.WaterResources.Sum(it =>
-                {
-                    if (it.UsageType.GroundWaterQuantity == GroundWaterQuantity.CubicMeterPerMonth)
-                    {
-                        return it.UsageType.UsageCubicMeters.Value * it.WaterActivities.Drink * 12 / 100.0;
-                    }
-                    else if (it.UsageType.GroundWaterQuantity == GroundWaterQuantity.WaterBill)
-                    {
-                        // buildingType
-                        return it.UsageType.WaterBill.Value / WaterBill(it.Location, BuildingType.SingleHouse);
-                    }
-                    else if (it.UsageType.GroundWaterQuantity == GroundWaterQuantity.Unknown && it.HasPump.Value)
-                    {
-                        return CalcPumps(it.Pumps);
-                    }
-                    return 0;
-                });
+                return privateGroundWater.WaterResourceCount > 0 ? privateGroundWater.WaterResources.Sum(it =>
+                   {
+                       if (it.UsageType.GroundWaterQuantity == GroundWaterQuantity.CubicMeterPerMonth)
+                       {
+                           return it.UsageType.UsageCubicMeters.Value * it.WaterActivities.Drink * 12 / 100.0;
+                       }
+                       else if (it.UsageType.GroundWaterQuantity == GroundWaterQuantity.WaterBill)
+                       {
+                           return it.UsageType.WaterBill.Value / WaterPrice(it.Location, buildingType);
+                       }
+                       else if (it.UsageType.GroundWaterQuantity == GroundWaterQuantity.Unknown && it.HasPump.Value)
+                       {
+                           return CalcPumps(it.Pumps, true);
+                       }
+                       return 0;
+                   }) : 0;
             }
             return 0;
         }
@@ -101,75 +112,58 @@ namespace VarsWebApi
         {
             if (publicGroundWater?.Doing == true)
             {
-                return publicGroundWater.WaterResources.Sum(it =>
-                {
-                    if (it.HasCubicMeterPerMonth == true)
-                    {
-                        return it.CubicMeterPerMonth.Value * it.WaterActivities.Drink * 12 / 100.0;
-                    }
-                    else if (it.HasPump.Value)
-                    {
-                        return CalcPumps(it.Pumps);
-                    }
-                    return 0;
-                });
+                return publicGroundWater.WaterResourceCount > 0 ? publicGroundWater.WaterResources.Sum(it =>
+                   {
+                       if (it.HasCubicMeterPerMonth == true)
+                       {
+                           return it.CubicMeterPerMonth.Value * it.WaterActivities.Drink * 12 / 100.0;
+                       }
+                       else if (it.HasPump == true)
+                       {
+                           return CalcPumps(it.Pumps, true);
+                       }
+                       return 0;
+                   }) : 0;
             }
             return 0;
         }
 
-        public double CalcPumps(List<Pump> pumps)
+        public double CalcRiver(River river)
         {
-            return pumps.Sum(it =>
-            {
-                return (it.PumpAuto.Value == false) ? it.HoursPerPump.Value * it.NumberOfPumpsPerYear.Value * CalcPumpRate(it) / 12 : 0;
-            });
-        }
-
-        public double CalcPumpRate(Pump pump)
-        {
-            if (pump.HasPumpRate == true)
-            {
-                return pump.PumpRate.Value;
-            }
-            // EnergySource
-            return 0;
-        }
-
-        public double WaterBill(Location location, BuildingType buildingType)
-        {
-            return isIn7Areas(location) ? isInBuildingType(buildingType) ? 8.5 : 13 : 3.5;
-        }
-
-        public bool isInBuildingType(BuildingType buildingType)
-        {
-            var types = new List<BuildingType>
-            {
-                BuildingType.SingleHouse, BuildingType.TownHouse,
-                BuildingType.ShopHouse, BuildingType.Apartment,
-                BuildingType.Religious, BuildingType.GreenHouse
-            };
-            return types.Any(it => it == buildingType);
-        }
-
-        public bool isIn7Areas(Location location)
-        {
-            var areas = new List<string>
-            {
-                "กรุงเทพมหานคร", "พระนครศรีอยุธยา", "ปทุมธานี", "สมุทรสาคร", "สมุทรปราการ", "นนทบุรี", "นครปฐม"
-            };
-            return areas.Any(it => it == location.Province);
+            return (river?.HasPump == true && river?.PumpCount > 0) ? CalcPumps(river.Pumps, false) : 0;
         }
 
         public double CalcPool(Pool pool)
         {
-            var sum = ((pool?.Doing ?? false) ? (pool?.WaterResources?.Sum(it => (it.HasCubicMeterPerMonth ?? false) ? (it.CubicMeterPerMonth ?? 0) * (it.WaterActivities?.Drink ?? 0) : 0) ?? 0) : 0) * 12 / 100.0;
-            return sum;
+            if (pool?.Doing == true)
+            {
+                return pool.WaterResourceCount > 0 ? pool.WaterResources.Sum(it =>
+                   {
+                       if (it.HasCubicMeterPerMonth == true)
+                       {
+                           return it.CubicMeterPerMonth.Value * it.WaterActivities.Drink * 12 / 100.0;
+                       }
+                       else if (it.HasPump == true)
+                       {
+                           return CalcPumps(it.Pumps, false);
+                       }
+                       return 0;
+                   }) : 0;
+            }
+            return 0;
         }
 
         public double CalcIrrigation(Irrigation irrigation)
         {
-            var sum = ((irrigation?.HasCubicMeterPerMonth ?? false) ? (irrigation?.CubicMeterPerMonth ?? 0) * (irrigation?.WaterActivities?.Drink ?? 0) : 0) * 12 / 100.0;
-            return sum;
+            if (irrigation?.HasCubicMeterPerMonth == true)
+            {
+                return irrigation.CubicMeterPerMonth.Value * irrigation.WaterActivities.Drink * 12 / 100.0;
+            }
+            else if (irrigation?.HasPump == true)
+            {
+                return CalcPumps(irrigation.Pumps, false);
+            }
+            return 0;
         }
 
         public double CalcRain(Rain rain)
@@ -185,15 +179,64 @@ namespace VarsWebApi
             return sum;
         }
 
-        public double CalcWaterUsage(WaterUsage waterUsage)
+        public double CalcPumps(List<Pump> pumps, bool isGround)
         {
-            var sum = CalcPlumping(waterUsage?.Plumbing)
-            + CalcGroundWater(waterUsage?.GroundWater)
-            + CalcPool(waterUsage?.Pool)
-            + CalcIrrigation(waterUsage?.Irrigation)
-            + CalcRain(waterUsage?.Rain)
-            + CalcBuying(waterUsage?.Buying);
-            return sum;
+            return pumps.Sum(it =>
+            {
+                return (it.PumpAuto.Value == false) ? it.HoursPerPump.Value * it.NumberOfPumpsPerYear.Value * CalcPumpRate(it, isGround) / 12 : 0;
+            });
+        }
+
+        public double CalcPumpRate(Pump pump, bool isGround)
+        {
+            if (pump.HasPumpRate == true)
+            {
+                return pump.PumpRate.Value;
+            }
+            else
+            {
+                var pumpcal = new PumpCal();
+                var listPump = isGround ? pumpcal.listPumpGroundWater : pumpcal.listSurfaceWater;
+                var pumpRate = listPump.FirstOrDefault(it => it.EnergyFromPump == pump.EnergySource
+                    && it.PumpType == pump.PumpType && it.Power == pump.HorsePower
+                    && it.SuctionPipeSize == pump.SuctionPipeSize && it.PipelineSize == pump.PipelineSize).PumpRate;
+                return pumpRate;
+            }
+        }
+
+        public double WaterPricePlumping(BuildingType buildingType, string type)
+        {
+            switch (type)
+            {
+                case "MWA": return isInBuildingType(buildingType) ? 10.5 : 13;
+                case "PWA": return isInBuildingType(buildingType) ? 16.6 : 26;
+                default: return 0;
+            }
+        }
+
+        public double WaterPrice(Location location, BuildingType buildingType)
+        {
+            return isIn7Areas(location) ? isInBuildingType(buildingType) ? 8.5 : 13 : 3.5;
+        }
+
+        public bool isIn7Areas(Location location)
+        {
+            var areas = new List<string>
+            {
+                "กรุงเทพมหานคร", "พระนครศรีอยุธยา", "ปทุมธานี", "สมุทรสาคร", "สมุทรปราการ", "นนทบุรี", "นครปฐม"
+            };
+            return areas.Any(it => it == location.Province);
+        }
+
+        public bool isInBuildingType(BuildingType buildingType)
+        {
+            var types = new List<BuildingType>
+            {
+                BuildingType.SingleHouse, BuildingType.TownHouse,
+                BuildingType.ShopHouse, BuildingType.Apartment,
+                BuildingType.Religious, BuildingType.GreenHouse
+            };
+            return types.Any(it => it == buildingType);
         }
     }
 }

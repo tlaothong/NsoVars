@@ -6,7 +6,7 @@ namespace VarsWebApi
 {
     public class PumpCal
     {
-        public static List<PumpRateModel> ListPumpGroundWater = new List<PumpRateModel> {
+        public List<PumpRateModel> listPumpGroundWater = new List<PumpRateModel> {
             new PumpRateModel {
             EnergyFromPump = EnergySource.ElecticPump,
             PumpType = "ปั๊มซับเมิร์ส/ปั๊มแบบจุ่ม",
@@ -402,7 +402,7 @@ namespace VarsWebApi
 
         };
 
-        public static List<PumpRateModel> listSurfaceWater = new List<PumpRateModel> {
+        public List<PumpRateModel> listSurfaceWater = new List<PumpRateModel> {
             new PumpRateModel {
                 EnergyFromPump = EnergySource.ElecticPump,
                     PumpType = "ปั๊มไดโว่/ปั๊มจุ่ม/ปั๊มแช่",
