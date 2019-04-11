@@ -12,6 +12,6 @@ namespace VarsWebApi.Models
         public string Power { get; set; }
         public string SuctionPipeSize { get; set; }
         public string PipelineSize { get; set; }
-        public int PumpRate { get; set; }
+        public double PumpRate { get; set; }
     }
 }

@@ -2,8 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using VarsWebApi.Models;
 
-namespace VarsWebApi {
-    public class PumpCal {
+namespace VarsWebApi
+{
+    public class PumpCal
+    {
         public static List<PumpRateModel> ListPumpGroundWater = new List<PumpRateModel> {
             new PumpRateModel {
             EnergyFromPump = EnergySource.ElecticPump,
@@ -400,7 +402,7 @@ namespace VarsWebApi {
 
         };
 
-        public static List<PumpRateModel> = new List<PumpRateModel> {
+        public static List<PumpRateModel> listSurfaceWater = new List<PumpRateModel> {
             new PumpRateModel {
                 EnergyFromPump = EnergySource.ElecticPump,
                     PumpType = "ปั๊มไดโว่/ปั๊มจุ่ม/ปั๊มแช่",
@@ -2113,6 +2115,7 @@ namespace VarsWebApi {
                     SuctionPipeSize = "11-12",
                     PipelineSize = "11-12",
                     PumpRate = 240.0
-            },
-        }
+            }
+        };
     }
+}
