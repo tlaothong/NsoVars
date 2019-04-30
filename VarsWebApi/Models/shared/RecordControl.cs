@@ -16,7 +16,7 @@ namespace VarsWebApi.Models
 
         public DateTime? LastUpload { get; set; }
         public DateTime? LastDownload { get; set; }
-
+        public int LogCount { get; set; }
         public List<RecordControlLog> Logs { get; set; }
     }
 }
