@@ -11,6 +11,11 @@ namespace VarsWebApi.Models
     public class Population
     {
         /// <summary>
+        /// ในรอบ 12 เดือนที่ผ่านมาครัวเรือนนี้ได้ปลูกข้าวเองหรือไม่
+        /// </summary>
+        public bool Skip { get; set; }
+
+        /// <summary>
         /// จำนวนคน
         /// </summary>
         public int PersonCount { get; set; }
