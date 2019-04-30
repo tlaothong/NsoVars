@@ -29,6 +29,10 @@ namespace VarsWebApi.Models
         /// <summary>
         /// 5 บ้านร้าง  
         /// </summary>
-        AbandonedHouse = 5
+        AbandonedHouse = 5,
+        /// <summary>
+        /// 6 ไม่สามารถเก็บข้อมูลต่อได้ 
+        /// </summary>
+        CanNotContinue = 6,
     }
 }
